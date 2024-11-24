@@ -35,7 +35,7 @@ class Model
     }
 
     public function getFav($offset = 0, $limit = 20){
-        $requete = $this->bd->prepare("SELECT * FROM Favoris WHERE id_utilisateur = :id LIMIT :limit OFFSET :offset");
+        $requete = $this->bd->prepare("SELECT Nom_materiel AS nom, Prix_Materiel AS prix, Lien_Image AS img_link FROM Favoris JOIN Materiel USING (id_materiel) WHERE id_utilisateur = :id LIMIT :limit OFFSET :offset");
         $requete->bindValue(":id", $_SESSION["id"]);
         $requete->bindValue(":offset", $offset);
         $requete->bindValue(":limit", $limit);
@@ -44,7 +44,7 @@ class Model
     }
 
     public function getPanier($offset = 0, $limit = 20){
-        $requete = $this->bd->prepare("SELECT * FROM Panier WHERE id_utilisateur = :id LIMIT :limit OFFSET :offset");
+        $requete = $this->bd->prepare("SELECT Nom_materiel AS nom, Prix_Materiel AS prix, Lien_Image AS img_link FROM Panier JOIN Materiel USING (id_materiel) WHERE id_utilisateur = :id LIMIT :limit OFFSET :offset");
         $requete->bindValue(":id", $_SESSION["id"]);
         $requete->bindValue(":offset", $offset);
         $requete->bindValue(":limit", $limit);
@@ -53,7 +53,7 @@ class Model
     }
 
     public function getHistorique($offset = 0, $limit = 20){
-        $requete = $this->bd->prepare("SELECT * FROM Panier WHERE id_utilisateur = :id LIMIT :limit OFFSET :offset");
+        $requete = $this->bd->prepare("SELECT Nom_materiel AS nom, Prix_Materiel AS prix, Lien_Image AS img_link FROM Historique_commande JOIN materiel_commande USING (id_historique_commande) JOIN Materiel USING (id_materiel) WHERE id_utilisateur = :id LIMIT :limit OFFSET :offset");
         $requete->bindValue(":id", $_SESSION["id"]);
         $requete->bindValue(":offset", $offset);
         $requete->bindValue(":limit", $limit);

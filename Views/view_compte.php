@@ -6,7 +6,31 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Test</p>
-    <?= $_SERVER['REQUEST_METHOD']?>
+    <div>
+        <h1>Favoris</h1>
+        <?php foreach($fav as $v): ?>
+            <div style="background: #F5F5DC; border: 5px solid black;">
+               <p><?= $v["nom"] ?></p>
+               <p>Prix : <?= $v["prix"] ?>€</p>
+               <p><img src="<?= $v["img_link"] ?>" alt="image du produit"></p>
+        </div>
+        <?php endforeach ?>
+        <h1>Panier</h1>
+        <?php foreach($panier as $v): ?>
+            <div style="background: #F5F5DC; border: 5px solid black;">
+               <p><?= $v["nom"] ?></p>
+               <p>Prix : <?= $v["prix"] ?>€</p>
+               <p><img src="<?= $v["img_link"] ?>" alt="image du produit"></p>
+        </div>
+        <?php endforeach ?>
+        <h1>historique</h1>
+        <?php foreach($historique as $v): ?>
+            <div style="background: #F5F5DC; border: 5px solid black;">
+               <p><?= $v["nom"] ?></p>
+               <p>Prix : <?= $v["prix"] ?>€</p>
+               <p><img src="<?= $v["img_link"] ?>" alt="image du produit"></p>
+        </div>
+        <?php endforeach ?>
+    </div>
 </body>
 </html>
