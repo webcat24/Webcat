@@ -1,3 +1,7 @@
+<?php $title= "Connexion";
+require "view_begin.php";
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -13,3 +17,5 @@
     <p><a href="?controller=Connexion&action=register">Register</a></p>
 </body>
 </html>
+
+<?php require "view_end.php"; ?>

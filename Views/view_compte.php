@@ -1,3 +1,7 @@
+<?php $title= "Mon compte";
+require "view_begin.php";
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -34,3 +38,5 @@
     </div>
 </body>
 </html>
+
+<?php require "view_end.php"; ?>

@@ -1,3 +1,8 @@
+<?php $title= "S'enregistrer";
+require "view_begin.php";
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,3 +17,5 @@
     </form>
 </body>
 </html>
+
+<?php require "view_end.php"; ?>

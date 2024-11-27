@@ -75,43 +75,62 @@
   background-color: var();
 }
 
-.bouton_v2{
-  background-color : var();
-  color: var(--blanc);
-  height: 45px;
-  padding-left: 20px;
-  padding-right: 20px;
-  font-size: var(--police_bouton);
-  text-align: center;
-  border: none;
-  border-radius: var(--bord_btn); /* Arrondir les bords */
-  font-family: 'WorkSans';
-}
-
-.bouton_v2:hover{
-  background-color: var();
-}
-
-.bouton_v3{
-  background-color : var();
-  color: var(--blanc);
-  height: 33px;
-  padding-left: 20px;
-  padding-right: 20px;
-  font-size: var(--police_bouton);
-  text-align: center;
-  border: none;
-  border-radius: var(--bord_btn); /* Arrondir les bords */
-  font-family: 'WorkSans';
-}
-
-.bouton_v3:hover{
-  background-color: var();
-}
-
 .text{
   color: var(--blanc);
   letter-spacing: 2px;
   font-size: var(--police_texte);
   font-family: 'Montserrat';
 }
+
+/* Début CSS de view_begin.php */
+.header-custom {
+  background-color: var(--marron);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.navbar-nav .nav-link{
+  color: var(--jaune);
+  letter-spacing: 2px;
+  font-size: var(--police_label);
+  font-weight: 600;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 30px; /* Espacement horizontal */
+}
+
+.navbar-nav .nav-item:last-child {
+  margin-right: 0; /* Pas de marge après le dernier élément */
+}
+
+.navbar-nav a.nav-link.active{
+  color:var(--jaune); /* Elements de la navigation en jaune */
+}
+
+.navbar-nav a.nav-link.active:hover{
+  color: var(--blanc); 
+}
+
+.navbar-nav .nav-link:hover{
+  color: var(--blanc); 
+}
+
+/* Fin CSS de view_begin.php */
+
+/* Début CSS de view_end.php */
+.footer {
+  text-align: center;
+  padding: 5px;
+}
+
+.or-primaire-border {
+  border-bottom: 2px solid var(--or_primaire); /* Ajuste l'épaisseur et la couleur */
+}
+
+.text_footer_bas {
+  color: var(--blanc);
+}
+/* Fin CSS de view_end */
