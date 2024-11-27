@@ -1,0 +1,117 @@
+/* STYLE FONTS */
+@font-face { font-family: "Montserrat"; src: url('../Fonts/Montserrat-Regular.ttf'); } /* Corps de texte */
+@font-face { font-family: "WorkSans"; src: url('../Fonts/WorkSans-Regular.ttf'); } /* Titres/sous-titres/accroches */
+
+/* TAILLE FONTS */
+:root{
+  --police_lien: 12px;
+  --police_label: 15px;
+  --police_bouton: 18px;
+  --police_titre: 25px;
+  --police_texte: 20px;
+}
+
+/* COULEURS */
+:root{
+  --marron: #9b7d61;
+  --rose:#daa38f;
+  --beige:#e9d7c0;
+  --turquoise:#92ada4;
+  --jaune:#fed8a6;
+  --blanc:#ffffff;
+  --noir:#000000;
+
+}
+
+/* FORMULAIRES */
+:root{
+  --bord_form: 20px;
+  --marge_form: 35px;
+}
+
+/* BOUTONS */
+:root{
+  --bord_btn: 5px;
+  --marge_btn: 20px;
+}
+
+/* RESPONSIVE : petits écrans (téléphones) */
+@media only screen and (max-width: 575px){
+  div.form_co {
+    width: 100%; /* Ajuster la largeur pour les petits écrans */
+    margin: 10px; /* Ajouter une petite marge autour du formulaire */
+    padding: 15px; /* Ajouter du rembourrage pour un meilleur espacement */
+  }
+}
+
+/* RESPONSIVE : écrans moyens (tablettes) */
+@media only screen and (min-width: 576px){
+  div.form_co {
+    width: 80%; /* Ajuster la largeur pour les écrans moyens */
+  }
+}
+
+/* RESPONSIVE : grands écrans (ordinateurs) */
+@media only screen and (min-width: 992px){
+  div.form_co {
+    width: 60%; /* Ajuster la largeur pour les écrans de grande taille */
+  }
+}
+
+/* Utilisé sur plusieurs pages */
+.bouton{
+  background-color : var(--marron);
+  color: var(--blanc);
+  height: 45px;
+  width: 100%;
+  font-size: var(--police_bouton);
+  text-align: center;
+  border: none;
+  border-radius: var(--bord_btn); /* Arrondir les bords */
+  font-family: 'WorkSans';
+}
+
+.bouton:hover{
+  background-color: var();
+}
+
+.bouton_v2{
+  background-color : var();
+  color: var(--blanc);
+  height: 45px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: var(--police_bouton);
+  text-align: center;
+  border: none;
+  border-radius: var(--bord_btn); /* Arrondir les bords */
+  font-family: 'WorkSans';
+}
+
+.bouton_v2:hover{
+  background-color: var();
+}
+
+.bouton_v3{
+  background-color : var();
+  color: var(--blanc);
+  height: 33px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: var(--police_bouton);
+  text-align: center;
+  border: none;
+  border-radius: var(--bord_btn); /* Arrondir les bords */
+  font-family: 'WorkSans';
+}
+
+.bouton_v3:hover{
+  background-color: var();
+}
+
+.text{
+  color: var(--blanc);
+  letter-spacing: 2px;
+  font-size: var(--police_texte);
+  font-family: 'Montserrat';
+}
