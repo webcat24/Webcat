@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 //Pour avoir la fonction e()
 require_once "Utils/functions.php";
 //Inclusion du modèle
@@ -8,7 +8,7 @@ require_once "Models/Model.php";
 require_once "Controllers/Controller.php";
 
 //Liste des contrôleurs -- A RENSEIGNER
-$controllers = ['inspiration'];
+$controllers = ["Utilisateur", "Connexion", "inspiration"];
 //Nom du contrôleur par défaut-- A RENSEIGNER
 $controller_default = "inspiration";
 

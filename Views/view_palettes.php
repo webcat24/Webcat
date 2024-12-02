@@ -1,4 +1,5 @@
 <?php
+$title = "Palettes";
 require 'view_begin.php';
 ?>
 <!-- section  menu -->

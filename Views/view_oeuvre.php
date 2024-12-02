@@ -1,4 +1,5 @@
 <?php
+$title = "Oeuvres";
 require 'view_begin.php';
 ?>
 <!-- section  menu -->

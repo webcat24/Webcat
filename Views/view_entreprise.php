@@ -1,7 +1,7 @@
 <?php
+$title = "À Propos";
 require "view_begin.php";
 ?>
-<title>WebCat | À Propos</title>
 </head>
 
 <body>
@@ -42,8 +42,8 @@ require "view_begin.php";
             </div>
             <div class="col-balance">
                 <div class="sticky-img-dual">
-                    <img src="Content/img/R.jfif" alt="" class="caher">
-                    <img src="Content/img/arbre.avif" alt="" class="blob">
+                    <img src="Content/img/arbre.avif" alt="" class="caher">
+                    <!-- <img src="Content/img/arbre.avif" alt="" class="blob"> -->
                     <img src="Content/img/er.jfif" alt="">
                 </div>
             </div>
@@ -53,8 +53,8 @@ require "view_begin.php";
 
             <div class="col-balance ordi">
                 <div class="sticky-img-dual">
-                    <img src="Content/img/er.jfif" alt="">
-                    <img src="Content/img/arb.avif" alt="" class="blob">
+                    <img src="Content/img/arb.avif" alt="">
+                    <!-- <img src="Content/img/arb.avif" alt="" class="blob"> -->
                     <img src="Content/img/R.jfif" alt="" class="caher">
                 </div>
             </div>
@@ -124,8 +124,8 @@ require "view_begin.php";
             <div class="col-balance">
                 <div class="sticky-img-dual">
                     <img src="Content/img/er.jfif" alt="">
-                    <img src="Content/img/arbr.avif" alt="" class="blob">
-                    <img src="Content/img/R.jfif" alt="" class="caher">
+                    <!-- <img src="Content/img/arbr.avif" alt="" class="blob"> -->
+                    <img src="Content/img/arbr.avif" alt="" class="caher">
                 </div>
             </div>
             <div class="sticky-img-dual-spacer"></div>

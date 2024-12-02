@@ -51,4 +51,58 @@ document.querySelectorAll(".arrow").forEach((arrow) => {
 });
 
 // Fermer le modal lorsqu'on clique ailleurs
-document.querySelector(".modal").addEventListener("click", closeModal);
+// document.querySelector(".modal").addEventListener("click", closeModal);
+
+// Swiper js
+document.addEventListener("DOMContentLoaded", () => {
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    // grabCursor: true,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+});
+
+// Change header bg color
+window.addEventListener("scroll", () => {
+  const scrollY = window.pageYOffset;
+  if (scrollY > 5) {
+    document.querySelector("header").classList.add("header-active");
+  } else {
+    document.querySelector("header").classList.remove("header-active");
+  }
+});
+
+// Nav open/close logic
+const body = document.querySelector("body"),
+  navMenu = document.querySelector("#navbarNavDropdown"), // Le menu collapsible
+  navOpenBtn = document.querySelector(".navbar-toggler"), // Bouton hamburger
+  navCloseBtn = document.querySelector(".navClose-btn"); // Ajoutez un bouton "fermer" si nécessaire
+
+if (navMenu && navOpenBtn) {
+  navOpenBtn.addEventListener("click", () => {
+    if (!navMenu.classList.contains("show")) {
+      // Vérifie si le menu est déjà ouvert
+      navMenu.classList.add("show"); // Ouvre le menu
+      body.style.overflowY = "hidden"; // Empêche le scroll
+    } else {
+      navMenu.classList.remove("show"); // Ferme le menu si cliqué à nouveau
+      body.style.overflowY = "scroll"; // Réactive le scroll
+    }
+  });
+}
+
+// Optionnel : Gérer un bouton de fermeture spécifique
+if (navMenu && navCloseBtn) {
+  navCloseBtn.addEventListener("click", () => {
+    navMenu.classList.remove("show"); // Ferme le menu
+    body.style.overflowY = "scroll"; // Réactive le scroll
+  });
+}
