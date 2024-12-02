@@ -7,7 +7,7 @@ require_once "Models/Model.php";
 //Inclusion de la classe Controller
 require_once "Controllers/Controller.php";
 
-//Liste des contrôleurs -- A RENSEIGNER
+//Liste des contrôleurs -- A RENSEIGNERs
 $controllers = ["Utilisateur", "Connexion"];
 //Nom du contrôleur par défaut-- A RENSEIGNER
 $controller_default = "Connexion";

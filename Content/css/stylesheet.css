@@ -42,6 +42,11 @@
     margin: 10px; /* Ajouter une petite marge autour du formulaire */
     padding: 15px; /* Ajouter du rembourrage pour un meilleur espacement */
   }
+
+  .navbar-nav .nav-item{
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* RESPONSIVE : écrans moyens (tablettes) */
@@ -83,12 +88,16 @@
 }
 
 /* Début CSS de view_begin.php */
+
+/* Styles par défaut : centrer le menu */
 .header-custom {
   background-color: var(--marron);
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center; /* Centré horizontalement */
+  align-items: center; /* Centré verticalement */
   margin-bottom: 50px;
+  position: relative; /* Pour positionner les icônes */
 }
 
 .navbar-nav .nav-link{
@@ -118,16 +127,21 @@
   color: var(--blanc); 
 }
 
+.navbar-collapse {
+  left: 0; /* Pousser complètement à gauche */
+  width: 100%; /* Si vous souhaitez qu'il prenne tout l'écran */
+}
 /* Fin CSS de view_begin.php */
 
 /* Début CSS de view_end.php */
-.footer {
+footer {
   text-align: center;
   padding: 5px;
+  background-color: var(--marron);
 }
 
-.or-primaire-border {
-  border-bottom: 2px solid var(--or_primaire); /* Ajuste l'épaisseur et la couleur */
+.footer-border {
+  border-bottom: 2px solid var(--marron); /* Ajuste l'épaisseur et la couleur */
 }
 
 .text_footer_bas {
