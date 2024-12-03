@@ -47,6 +47,43 @@
     display: flex;
     flex-direction: column;
   }
+
+  .footer-links {
+    display: none; /* Cacher les liens */
+  }
+
+  .footer-title {
+    cursor: pointer; /* Changer le curseur pour indiquer que le titre est cliquable */
+  }
+  
+  /* Centrer les copyrights */
+  .copyright {
+    text-align: center; /* Centre le texte des copyrights */
+    padding-bottom: 10px; /* Ajoute une petite marge pour espacer */
+  }
+
+  /* CENTRER LE LOGO */
+  .footer-logo {
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Centre le logo horizontalement */
+    align-items: center; /* Centre le logo verticalement */
+    width: 100%; /* Assure que le conteneur occupe toute la largeur */
+  }
+
+  .footer-logo img {
+    width: 130px;; /* Redimensionne le logo à 30% de la largeur de son conteneur parent */
+    height: auto; /* Maintient les proportions de l'image */
+    display: block; /* Affiche l'image en tant qu'élément de bloc */
+  }
+
+  footer h5 {
+    text-align: center; /* Alignement des titres au centre */
+  }
+  
+  footer p, footer a {
+    text-align: center; /* Alignement du texte à gauche */
+  }
 }
 
 /* RESPONSIVE : écrans moyens (tablettes) */
@@ -54,12 +91,64 @@
   div.form_co {
     width: 80%; /* Ajuster la largeur pour les écrans moyens */
   }
+
+  .footer-links {
+    display: block;
+  }
+
+  .footer-logo {
+    text-align: left; /* Aligne tout le contenu (y compris l'image) à gauche */
+  }
+
+  .footer-logo img {
+    width: 150px;; /* Redimensionne le logo à 30% de la largeur de son conteneur parent */
+    height: auto; /* Maintient les proportions de l'image */
+    display: block; /* Affiche l'image en tant qu'élément de bloc */
+  }
+
+  footer h5 {
+    text-align: left; /* Alignement des titres à gauche */
+  }
+  
+  footer p, footer a {
+    text-align: left; /* Alignement du texte à gauche */
+  }
+
+  .footer-title{
+    pointer-events: none
+  }
 }
 
 /* RESPONSIVE : grands écrans (ordinateurs) */
 @media only screen and (min-width: 992px){
   div.form_co {
     width: 60%; /* Ajuster la largeur pour les écrans de grande taille */
+  }
+
+  .footer-links {
+    display: block;
+  }
+
+  .footer-logo {
+    text-align: left; /* Aligne tout le contenu (y compris l'image) à gauche */
+  }
+
+  .footer-logo img {
+    width: 200px;; /* Redimensionne le logo à 30% de la largeur de son conteneur parent */
+    height: auto; /* Maintient les proportions de l'image */
+    display: block; /* Affiche l'image en tant qu'élément de bloc */
+  }
+
+  footer h5 {
+    text-align: left; /* Alignement des titres à gauche */
+  }
+  
+  footer p, footer a {
+    text-align: left; /* Alignement du texte à gauche */
+  }
+
+  .footer-title{
+    pointer-events: none
   }
 }
 
@@ -135,16 +224,55 @@
 
 /* Début CSS de view_end.php */
 footer {
-  text-align: center;
-  padding: 5px;
-  background-color: var(--marron);
-}
-
-.footer-border {
-  border-bottom: 2px solid var(--marron); /* Ajuste l'épaisseur et la couleur */
-}
-
-.text_footer_bas {
+  background-color: var(--marron); /* Couleur de fond */
   color: var(--blanc);
+  position: relative;
+  width: 100%;
+}
+
+.lien{
+  color: var(--blanc);
+  text-decoration: none;
+}
+
+/* Ajustement des liens dans le footer */
+footer a:hover {
+  color: var(--jaune); /* Couleur au survol */
+  text-decoration: underline;
+}
+
+/* Icônes réseaux sociaux */
+.social-icon {
+  width: 30px; /* Taille des icônes */
+  height: 30px;
+  margin: 0 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  transform: scale(1.2); /* Zoom au survol */
+}
+
+.footer-icon{
+  width: 24px; /* Taille de l'image */
+  height: 24px; /* Conserver une taille proportionnée */
+  margin-right: 5px; /* Marge à droite */
+}
+
+.copyright{
+  color: var(--jaune);
+}
+
+footer h5 {
+  font-weight: bold;
+  color: var(--jaune);
+}
+
+footer p, footer a {
+  font-size: var(--police_label);
+}
+
+.footer-logo img {
+  margin-top: -30px;
 }
 /* Fin CSS de view_end */
