@@ -8,13 +8,13 @@
 	<title><?= $title ?></title>
 
 	<!-- Styles CSS -->
-	<link rel="stylesheet" href="Content/css/stylesheet.css"> <!-- Votre CSS personnalisé -->
 	<link rel="stylesheet" href="Content/css/plugin_theme_css.css"> <!-- CSS des plugins -->
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> <!-- Swiper CSS -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	<link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"> <!-- Icones -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+	<link rel="stylesheet" href="Content/css/stylesheet.css"> <!-- Votre CSS personnalisé -->
 
 
 
@@ -39,16 +39,18 @@
 						</li>
 						<li class="nav-item">
 							<a class="nav-link active" aria-current="page"
-								href="?controller=entreprise&action=entreprise">Entreprise</a>
+								href="?controller=Controller_inspiration&action=afficherentreprise">Entreprise</a>
 						</li>
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-								aria-expanded="false">Inspiration</a>
+							<a class="nav-link dropdown-toggle"
+								href="?controller=Controller_inspiration&action=afficherinspiration" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">Inspiration</a>
 							<ul class="dropdown-menu">
 								<li><a class="dropdown-item"
 										href="?controller=Controller_inspiration&action=affichepalettes">Palettes</a>
 								</li>
-								<li><a class="dropdown-item" href="?controller=oeuvres&action=oeuvres">Œuvres</a></li>
+								<li><a class="dropdown-item"
+										href="?controller=Controller_inspiration&action=afficheroeuvre">Œuvres</a></li>
 							</ul>
 						</li>
 						<li class="nav-item">
@@ -69,16 +71,11 @@
 				</div>
 
 				<!-- Bouton hamburger -->
-				<!-- <button class="navbar-toggler position-absolute top-0 start-0 ms-3 mt-3" type="button"
+				<button class="navbar-toggler position-absolute top-0 start-0 ms-3 mt-3" type="button"
 					data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
 					aria-expanded="false" aria-label="Toggle navigation">
 					<img src="Content/img/icons8-hamburger-menu.png" alt="Menu" style="width: 30px; height: 30px;" />
 				</button>
-				<button class="navClose-btn position-absolute top-0 end-0 me-3 mt-3" aria-label="Close navigation">
-					<!-- Icône pour fermer le menu --
-					<i class="navClose-btn position-absolute top-0 end-0 me-3 mt-3 bi bi-x-lg"
-						aria-label="Close navigation" style="font-size: 1.5rem; cursor: pointer;"></i>
-				</button> -->
 
 			</div>
 		</nav>

@@ -13,10 +13,14 @@ class Controller_inspiration extends Controller
      */
     public function action_default()
     {
-        $this->action_afficheroeuvre();
+        $this->action_afficherinspiration();
     }
 
+    public function action_afficherinspiration()
+    {
 
+        $this->render('inspiration');
+    }
     public function action_afficheroeuvre()
     {
 
@@ -30,6 +34,6 @@ class Controller_inspiration extends Controller
     public function action_affichepalettes()
     {
 
-        $this->render('inspiration');
+        $this->render('palettes');
     }
 }

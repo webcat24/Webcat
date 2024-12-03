@@ -98,7 +98,7 @@ require 'view_begin.php';
                             <div class="item_pos col-lg-12">
                                 <div class="witr_single_pslide">
                                     <div class="witr_pslide_image">
-                                        <img src="Content/img/palet2.webp" alt="image">
+                                        <img src="Content/img/arbre.avif" alt="image">
                                     </div>
                                     <div class="witr_content_pslide_text">
                                         <div class="witr_number_pslide">

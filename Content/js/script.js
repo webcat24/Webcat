@@ -83,9 +83,7 @@ window.addEventListener("scroll", () => {
 // Nav open/close logic
 const body = document.querySelector("body"),
   navMenu = document.querySelector("#navbarNavDropdown"), // Le menu collapsible
-  navOpenBtn = document.querySelector(".navbar-toggler"), // Bouton hamburger
-  navCloseBtn = document.querySelector(".navClose-btn"); // Ajoutez un bouton "fermer" si nécessaire
-
+  navOpenBtn = document.querySelector(".navbar-toggler"); // Bouton hamburger
 if (navMenu && navOpenBtn) {
   navOpenBtn.addEventListener("click", () => {
     if (!navMenu.classList.contains("show")) {
@@ -100,8 +98,8 @@ if (navMenu && navOpenBtn) {
 }
 
 // Optionnel : Gérer un bouton de fermeture spécifique
-if (navMenu && navCloseBtn) {
-  navCloseBtn.addEventListener("click", () => {
+if (navOpenBtn) {
+  navOpenBtn.addEventListener("click", () => {
     navMenu.classList.remove("show"); // Ferme le menu
     body.style.overflowY = "scroll"; // Réactive le scroll
   });

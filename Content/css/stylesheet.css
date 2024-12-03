@@ -128,32 +128,6 @@ section{
   box-shadow: 0 0 27px var(--shadowColor);
   margin-top: 30px!important;
 }
-
-
-
-/* RESPONSIVE : petits écrans (téléphones) */
-@media only screen and (max-width: 575px){
-  div.form_co {
-    width: 100%; /* Ajuster la largeur pour les petits écrans */
-    margin: 10px; /* Ajouter une petite marge autour du formulaire */
-    padding: 15px; /* Ajouter du rembourrage pour un meilleur espacement */
-  }
-}
-
-/* RESPONSIVE : écrans moyens (tablettes) */
-@media only screen and (min-width: 576px){
-  div.form_co {
-    width: 80%; /* Ajuster la largeur pour les écrans moyens */
-  }
-}
-
-/* RESPONSIVE : grands écrans (ordinateurs) */
-@media only screen and (min-width: 992px){
-  div.form_co {
-    width: 60%; /* Ajuster la largeur pour les écrans de grande taille */
-  }
-}
-
 /* Utilisé sur plusieurs pages */
 .bouton{
   background-color : var(--marron);
@@ -179,16 +153,20 @@ section{
 }
 
 /* Début CSS de view_begin.php */
+
+/* Styles par défaut : centrer le menu */
 .header-custom {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center; /* Centré horizontalement */
+  align-items: center; /* Centré verticalement */
+  margin-bottom: 50px;
+  position: relative; /* Pour positionner les icônes */
 }
 
 .header-active{
   height: 6rem;
-  /* background-color: var(--marron); */
-  background-color: var(--bgBlack);
+  background-color: var(--marron);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   justify-content: center;
   align-items: center;
@@ -213,24 +191,29 @@ section{
   color:var(--jaune); /* Elements de la navigation en jaune */
 }
 
-.navbar-nav a.nav-link.active:hover{
+/* .navbar-nav a.nav-link.active:hover{
   color: var(--blanc); 
-}
+} */
 
 .navbar-nav .nav-link:hover{
   color: var(--blanc); 
 }
 
+.navbar-collapse {
+  left: 0; /* Pousser complètement à gauche */
+  width: 100%; /* Si vous souhaitez qu'il prenne tout l'écran */
+}
 /* Fin CSS de view_begin.php */
 
 /* Début CSS de view_end.php */
-.footer {
+footer {
   text-align: center;
   padding: 5px;
+  background-color: var(--marron);
 }
 
-.or-primaire-border {
-  border-bottom: 2px solid var(--or_primaire); /* Ajuste l'épaisseur et la couleur */
+.footer-border {
+  border-bottom: 2px solid var(--marron); /* Ajuste l'épaisseur et la couleur */
 }
 
 .text_footer_bas {
@@ -296,12 +279,6 @@ section{
   .col-balance {
     width: 50%!important;
     padding: 30px!important;
-  }
-  
-  @media only screen and (max-width: 992px) {  
-    .col-balance {
-      width: 100%;
-    }
   }
   
   h2, .fs-h2 { font-size: var(--h2TextSize); font-weight: bold; display: block; }
@@ -446,14 +423,6 @@ section{
     color: #fff;
     border-radius: 6px;
 }
-/* Responsive */
-@media (max-width:964px) {
-    #menu .dishes .dish {
-        width: 100%;
-        max-width: 260px;
-    }
-
-}
 /* couleurs des palettes et oeuvres */
 
 .color-dropdown {
@@ -467,8 +436,8 @@ section{
 .multicolor-text {
   font-size: 1.2em;
   font-weight: bold;
-  /* background: linear-gradient(90deg, red, orange, yellow, green, blue, purple); */
-  background: var(--bgBlack);
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
+  /* background: var(--bgBlack); */
   background-clip: text; /* Standard property */
   -webkit-background-clip: text; /* WebKit browsers */
   color: transparent; /* Makes the text itself transparent for all browsers */
@@ -655,8 +624,6 @@ section{
      height: 110px;
      line-height: 90px;
      text-align: center;
-    /* border-radius: 100%;
-     */
      display: inline-block;
      color: #fff;
      font-size: 40px;
@@ -713,8 +680,6 @@ section{
      background: #fff;
      color:#0c5adb;
      box-shadow: 0px 0px 65px 0px #00000014;
-    /* border-radius: 5px;
-     */
 }
  .witr_pslide3 .witr_single_pslide:hover .witr_pslide_custom a span{
      background: #0c5adb;
@@ -727,20 +692,6 @@ section{
   grid-template-columns: 1fr 1fr; /* Deux colonnes de même taille */
   column-gap: 6rem; /* Espacement horizontal entre les colonnes */
   margin-top: 6rem; /* Espacement vertical avec le contenu précédent */
-}
-
-/*Font sizes For Small Screen 968px */
-@media screen and (max-width: 990px) {
-:root {
-  --big-font: 3.5rem;
-  --h1-font: 2.4rem;
-  --h2-font: 2rem;
-  --h3-font: 1.8rem;
-  --h4-font: 1.6rem;
-  --normal-font: 1.5rem;
-  --small-font: 1.3rem;
-  --smaller-font: 1.2rem;
-}
 }
 
 /* Header */
@@ -759,7 +710,6 @@ section{
 .home{
   height: 100vh;
   width: 100%;
-  /* background-color: red; */
 }
 .swiper-slide{
   position: relative!important;
@@ -785,9 +735,10 @@ section{
 .swiper-navBtn{
   height: 5rem!important;
   width: 5rem!important;
-  color: var(--white-color)!important;
+  /* color: var(--white-color)!important; */
+  color: #0c0d19!important;
   border-radius: 50%!important;
-  background-color: rgba(255, 255, 255, 0.2)!important;
+  background-color: rgba(255, 255, 255, 0.8)!important;
   transition: var(--tran-0-2)!important;
   opacity: 0;
   visibility: visible;
@@ -970,3 +921,145 @@ section{
     color: var(--text-color);
   }
 }
+
+/* RESPONSIVE : petits écrans (téléphones) */
+@media only screen and (max-width: 575px){
+  div.form_co {
+    width: 100%; /* Ajuster la largeur pour les petits écrans */
+    margin: 10px; /* Ajouter une petite marge autour du formulaire */
+    padding: 15px; /* Ajouter du rembourrage pour un meilleur espacement */
+  }
+
+  .navbar-nav .nav-item{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* RESPONSIVE : écrans moyens (tablettes) */
+@media only screen and (min-width: 576px){
+  div.form_co {
+    width: 80%; /* Ajuster la largeur pour les écrans moyens */
+  }
+}
+
+/* RESPONSIVE : grands écrans (ordinateurs) */
+@media only screen and (min-width: 992px){
+  div.form_co {
+    width: 60%; /* Ajuster la largeur pour les écrans de grande taille */
+  }
+}
+
+@media only screen and (max-width: 992px) {  
+  .col-balance {
+    width: 100%;
+  }
+}
+
+/* Responsive */
+@media (max-width:964px) {
+  #menu .dishes .dish {
+      width: 100%;
+      max-width: 260px;
+  }
+
+}
+
+/*Font sizes For Small Screen 968px */
+@media screen and (max-width: 990px) {
+  :root {
+    --big-font: 3.5rem;
+    --h1-font: 2.4rem;
+    --h2-font: 2rem;
+    --h3-font: 1.8rem;
+    --h4-font: 1.6rem;
+    --normal-font: 1.5rem;
+    --small-font: 1.3rem;
+    --smaller-font: 1.2rem;
+  }
+  }
+
+
+
+  /* --- HOME RESPONSIVE --- */
+@media (max-width: 768px) {
+  /* Sur les petits écrans, ajuster la taille du texte et les marges */
+  .home h1 {
+    font-size: 32px;
+  }
+
+  .home p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 320px) {
+  .me-4 {
+    margin-right: 0.4rem !important;
+}
+.dishes .dish img {
+  width: 210px;
+}
+}
+@media (max-width: 1024px) {
+  .dishes .dish img {
+    width: 210px;
+  }
+}
+
+
+/* --- HEADER RESPONSIVE --- */
+@media (max-width: 768px) {
+  .header{
+    height: 4.5rem;
+  }  
+  nav .navbar-toggler {
+    display: block;
+  }
+  .homeTitle{
+    font-size: var(--h1-font);
+  }
+  .swiper-button-next:after, .swiper-button-prev:after{
+    font-size: 20px!important;
+  }
+  .swiper-navBtn{
+    height: 3rem !important;
+    width: 3rem !important;
+  }
+  .navbar-nav {
+    display: none; /* Masquer les liens de navigation par défaut */
+    flex-direction: column;
+    position: fixed;
+    background-color: var(--marron);
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .navbar-nav.show {
+    display: flex; /* Afficher les éléments lorsque le menu est ouvert */
+  }
+
+  .navbar-nav .nav-link {
+    padding: 12px;
+    font-size: 18px;
+    width: 100%;
+  }
+}
+/* --- SWIPER RESPONSIVE --- */
+@media (max-width: 768px) {
+  /* Ajuster la vue de Swiper sur mobile */
+  .swiper-container {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+
