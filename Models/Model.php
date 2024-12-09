@@ -17,7 +17,7 @@ class Model
      */
     private function __construct()
     {
-        include "/home/Web/Auth/credentials.php";
+        include "credentials.php";
         $this->bd = new PDO($dsn, $login, $mdp);
         $this->bd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $this->bd->query("SET nameS 'utf8'");
@@ -34,9 +34,54 @@ class Model
         return self::$instance;
     }
 
-    /**
-     * Retourne les 25 derniers prix nobels
-     * @return [array] Contient les informations des prix nobel
-     */
+    public function getFav($offset = 0, $limit = 20){
+        $requete = $this->bd->prepare("SELECT Nom_materiel AS nom, Prix_Materiel AS prix, Lien_Image AS img_link FROM Favoris JOIN Materiel USING (id_materiel) WHERE id_utilisateur = :id LIMIT :limit OFFSET :offset");
+        $requete->bindValue(":id", $_SESSION["id"]);
+        $requete->bindValue(":offset", $offset);
+        $requete->bindValue(":limit", $limit);
+        $requete->execute();
+        return $requete->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getPanier($offset = 0, $limit = 20){
+        $requete = $this->bd->prepare("SELECT Nom_materiel AS nom, Prix_Materiel AS prix, Lien_Image AS img_link FROM Panier JOIN Materiel USING (id_materiel) WHERE id_utilisateur = :id LIMIT :limit OFFSET :offset");
+        $requete->bindValue(":id", $_SESSION["id"]);
+        $requete->bindValue(":offset", $offset);
+        $requete->bindValue(":limit", $limit);
+        $requete->execute();
+        return $requete->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getHistorique($offset = 0, $limit = 20){
+        $requete = $this->bd->prepare("SELECT Nom_materiel AS nom, Prix_Materiel AS prix, Lien_Image AS img_link FROM Historique_commande JOIN materiel_commande USING (id_historique_commande) JOIN Materiel USING (id_materiel) WHERE id_utilisateur = :id LIMIT :limit OFFSET :offset");
+        $requete->bindValue(":id", $_SESSION["id"]);
+        $requete->bindValue(":offset", $offset);
+        $requete->bindValue(":limit", $limit);
+        $requete->execute();
+        return $requete->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function addUserInDB($infos){
+        $requete = $this->bd->prepare("INSERT INTO Utilisateur (mail) VALUES (:email)");
+        $requete->bindValue(":email", $infos["email"]);
+        $requete->execute();
+    }
+
+    public function isUserInDB($email){
+        $requete = $this->bd->prepare("SELECT mail FROM Utilisateur WHERE mail = :email");
+        $requete->bindValue(":email", $email);
+        $requete->execute();
+        if($requete->fetch(PDO::FETCH_ASSOC) != false){
+            return true;
+        }
+        return false;
+    }
+
+    public function getUserID($mail){
+        $requete = $this->bd->prepare("SELECT id_utilisateur FROM Utilisateur WHERE mail = :email");
+        $requete->bindValue(":email", $mail);
+        $requete->execute();
+        return $requete->fetch(PDO::FETCH_ASSOC)["id_utilisateur"];
+    }
     
 }
