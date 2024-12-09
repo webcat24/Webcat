@@ -126,7 +126,7 @@ section{
   margin-top: 100px;
   border-radius: 20px;
   box-shadow: 0 0 27px var(--shadowColor);
-  margin-top: 30px!important;
+  margin-top: 50px!important;
 }
 /* Utilisé sur plusieurs pages */
 .bouton{
@@ -155,6 +155,17 @@ section{
 /* Début CSS de view_begin.php */
 
 /* Styles par défaut : centrer le menu */
+
+/* Header */
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 7rem;
+  width: 100%;
+  z-index: var(--z-fixed);
+  transition: var(--tran-0-5);
+}
 .header-custom {
   display: flex;
   flex-direction: column;
@@ -171,6 +182,8 @@ section{
   justify-content: center;
   align-items: center;
 }
+
+
 
 .navbar-nav .nav-link{
   color: var(--jaune);
@@ -191,9 +204,9 @@ section{
   color:var(--jaune); /* Elements de la navigation en jaune */
 }
 
-/* .navbar-nav a.nav-link.active:hover{
+.navbar-nav a.nav-link.active:hover{
   color: var(--blanc); 
-} */
+}
 
 .navbar-nav .nav-link:hover{
   color: var(--blanc); 
@@ -203,23 +216,66 @@ section{
   left: 0; /* Pousser complètement à gauche */
   width: 100%; /* Si vous souhaitez qu'il prenne tout l'écran */
 }
+
+/* Bouton Hamburger */
+.navbar-toggler {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1000; /* Toujours au-dessus des autres éléments */
+  width: var(--btn-size);
+  height: var(--btn-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-duration), opacity var(--transition-duration);
+}
+
+.navbar-toggler img {
+  width: var(--btn-size);
+  height: var(--btn-size);
+  transition: transform var(--transition-duration);
+}
+
+/* Animation au survol */
+.navbar-toggler:hover img {
+  transform: scale(1.2); /* Agrandissement */
+}
+
+/* Positionnement spécifique */
+.navbar-toggler.position-absolute {
+  top: 10px; /* Ajustez selon votre design */
+  left: 10px;
+}
+/* Bouton Close */
+.navClose-btn {
+  color: var(--btn-color); /* Couleur principale */
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000; /* Toujours au-dessus des autres éléments */
+  width: var(--btn-size);
+  height: var(--btn-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: transform var(--transition-duration), color var(--transition-duration);
+}
+
+/* Animation au survol */
+.navClose-btn:hover {
+  transform: scale(1.2); /* Agrandissement */
+  color: var(--btn-hover-color); /* Change la couleur */
+}
+
+/* Positionnement spécifique */
+.navClose-btn.position-absolute {
+  top: 10px; /* Ajustez selon votre design */
+  right: 10px;
+}
 /* Fin CSS de view_begin.php */
-
-/* Début CSS de view_end.php */
-footer {
-  text-align: center;
-  padding: 5px;
-  background-color: var(--marron);
-}
-
-.footer-border {
-  border-bottom: 2px solid var(--marron); /* Ajuste l'épaisseur et la couleur */
-}
-
-.text_footer_bas {
-  color: var(--blanc);
-}
-/* Fin CSS de view_end */
 
 .carousel img {
   height: 60vh;
@@ -231,25 +287,6 @@ footer {
   /* border-radius: 10px; */
   padding: 10px 20px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* page entreprise */
   
@@ -384,7 +421,7 @@ footer {
   margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    /* width: 80%; */
     justify-content: space-around;
 }
 .dishes .dish {
@@ -403,8 +440,8 @@ footer {
 
 }
 .dishes .dish  img {
-    width: 240px;
-    height: 140px;
+    width: 290px;
+    height: 170px;
     margin-bottom: 15px;
     cursor: pointer;
 
@@ -436,8 +473,8 @@ footer {
 .multicolor-text {
   font-size: 1.2em;
   font-weight: bold;
-  background: linear-gradient(90deg, red, orange, yellow, green, blue, purple);
-  /* background: var(--bgBlack); */
+  /* background: linear-gradient(90deg, red, orange, yellow, green, blue, purple); */
+  background: var(--bgBlack);
   background-clip: text; /* Standard property */
   -webkit-background-clip: text; /* WebKit browsers */
   color: transparent; /* Makes the text itself transparent for all browsers */
@@ -466,6 +503,25 @@ footer {
   max-height: 90%;
   object-fit: contain;
 }
+.modal .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Assurez-vous que le bouton du menu déroulant s'affiche correctement */
+.nav-item .dropdown-toggle::after {
+  margin-left: .255em;
+}
+/* Afficher le menu déroulant au survol */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 
 .arrow {
   position: absolute!important;
@@ -543,13 +599,14 @@ footer {
      border-radius: 5px;
      font-size: 30px;
      background: #fff;
-     color: #0c5adb;
+     color: var(--marron);
 }
  .witr_pslide_image img{
      margin-right: auto;
      margin-left: auto;
      transition:.5s;
      width:100%;
+     height: 20rem;
 }
  .ps1 .witr_content_pslide_text {
      position: absolute;
@@ -576,7 +633,7 @@ footer {
      color:#fff;
 }
  .ps1 .witr_content_pslide_text h3:hover{
-     color:#0c5adb;
+     color:var(--marron);
 }
  .ps1 .witr_content_pslide_text p{
      color:#fff;
@@ -594,7 +651,7 @@ footer {
      color:#fff;
 }
  .ps1 .witr_content_pslide_text a:hover{
-     color:#0c5adb;
+     color:var(--marron);
 }
 /* ps2 Slide */
  .ps2.ps1 .witr_content_pslide_text {
@@ -619,7 +676,7 @@ footer {
      bottom: -30px;
 }
  .witr_pslide_custom a span{
-     background: #0c5adb;
+     background: var(--marron);
      width: 110px;
      height: 110px;
      line-height: 90px;
@@ -654,7 +711,7 @@ footer {
 }
  .witr_number_pslide h4{
      font-size:50px;
-     color:#0c5adb;
+     color:var(--marron);
 }
  .ps3.ps1 .witr_content_pslide_text p, .ps3.ps1 .witr_content_pslide_text h3, .ps3.ps1 .witr_content_pslide_text a {
      color:#000;
@@ -663,7 +720,7 @@ footer {
      margin-bottom: 3px;
 }
  .ps3.ps1 .witr_content_pslide_text a:hover{
-     color:#0c5adb;
+     color:var(--marron);
 }
  .witr_pslide3 .witr_single_pslide:hover .witr_pslide_custom{
      bottom: 45px;
@@ -678,11 +735,11 @@ footer {
      line-height: 45px;
      font-size: 18px;
      background: #fff;
-     color:#0c5adb;
+     color:var(--marron);
      box-shadow: 0px 0px 65px 0px #00000014;
 }
  .witr_pslide3 .witr_single_pslide:hover .witr_pslide_custom a span{
-     background: #0c5adb;
+     background: var(--marron);
      color:#fff;
 }
 
@@ -694,16 +751,6 @@ footer {
   margin-top: 6rem; /* Espacement vertical avec le contenu précédent */
 }
 
-/* Header */
-.header{
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 7rem;
-  width: 100%;
-  z-index: var(--z-fixed);
-  transition: var(--tran-0-5);
-}
 
 
 /* Home */
@@ -729,6 +776,31 @@ footer {
 .home-img{
   height: 100%;
   width: 100%;
+  object-fit: cover;
+  object-position: center; /* Centre l'image */
+}
+/* reduction des images sur certaines pages */
+.about-page .home-img {
+  height: 60%;
+  width: 100%;
+}
+.about-page .home .swiper-slide::before{
+  height: 91%;
+}
+.about-page section{
+  margin-top: -50px !important;
+}
+.about-page .homeSubtitle{
+  font-size: 1.7rem;
+}
+
+.about-page .homeTitle{
+  font-size: 2.5rem;
+}
+.about-page .swiper-navBtn{
+  height: 3rem!important;
+  width: 3rem!important;
+  top: 45%;
 }
 
 /* swiper button */
@@ -799,72 +871,139 @@ footer {
 }
 
 
+/* Début CSS de view_end.php */
 
+footer {
+  background-color: var(--marron); /* Couleur de fond */
+  color: var(--blanc);
+  position: relative;
+  width: 100%;
+}
 
+.footer-border {
+  border-bottom: 2px solid var(--marron); /* Ajuste l'épaisseur et la couleur */
+}
 
+.text_footer_bas {
+  color: var(--blanc);
+}
+.lien{
+  color: var(--blanc);
+  text-decoration: none;
+}
 
-/* Bouton Hamburger */
-.navbar-toggler {
-  background: none;
+/* Ajustement des liens dans le footer */
+footer a:hover {
+  color: var(--jaune); /* Couleur au survol */
+  text-decoration: underline;
+}
+
+/* Icônes réseaux sociaux */
+.social-icon {
+  width: 30px; /* Taille des icônes */
+  height: 30px;
+  margin: 0 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  transform: scale(1.2); /* Zoom au survol */
+}
+
+.footer-icon{
+  width: 24px; /* Taille de l'image */
+  height: 24px; /* Conserver une taille proportionnée */
+  margin-right: 5px; /* Marge à droite */
+}
+
+.copyright{
+  color: var(--jaune);
+}
+
+footer h5 {
+  font-weight: bold;
+  color: var(--jaune);
+}
+
+footer p, footer a {
+  font-size: var(--police_label);
+}
+
+.footer-logo img {
+  margin-top: -30px;
+}
+
+/* barre search */
+.wrapper{
+  max-width: 450px;
+  margin: 50px auto;
+}
+.wrapper .search-input{
+  background: var(--bgWhite);
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+}
+.search-input input{
+  height: 55px;
+  width: 100%;
+  outline: none;
   border: none;
+  border-radius: 5px;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+}
+.search-input.active input{
+  border-radius: 5px 5px 0 0;
+}
+.search-input .autocom-box{
   padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 280px;
+  overflow-y: auto;
+}
+.search-input.active .autocom-box{
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.autocom-box li{
+  list-style: none;
+  padding: 8px 12px;
+  display: none;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+}
+.search-input.active .autocom-box li{
+  display: block;
+}
+.autocom-box li:hover{
+  background: #efefef;
+}
+.search-input .icon{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  line-height: 55px;
+  font-size: 20px;
+  color: var(--bgWhite);
   cursor: pointer;
-  z-index: 1000; /* Toujours au-dessus des autres éléments */
-  width: var(--btn-size);
-  height: var(--btn-size);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform var(--transition-duration), opacity var(--transition-duration);
-}
-
-.navbar-toggler img {
-  width: var(--btn-size);
-  height: var(--btn-size);
-  transition: transform var(--transition-duration);
-}
-
-/* Animation au survol */
-.navbar-toggler:hover img {
-  transform: scale(1.2); /* Agrandissement */
-}
-
-/* Positionnement spécifique */
-.navbar-toggler.position-absolute {
-  top: 10px; /* Ajustez selon votre design */
-  left: 10px;
-}
-/* Bouton Close */
-.navClose-btn {
-  color: var(--btn-color); /* Couleur principale */
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 1000; /* Toujours au-dessus des autres éléments */
-  width: var(--btn-size);
-  height: var(--btn-size);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  transition: transform var(--transition-duration), color var(--transition-duration);
-}
-
-/* Animation au survol */
-.navClose-btn:hover {
-  transform: scale(1.2); /* Agrandissement */
-  color: var(--btn-hover-color); /* Change la couleur */
-}
-
-/* Positionnement spécifique */
-.navClose-btn.position-absolute {
-  top: 10px; /* Ajustez selon votre design */
-  right: 10px;
+  background: var(--marron);
+  width: 60px;
 }
 
 
+/* Fin CSS de view_end */
 
-/* nav responsive */
+/* --- Responsive CSS --- */
+
 @media screen and (max-width: 768px) {
   .contact-content{
     display: none;
@@ -920,7 +1059,49 @@ footer {
   .header-active .navOpen-btn{
     color: var(--text-color);
   }
+
+
+  /* image court */
+  .about-page .home-img {
+    height: auto;
+    width: 100%;
+    padding-bottom: 80px;
+  }
+  .home-img {
+    height: 50rem;
+    width: 100%;
+    padding-bottom: 80px;
+  }
+  .home .swiper-slide::before{
+    height: 84%;
+  }
+
+  /* .about-page .home .swiper-slide::before {
+    height: 84%;
+  } */
+  
+
+  .about-page section {
+    margin-top: -30px !important;
+    display: table-cell;
+    
+  }
+
+  .about-page .homeSubtitle {
+    font-size: 1.3rem;
+  }
+
+  .about-page .homeTitle {
+    font-size: 2rem;
+  }
+
+  .about-page .swiper-navBtn {
+    height: 2.5rem !important;
+    width: 2.5rem !important;
+    top: 50%;
+  }
 }
+
 
 /* RESPONSIVE : petits écrans (téléphones) */
 @media only screen and (max-width: 575px){
@@ -934,6 +1115,43 @@ footer {
     display: flex;
     flex-direction: column;
   }
+
+  .footer-links {
+    display: none; /* Cacher les liens */
+  }
+
+  .footer-title {
+    cursor: pointer; /* Changer le curseur pour indiquer que le titre est cliquable */
+  }
+  
+  /* Centrer les copyrights */
+  .copyright {
+    text-align: center; /* Centre le texte des copyrights */
+    padding-bottom: 10px; /* Ajoute une petite marge pour espacer */
+  }
+
+  /* CENTRER LE LOGO */
+  .footer-logo {
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Centre le logo horizontalement */
+    align-items: center; /* Centre le logo verticalement */
+    width: 100%; /* Assure que le conteneur occupe toute la largeur */
+  }
+
+  .footer-logo img {
+    width: 130px;; /* Redimensionne le logo à 30% de la largeur de son conteneur parent */
+    height: auto; /* Maintient les proportions de l'image */
+    display: block; /* Affiche l'image en tant qu'élément de bloc */
+  }
+
+  footer h5 {
+    text-align: center; /* Alignement des titres au centre */
+  }
+  
+  footer p, footer a {
+    text-align: center; /* Alignement du texte à gauche */
+  }
 }
 
 /* RESPONSIVE : écrans moyens (tablettes) */
@@ -941,12 +1159,64 @@ footer {
   div.form_co {
     width: 80%; /* Ajuster la largeur pour les écrans moyens */
   }
+
+  .footer-links {
+    display: block;
+  }
+
+  .footer-logo {
+    text-align: left; /* Aligne tout le contenu (y compris l'image) à gauche */
+  }
+
+  .footer-logo img {
+    width: 150px;; /* Redimensionne le logo à 30% de la largeur de son conteneur parent */
+    height: auto; /* Maintient les proportions de l'image */
+    display: block; /* Affiche l'image en tant qu'élément de bloc */
+  }
+
+  footer h5 {
+    text-align: left; /* Alignement des titres à gauche */
+  }
+  
+  footer p, footer a {
+    text-align: left; /* Alignement du texte à gauche */
+  }
+
+  .footer-title{
+    pointer-events: none
+  }
 }
 
 /* RESPONSIVE : grands écrans (ordinateurs) */
 @media only screen and (min-width: 992px){
   div.form_co {
     width: 60%; /* Ajuster la largeur pour les écrans de grande taille */
+  }
+
+  .footer-links {
+    display: block;
+  }
+
+  .footer-logo {
+    text-align: left; /* Aligne tout le contenu (y compris l'image) à gauche */
+  }
+
+  .footer-logo img {
+    width: 200px;; /* Redimensionne le logo à 30% de la largeur de son conteneur parent */
+    height: auto; /* Maintient les proportions de l'image */
+    display: block; /* Affiche l'image en tant qu'élément de bloc */
+  }
+
+  footer h5 {
+    text-align: left; /* Alignement des titres à gauche */
+  }
+  
+  footer p, footer a {
+    text-align: left; /* Alignement du texte à gauche */
+  }
+
+  .footer-title{
+    pointer-events: none
   }
 }
 
@@ -1000,7 +1270,15 @@ footer {
 .dishes .dish img {
   width: 210px;
 }
+
 }
+@media (max-width: 528px) {
+  .section-title{
+    padding: 5px 5px;
+  }
+}
+
+
 @media (max-width: 1024px) {
   .dishes .dish img {
     width: 210px;
@@ -1026,8 +1304,8 @@ footer {
     height: 3rem !important;
     width: 3rem !important;
   }
-  .navbar-nav {
-    display: none; /* Masquer les liens de navigation par défaut */
+  /* .navbar-nav {
+    display: none; /* Masquer les liens de navigation par défaut *
     flex-direction: column;
     position: fixed;
     background-color: var(--marron);
@@ -1035,7 +1313,7 @@ footer {
     left: 0;
     width: 100%;
     padding: 20px;
-  }
+  } */
 
   .navbar-nav.show {
     display: flex; /* Afficher les éléments lorsque le menu est ouvert */
@@ -1060,6 +1338,234 @@ footer {
     justify-content: center;
   }
 }
+/* Styles responsive */
+@media screen and (max-width: 768px) {
+  .witr_cslide3_idany {
+    grid-template-columns: 1fr; /* Passer à une seule colonne */
+    column-gap: 0;
+    margin-top: 3rem; /* Ajuster l'espacement vertical */
+  }
+  .witr_pslide3 .witr_single_pslide {
+    margin-bottom: 2rem; /* Réduire la marge inférieure entre les éléments */
+  }
+  .witr_pslide_image img {
+    width: 100%;
+    height: auto; /* Assurer que les images s'adaptent à la largeur de l'écran */
+  }
+  .ps1 .witr_content_pslide_text {
+    position: static; /* Supprimer le positionnement absolu */
+    bottom: auto;
+    left: auto;
+    right: auto;
+    opacity: 1;
+    padding: 20px; /* Ajouter du padding pour l'espacement interne */
+    box-shadow: none; /* Supprimer l'ombre si nécessaire */
+  }
+  .witr_pslide_custom {
+    position: static; /* Positionnement statique pour s'adapter au flux de la page */
+    margin-top: 10px; /* Espacement au-dessus du bouton */
+  }
+  .witr_pslide_custom a span {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px; /* Ajuster la taille de la police du bouton */
+  }
+  .witr_number_pslide h4 {
+    font-size: 2rem; /* Ajuster la taille de la police du numéro */
+  }
+  .witr_content_pslide_text h3 {
+    font-size: 1.5rem; /* Ajuster la taille de la police du titre */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .witr_content_pslide_text {
+    padding: 15px; /* Réduire le padding pour les très petits écrans */
+  }
+  .witr_number_pslide h4 {
+    font-size: 1.5rem; /* Réduire encore la taille de la police du numéro */
+  }
+  .witr_content_pslide_text h3 {
+    font-size: 1.2rem; /* Réduire la taille de la police du titre */
+  }
+  .witr_pslide_custom a span {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px; /* Ajuster la taille du bouton */
+  }
+}
 
 
 
+
+/* Version responsive pour les tablettes */
+@media (max-width: 768px) {
+  .col-balance {
+    width: 100% !important;
+    padding: 15px !important;
+  }
+
+  .section-title {
+    font-size: calc(var(--h2TextSize) * 0.8);
+    padding: 5px 30px;
+  }
+
+  .sticky-img,
+  .sticky-img-dual {
+    height: 200px;
+  }
+
+  .sticky-img-dual > img:first-child {
+    -webkit-transform: translateX(5%);
+    transform: translateX(5%);
+  }
+
+  .sticky-img-dual > img:last-child {
+    -webkit-transform: translate(80%, 30%);
+    transform: translate(80%, 30%);
+  }
+
+  .sticky-img-dual-spacer {
+    height: 100px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: calc(21px * 0.9);
+  }
+
+  p, li, small {
+    font-size: calc(var(--pTextSize) * 0.9);
+  }
+}
+
+/* Version responsive pour les mobiles */
+@media (max-width: 480px) {
+  .col-balance {
+    width: 100% !important;
+    padding: 10px !important;
+  }
+
+  .section-title {
+    font-size: calc(var(--h2TextSize) * 0.7);
+    padding: 5px 20px;
+  }
+
+  .sticky-img,
+  .sticky-img-dual {
+    height: 150px;
+  }
+
+  .sticky-img-dual > img:first-child {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+
+  .sticky-img-dual > img:last-child {
+    -webkit-transform: translate(70%, 20%);
+    transform: translate(70%, 20%);
+  }
+
+  .sticky-img-dual-spacer {
+    height: 80px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: calc(21px * 0.8);
+  }
+
+  p, li, small {
+    font-size: calc(var(--pTextSize) * 0.8);
+  }
+
+  .row {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .home .swiper-slide::before{
+    height: 100%;
+  }
+}
+
+/* Desktop large (2560px et plus) */
+@media (min-width: 2560px) {
+  .about-page .home .swiper-slide::before {
+    height: 90%;
+  }
+  .navbar-nav .nav-link {
+    font-size: 50px;
+  }
+  .header-active {
+    height: 18rem;
+}
+.d-flex.align-items-center.position-absolute.top-0.end-0.mt-3.me-4 img {
+  width: 80px!important;
+  height: 80px!important;
+}
+.img-fluid {
+  max-width: 442px!important;
+}
+}
+
+/* Desktop standard */
+@media (max-width: 2560px) and (min-width: 1440px) {
+  .about-page .home .swiper-slide::before {
+    height: 93%; 
+  }
+  .about-page .swiper-navBtn {
+    height: 8rem !important;
+    width: 8rem !important;
+    top: 45%;
+}
+.navbar-nav .nav-link {
+  font-size: 30px;
+}
+.header-active {
+  height: 12rem;
+}
+.d-flex.align-items-center.position-absolute.top-0.end-0.mt-3.me-4 img {
+width: 50px!important;
+height: 50px!important;
+}
+.img-fluid {
+max-width: 337px!important;
+}
+
+}
+
+/* Tablettes horizontales */
+@media (max-width: 1440px) and (min-width: 1024px) {
+  .about-page .home .swiper-slide::before {
+    height: 88%;
+  }
+}
+
+/* Tablettes verticales */
+@media (max-width: 1024px) and (min-width: 772px) {
+  .about-page .home .swiper-slide::before {
+    height: 82%; 
+  }
+}
+
+@media (max-width: 772px) and (min-width: 769px) {
+  .about-page .home .swiper-slide::before {
+    height: 76%;
+  }
+}
+
+@media (max-width: 992px) {
+  .header {
+    background-color: var(--marron);
+  }
+  .navbar-nav {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    background-color: var(--marron);
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+}
+}
