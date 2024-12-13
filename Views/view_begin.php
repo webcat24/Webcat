@@ -17,7 +17,6 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 	<!-- CSS de Venobox -->
 	<link rel="stylesheet" href="https://unpkg.com/venobox@1.9.1/venobox.min.css" />
-
 	<link rel="stylesheet" href="Content/css/stylesheet.css"> <!-- Votre CSS personnalisé -->
 
 

@@ -25,7 +25,7 @@
 :root{  
   /* z-index */
   --z-overlay: 10;
-  --z-fixed: 100;
+  --z-fixed: 10;
   /* transition */
   --tran-0-2: 0.2s;
   --tran-0-5: 0.5s;
@@ -1028,6 +1028,187 @@ footer p, footer a {
   width: 60px;
 }
 
+/* Partie palettes */
+        /* Container */
+        .palette-container {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          justify-content: center;
+          padding: 20px;
+      }
+
+      /* Palette Card */
+      .palette-card {
+          width: 370px;
+          background: #fff;
+          border-radius: 12px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+          transition: transform 0.3s ease;
+      }
+
+      .palette-card:hover {
+          transform: scale(1.05);
+      }
+
+      /* Colors */
+
+      .palette {
+          display: flex;
+          height: 170px;
+          position: relative;
+          overflow: hidden;
+          /* Empêche les éléments agrandis de déborder */
+      }
+
+      .color {
+          flex: 1;
+          cursor: pointer;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all 0.3s ease;
+          /* Transition douce */
+          color: transparent;
+          /* Le texte est caché par défaut */
+          font-weight: bold;
+          font-size: 16px;
+          text-transform: uppercase;
+          z-index: 1;
+          /* Position initiale des couleurs */
+      }
+
+      .color:hover {
+          flex: 1.5;
+          /* Agrandit davantage la couleur */
+          transform: scale(1.2);
+          /* Effet de mise en valeur */
+          color: white;
+          /* Rendre le texte visible */
+          z-index: 2;
+          /* Place la couleur au-dessus des autres */
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+          /* Ajoute un effet d'ombre */
+      }
+
+      /* Empêche les autres éléments d'empiéter */
+      .palette .color:not(:hover) {
+          flex: 0.8;
+          /* Réduit légèrement les autres couleurs */
+          transition: flex 0.3s ease;
+          /* Transition fluide pour la réduction */
+      }
+
+
+
+      /* Footer */
+      .palette-footer {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 19px 26px;
+          background: #f9f9f9;
+      }
+
+      .expand-icon {
+          font-size: 16px;
+          color: #666;
+          text-decoration: none;
+          transition: color 0.2s ease;
+      }
+
+      .expand-icon:hover {
+          color: #000;
+      }
+
+      .likes {
+          font-size: 14px;
+          color: #666;
+      }
+
+      /* Modale */
+      .modalpalette {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: rgba(0, 0, 0, 0.8);
+          z-index: 10;
+      }
+
+      .hidden {
+          display: none;
+      }
+
+      .modal-content {
+          background: white;
+          border-radius: 12px;
+          padding: 20px;
+          position: relative;
+          width: 80%;
+          max-width: 700px;
+      }
+
+      .nav-button {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background: rgba(0, 0, 0, 0.6);
+          border: none;
+          color: white;
+          font-size: 24px;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          cursor: pointer;
+      }
+
+      .nav-button.left {
+          left: -20px;
+      }
+
+      .nav-button.right {
+          right: -20px;
+      }
+
+      .close {
+          position: absolute;
+          top: 10px;
+          right: 20px;
+          font-size: 24px;
+          color: black;
+          cursor: pointer;
+      }
+
+      .modalpalette .palette {
+          height: 400px;
+          width: 590px;
+          margin-left: auto;
+          margin-right: auto;
+      }
+
+      /* Section pour les mots */
+      .tags {
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+          margin-top: 10px;
+      }
+
+      .tag {
+          background: #f3f3f3;
+          padding: 5px 10px;
+          border-radius: 20px;
+          font-size: 14px;
+          font-weight: bold;
+      }
+      /* fin des palettes */
 
 /* Fin CSS de view_end */
 
@@ -1567,4 +1748,20 @@ max-width: 337px!important;
     padding: 20px;
 }
 }
+      @media (max-width: 689px) {
+        .expand-icon {
+          display: none;
+      }
 
+      }
+      @media (max-width: 768px) {
+      .modal-content {
+        width: 94%;
+        padding: 41px;
+
+    }
+    .close {
+      top: -3px;
+  }   
+
+      }
