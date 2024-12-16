@@ -224,3 +224,210 @@ function showSuggestions(list) {
   }
   suggBox.innerHTML = listData;
 }
+
+// script de la view palette
+// Fonction pour attacher les événements aux couleurs
+function attachColorEvents(colors) {
+  colors.forEach((color) => {
+    const colorName = color.textContent; // Sauvegarder le nom de la couleur
+
+    // Rendre le nom visible uniquement au survol
+    color.addEventListener("mouseenter", () => {
+      color.style.color = "white"; // Affiche le texte au survol
+    });
+
+    color.addEventListener("mouseleave", () => {
+      color.style.color = "transparent"; // Cache le texte lorsqu'on sort du carré
+    });
+
+    // Gérer le clic pour copier
+    color.addEventListener("click", () => {
+      const colorCode = color.getAttribute("data-color"); // Obtenir le code couleur
+
+      // Copier dans le presse-papiers
+      navigator.clipboard
+        .writeText(colorCode)
+        .then(() => {
+          // Sauvegarder temporairement le contenu original
+          const originalContent = color.textContent;
+
+          // Afficher "Copié !" temporairement
+          color.textContent = "Copié !";
+          color.style.color = "black"; // Rendre le texte visible
+          color.style.fontWeight = "bold";
+
+          // Restaurer le nom de la couleur après 2 secondes
+          setTimeout(() => {
+            color.textContent = originalContent; // Restaurer le texte
+          }, 2000);
+        })
+        .catch(() => {
+          alert("Erreur lors de la copie de la couleur.");
+        });
+    });
+  });
+}
+
+// Liste de palettes avec des couleurs
+// Fonction pour récupérer les couleurs depuis un fichier JSON
+async function fetchPalettes() {
+  try {
+    const response = await fetch("Content/js/colors.json");
+    if (!response.ok) {
+      throw new Error("Erreur lors du chargement des palettes");
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Erreur lors de la récupération des couleurs :", error);
+    return [];
+  }
+}
+let palettes = [];
+
+// Fonction pour générer les palettes dynamiquement
+async function generatePalettes() {
+  const container = document.getElementById("paletteContainer");
+  // Récupérer les palettes depuis le fichier JSON
+  const palettesCoul = await fetchPalettes();
+
+  palettesCoul.forEach((palette, index) => {
+    // Créer la carte de palette
+    const paletteCard = document.createElement("div");
+    paletteCard.className = "palette-card";
+    paletteCard.dataset.index = index;
+
+    // Créer la div de palette
+    const paletteDiv = document.createElement("div");
+    paletteDiv.className = "palette";
+
+    // Ajouter chaque couleur dans la palette
+    palette.colors.forEach((colorObj) => {
+      const colorDiv = document.createElement("div");
+      colorDiv.className = "color";
+      colorDiv.style.backgroundColor = colorObj.hex;
+      colorDiv.dataset.color = colorObj.hex;
+      colorDiv.textContent = colorObj.hex; // Affiche la couleur
+      paletteDiv.appendChild(colorDiv);
+    });
+
+    // Ajouter le footer avec l'icône d'agrandissement
+    const paletteFooter = document.createElement("div");
+    paletteFooter.className = "palette-footer";
+    const expandLink = document.createElement("a");
+    expandLink.href = "#";
+    expandLink.className = "expand-icon";
+    expandLink.textContent = "⤢";
+
+    // Ajouter l'événement sur l'icône expand-icon
+    expandLink.addEventListener("click", (event) => {
+      event.preventDefault(); // Empêcher le comportement par défaut
+      showPalette(index); // Afficher le modal
+    });
+
+    paletteFooter.appendChild(expandLink);
+
+    // Ajouter les éléments à la carte
+    paletteCard.appendChild(paletteDiv);
+    paletteCard.appendChild(paletteFooter);
+
+    // Ajouter la carte dans le conteneur principal
+    container.appendChild(paletteCard);
+  });
+
+  // Mettre à jour la liste des palettes
+  palettes = document.querySelectorAll(".palette-card");
+}
+
+function showPalette(index) {
+  if (index >= 0 && index < palettes.length) {
+    currentIndex = index;
+
+    // Afficher la palette dans le modal
+    const palette = palettes[index].querySelector(".palette").cloneNode(true);
+    modalPalette.innerHTML = ""; // Réinitialiser le contenu précédent
+    modalPalette.appendChild(palette);
+
+    // Réattacher les événements pour les couleurs dans la modale
+    const modalColors = modalPalette.querySelectorAll(".color");
+    attachColorEvents(modalColors);
+
+    // Afficher les mots correspondants
+    const tags = paletteTags[index] || [];
+    modalTags.innerHTML = tags
+      .map((tag) => `<span class="tag">${tag}</span>`)
+      .join("");
+
+    // Afficher le modal
+    modal.classList.remove("hidden");
+  } else {
+    console.error(`Index invalide pour showPalette: ${index}`);
+  }
+}
+
+// Appeler la fonction pour générer les palettes
+generatePalettes();
+
+// Fonction pour afficher la palette dans le modal
+function showPalette(index) {
+  if (index >= 0 && index < palettes.length) {
+    currentIndex = index;
+
+    // Afficher la palette dans le modal
+    const palette = palettes[index].querySelector(".palette").cloneNode(true);
+    modalPalette.innerHTML = ""; // Réinitialiser le contenu précédent
+    modalPalette.appendChild(palette);
+
+    // Réattacher les événements pour les couleurs dans la modale
+    const modalColors = modalPalette.querySelectorAll(".color");
+    attachColorEvents(modalColors);
+
+    // Afficher les mots correspondants
+    const tags = paletteTags[index] || [];
+    modalTags.innerHTML = tags
+      .map((tag) => `<span class="tag">${tag}</span>`)
+      .join("");
+
+    // Afficher le modal
+    modal.classList.remove("hidden");
+  }
+}
+
+// Fermer la modale
+function closeModalPalette() {
+  modal.classList.add("hidden");
+  modalPalette.innerHTML = "";
+  modalTags.innerHTML = "";
+}
+
+// Naviguer entre les palettes
+function navigatePalette(direction) {
+  currentIndex = (currentIndex + direction + palettes.length) % palettes.length;
+  showPalette(currentIndex);
+}
+
+// Ajouter un événement de clic sur les icônes "expand-icon"
+document.querySelectorAll(".expand-icon").forEach((icon, index) => {
+  icon.addEventListener("click", (event) => {
+    event.preventDefault(); // Empêcher le comportement par défaut du lien
+    showPalette(index);
+  });
+});
+
+// const palettes = document.querySelectorAll(".palette-card");
+const modal = document.querySelector(".modalpalette");
+const modalPalette = document.getElementById("modal-palette");
+const modalTags = document.getElementById("modal-tags"); // Conteneur pour les mots
+
+// Liste des mots pour chaque palette
+const paletteTags = [
+  ["Orange", "Nature", "Marron"], // Mots pour la première palette
+  ["Rouge", "Foncé", "Élégant"], // Mots pour la deuxième palette
+  ["Bleu", "Moderne", "Pastel"], // Mots pour la troisième palette
+];
+
+// Attacher les événements de copie et de survol aux couleurs visibles dans les cartes
+const allColors = document.querySelectorAll(".palette-card .color");
+attachColorEvents(allColors);
+
+// Fin script de la view palette

@@ -2,13 +2,13 @@
 $title = "Palettes";
 require 'view_begin.php';
 ?>
+<!-- section  images -->
 <div class="home" id="home">
     <div class="home-content">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <video class="home-img" src="Content/img/test.mp4" autoplay muted loop playsinline></video>
-
                     <div class="home-details">
                         <div class="home-text">
                             <h4 class="homeSubtitle">Exprimez-vous en couleurs.</h4>
@@ -59,7 +59,6 @@ require 'view_begin.php';
         </div>
     </div>
 </div>
-<!-- section  menu -->
 <div class="wrapper">
     <div class="search-input">
         <a href="" target="_blank" hidden></a>
@@ -71,100 +70,17 @@ require 'view_begin.php';
         </div>
     </div>
 </div>
-<div class="entoure">
-    <section id="menu">
-        <h2 class="section-title ff-damion espace">Nos Palettes</h2>
-        <div class="dishes">
-            <div class="dish">
-                <img src="Content/img/palet1.jfif" alt="Dish Image">
-                <h2>Nom</h2>
-                <span>Nom de l'artist</span>
-                <label for="color-select" class="multicolor-text">Couleur :</label>
-                <select id="color-select" class="color-dropdown">
-                    <option value="red" style="color: red;">Rouge</option>
-                    <option value="blue" style="color: blue;">Bleu</option>
-                    <option value="green" style="color: green;">Vert</option>
-                    <option value="yellow" style="color: yellow;">Jaune</option>
-                </select>
-            </div>
-            <div class="dish">
-                <img src="Content/img/palet2.webp">
-                <h2>Nom</h2>
-                <span>Nom de l'artist</span>
-                <label for="color-select" class="multicolor-text">Couleur :</label>
-                <select id="color-select" class="color-dropdown">
-                    <option value="red" style="color: red;">Rouge</option>
-                    <option value="blue" style="color: blue;">Bleu</option>
-                    <option value="green" style="color: green;">Vert</option>
-                    <option value="yellow" style="color: yellow;">Jaune</option>
-                </select>
-                <!-- <a href="#">bUY</a> -->
-            </div>
-            <div class="dish">
-                <img src="Content/img/palet3.jpg">
-                <h2>Nom</h2>
-                <span>Nom de l'artist</span>
-                <label for="color-select" class="multicolor-text">Couleur :</label>
-                <select id="color-select" class="color-dropdown">
-                    <option value="red" style="color: red;">Rouge</option>
-                    <option value="blue" style="color: blue;">Bleu</option>
-                    <option value="green" style="color: green;">Vert</option>
-                    <option value="yellow" style="color: yellow;">Jaune</option>
-                </select>
-                <!-- <a href="#">bUY</a> -->
-            </div>
-            <div class="dish">
-                <img src="Content/img/palet4.jpg">
-                <h2>Nom</h2>
-                <span>Nom de l'artist</span>
-                <label for="color-select" class="multicolor-text">Couleur :</label>
-                <select id="color-select" class="color-dropdown">
-                    <option value="red" style="color: red;">Rouge</option>
-                    <option value="blue" style="color: blue;">Bleu</option>
-                    <option value="green" style="color: green;">Vert</option>
-                    <option value="yellow" style="color: yellow;">Jaune</option>
-                </select>
-                <!-- <a href="#">bUY</a> -->
-            </div>
-            <div class="dish">
-                <img src="Content/img/palet5.jpg">
-                <h2>Nom</h2>
-                <span>Nom de l'artist</span>
-                <label for="color-select" class="multicolor-text">Couleur :</label>
-                <select id="color-select" class="color-dropdown">
-                    <option value="red" style="color: red;">Rouge</option>
-                    <option value="blue" style="color: blue;">Bleu</option>
-                    <option value="green" style="color: green;">Vert</option>
-                    <option value="yellow" style="color: yellow;">Jaune</option>
-                </select>
-                <!-- <a href="#">bUY</a> -->
-            </div>
-            <div class="dish">
-                <img src="Content/img/palet6.jpg">
-                <h2>Nom</h2>
-                <span>Nom de l'artist</span>
-                <label for="color-select" class="multicolor-text">Couleur :</label>
-                <select id="color-select" class="color-dropdown">
-                    <option value="red" style="color: red;">Rouge</option>
-                    <option value="blue" style="color: blue;">Bleu</option>
-                    <option value="green" style="color: green;">Vert</option>
-                    <option value="yellow" style="color: yellow;">Jaune</option>
-                </select>
-                <!-- <a href="#">bUY</a> -->
-            </div>
-            <div class="modal">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <img src="" alt="Fullscreen Image">
-                <div class="arrow left" onclick="navigateImage(-1)">&#10094;</div>
-                <div class="arrow right" onclick="navigateImage(1)">&#10095;</div>
-            </div>
-
-
-
-        </div>
-    </section>
+<div class="palette-container" id="paletteContainer">
 </div>
-
+<div class="modalpalette hidden">
+    <div class="modal-content">
+        <span class="close" onclick="closeModalPalette()">&times;</span>
+        <button class="nav-button left" onclick="navigatePalette(-1)">&#10094;</button>
+        <div id="modal-palette" class="palette"></div>
+        <div id="modal-tags" class="tags"></div> <!-- Section pour les mots -->
+        <button class="nav-button right" onclick="navigatePalette(1)">&#10095;</button>
+    </div>
+</div>
 
 <?php
 require 'view_end.php';
