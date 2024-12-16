@@ -970,7 +970,7 @@ footer p, footer a {
 .wrapper .search-input{
   background: var(--blanc);
   width: 100%;
-  border-radius: 5px;
+  border-radius: 50px;
   position: relative;
   box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
 }
@@ -1022,9 +1022,9 @@ footer p, footer a {
   text-align: center;
   line-height: 55px;
   font-size: 20px;
-  color: var(--blanc);
+  color: var(--marron);
   cursor: pointer;
-  background: var(--marron);
+  /* background: var(--marron); */
   width: 60px;
 }
 

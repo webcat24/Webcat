@@ -64,7 +64,7 @@
 
 				<!-- Logos user/panier à droite -->
 				<div class="d-flex align-items-center position-absolute top-0 end-0 mt-3 me-4">
-					<a href="?controller=compte&action=compte" class="me-3">
+					<a href="?controller=Connexion&action=connexion" class="me-3">
 						<img src="Content/img/user.png" alt="User" style="width: 30px; height: 30px;" />
 					</a>
 					<a href="?controller=compte&action=compte">
