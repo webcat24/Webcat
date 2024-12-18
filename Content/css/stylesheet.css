@@ -501,8 +501,39 @@ section{
   display: block;
   max-width: 90%;
   max-height: 90%;
-  object-fit: contain;
+  width: auto;
+  height: auto;
 }
+
+.notifCouleurPipette {
+  color: rgb(51, 51, 51);
+  background-color: #F8F1E9;
+  position: absolute;
+  width: 400px;
+  right: 120px;
+  top: 35px;
+
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 20px;
+
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25);
+}
+
+.textNotifPipete {
+  display: flex;
+  flex-direction: column;
+}
+
+#colorDisplayPipette {
+  width:100px;
+  height:50px;
+  border-bottom-right-radius: 20px;
+}
+
 .modal .close {
   position: absolute;
   top: 20px;

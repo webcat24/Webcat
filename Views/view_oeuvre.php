@@ -22,13 +22,8 @@ require 'view_begin.php';
                 <img src="Content/img/R.jfif" alt="Dish Image">
                 <h2>Nom</h2>
                 <span>Nom de l'artist</span>
-                <label for="color-select" class="multicolor-text">Couleur :</label>
-                <select id="color-select" class="color-dropdown">
-                    <option value="red" style="color: red;">Rouge</option>
-                    <option value="blue" style="color: blue;">Bleu</option>
-                    <option value="green" style="color: green;">Vert</option>
-                    <option value="yellow" style="color: yellow;">Jaune</option>
-                </select>
+                <!-- pipette icon -->
+                <i id="pipetteSmallEcran" class="bi bi-eyedropper" onclick="showImage(0)"></i>
                 <!-- <a href="#" class="buy-button">Acheter</a> -->
             </div>
             <div class="dish">
@@ -97,13 +92,23 @@ require 'view_begin.php';
             </div>
             <div class="modal">
                 <span class="close" onclick="closeModal()">&times;</span>
+
                 <img src="" alt="Fullscreen Image">
+                <canvas id="canvas"></canvas>
+                <div id ="notifCouleurPipette" class="notifCouleurPipette">
+                    <div class="textNotifPipete">
+                        <p>Code couleur : <span id="colorCodePipette">#------</span></p>
+                    </div>
+                    <div id="colorDisplayPipette"></div>
+                </div>
                 <div class="arrow left" onclick="navigateImage(-1)">&#10094;</div>
                 <div class="arrow right" onclick="navigateImage(1)">&#10095;</div>
             </div>
         </div>
     </section>
 </div>
+<script src="Content\js\pipette.js"></script>
+
 <?php
 require 'view_end.php';
 ?>

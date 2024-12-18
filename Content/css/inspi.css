@@ -77,7 +77,7 @@ img{
   .fc-primary {
     color: var(--primaryColor);
   }
-  
+
   .row {
     display: -webkit-box;
     display: -webkit-flex;
@@ -318,6 +318,7 @@ img{
   object-fit: contain;
 }
 
+
 .arrow {
   position: absolute;
   top: 50%;
@@ -552,7 +553,6 @@ img{
      background: #0c5adb;
      color:#fff;
 }
-
 
 .witr_cslide3_idany {
   display: grid;
