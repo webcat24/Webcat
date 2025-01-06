@@ -90,13 +90,10 @@ class Model
         return $requete->fetch(PDO::FETCH_ASSOC)["id_utilisateur"];
     }
 
-<<<<<<< HEAD
     public function getAllColors(){
         $requete = $this->bd->prepare("SELECT * FROM couleur");
         $requete->execute();
         return $requete->fetchAll(PDO::FETCH_ASSOC);
     }
     
-=======
->>>>>>> 6855e54fcfdbd391b0ccae2a4fefd2c711e461f9
 }

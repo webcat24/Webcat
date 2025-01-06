@@ -41,6 +41,7 @@ function redimentionCanvasCadre(modalImage){
     const blockColor = document.getElementById('colorDisplayPipette');
   
     // Animation pour afficher la notification
+    isNotifActive = true;
     showNotif();
   
     let hexColor = rgbToHex(colorPixel[0],colorPixel[1],colorPixel[2]);
@@ -50,9 +51,12 @@ function redimentionCanvasCadre(modalImage){
   }
   
   function showNotif() {
-    isNotifActive = true;
     const notifBlock = document.getElementById('notifCouleurPipette');
-    notifBlock.style.display = "flex";
+    if(isNotifActive){
+      notifBlock.style.display = "flex";
+    }else{
+      notifBlock.style.display = "none";
+    }
   }
   
   function rgbToHex(r, g, b) {
@@ -73,14 +77,13 @@ function redimentionCanvasCadre(modalImage){
   
     const pipetteButton = document.getElementById("pipetteIcon");
     const canvas = document.getElementById('canvas');
-    const notifBlock = document.getElementById('notifCouleurPipette');
   
     if (pipetteButton) {
       if(isPipetteActive){
         pipetteButton.style.color = "#808080";
         canvas.style.cursor = "crosshair";
-        notifBlock.style.display = "none";
         isNotifActive = false;
+        showNotif();
       } else {
         pipetteButton.style.color = "#FFFFFF";
         canvas.style.cursor = "";

@@ -21,20 +21,21 @@ function showImage(index) {
 
       // Zone canva interactif
       redimentionCanvasCadre(modalImage);
+
+      // Desactiver notif
+      isNotifActive=false;
+      showNotif();
   }
 }
 
 // Fermer la modale + retirer l'icône + restart color pipette
 function closeModal() {
   const modalElement = document.querySelector(".modal");
+  const canvas = document.getElementById('canvas');
+
   if (modalElement) {
-    const blockNameColor = document.getElementById('colorCodePipette');
-    const blockColor = document.getElementById('colorDisplayPipette');
-
-    blockNameColor.textContent="#------"; // Affichage name color
-    blockColor.style.backgroundColor=""; // Affichage color
-
     modalElement.style.display = "none";
+    canvas.style.cursor = "";
 
     // Supprimer l'icône de la pipette
     const pipetteIcon = document.getElementById("pipetteIcon");
