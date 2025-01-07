@@ -8,7 +8,7 @@ require_once "Models/Model.php";
 require_once "Controllers/Controller.php";
 
 //Liste des contrôleurs -- A RENSEIGNER
-$controllers = ["Utilisateur", "Connexion"];
+$controllers = ["Utilisateur", "Connexion","Admin"];
 //Nom du contrôleur par défaut-- A RENSEIGNER
 $controller_default = "Connexion";
 

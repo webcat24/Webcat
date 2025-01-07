@@ -67,6 +67,16 @@ class Model
         $requete->execute();
     }
 
+    public function addProducts(){
+        $requete = $this->bd->prepare("INSERT INTO Materiel (Nom_materiel, Prix_materiel, Description_materiel, Lien_image) VALUES (:name, :price, :description, :image)");
+        $requete->execute([
+            ':Nom_materiel' => $name,
+            ':Prix_materiel' => $price,
+            ':Description_materiel' => $description,
+            ':Lien_ image' => $image 
+        ]);
+    }
+
     public function isUserInDB($email){
         $requete = $this->bd->prepare("SELECT mail FROM Utilisateur WHERE mail = :email");
         $requete->bindValue(":email", $email);
