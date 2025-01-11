@@ -1,29 +1,43 @@
 <?php
+
 class Controller_admin extends Controller {
 
     public function action_admin() {   
         $m = Model::getModel();
-        $data = []; // Vous pouvez utiliser un tableau vide ou ajouter d'autres données si nécessaire
-
-        // Rendu de la page admin avec le formulaire
+        
+        // Récupérer les types de peinture depuis le modèle
+        $typesPeinture = $m->recupererTypePeinture();
+    
+        // Passer les données à la vue
+        $data = [
+            "typesPeinture" => $typesPeinture
+        ];
+    
+        // Rendu de la page admin avec les données
         $this->render("admin", $data);
     }
 
     public function action_add_product() {
         $m = Model::getModel();
-
+        
         // Vérification si une requête POST a été envoyée
-        if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["name"], $_POST["price"], $_POST["description"])) {
-            $name = htmlspecialchars($_POST["name"]);
-            $price = floatval($_POST["price"]);
-            $description = htmlspecialchars($_POST["description"]);
-            $image = ""; // Vous pouvez gérer l'image plus tard, si nécessaire
+        if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["quantite"], $_POST["nom_type_peinture"])) {
+            $quantite = htmlspecialchars($_POST["quantite"]);
+            $nom_type_peinture = htmlspecialchars($_POST["nom_type_peinture"]);
 
-            // Appel direct à la méthode addProducts
-            $m->addProducts($name, $price, $description, $image);
+            // Génération automatique d'Id_Materiel et d'Id_Couleur
+            $id_materiel = rand(1000, 9999);
+            $id_couleur = rand(1, 100);
+
+            // Appel direct à la méthode addPeinture
+            $m->addPeinture($id_materiel, $id_couleur, $quantite, $nom_type_peinture);
+
+            // Redirection vers la page admin après ajout
+            header("Location: ?controller=Admin&action=admin");
+            exit;
         }
 
-        // Redirection vers la page admin après ajout
+        // Si pas de requête POST, on redirige vers la page admin
         header("Location: ?controller=Admin&action=admin");
         exit;
     }
@@ -32,4 +46,5 @@ class Controller_admin extends Controller {
         $this->action_admin();
     }
 }
+
 ?>
