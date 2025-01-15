@@ -111,13 +111,37 @@ section{
 .bouton{
   background-color : var(--marron);
   color: var(--blanc);
-  height: 45px;
-  width: 100%;
+  height: 50px;
+  width: 125%;
   font-size: var(--police_bouton);
   text-align: center;
   border: none;
   border-radius: var(--bord_btn); /* Arrondir les bords */
-  font-family: 'WorkSans';
+}
+
+.bouton2{
+  background-color : var(--turquoise);
+  color: var(--blanc);
+  height: 50px;
+  width: 25%;
+  font-size: var(--police_bouton);
+  font-weight: var(--font-semi-bold);
+  text-align: center;
+  border: 0.5px solid var(--blanc); /* Ajoute un contour blanc */
+  border-radius: var(--bord_btn); /* Arrondir les bords */
+  margin-bottom: 15px;
+}
+
+.bouton3{
+  background-color : var(--turquoise);
+  color: var(--blanc);
+  height: 50px;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-size: var(--police_bouton);
+  font-weight: var(--font-semi-bold);
+  border: none;
+  border-radius: var(--bord_btn); /* Arrondir les bords */
 }
 
 .bouton:hover{
@@ -265,11 +289,10 @@ body.background-modifie {
   background-repeat: no-repeat;
   min-height: 100vh;
   margin: 0;
-  /* Supprime les marges par défaut */
 }
 #cont_co.container-fluid{
   max-width: 600px;
-  margin-top: 100px;
+  margin-top: 180px;
   margin-bottom: 100px;
 }
 
@@ -875,6 +898,7 @@ p.psswrd {
   border: 3px solid var(--blanc);
   background-color: var(--marron);
 } */
+
 .home-details{
   position: absolute;
   top: 50%;
@@ -1519,7 +1543,7 @@ footer p, footer a {
 /* RESPONSIVE : grands écrans (ordinateurs) */
 @media only screen and (min-width: 992px){
   div.form_co {
-    width: 60%; /* Ajuster la largeur pour les écrans de grande taille */
+    width: 80%; /* Ajuster la largeur pour les écrans de grande taille */
   }
 
   .footer-links {
@@ -1600,7 +1624,8 @@ footer p, footer a {
 }
 }
 
-@media screen and (max-width: 480px) {
+/* Version responsive pour les mobiles */
+@media (max-width: 480px) {
   .witr_content_pslide_text {
     padding: 15px; /* Réduire le padding pour les très petits écrans */
   }
@@ -1616,10 +1641,7 @@ footer p, footer a {
     line-height: 40px;
     font-size: 16px; /* Ajuster la taille du bouton */
   }
-}
 
-/* Version responsive pour les mobiles */
-@media (max-width: 480px) {
   .col-balance {
     width: 100% !important;
     padding: 10px !important;
@@ -1712,21 +1734,77 @@ footer a:hover {
 .copyright{
   color: var(--jaune);
 }
+/* Fin CSS de view_end.php */
 
-      @media (max-width: 689px) {
-        .expand-icon {
-          display: none;
-      }
+@media (max-width: 689px) {
+  .expand-icon {
+    display: none;
+  }
+}
+      
+@media (max-width: 768px) {
+  .modal-content {
+    width: 94%;
+    padding: 41px;
+  }
 
-      }
-      @media (max-width: 768px) {
-      .modal-content {
-        width: 94%;
-        padding: 41px;
-
-    }
-    .close {
-      top: -3px;
+  .close {
+    top: -3px;
   }   
+}
 
-      }
+/* Début CSS de view_accueil.php */
+
+/* Les carousels */
+.carousel-item {
+  position: relative;
+  width: 100%; /* Prend toute la largeur du conteneur */
+  height: 70vh; /* Adapte à la hauteur de l'écran */
+  overflow: hidden; /* Coupe l'image qui dépasse */
+}
+
+.carousel-item img {
+  border-radius: 0; /* Supprime les coins arrondis */
+  position: absolute;
+  width: 600px; /* Largeur fixe */
+  height: 100%; /* Remplit la hauteur du conteneur */
+  top: 0;
+  left: 50%; /* Centre horizontalement */
+  transform: translateX(-50%); /* Ajuste pour être centré */
+  object-fit: cover; /* Permet de bien couvrir l'espace */
+}
+
+.carousel-caption h5 {
+  color: var(--turquoise); /* Rend le texte transparent */
+  -webkit-text-stroke: 0.5px white; /* Contour blanc avec une largeur de 2px */
+  font-weight: bold;
+  text-transform: uppercase; /* (Facultatif) Met le texte en majuscules */
+  text-align: center;
+  font-size: 150%;
+}
+
+.accueil-bloc{
+  padding-top: 50px;
+  padding-right: 50px;
+  padding-left: 50px;
+  text-align: center;
+}
+
+.article {
+  padding-bottom: 40px;
+  padding-top: 20px;
+}
+
+.article-bloc{
+  margin-bottom: 50px;
+}
+
+.article-bloc h5{
+  color: var(--marron); /* Rend le texte transparent */
+  text-transform: uppercase; /* (Facultatif) Met le texte en majuscules */
+  font-size: 150%;
+}
+
+.col {
+  width: 25%; /* Ajuste la largeur des colonnes pour 4 images visibles */
+}

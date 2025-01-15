@@ -8,9 +8,9 @@ require_once "Models/Model.php";
 require_once "Controllers/Controller.php";
 
 //Liste des contrôleurs -- A RENSEIGNER
-$controllers = ["Utilisateur", "Connexion", "inspiration"];
+$controllers = ["Utilisateur", "Connexion", "inspiration","Accueil"];
 //Nom du contrôleur par défaut-- A RENSEIGNER
-$controller_default = "Connexion";
+$controller_default = "Accueil";
 
 //On teste si le paramètre controller existe et correspond à un contrôleur de la liste $controllers
 if (isset($_GET['controller']) and in_array($_GET['controller'], $controllers)) {
