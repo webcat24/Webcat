@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8" />
 	<title><?= $title ?></title>
 
 	<!-- Styles CSS -->
@@ -19,46 +20,45 @@
 
 
 </head>
-<body class="base <?=isset($bodyClass) ? $bodyClass:''?>">
+
+<body class="base <?= isset($bodyClass) ? $bodyClass : '' ?>">
 	<header class="header">
-	<nav class="navbar navbar-expand-lg header-custom">
-    	<div class="container-fluid d-flex flex-column align-items-center">
-      	<!-- Logo au centre -->
-      		<a class="navbar_logo" href="?controller=accueil&action=accueil">
-				<img src="Content/img/logo_long.png" alt="Logo" class="img-fluid" style="max-width: 150px;"/>
-			</a>
+		<nav class="navbar navbar-expand-lg header-custom">
+			<div class="container-fluid d-flex flex-column align-items-center">
+				<!-- Logo au centre -->
+				<a class="navbar_logo" href="?controller=accueil&action=accueil">
+					<img src="Content/img/logo_long.png" alt="Logo" class="img-fluid" style="max-width: 150px;" />
+				</a>
 
-      		<!-- Menu en dessous -->
-      		<div class="collapse navbar-collapse mt-2" id="navbarNavDropdown">
-        		<ul class="navbar-nav d-flex justify-content-center w-100">
-          			<li class="nav-item">
-            			<a class="nav-link active" aria-current="page" href="?controller=accueil&action=accueil">Accueil</a>
-          			</li>
-          			<li class="nav-item">
-            			<a class="nav-link active" aria-current="page" href="?controller=entreprise&action=entreprise">Entreprise</a>
-          			</li>
-          			<li class="nav-item dropdown">
-            			<a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">Inspiration</a>
-            			<ul class="dropdown-menu">
-              				<li><a class="dropdown-item" href="?controller=palettes&action=palettes">Palettes</a></li>
-              				<li><a class="dropdown-item" href="?controller=oeuvres&action=oeuvres">Œuvres</a></li>
-            			</ul>
-          			</li>
-          			<li class="nav-item">
-            			<a class="nav-link active" aria-current="page" href="?controller=boutique&action=boutique">Boutique</a>
-          			</li>
-        		</ul>
-      		</div>
-
-      		<!-- Logos user/panier à droite -->
-      		<div class="d-flex align-items-center position-absolute top-0 end-0 mt-3 me-4">
-        		<a href="?controller=compte&action=compte" class="me-3">
-          			<img src="Content/img/user.png" alt="User" style="width: 30px; height: 30px;" />
-        		</a>
-        		<a href="?controller=compte&action=compte">
-          			<img src="Content/img/panier.png" alt="Panier" style="width: 30px; height: 30px;" />
-        		</a>
-      		</div>
+				<!-- Menu en dessous -->
+				<div class="collapse navbar-collapse mt-2" id="navbarNavDropdown">
+					<ul class="navbar-nav d-flex justify-content-center w-100">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page"
+								href="?controller=accueil&action=accueil">Accueil</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page"
+								href="?controller=inspiration&action=afficherentreprise">Entreprise</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle"
+								href="?controller=inspiration&action=afficherinspiration" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">Inspiration</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item"
+										href="?controller=inspiration&action=affichepalettes">Palettes</a>
+								</li>
+								<li><a class="dropdown-item"
+										href="?controller=inspiration&action=afficheroeuvre">Œuvres</a></li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page"
+								href="?controller=inspiration&action=boutique">Boutique</a>
+						</li>
+					</ul>
+				</div>
 
 				<!-- Logos user/panier à droite -->
 				<div class="d-flex align-items-center position-absolute top-0 end-0 mt-3 me-4">

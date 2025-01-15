@@ -31,9 +31,42 @@ class Controller_inspiration extends Controller
 
         $this->render('entreprise');
     }
+    // public function action_affichepalettes()
+    // {
+
+    //     $this->render('palettes');
+    // }
+
     public function action_affichepalettes()
     {
+        $model = Model::getModel();
+        $palettes = $model->getPalettes();
 
-        $this->render('palettes');
+        // Organiser les palettes et leurs couleurs
+        $palette_data = [];
+        foreach ($palettes as $row) {
+            $palette_name = $row['palette_name'];
+            if (!isset($palette_data[$palette_name])) {
+                $palette_data[$palette_name] = [];
+            }
+            $palette_data[$palette_name][] = [
+                'color_name' => $row['color_name'],
+                'hex_code' => $row['hex_code']
+            ];
+        }
+
+        // Envoyer les données à la vue
+        $this->render('palettes', ['palettes' => $palette_data]);
     }
+    public function action_boutique()
+    {
+        $model = Model::getModel();
+
+        $produits = $model->getProduits();
+
+        $this->render('boutique', ['produits' => $produits]);
+    }
+
+
+
 }

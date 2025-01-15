@@ -2,61 +2,72 @@
 $title = "Oeuvres";
 require 'view_begin.php';
 ?>
-<div class="home" id="home">
-    <div class="home-content">
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <video class="home-img" src="Content/img/test.mp4" autoplay muted loop playsinline></video>
+<div class="carousel next">
+    <div class="list">
+        <article class="item other_1">
+            <div class="main-content" style="background: linear-gradient(#603524, #d69041);">
+                <!-- <div class="main-content" style="background: linear-gradient(to right, #b26c86, #4b3d4f);"> -->
 
-                    <div class="home-details">
-                        <div class="home-text">
-                            <h4 class="homeSubtitle">Exprimez-vous en couleurs.</h4>
-                            <h2 class="homeTitle"> Les couleurs de <br>votre art</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <img src="https://th.bing.com/th/id/OIP.GXMvjgr-sSB8Uqqos6JNCwHaFa?rs=1&pid=ImgDetMain" alt=""
-                        class="home-img">
-
-                    <div class="home-details">
-                        <div class="home-text">
-                            <h4 class="homeSubtitle">Slogan different si on veut.</h4>
-                            <h2 class="homeTitle">Slogan different si on veut <br> reflechir</h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <img src="https://static.vecteezy.com/system/resources/previews/002/744/052/original/trendy-beautiful-gradient-color-palettes-vector.jpg"
-                        alt="" class="home-img">
-
-                    <div class="home-details">
-                        <div class="home-text">
-                            <h4 class="homeSubtitle">Slogan different si on veut.</h4>
-                            <h2 class="homeTitle">Slogan different si on veut <br> reflechir</h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <img src="https://www.johnbeckley.com/images/2017/04/Marilyn-monroe-painting-john-beckley-2017-edition.jpg"
-                        alt="" class="home-img">
-
-                    <div class="home-details">
-                        <div class="home-text">
-                            <h4 class="homeSubtitle">Slogan different si on veut.</h4>
-                            <h2 class="homeTitle">Slogan different si on veut <br> reflechir</h2>
-                        </div>
-                    </div>
+                <div class="content">
+                    <h2>Exprimez-vous en couleurs.</h2>
                 </div>
             </div>
-
-            <div class="swiper-button-next swiper-navBtn"></div>
-            <div class="swiper-button-prev swiper-navBtn"></div>
-            <div class="swiper-pagination"></div>
-        </div>
+            <figure class="image">
+                <img src="Content/img/oeuvre1.jpg" alt="" crossorigin="anonymous">
+                <figcaption>Les couleurs de votre art</figcaption>
+            </figure>
+        </article>
+        <article class="item active">
+            <!-- <div class="main-content" style="background-color: #f5bfaf;"> -->
+            <div class="main-content" style="background: linear-gradient(#fdefe5, #faaec6);">
+                <div class="content">
+                    <h2>Exprimez-vous en couleurs.</h2>
+                </div>
+            </div>
+            <figure class="image">
+                <img src="Content/img/oeuvre2.jpg" alt="" crossorigin="anonymous">
+                <figcaption>Les couleurs de votre art</figcaption>
+            </figure>
+        </article>
+        <article class="item other_2">
+            <div class="main-content" style="background: linear-gradient(#3474d4, #83c2ef);">
+                <div class=" content">
+                    <h2>Exprimez-vous en couleurs.</h2>
+                </div>
+            </div>
+            <figure class="image">
+                <img src="Content/img/oeuvre3.jpg" alt="" crossorigin="anonymous">
+                <figcaption>Les couleurs de votre art</figcaption>
+            </figure>
+        </article>
+        <article class="item">
+            <div class="main-content" style="background: linear-gradient(#f0a60c, #97c9f7);">
+                <div class="content">
+                    <h2>Exprimez-vous en couleurs.</h2>
+                </div>
+            </div>
+            <figure class="image">
+                <img src="Content/img/oeuvre4.jpg" alt="" crossorigin="anonymous">
+                <figcaption>Les couleurs de votre art</figcaption>
+            </figure>
+        </article>
+        <article class="item">
+            <!-- <div class="main-content" style="background: linear-gradient(to right, #bc60a1, #2c3151);"> -->
+            <div class="main-content" style="background: linear-gradient(#dfb66d, #5b6f75);">
+                <div class="content">
+                    <h2>Exprimez-vous en couleurs.</h2>
+                </div>
+            </div>
+            <figure class="image">
+                <img src="Content/img/oeuvre6.jpg" alt="" crossorigin="anonymous">
+                <figcaption>Les couleurs de votre art</figcaption>
+            </figure>
+        </article>
+    </div>
+    <div class="arrows">
+        <button id="prev">
+            < </button>
+                <button id="next">></button>
     </div>
 </div>
 <!-- section  menu -->

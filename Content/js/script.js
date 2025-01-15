@@ -14,7 +14,6 @@ function showImage(index) {
 }
 
 // Fermer le plein écran
-// Fermer le plein écran
 function closeModal() {
   const modalElement = document.querySelector(".modal");
   if (modalElement) {
@@ -64,9 +63,6 @@ document.querySelectorAll(".arrow").forEach((arrow) => {
     event.stopPropagation(); // Empêche la fermeture du modal
   });
 });
-
-// Fermer le modal lorsqu'on clique ailleurs
-// document.querySelector(".modal").addEventListener("click", closeModal);
 
 // Swiper js
 document.addEventListener("DOMContentLoaded", () => {
@@ -166,268 +162,314 @@ let suggestions = [
   "What does CSS stands for?",
 ];
 // getting all required elements
+
 const searchWrapper = document.querySelector(".search-input");
-const inputBox = searchWrapper.querySelector("input");
-const suggBox = searchWrapper.querySelector(".autocom-box");
-const icon = searchWrapper.querySelector(".icon");
-let linkTag = searchWrapper.querySelector("a");
-let webLink;
+if (searchWrapper) {
+  const inputBox = searchWrapper.querySelector("input");
+  const suggBox = searchWrapper.querySelector(".autocom-box");
+  const icon = searchWrapper.querySelector(".icon");
+  let linkTag = searchWrapper.querySelector("a");
+  let webLink;
 
-// if user press any key and release
-inputBox.onkeyup = (e) => {
-  let userData = e.target.value; //user enetered data
-  let emptyArray = [];
-  if (userData) {
-    icon.onclick = () => {
-      webLink = `https://www.google.com/search?q=${userData}`;
-      linkTag.setAttribute("href", webLink);
-      linkTag.click();
+  if (inputBox && suggBox && icon && linkTag) {
+    // if user presses any key and releases
+    inputBox.onkeyup = (e) => {
+      let userData = e.target.value; // user entered data
+      let emptyArray = [];
+      if (userData) {
+        icon.onclick = () => {
+          webLink = `https://www.google.com/search?q=${userData}`;
+          linkTag.setAttribute("href", webLink);
+          linkTag.click();
+        };
+        emptyArray = suggestions.filter((data) => {
+          // filtering array value and user characters to lowercase and return only those words which start with user entered chars
+          return data
+            .toLocaleLowerCase()
+            .startsWith(userData.toLocaleLowerCase());
+        });
+        emptyArray = emptyArray.map((data) => {
+          // passing return data inside li tag
+          return `<li>${data}</li>`;
+        });
+        searchWrapper.classList.add("active"); // show autocomplete box
+        showSuggestions(emptyArray);
+        let allList = suggBox.querySelectorAll("li");
+        for (let i = 0; i < allList.length; i++) {
+          // adding onclick attribute in all li tags
+          allList[i].setAttribute("onclick", "select(this)");
+        }
+      } else {
+        searchWrapper.classList.remove("active"); // hide autocomplete box
+      }
     };
-    emptyArray = suggestions.filter((data) => {
-      //filtering array value and user characters to lowercase and return only those words which are start with user enetered chars
-      return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
-    });
-    emptyArray = emptyArray.map((data) => {
-      // passing return data inside li tag
-      return (data = `<li>${data}</li>`);
-    });
-    searchWrapper.classList.add("active"); //show autocomplete box
-    showSuggestions(emptyArray);
-    let allList = suggBox.querySelectorAll("li");
-    for (let i = 0; i < allList.length; i++) {
-      //adding onclick attribute in all li tag
-      allList[i].setAttribute("onclick", "select(this)");
+
+    function select(element) {
+      let selectData = element.textContent;
+      inputBox.value = selectData;
+      icon.onclick = () => {
+        webLink = `https://www.google.com/search?q=${selectData}`;
+        linkTag.setAttribute("href", webLink);
+        linkTag.click();
+      };
+      searchWrapper.classList.remove("active");
     }
-  } else {
-    searchWrapper.classList.remove("active"); //hide autocomplete box
-  }
-};
 
-function select(element) {
-  let selectData = element.textContent;
-  inputBox.value = selectData;
-  icon.onclick = () => {
-    webLink = `https://www.google.com/search?q=${selectData}`;
-    linkTag.setAttribute("href", webLink);
-    linkTag.click();
-  };
-  searchWrapper.classList.remove("active");
-}
-
-function showSuggestions(list) {
-  let listData;
-  if (!list.length) {
-    userValue = inputBox.value;
-    listData = `<li>${userValue}</li>`;
-  } else {
-    listData = list.join("");
+    function showSuggestions(list) {
+      let listData;
+      if (!list.length) {
+        const userValue = inputBox.value;
+        listData = `<li>${userValue}</li>`;
+      } else {
+        listData = list.join("");
+      }
+      suggBox.innerHTML = listData;
+    }
   }
-  suggBox.innerHTML = listData;
 }
 
 // script de la view palette
-// Fonction pour attacher les événements aux couleurs
-function attachColorEvents(colors) {
-  colors.forEach((color) => {
-    const colorName = color.textContent; // Sauvegarder le nom de la couleur
-
-    // Rendre le nom visible uniquement au survol
-    color.addEventListener("mouseenter", () => {
-      color.style.color = "white"; // Affiche le texte au survol
-    });
-
-    color.addEventListener("mouseleave", () => {
-      color.style.color = "transparent"; // Cache le texte lorsqu'on sort du carré
-    });
-
-    // Gérer le clic pour copier
-    color.addEventListener("click", () => {
-      const colorCode = color.getAttribute("data-color"); // Obtenir le code couleur
-
-      // Copier dans le presse-papiers
-      navigator.clipboard
-        .writeText(colorCode)
-        .then(() => {
-          // Sauvegarder temporairement le contenu original
-          const originalContent = color.textContent;
-
-          // Afficher "Copié !" temporairement
-          color.textContent = "Copié !";
-          color.style.color = "black"; // Rendre le texte visible
-          color.style.fontWeight = "bold";
-
-          // Restaurer le nom de la couleur après 2 secondes
-          setTimeout(() => {
-            color.textContent = originalContent; // Restaurer le texte
-          }, 2000);
-        })
-        .catch(() => {
-          alert("Erreur lors de la copie de la couleur.");
-        });
-    });
-  });
-}
-
-// Liste de palettes avec des couleurs
-// Fonction pour récupérer les couleurs depuis un fichier JSON
-async function fetchPalettes() {
-  try {
-    const response = await fetch("Content/js/colors.json");
-    if (!response.ok) {
-      throw new Error("Erreur lors du chargement des palettes");
-    }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error("Erreur lors de la récupération des couleurs :", error);
-    return [];
-  }
-}
-let palettes = [];
-
-// Fonction pour générer les palettes dynamiquement
-async function generatePalettes() {
-  const container = document.getElementById("paletteContainer");
-  // Récupérer les palettes depuis le fichier JSON
-  const palettesCoul = await fetchPalettes();
-
-  palettesCoul.forEach((palette, index) => {
-    // Créer la carte de palette
-    const paletteCard = document.createElement("div");
-    paletteCard.className = "palette-card";
-    paletteCard.dataset.index = index;
-
-    // Créer la div de palette
-    const paletteDiv = document.createElement("div");
-    paletteDiv.className = "palette";
-
-    // Ajouter chaque couleur dans la palette
-    palette.colors.forEach((colorObj) => {
-      const colorDiv = document.createElement("div");
-      colorDiv.className = "color";
-      colorDiv.style.backgroundColor = colorObj.hex;
-      colorDiv.dataset.color = colorObj.hex;
-      colorDiv.textContent = colorObj.hex; // Affiche la couleur
-      paletteDiv.appendChild(colorDiv);
-    });
-
-    // Ajouter le footer avec l'icône d'agrandissement
-    const paletteFooter = document.createElement("div");
-    paletteFooter.className = "palette-footer";
-    const expandLink = document.createElement("a");
-    expandLink.href = "#";
-    expandLink.className = "expand-icon";
-    expandLink.textContent = "⤢";
-
-    // Ajouter l'événement sur l'icône expand-icon
-    expandLink.addEventListener("click", (event) => {
-      event.preventDefault(); // Empêcher le comportement par défaut
-      showPalette(index); // Afficher le modal
-    });
-
-    paletteFooter.appendChild(expandLink);
-
-    // Ajouter les éléments à la carte
-    paletteCard.appendChild(paletteDiv);
-    paletteCard.appendChild(paletteFooter);
-
-    // Ajouter la carte dans le conteneur principal
-    container.appendChild(paletteCard);
-  });
-
-  // Mettre à jour la liste des palettes
-  palettes = document.querySelectorAll(".palette-card");
-}
-
+// Fonction pour afficher une palette dans le modal
 function showPalette(index) {
-  if (index >= 0 && index < palettes.length) {
-    currentIndex = index;
+  const modal = document.querySelector(".modalpalette");
+  const modalPalette = document.getElementById("modal-palette");
+  const palettes = document.querySelectorAll(".palette-card");
 
-    // Afficher la palette dans le modal
+  if (index >= 0 && index < palettes.length) {
+    // Récupérez la palette à afficher
     const palette = palettes[index].querySelector(".palette").cloneNode(true);
-    modalPalette.innerHTML = ""; // Réinitialiser le contenu précédent
+
+    // Effacez le contenu précédent
+    modalPalette.innerHTML = "";
     modalPalette.appendChild(palette);
 
-    // Réattacher les événements pour les couleurs dans la modale
+    // Réattachez les événements aux couleurs
     const modalColors = modalPalette.querySelectorAll(".color");
     attachColorEvents(modalColors);
 
-    // Afficher les mots correspondants
-    const tags = paletteTags[index] || [];
-    modalTags.innerHTML = tags
-      .map((tag) => `<span class="tag">${tag}</span>`)
-      .join("");
-
-    // Afficher le modal
+    // Affichez la modale
     modal.classList.remove("hidden");
   } else {
     console.error(`Index invalide pour showPalette: ${index}`);
   }
 }
 
-// Appeler la fonction pour générer les palettes
-generatePalettes();
+// Fonction pour attacher les événements aux couleurs
+function attachColorEvents(colors) {
+  colors.forEach((color) => {
+    const colorName = color.textContent;
 
-// Fonction pour afficher la palette dans le modal
-function showPalette(index) {
-  if (index >= 0 && index < palettes.length) {
-    currentIndex = index;
+    // Afficher le nom au survol
+    color.addEventListener("mouseenter", () => {
+      color.style.color = "white";
+    });
 
-    // Afficher la palette dans le modal
-    const palette = palettes[index].querySelector(".palette").cloneNode(true);
-    modalPalette.innerHTML = ""; // Réinitialiser le contenu précédent
-    modalPalette.appendChild(palette);
+    // Masquer le nom en quittant
+    color.addEventListener("mouseleave", () => {
+      color.style.color = "transparent";
+    });
 
-    // Réattacher les événements pour les couleurs dans la modale
-    const modalColors = modalPalette.querySelectorAll(".color");
-    attachColorEvents(modalColors);
-
-    // Afficher les mots correspondants
-    const tags = paletteTags[index] || [];
-    modalTags.innerHTML = tags
-      .map((tag) => `<span class="tag">${tag}</span>`)
-      .join("");
-
-    // Afficher le modal
-    modal.classList.remove("hidden");
-  }
+    // Copier au clic
+    color.addEventListener("click", () => {
+      const colorCode = color.getAttribute("data-color");
+      navigator.clipboard
+        .writeText(colorCode)
+        .then(() => {
+          color.textContent = "Copié !";
+          setTimeout(() => {
+            color.textContent = colorName;
+          }, 2000);
+        })
+        .catch(() => {
+          alert("Erreur lors de la copie.");
+        });
+    });
+  });
 }
 
-// Fermer la modale
-function closeModalPalette() {
-  modal.classList.add("hidden");
-  modalPalette.innerHTML = "";
-  modalTags.innerHTML = "";
-}
-
-// Naviguer entre les palettes
+// Fonction pour naviguer entre les palettes
 function navigatePalette(direction) {
+  const palettes = document.querySelectorAll(".palette-card");
   currentIndex = (currentIndex + direction + palettes.length) % palettes.length;
   showPalette(currentIndex);
 }
 
-// Ajouter un événement de clic sur les icônes "expand-icon"
+// Fermer la modale
+function closeModalPalette() {
+  const modal = document.querySelector(".modalpalette");
+  modal.classList.add("hidden");
+}
+
+// Ajouter des événements pour les icônes d'agrandissement
 document.querySelectorAll(".expand-icon").forEach((icon, index) => {
   icon.addEventListener("click", (event) => {
-    event.preventDefault(); // Empêcher le comportement par défaut du lien
+    event.preventDefault();
     showPalette(index);
   });
 });
-
-// const palettes = document.querySelectorAll(".palette-card");
-const modal = document.querySelector(".modalpalette");
-const modalPalette = document.getElementById("modal-palette");
-const modalTags = document.getElementById("modal-tags"); // Conteneur pour les mots
-
-// Liste des mots pour chaque palette
-const paletteTags = [
-  ["Orange", "Nature", "Marron"], // Mots pour la première palette
-  ["Rouge", "Foncé", "Élégant"], // Mots pour la deuxième palette
-  ["Bleu", "Moderne", "Pastel"], // Mots pour la troisième palette
-];
 
 // Attacher les événements de copie et de survol aux couleurs visibles dans les cartes
 const allColors = document.querySelectorAll(".palette-card .color");
 attachColorEvents(allColors);
 
 // Fin script de la view palette
+
+// script pour le caroussel
+document.addEventListener("DOMContentLoaded", () => {
+  const myCarouselElement = document.querySelector("#myCarousel");
+
+  if (myCarouselElement) {
+    const carousel = new bootstrap.Carousel(myCarouselElement, {
+      interval: 5000, // Temps entre les slides
+      ride: "carousel", // Démarrage automatique
+      pause: false, // Empêche l'arrêt au survol
+    });
+  }
+});
+
+// fin du script pour le caroussel
+(function () {
+  let field = document.querySelector(".items");
+  if (!field) {
+    // Arrête l'exécution si le conteneur ".items" n'existe pas
+    console.warn('Le conteneur ".items" est introuvable.');
+    return;
+  }
+
+  let li = Array.from(field.children);
+
+  // Vérifiez si les conteneurs pour les filtres existent
+  const categoryContainer = document.querySelector(".categories");
+  const colorContainer = document.querySelector(".colors");
+  const shadeContainer = document.querySelector(".shades");
+
+  if (!categoryContainer || !colorContainer || !shadeContainer) {
+    console.warn(
+      "Un ou plusieurs conteneurs de filtres (categories, colors, shades) sont introuvables."
+    );
+    return;
+  }
+
+  // Générer dynamiquement les filtres
+  function generateFilters() {
+    const categories = new Set();
+    const colors = new Set();
+    const shades = new Set();
+
+    for (let item of li) {
+      const category = item.getAttribute("data-category");
+      if (category && category.trim() !== "") {
+        category.split(",").forEach((cat) => categories.add(cat.trim()));
+      }
+
+      const color = item.getAttribute("data-color");
+      if (color && color.trim() !== "") {
+        color.split(",").forEach((col) => colors.add(col.trim()));
+      }
+
+      const shade = item.getAttribute("data-shade");
+      if (shade && shade.trim() !== "") {
+        shade.split(",").forEach((sh) => shades.add(sh.trim()));
+      }
+    }
+
+    // Ajouter l'option "All" pour chaque filtre
+    categoryContainer.innerHTML = `<li data-filter="all" class="active"><a href="#">All</a></li>`;
+    colorContainer.innerHTML = `<li data-filter="all" class="active"><a href="#">All</a></li>`;
+    shadeContainer.innerHTML = `<li data-filter="all" class="active"><a href="#">All</a></li>`;
+
+    categories.forEach((cat) => {
+      categoryContainer.innerHTML += `<li data-filter="${cat}"><a href="#">${cat}</a></li>`;
+    });
+
+    colors.forEach((col) => {
+      colorContainer.innerHTML += `<li data-filter="${col}"><a href="#">${col}</a></li>`;
+    });
+
+    shades.forEach((sh) => {
+      shadeContainer.innerHTML += `<li data-filter="${sh}"><a href="#">${sh}</a></li>`;
+    });
+  }
+
+  // Appliquer les filtres
+  function applyFilters() {
+    const selectedCategory =
+      document
+        .querySelector(".categories .active")
+        ?.getAttribute("data-filter") || "all";
+    const selectedColor =
+      document.querySelector(".colors .active")?.getAttribute("data-filter") ||
+      "all";
+    const selectedShade =
+      document.querySelector(".shades .active")?.getAttribute("data-filter") ||
+      "all";
+
+    const productContainer = document.querySelector(".product-container");
+    let visibleItems = 0;
+    let lastVisibleItem = null;
+
+    for (let item of li) {
+      const categoryMatch =
+        selectedCategory === "all" ||
+        (item.getAttribute("data-category") || "")
+          .split(",")
+          .includes(selectedCategory);
+
+      const colorMatch =
+        selectedColor === "all" ||
+        (item.getAttribute("data-color") || "")
+          .split(",")
+          .includes(selectedColor);
+
+      const shadeMatch =
+        selectedShade === "all" ||
+        (item.getAttribute("data-shade") || "")
+          .split(",")
+          .includes(selectedShade);
+
+      if (categoryMatch && colorMatch && shadeMatch) {
+        item.style.display = "block";
+        item.style.transform = "scale(1)";
+        visibleItems++;
+        lastVisibleItem = item;
+      } else {
+        item.style.display = "none";
+        item.style.transform = "scale(0)";
+      }
+    }
+
+    if (visibleItems === 1 && lastVisibleItem) {
+      lastVisibleItem.style.width = "50%";
+      if (productContainer)
+        productContainer.style.justifyContent = "flex-start";
+    } else {
+      for (let item of li) {
+        item.style.width = "30.4%";
+      }
+    }
+  }
+
+  // Ajouter les écouteurs pour les filtres
+  function setupFilterListeners() {
+    const indicators = document.querySelectorAll(".indicator li");
+    indicators.forEach((indicator) => {
+      indicator.addEventListener("click", function () {
+        if (this.classList.contains("active")) {
+          this.classList.remove("active");
+        } else {
+          const group = this.parentElement;
+          const siblings = group.children;
+          for (let sibling of siblings) {
+            sibling.classList.remove("active");
+          }
+          this.classList.add("active");
+        }
+        applyFilters();
+      });
+    });
+  }
+
+  // Initialisation
+  generateFilters();
+  setupFilterListeners();
+})();

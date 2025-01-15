@@ -1,42 +1,115 @@
-<?php $title= "Mon compte";
+<?php $title = "Mon compte";
+$bodyClass = "profile";
 require "view_begin.php";
 ?>
+<!-- Boxicons -->
+<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div>
-        <h1>Favoris</h1>
-        <?php foreach($fav as $v): ?>
-            <div style="background: #F5F5DC; border: 5px solid black;">
-               <p><?= $v["nom"] ?></p>
-               <p>Prix : <?= $v["prix"] ?>€</p>
-               <p><img src="<?= $v["img_link"] ?>" alt="image du produit"></p>
-        </div>
-        <?php endforeach ?>
-        <h1>Panier</h1>
-        <?php foreach($panier as $v): ?>
-            <div style="background: #F5F5DC; border: 5px solid black;">
-               <p><?= $v["nom"] ?></p>
-               <p>Prix : <?= $v["prix"] ?>€</p>
-               <p><img src="<?= $v["img_link"] ?>" alt="image du produit"></p>
-        </div>
-        <?php endforeach ?>
-        <h1>Historique</h1>
-        <?php foreach($historique as $v): ?>
-            <div style="background: #F5F5DC; border: 5px solid black;">
-               <p><?= $v["nom"] ?></p>
-               <p>Prix : <?= $v["prix"] ?>€</p>
-               <p><img src="<?= $v["img_link"] ?>" alt="image du produit"></p>
-        </div>
-        <?php endforeach ?>
-    </div>
-</body>
-</html>
+<!-- CONTENT -->
+<section id="content">
+    <!-- NAVBAR -->
+    <nav>
+        <form action="#">
+            <div class="form-input">
+                <input type="search" placeholder="Search...">
+                <button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
+            </div>
+        </form>
+        <!-- <a href="#" class="notification">
+            <i class='bx bxs-bell'></i>
+            <span class="num">8</span>
+        </a> -->
+        <a href="#" class="profile">
+            <img src="Content/img/image.png">
+        </a>
+    </nav>
+    <!-- NAVBAR -->
 
+    <!-- MAIN -->
+    <main>
+        <h3>Favoris</h3>
+        <ul class="box-info">
+            <?php foreach ($fav as $v): ?>
+                <li>
+                    <!-- <img src="<?= htmlspecialchars($v["img_link"]) ?>" alt="image du produit" class='bx'> -->
+                    <img src="Content/img/image.png" alt="image du produit" class='bx'>
+                    <span class="text">
+                        <h3><?= htmlspecialchars($v["nom"]) ?></h3>
+                        <p>Prix : <?= htmlspecialchars($v["prix"]) ?>€</p>
+                    </span>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+        <div class="table-data">
+            <div class="order">
+                <div class="head">
+                    <h3>Historique</h3>
+                    <i class='bx bx-search'></i>
+                    <i class='bx bx-filter'></i>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tableau</th>
+                            <th>Prix</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($historique as $v): ?>
+                            <tr>
+                                <td>
+                                    <!-- <img src="<?= $v["img_link"] ?>" alt="image du produit"> -->
+                                    <img src="Content/img/image.png">
+                                    <p><?= $v["nom"] ?></p>
+                                </td>
+                                <td><?= $v["prix"] ?>€ </td>
+                                <td><span class="status completed">Completed</span></td>
+                            </tr>
+                        <?php endforeach ?>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="todo">
+                <div class="head">
+                    <h3>Panier</h3>
+                    <div class="actions">
+                        <button class="btn add-item" title="Ajouter un produit">
+                            <i class='bx bx-plus'></i>
+                        </button>
+                        <button class="btn filter-items" title="Filtrer les produits">
+                            <i class='bx bx-filter'></i>
+                        </button>
+                    </div>
+                </div>
+                <ul class="todo-list">
+                    <?php foreach ($panier as $v): ?>
+                        <li class="completed">
+                            <div class="product-image">
+                                <!-- <img src="<?= htmlspecialchars($v["img_link"]) ?>" alt="image du produit"> -->
+                                <img src="Content/img/image.png">
+                            </div>
+                            <div class="product-details">
+                                <p class="product-name">Nom : <?= htmlspecialchars($v["nom"]) ?></p>
+                                <p class="product-price">Prix : <?= htmlspecialchars($v["prix"]) ?>€</p>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn remove-item" title="Retirer">
+                                    <i class='bx bx-trash'></i>
+                                </button>
+                            </div>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+
+
+
+        </div>
+        </div>
+    </main>
+    <!-- MAIN -->
+</section>
+<!-- CONTENT -->
 <?php require "view_end.php"; ?>
