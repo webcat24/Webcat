@@ -67,9 +67,11 @@ function redimentionCanvasCadre(modalImage){
     return "#" + [r, g, b].map(toHex).join("");
   }
   
-  // Activation pipette grâce à la pipetteSmallEcran
-  const pipetteSmallEcran = document.getElementById("pipetteSmallEcran");
-  pipetteSmallEcran.addEventListener("click", pipetteEtat);
+  // Activation pour toutes les pipettes grâce à la pipetteSmallEcran
+  const pipetteSmallEcranCollection = document.querySelectorAll('[id^="pipetteSmallEcran"]');
+  pipetteSmallEcranCollection.forEach((littlePipette)=>{
+    littlePipette.addEventListener("click", pipetteEtat)
+  })
   
   // Fonction qui permet d'activer ou désactiver la pipette
   function pipetteEtat() {

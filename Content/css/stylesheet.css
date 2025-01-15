@@ -602,6 +602,33 @@ p.psswrd {
   color: #ccc; /* Change de couleur au survol */
 }
 
+/* BarreNavOeuvre */
+.navBarreNavOeuvre ul {
+  display: flex;
+  justify-content: center;
+}
+
+.navBarreNavOeuvre ul li {
+  margin: 15px;
+}
+
+.navBarreNavOeuvre ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  background-color: var(--marron);
+}
+
+.navBarreNavOeuvre ul li a.pageActive{
+  background-color: var(--rose);
+}
+
+.navBarreNavOeuvre ul li a:hover {
+  background-color: var(--jaune);
+  color: gray;
+}
 
 /* Inspiration */
 .slick-slider .col-md-12,

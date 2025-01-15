@@ -96,4 +96,21 @@ class Model
         return $requete->fetchAll(PDO::FETCH_ASSOC);
     }
     
-}
+    public function getOeuvresWithTheirArtisteAndImg($debut, $fin){
+        $requete = $this->bd->prepare("SELECT id_oeuvres, nom_oeuvre, oeuvres.id_artiste, nom_artiste, images.id_image, Lien_image FROM oeuvres
+                                                    JOIN artiste ON oeuvres.id_artiste = artiste.id_artiste
+                                                    JOIN images ON oeuvres.id_image = images.id_image
+                                                        WHERE id_oeuvres BETWEEN :DEBUT AND :FIN 
+                                                            ORDER BY id_oeuvres ASC;");
+        $requete->bindValue(':DEBUT', $debut);
+        $requete->bindValue(':FIN', $fin);
+        $requete->execute();
+        return $requete->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getNombreTotalOeuvres(){
+        $requete = $this->bd->prepare("SELECT count(*) AS quantite FROM oeuvres");
+        $requete->execute();
+        return $requete->fetch(PDO::FETCH_ASSOC);
+    }
+} 
