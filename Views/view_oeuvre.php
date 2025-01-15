@@ -1,7 +1,7 @@
 <?php
 $title = "Oeuvres";
 require 'view_begin.php';
-var_dump($data)
+// var_dump(value: $data)
 ?>
 <div class="carousel next">
     <div class="list">
@@ -87,23 +87,24 @@ var_dump($data)
     <section id="menu">
         <h2 class="section-title ff-damion espace">Nos Œuvres</h2>
         <div class="dishes">
-        <?php foreach ($data["dataTableaux"] as $oeuvre):?>
-            <div class="dish">
-                <img src="<?=$oeuvre['lien_image']?>" alt="Dish Image">
-                <h2><?=e($oeuvre['nom_oeuvre'])?></h2>
-                <span><?=e($oeuvre['nom_artiste'])?></span>
-                <!-- pipette icon -->
-                <i id="pipetteSmallEcran" class="bi bi-eyedropper" onclick="showImage(<?=$oeuvre['id_oeuvres'] - 1?>)"></i>
-                <!-- <a href="#" class="buy-button">Acheter</a> -->
-            </div>
-        <?php endforeach;?>   
+            <?php foreach ($data["dataTableaux"] as $oeuvre): ?>
+                <div class="dish">
+                    <img src="<?= $oeuvre['lien_image'] ?>" alt="Dish Image">
+                    <h2><?= e($oeuvre['nom_oeuvre']) ?></h2>
+                    <span><?= e($oeuvre['nom_artiste']) ?></span>
+                    <!-- pipette icon -->
+                    <i id="pipetteSmallEcran" class="bi bi-eyedropper"
+                        onclick="showImage(<?= $oeuvre['id_oeuvres'] - 1 ?>)"></i>
+                    <!-- <a href="#" class="buy-button">Acheter</a> -->
+                </div>
+            <?php endforeach; ?>
 
             <div class="modal">
                 <span class="close" onclick="closeModal()">&times;</span>
 
                 <img src="" alt="Fullscreen Image">
                 <canvas id="canvas"></canvas>
-                <div id ="notifCouleurPipette" class="notifCouleurPipette">
+                <div id="notifCouleurPipette" class="notifCouleurPipette">
                     <div class="textNotifPipete">
                         <p>Code couleur : <span id="colorCodePipette">#------</span></p>
                     </div>
@@ -120,17 +121,19 @@ var_dump($data)
 <div class="conteneurBarreNavOeuvre">
     <nav class="navBarreNavOeuvre">
         <ul>
-            <?php for($i=1; $i <= $data["taillePageNav"]; $i++) :?>
-            <li>
-                <a <?php if($i==$data["currentPage"]){ echo"class=\"pageActive\"";} ?>
-                    href="http://localhost/SAE5/git/Webcat/?controller=Controller_inspiration&action=afficheroeuvre&page=<?=$i?>">
-                    <?=$i?>
-                </a>
-            </li>
-            <?php endfor?>
+            <?php for ($i = 1; $i <= $data["taillePageNav"]; $i++): ?>
+                <li>
+                    <a <?php if ($i == $data["currentPage"]) {
+                        echo "class=\"pageActive\"";
+                    } ?>
+                        href="http://localhost/SAE5/git/Webcat/?controller=Controller_inspiration&action=afficheroeuvre&page=<?= $i ?>">
+                        <?= $i ?>
+                    </a>
+                </li>
+            <?php endfor ?>
         </ul>
     </nav>
-</div> 
+</div>
 
 <script src="Content\js\pipette.js"></script>
 

@@ -5,19 +5,44 @@ let currentIndex = -1;
 // Fonction pour afficher une image en plein écran
 function showImage(index) {
   const modal = document.querySelector(".modal");
-  const modalImage = document.querySelector(".modal img");
+  const modalImage = modal.querySelector("img");
+
   if (index >= 0 && index < images.length) {
     currentIndex = index;
     modalImage.src = images[index].src;
-    modal.style.display = "flex"; // Affiche le modal
+    modal.style.display = "flex"; // Affiche la modale
+
+    // Crée l'icône de la pipette et l'ajoute à la modale
+    createPipetteIconImagePleinEcran();
+
+    // Activation de la pipette sur l'icône
+    const pipetteButton = document.getElementById("pipetteIcon");
+    pipetteButton.addEventListener("click", pipetteEtat);
+
+    // Zone canva interactif
+    redimentionCanvasCadre(modalImage);
+
+    // Desactiver notif
+    isNotifActive = false;
+    showNotif();
   }
 }
 
-// Fermer le plein écran
+// Fermer la modale + retirer l'icône + restart color pipette
 function closeModal() {
   const modalElement = document.querySelector(".modal");
+  const canvas = document.getElementById("canvas");
+
   if (modalElement) {
     modalElement.style.display = "none";
+    canvas.style.cursor = "";
+
+    // Supprimer l'icône de la pipette
+    const pipetteIcon = document.getElementById("pipetteIcon");
+    if (pipetteIcon) {
+      isPipetteActive = false;
+      pipetteIcon.remove();
+    }
   }
 }
 

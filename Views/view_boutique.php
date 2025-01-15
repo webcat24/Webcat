@@ -233,7 +233,7 @@ require 'view_begin.php';
                     data-color="<?= htmlspecialchars($produit['colors']) ?>"
                     data-shade="<?= htmlspecialchars($produit['shades']) ?>">
                     <picture>
-                        <img src="<?= htmlspecialchars($produit['lien_image']) ?>"
+                        <img src="<?= htmlspecialchars($produit['id_image']) ?>"
                             alt="<?= htmlspecialchars($produit['nom_materiel']) ?>">
                     </picture>
                     <div class="detail">

@@ -36,7 +36,7 @@ class Model
 
     public function getFav($offset = 0, $limit = 20)
     {
-        $requete = $this->bd->prepare("SELECT Nom_materiel AS nom, Prix_Materiel AS prix, Lien_Image AS img_link FROM Favoris JOIN Materiel USING (id_materiel) WHERE id_utilisateur = :id LIMIT :limit OFFSET :offset");
+        $requete = $this->bd->prepare("SELECT Nom_materiel AS nom, Prix_Materiel AS prix, id_Image AS img_link FROM Favoris JOIN Materiel USING (id_materiel) WHERE id_utilisateur = :id LIMIT :limit OFFSET :offset");
         $requete->bindValue(":id", $_SESSION["id"]);
         $requete->bindValue(":offset", $offset);
         $requete->bindValue(":limit", $limit);
@@ -46,7 +46,7 @@ class Model
 
     public function getPanier($offset = 0, $limit = 20)
     {
-        $requete = $this->bd->prepare("SELECT Nom_materiel AS nom, Prix_Materiel AS prix, Lien_Image AS img_link FROM Panier JOIN Materiel USING (id_materiel) WHERE id_utilisateur = :id LIMIT :limit OFFSET :offset");
+        $requete = $this->bd->prepare("SELECT Nom_materiel AS nom, Prix_Materiel AS prix, id_Image AS img_link FROM Panier JOIN Materiel USING (id_materiel) WHERE id_utilisateur = :id LIMIT :limit OFFSET :offset");
         $requete->bindValue(":id", $_SESSION["id"]);
         $requete->bindValue(":offset", $offset);
         $requete->bindValue(":limit", $limit);
@@ -56,7 +56,7 @@ class Model
 
     public function getHistorique($offset = 0, $limit = 20)
     {
-        $requete = $this->bd->prepare("SELECT Nom_materiel AS nom, Prix_Materiel AS prix, Lien_Image AS img_link FROM Historique_commande JOIN materiel_commande USING (id_historique_commande) JOIN Materiel USING (id_materiel) WHERE id_utilisateur = :id LIMIT :limit OFFSET :offset");
+        $requete = $this->bd->prepare("SELECT Nom_materiel AS nom, Prix_Materiel AS prix, id_Image AS img_link FROM Historique_commande JOIN materiel_commande USING (id_historique_commande) JOIN Materiel USING (id_materiel) WHERE id_utilisateur = :id LIMIT :limit OFFSET :offset");
         $requete->bindValue(":id", $_SESSION["id"]);
         $requete->bindValue(":offset", $offset);
         $requete->bindValue(":limit", $limit);
@@ -88,6 +88,50 @@ class Model
         $requete->bindValue(":email", $mail);
         $requete->execute();
         return $requete->fetch(PDO::FETCH_ASSOC)["id_utilisateur"];
+    }
+
+
+
+    // palette
+    public function getPalettes()
+    {
+        $requete = $this->bd->prepare("SELECT p.Nom_palette AS palette_name, c.Coloris AS color_name, c.Code_hexadecimal AS hex_code FROM Palette p LEFT JOIN Est_composee ec ON p.Nom_palette = ec.Nom_palette LEFT JOIN Couleur c ON ec.Id_Couleur = c.Id_Couleur ORDER BY p.Nom_palette, c.Id_Couleur");
+        $requete->execute();
+        return $requete->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getProduits()
+    {
+        $requete = $this->bd->prepare("SELECT * FROM Materiel m");
+        $requete->execute();
+        return $requete->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getAllColors()
+    {
+        $requete = $this->bd->prepare("SELECT * FROM couleur");
+        $requete->execute();
+        return $requete->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getOeuvresWithTheirArtisteAndImg($debut, $fin)
+    {
+        $requete = $this->bd->prepare("SELECT id_oeuvres, nom_oeuvre, oeuvres.id_artiste, nom_artiste, images.id_image, Lien_image FROM oeuvres
+                                                    JOIN artiste ON oeuvres.id_artiste = artiste.id_artiste
+                                                    JOIN images ON oeuvres.id_image = images.id_image
+                                                        WHERE id_oeuvres BETWEEN :DEBUT AND :FIN 
+                                                            ORDER BY id_oeuvres ASC;");
+        $requete->bindValue(':DEBUT', $debut);
+        $requete->bindValue(':FIN', $fin);
+        $requete->execute();
+        return $requete->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getNombreTotalOeuvres()
+    {
+        $requete = $this->bd->prepare("SELECT count(*) AS quantite FROM oeuvres");
+        $requete->execute();
+        return $requete->fetch(PDO::FETCH_ASSOC);
     }
 
 }
