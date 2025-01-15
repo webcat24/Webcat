@@ -1,6 +1,7 @@
 <?php
 $title = "Oeuvres";
 require 'view_begin.php';
+var_dump($data)
 ?>
 <div class="carousel next">
     <div class="list">
@@ -86,92 +87,53 @@ require 'view_begin.php';
     <section id="menu">
         <h2 class="section-title ff-damion espace">Nos Œuvres</h2>
         <div class="dishes">
+        <?php foreach ($data["dataTableaux"] as $oeuvre):?>
             <div class="dish">
-                <img src="Content/img/R.jfif" alt="Dish Image">
-                <h2>Nom</h2>
-                <span>Nom de l'artist</span>
-                <label for="color-select" class="multicolor-text">Couleur :</label>
-                <select id="color-select" class="color-dropdown">
-                    <option value="red" style="color: red;">Rouge</option>
-                    <option value="blue" style="color: blue;">Bleu</option>
-                    <option value="green" style="color: green;">Vert</option>
-                    <option value="yellow" style="color: yellow;">Jaune</option>
-                </select>
+                <img src="<?=$oeuvre['lien_image']?>" alt="Dish Image">
+                <h2><?=e($oeuvre['nom_oeuvre'])?></h2>
+                <span><?=e($oeuvre['nom_artiste'])?></span>
+                <!-- pipette icon -->
+                <i id="pipetteSmallEcran" class="bi bi-eyedropper" onclick="showImage(<?=$oeuvre['id_oeuvres'] - 1?>)"></i>
                 <!-- <a href="#" class="buy-button">Acheter</a> -->
             </div>
-            <div class="dish">
-                <img src="Content/img/arbre.avif">
-                <h2>Nom</h2>
-                <span>Nom de l'artist</span>
-                <label for="color-select" class="multicolor-text">Couleur :</label>
-                <select id="color-select" class="color-dropdown">
-                    <option value="red" style="color: red;">Rouge</option>
-                    <option value="blue" style="color: blue;">Bleu</option>
-                    <option value="green" style="color: green;">Vert</option>
-                    <option value="yellow" style="color: yellow;">Jaune</option>
-                </select>
-                <!-- <a href="#">bUY</a> -->
-            </div>
-            <div class="dish">
-                <img src="Content/img/er.jfif">
-                <h2>Nom</h2>
-                <span>Nom de l'artist</span>
-                <label for="color-select" class="multicolor-text">Couleur :</label>
-                <select id="color-select" class="color-dropdown">
-                    <option value="red" style="color: red;">Rouge</option>
-                    <option value="blue" style="color: blue;">Bleu</option>
-                    <option value="green" style="color: green;">Vert</option>
-                    <option value="yellow" style="color: yellow;">Jaune</option>
-                </select>
-                <!-- <a href="#">bUY</a> -->
-            </div>
-            <div class="dish">
-                <img src="Content/img/arb.avif">
-                <h2>Nom</h2>
-                <span>Nom de l'artist</span>
-                <label for="color-select" class="multicolor-text">Couleur :</label>
-                <select id="color-select" class="color-dropdown">
-                    <option value="red" style="color: red;">Rouge</option>
-                    <option value="blue" style="color: blue;">Bleu</option>
-                    <option value="green" style="color: green;">Vert</option>
-                    <option value="yellow" style="color: yellow;">Jaune</option>
-                </select>
-                <!-- <a href="#">bUY</a> -->
-            </div>
-            <div class="dish">
-                <img src="Content/img/arbr.avif">
-                <h2>Nom</h2>
-                <span>Nom de l'artist</span>
-                <label for="color-select" class="multicolor-text">Couleur :</label>
-                <select id="color-select" class="color-dropdown">
-                    <option value="red" style="color: red;">Rouge</option>
-                    <option value="blue" style="color: blue;">Bleu</option>
-                    <option value="green" style="color: green;">Vert</option>
-                    <option value="yellow" style="color: yellow;">Jaune</option>
-                </select>
-                <!-- <a href="#">bUY</a> -->
-            </div>
-            <div class="dish">
-                <img src="Content/img/R.jfif">
-                <h2>Nom</h2>
-                <span>Nom de l'artist</span>
-                <label for="color-select" class="multicolor-text">Couleur :</label>
-                <select id="color-select" class="color-dropdown">
-                    <option value="red" style="color: red;">Rouge</option>
-                    <option value="blue" style="color: blue;">Bleu</option>
-                    <option value="green" style="color: green;">Vert</option>
-                    <option value="yellow" style="color: yellow;">Jaune</option>
-                </select>
-            </div>
+        <?php endforeach;?>   
+
             <div class="modal">
                 <span class="close" onclick="closeModal()">&times;</span>
+
                 <img src="" alt="Fullscreen Image">
+                <canvas id="canvas"></canvas>
+                <div id ="notifCouleurPipette" class="notifCouleurPipette">
+                    <div class="textNotifPipete">
+                        <p>Code couleur : <span id="colorCodePipette">#------</span></p>
+                    </div>
+                    <div id="colorDisplayPipette"></div>
+                </div>
                 <div class="arrow left" onclick="navigateImage(-1)">&#10094;</div>
                 <div class="arrow right" onclick="navigateImage(1)">&#10095;</div>
             </div>
         </div>
+
     </section>
 </div>
+<!-- Barre nav -->
+<div class="conteneurBarreNavOeuvre">
+    <nav class="navBarreNavOeuvre">
+        <ul>
+            <?php for($i=1; $i <= $data["taillePageNav"]; $i++) :?>
+            <li>
+                <a <?php if($i==$data["currentPage"]){ echo"class=\"pageActive\"";} ?>
+                    href="http://localhost/SAE5/git/Webcat/?controller=Controller_inspiration&action=afficheroeuvre&page=<?=$i?>">
+                    <?=$i?>
+                </a>
+            </li>
+            <?php endfor?>
+        </ul>
+    </nav>
+</div> 
+
+<script src="Content\js\pipette.js"></script>
+
 <?php
 require 'view_end.php';
 ?>

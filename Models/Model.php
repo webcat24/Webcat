@@ -90,23 +90,4 @@ class Model
         return $requete->fetch(PDO::FETCH_ASSOC)["id_utilisateur"];
     }
 
-
-
-    // palette
-    public function getPalettes()
-    {
-        $requete = $this->bd->prepare("SELECT p.Nom_palette AS palette_name, c.Coloris AS color_name, c.Code_hexadecimal AS hex_code FROM Palette p LEFT JOIN Est_composee ec ON p.Nom_palette = ec.Nom_palette LEFT JOIN Couleur c ON ec.Id_Couleur = c.Id_Couleur ORDER BY p.Nom_palette, c.Id_Couleur");
-        $requete->execute();
-        return $requete->fetchAll(PDO::FETCH_ASSOC);
-    }
-
-    public function getProduits()
-    {
-        $requete = $this->bd->prepare("SELECT * FROM Materiel m");
-        $requete->execute();
-        return $requete->fetchAll(PDO::FETCH_ASSOC);
-    }
-
-
-
 }
