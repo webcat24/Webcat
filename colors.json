@@ -1,0 +1,422 @@
+[
+    {
+        "palette_name": "Palette 1",
+        "colors": [
+            { "color": "rgb(229, 231, 230)", "hex": "#e5e7e6" },
+            { "color": "rgb(238, 230, 216)", "hex": "#EEE6D8" },
+            { "color": "rgb(218, 171, 58)", "hex": "#DAAB3A" },
+            { "color": "rgb(182, 115, 50)", "hex": "#B67332" },
+            { "color": "rgb(147, 68, 26)", "hex": "#93441A" }
+        ]
+    },
+    {
+        "palette_name": "Palette 2",
+        "colors": [
+            { "color": "rgb(30, 15, 28)", "hex": "#1E0F1C" },
+            { "color": "rgb(167, 0, 30)", "hex": "#A7001E" },
+            { "color": "rgb(226, 233, 192)", "hex": "#E2E9C0" },
+            { "color": "rgb(122, 169, 92)", "hex": "#7AA95C" },
+            { "color": "rgb(149, 81, 73)", "hex": "#955149" }
+        ]
+    },
+    {
+        "palette_name": "Palette 3",
+        "colors": [
+            { "color": "rgb(202, 60, 102)", "hex": "#CA3C66" },
+            { "color": "rgb(219, 106, 143)", "hex": "#DB6A8F" },
+            { "color": "rgb(232, 170, 190)", "hex": "#E8AABE" },
+            { "color": "rgb(167, 224, 224)", "hex": "#A7E0E0" },
+            { "color": "rgb(74, 163, 162)", "hex": "#4AA3A2" }
+        ]
+    },
+    {
+        "palette_name": "Palette 4",
+        "colors": [
+            { "color": "rgb(67, 12, 5)", "hex": "#430C05" },
+            { "color": "rgb(212, 111, 77)", "hex": "#D46F4D" },
+            { "color": "rgb(255, 191, 102)", "hex": "#FFBF66" },
+            { "color": "rgb(8, 197, 209)", "hex": "#08C5D1" },
+            { "color": "rgb(0, 53, 63)", "hex": "#00353F" }
+        ]
+    },
+    {
+        "palette_name": "Palette 5",
+        "colors": [
+            { "color": "rgb(206, 106, 107)", "hex": "#CE6A6B" },
+            { "color": "rgb(235, 172, 162)", "hex": "#EBACA2" },
+            { "color": "rgb(190, 211, 195)", "hex": "#BED3C3" },
+            { "color": "rgb(74, 145, 158)", "hex": "#4A919E" },
+            { "color": "rgb(33, 46, 83)", "hex": "#212E53" }
+        ]
+    },
+    {
+        "palette_name": "Palette 6",
+        "colors": [
+            { "color": "rgb(247, 246, 207)", "hex": "#F7F6CF" },
+            { "color": "rgb(182, 216, 242)", "hex": "#B6D8F2" },
+            { "color": "rgb(244, 207, 223)", "hex": "#F4CFDF" },
+            { "color": "rgb(87, 132, 186)", "hex": "#5784BA" },
+            { "color": "rgb(154, 200, 235)", "hex": "#9AC8EB" }
+        ]
+    },
+    {
+        "palette_name": "Palette 7",
+        "colors": [
+            { "color": "rgb(249, 150, 139)", "hex": "#F9968B" },
+            { "color": "rgb(242, 116, 56)", "hex": "#F27438" },
+            { "color": "rgb(38, 71, 78)", "hex": "#26474E" },
+            { "color": "rgb(118, 205, 205)", "hex": "#76CDCD" },
+            { "color": "rgb(44, 206, 210)", "hex": "#2CCED2" }
+        ]
+    },
+    {
+        "palette_name": "Palette 8",
+        "colors": [
+            { "color": "rgb(106, 100, 90)", "hex": "#6A645A" },
+            { "color": "rgb(227, 205, 139)", "hex": "#E3CD8B" },
+            { "color": "rgb(93, 112, 82)", "hex": "#5D7052" },
+            { "color": "rgb(193, 136, 69)", "hex": "#C18845" },
+            { "color": "rgb(240, 190, 134)", "hex": "#F0BE86" }
+        ]
+    },
+    {
+        "palette_name": "Palette 9",
+        "colors": [
+            { "color": "rgb(225, 166, 36)", "hex": "#E1A624" },
+            { "color": "rgb(49, 122, 193)", "hex": "#317AC1" },
+            { "color": "rgb(56, 68, 84)", "hex": "#384454" },
+            { "color": "rgb(212, 211, 220)", "hex": "#D4D3DC" },
+            { "color": "rgb(173, 149, 107)", "hex": "#AD956B" }
+        ]
+    },
+    {
+        "palette_name": "Palette 10",
+        "colors": [
+            { "color": "rgb(24, 83, 79)", "hex": "#18534F" },
+            { "color": "rgb(34, 109, 104)", "hex": "#226D68" },
+            { "color": "rgb(236, 248, 246)", "hex": "#ECF8F6" },
+            { "color": "rgb(254, 234, 161)", "hex": "#FEEAA1" },
+            { "color": "rgb(214, 149, 91)", "hex": "#D6955B" }
+        ]
+    },
+          {
+            "palette_name": "Palette 11",
+            "colors": [
+              { "color": "rgb(145, 70, 75)", "hex": "#91464B" },
+              { "color": "rgb(243, 221, 210)", "hex": "#F3DDD2" },
+              { "color": "rgb(237, 159, 130)", "hex": "#ED9F82" },
+              { "color": "rgb(195, 98, 91)", "hex": "#C3625B" },
+              { "color": "rgb(131, 50, 51)", "hex": "#833233" }
+            ]
+          },
+          {
+            "palette_name": "Palette 12",
+            "colors": [
+              { "color": "rgb(53, 67, 92)", "hex": "#35435C" },
+              { "color": "rgb(95, 138, 180)", "hex": "#5F8AB4" },
+              { "color": "rgb(169, 197, 224)", "hex": "#A9C5E0" },
+              { "color": "rgb(206, 221, 233)", "hex": "#CEDDE9" },
+              { "color": "rgb(243, 248, 250)", "hex": "#F3F8FA" }
+            ]
+          },
+          {
+            "palette_name": "Palette 13",
+            "colors": [
+              { "color": "rgb(33, 33, 33)", "hex": "#212121" },
+              { "color": "rgb(55, 55, 55)", "hex": "#373737" },
+              { "color": "rgb(95, 95, 95)", "hex": "#5F5F5F" },
+              { "color": "rgb(135, 135, 135)", "hex": "#878787" },
+              { "color": "rgb(215, 215, 215)", "hex": "#D7D7D7" }
+            ]
+          },
+          {
+            "palette_name": "Palette 14",
+            "colors": [
+              { "color": "rgb(89, 101, 107)", "hex": "#59656B" },
+              { "color": "rgb(141, 158, 167)", "hex": "#8D9EA7" },
+              { "color": "rgb(198, 206, 211)", "hex": "#C6CED3" },
+              { "color": "rgb(222, 229, 232)", "hex": "#DEE5E8" },
+              { "color": "rgb(244, 246, 247)", "hex": "#F4F6F7" }
+            ]
+          },
+          {
+            "palette_name": "Palette 15",
+            "colors": [
+              { "color": "rgb(255, 244, 228)", "hex": "#FFF4E4" },
+              { "color": "rgb(252, 224, 186)", "hex": "#FCE0BA" },
+              { "color": "rgb(247, 194, 127)", "hex": "#F7C27F" },
+              { "color": "rgb(238, 159, 76)", "hex": "#EE9F4C" },
+              { "color": "rgb(220, 120, 57)", "hex": "#DC7839" }
+            ]
+          },
+          {
+            "palette_name": "Palette 16",
+            "colors": [
+              { "color": "rgb(27, 20, 20)", "hex": "#1B1414" },
+              { "color": "rgb(52, 39, 39)", "hex": "#342727" },
+              { "color": "rgb(92, 73, 73)", "hex": "#5C4949" },
+              { "color": "rgb(152, 121, 121)", "hex": "#987979" },
+              { "color": "rgb(228, 189, 189)", "hex": "#E4BDBD" }
+            ]
+          },
+          {
+            "palette_name": "Palette 17",
+            "colors": [
+              { "color": "rgb(240, 249, 239)", "hex": "#F0F9EF" },
+              { "color": "rgb(222, 235, 218)", "hex": "#DEEBDD" },
+              { "color": "rgb(190, 215, 184)", "hex": "#BED7B8" },
+              { "color": "rgb(143, 183, 134)", "hex": "#8FB786" },
+              { "color": "rgb(72, 141, 71)", "hex": "#488D47" }
+            ]
+          },
+          {
+            "palette_name": "Palette 18",
+            "colors": [
+              { "color": "rgb(241, 240, 234)", "hex": "#F1F0EA" },
+              { "color": "rgb(204, 199, 178)", "hex": "#CCC7B2" },
+              { "color": "rgb(160, 153, 124)", "hex": "#A0997C" },
+              { "color": "rgb(108, 99, 70)", "hex": "#6C6346" },
+              { "color": "rgb(51, 44, 25)", "hex": "#332C19" }
+            ]
+          },
+          {
+            "palette_name": "Palette 19",
+            "colors": [
+              { "color": "rgb(228, 241, 243)", "hex": "#E4F1F3" },
+              { "color": "rgb(180, 218, 224)", "hex": "#B4DAE0" },
+              { "color": "rgb(117, 186, 195)", "hex": "#75BAC3" },
+              { "color": "rgb(55, 146, 159)", "hex": "#37929F" },
+              { "color": "rgb(16, 101, 114)", "hex": "#106572" }
+            ]
+          },
+          {
+            "palette_name": "Palette 20",
+            "colors": [
+              { "color": "rgb(248, 236, 211)", "hex": "#F8ECD3" },
+              { "color": "rgb(239, 209, 155)", "hex": "#EFD19B" },
+              { "color": "rgb(229, 180, 90)", "hex": "#E5B45A" },
+              { "color": "rgb(202, 144, 46)", "hex": "#CA902E" },
+              { "color": "rgb(149, 100, 25)", "hex": "#956419" }
+            ]
+          },
+              {
+                "palette_name": "Palette 21",
+                "colors": [
+                  { "color": "rgb(255, 183, 178)", "hex": "#FFB7B2" },
+                  { "color": "rgb(255, 223, 186)", "hex": "#FFDFBA" },
+                  { "color": "rgb(255, 255, 186)", "hex": "#FFFFBA" },
+                  { "color": "rgb(186, 255, 201)", "hex": "#BAFFC9" },
+                  { "color": "rgb(186, 225, 255)", "hex": "#BAE1FF" }
+                ]
+              },
+              {
+                "palette_name": "Palette 22",
+                "colors": [
+                  { "color": "rgb(239, 71, 111)", "hex": "#EF476F" },
+                  { "color": "rgb(255, 209, 102)", "hex": "#FFD166" },
+                  { "color": "rgb(6, 214, 160)", "hex": "#06D6A0" },
+                  { "color": "rgb(17, 138, 178)", "hex": "#118AB2" },
+                  { "color": "rgb(7, 59, 76)", "hex": "#073B4C" }
+                ]
+              },
+              {
+                "palette_name": "Palette 23",
+                "colors": [
+                  { "color": "rgb(62, 76, 87)", "hex": "#3E4C57" },
+                  { "color": "rgb(125, 157, 156)", "hex": "#7D9D9C" },
+                  { "color": "rgb(194, 217, 214)", "hex": "#C2D9D6" },
+                  { "color": "rgb(244, 252, 249)", "hex": "#F4FCF9" },
+                  { "color": "rgb(180, 112, 81)", "hex": "#B47051" }
+                ]
+              },
+              {
+                "palette_name": "Palette 24",
+                "colors": [
+                  { "color": "rgb(229, 152, 155)", "hex": "#E5989B" },
+                  { "color": "rgb(241, 208, 173)", "hex": "#F1D0AD" },
+                  { "color": "rgb(250, 237, 205)", "hex": "#FAEDCD" },
+                  { "color": "rgb(168, 218, 220)", "hex": "#A8DADC" },
+                  { "color": "rgb(69, 123, 157)", "hex": "#457B9D" }
+                ]
+              },
+              {
+                "palette_name": "Palette 25",
+                "colors": [
+                  { "color": "rgb(255, 159, 28)", "hex": "#FF9F1C" },
+                  { "color": "rgb(255, 216, 39)", "hex": "#FFD827" },
+                  { "color": "rgb(36, 123, 160)", "hex": "#247BA0" },
+                  { "color": "rgb(112, 193, 179)", "hex": "#70C1B3" },
+                  { "color": "rgb(31, 30, 51)", "hex": "#1F1E33" }
+                ]
+              },
+              {
+                "palette_name": "Palette 26",
+                "colors": [
+                  { "color": "rgb(69, 105, 144)", "hex": "#456990" },
+                  { "color": "rgb(77, 144, 142)", "hex": "#4D908E" },
+                  { "color": "rgb(103, 189, 173)", "hex": "#67BDAD" },
+                  { "color": "rgb(168, 218, 220)", "hex": "#A8DADC" },
+                  { "color": "rgb(255, 244, 220)", "hex": "#FFF4DC" }
+                ]
+              },
+              {
+                "palette_name": "Palette 27",
+                "colors": [
+                  { "color": "rgb(75, 97, 119)", "hex": "#4B6177" },
+                  { "color": "rgb(157, 190, 187)", "hex": "#9DBEBB" },
+                  { "color": "rgb(232, 229, 215)", "hex": "#E8E5D7" },
+                  { "color": "rgb(247, 246, 231)", "hex": "#F7F6E7" },
+                  { "color": "rgb(210, 198, 168)", "hex": "#D2C6A8" }
+                ]
+              },
+              {
+                "palette_name": "Palette 28",
+                "colors": [
+                  { "color": "rgb(244, 211, 94)", "hex": "#F4D35E" },
+                  { "color": "rgb(248, 228, 185)", "hex": "#F8E4B9" },
+                  { "color": "rgb(131, 196, 196)", "hex": "#83C4C4" },
+                  { "color": "rgb(44, 44, 84)", "hex": "#2C2C54" },
+                  { "color": "rgb(15, 52, 96)", "hex": "#0F3460" }
+                ]
+              },
+              {
+                "palette_name": "Palette 29",
+                "colors": [
+                  { "color": "rgb(215, 223, 233)", "hex": "#D7DFE9" },
+                  { "color": "rgb(186, 205, 224)", "hex": "#BACDE0" },
+                  { "color": "rgb(114, 168, 206)", "hex": "#72A8CE" },
+                  { "color": "rgb(60, 118, 191)", "hex": "#3C76BF" },
+                  { "color": "rgb(26, 51, 108)", "hex": "#1A336C" }
+                ]
+              },
+              {
+                "palette_name": "Palette 30",
+                "colors": [
+                  { "color": "rgb(239, 243, 241)", "hex": "#EFF3F1" },
+                  { "color": "rgb(210, 221, 218)", "hex": "#D2DDDA" },
+                  { "color": "rgb(128, 169, 169)", "hex": "#80A9A9" },
+                  { "color": "rgb(64, 91, 91)", "hex": "#405B5B" },
+                  { "color": "rgb(26, 36, 36)", "hex": "#1A2424" }
+                ]
+              },
+              {
+                "palette_name": "Palette 31",
+                "colors": [
+                  { "color": "rgb(244, 162, 97)", "hex": "#F4A261" },
+                  { "color": "rgb(233, 196, 106)", "hex": "#E9C46A" },
+                  { "color": "rgb(42, 157, 143)", "hex": "#2A9D8F" },
+                  { "color": "rgb(38, 70, 83)", "hex": "#264653" },
+                  { "color": "rgb(231, 111, 81)", "hex": "#E76F51" }
+                ]
+              },
+              {
+                "palette_name": "Palette 32",
+                "colors": [
+                  { "color": "rgb(93, 188, 210)", "hex": "#5DBCDA" },
+                  { "color": "rgb(244, 241, 222)", "hex": "#F4F1DE" },
+                  { "color": "rgb(233, 196, 106)", "hex": "#E9C46A" },
+                  { "color": "rgb(220, 87, 84)", "hex": "#DC5754" },
+                  { "color": "rgb(77, 55, 59)", "hex": "#4D373B" }
+                ]
+              },
+              {
+                "palette_name": "Palette 33",
+                "colors": [
+                  { "color": "rgb(168, 218, 220)", "hex": "#A8DADC" },
+                  { "color": "rgb(69, 123, 157)", "hex": "#457B9D" },
+                  { "color": "rgb(29, 53, 87)", "hex": "#1D3557" },
+                  { "color": "rgb(230, 57, 70)", "hex": "#E63946" },
+                  { "color": "rgb(241, 250, 238)", "hex": "#F1FAEE" }
+                ]
+              },
+              {
+                "palette_name": "Palette 34",
+                "colors": [
+                  { "color": "rgb(47, 72, 88)", "hex": "#2F4858" },
+                  { "color": "rgb(233, 196, 106)", "hex": "#E9C46A" },
+                  { "color": "rgb(244, 247, 227)", "hex": "#F4F7E3" },
+                  { "color": "rgb(180, 105, 136)", "hex": "#B46988" },
+                  { "color": "rgb(23, 42, 58)", "hex": "#172A3A" }
+                ]
+              },
+              {
+                "palette_name": "Palette 35",
+                "colors": [
+                  { "color": "rgb(231, 111, 81)", "hex": "#E76F51" },
+                  { "color": "rgb(244, 162, 97)", "hex": "#F4A261" },
+                  { "color": "rgb(38, 70, 83)", "hex": "#264653" },
+                  { "color": "rgb(233, 196, 106)", "hex": "#E9C46A" },
+                  { "color": "rgb(42, 157, 143)", "hex": "#2A9D8F" }
+                ]
+              },
+              {
+                "palette_name": "Palette 36",
+                "colors": [
+                  { "color": "rgb(255, 211, 105)", "hex": "#FFD369" },
+                  { "color": "rgb(244, 122, 95)", "hex": "#F47A5F" },
+                  { "color": "rgb(96, 108, 128)", "hex": "#606C80" },
+                  { "color": "rgb(72, 85, 99)", "hex": "#485563" },
+                  { "color": "rgb(32, 36, 41)", "hex": "#202429" }
+                ]
+              },
+              {
+                "palette_name": "Palette 37",
+                "colors": [
+                  { "color": "rgb(244, 162, 97)", "hex": "#F4A261" },
+                  { "color": "rgb(42, 157, 143)", "hex": "#2A9D8F" },
+                  { "color": "rgb(69, 123, 157)", "hex": "#457B9D" },
+                  { "color": "rgb(38, 70, 83)", "hex": "#264653" },
+                  { "color": "rgb(241, 250, 238)", "hex": "#F1FAEE" }
+                ]
+              },
+              {
+                "palette_name": "Palette 38",
+                "colors": [
+                  { "color": "rgb(241, 105, 65)", "hex": "#F16941" },
+                  { "color": "rgb(255, 159, 28)", "hex": "#FF9F1C" },
+                  { "color": "rgb(248, 244, 228)", "hex": "#F8F4E4" },
+                  { "color": "rgb(93, 163, 162)", "hex": "#5DA3A2" },
+                  { "color": "rgb(54, 67, 71)", "hex": "#364347" }
+                ]
+              },
+              {
+                "palette_name": "Palette 39",
+                "colors": [
+                  { "color": "rgb(244, 162, 97)", "hex": "#F4A261" },
+                  { "color": "rgb(231, 111, 81)", "hex": "#E76F51" },
+                  { "color": "rgb(38, 70, 83)", "hex": "#264653" },
+                  { "color": "rgb(233, 196, 106)", "hex": "#E9C46A" },
+                  { "color": "rgb(42, 157, 143)", "hex": "#2A9D8F" }
+                ]
+              },
+              {
+                "palette_name": "Palette 40",
+                "colors": [
+                  { "color": "rgb(233, 196, 106)", "hex": "#E9C46A" },
+                  { "color": "rgb(42, 157, 143)", "hex": "#2A9D8F" },
+                  { "color": "rgb(244, 162, 97)", "hex": "#F4A261" },
+                  { "color": "rgb(231, 111, 81)", "hex": "#E76F51" },
+                  { "color": "rgb(38, 70, 83)", "hex": "#264653" }
+                ]
+              },
+              {
+                "palette_name": "Palette 41",
+                "colors": [
+                  { "color": "rgb(69, 123, 157)", "hex": "#457B9D" },
+                  { "color": "rgb(168, 218, 220)", "hex": "#A8DADC" },
+                  { "color": "rgb(241, 250, 238)", "hex": "#F1FAEE" },
+                  { "color": "rgb(29, 53, 87)", "hex": "#1D3557" },
+                  { "color": "rgb(230, 57, 70)", "hex": "#E63946" }
+                ]
+              },
+              {
+                "palette_name": "Palette 42",
+                "colors": [
+                  { "color": "rgb(253, 231, 76)", "hex": "#FDE74C" },
+                  { "color": "rgb(243, 134, 48)", "hex": "#F38630" },
+                  { "color": "rgb(35, 123, 128)", "hex": "#237B80" },
+                  { "color": "rgb(18, 32, 47)", "hex": "#12202F" },
+                  { "color": "rgb(255, 209, 220)", "hex": "#FFD1DC" }
+                ]
+              }               
+]
