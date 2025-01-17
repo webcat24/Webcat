@@ -1,35 +1,48 @@
 <?php
 session_start();
-//Pour avoir la fonction e()
+
+// Pour avoir la fonction e()
 require_once "Utils/functions.php";
-//Inclusion du modèle
+// Inclusion du modèle
 require_once "Models/Model.php";
-//Inclusion de la classe Controller
+// Inclusion de la classe Controller
 require_once "Controllers/Controller.php";
 
-//Liste des contrôleurs -- A RENSEIGNER
-$controllers = ["Utilisateur", "Connexion","Admin"];
-//Nom du contrôleur par défaut-- A RENSEIGNER
+// Liste des contrôleurs autorisés
+$controllers = ["Utilisateur", "Connexion", "Admin", "Materiel"];
 $controller_default = "Connexion";
 
-//On teste si le paramètre controller existe et correspond à un contrôleur de la liste $controllers
-if (isset($_GET['controller']) and in_array($_GET['controller'], $controllers)) {
+// Récupérer le contrôleur depuis l'URL ou utiliser le contrôleur par défaut
+if (isset($_GET['controller']) && in_array($_GET['controller'], $controllers)) {
     $nom_controller = $_GET['controller'];
 } else {
     $nom_controller = $controller_default;
 }
 
-//On détermine le nom de la classe du contrôleur
-$nom_classe = 'Controller_' . $nom_controller;
-
-//On détermine le nom du fichier contenant la définition du contrôleur
+// Déterminer le nom de la classe et du fichier du contrôleur
+$nom_classe = 'Controller_' . ucfirst(strtolower($nom_controller));
 $nom_fichier = 'Controllers/' . $nom_classe . '.php';
 
-//Si le fichier existe et est accessible en lecture
+// Vérifiez si le fichier existe et est accessible
 if (is_readable($nom_fichier)) {
-    //On l'inclut et on instancie un objet de cette classe
     require_once $nom_fichier;
-    new $nom_classe();
+
+    // Instancier dynamiquement le contrôleur
+    if (class_exists($nom_classe)) {
+        $controller = new $nom_classe();
+
+        // Déterminer l'action à exécuter
+        $action = isset($_GET['action']) ? 'action_' . strtolower($_GET['action']) : 'action_default';
+
+        // Vérifiez si l'action existe dans le contrôleur
+        if (method_exists($controller, $action)) {
+            $controller->$action(); // Appeler l'action
+        } else {
+            die("Erreur 404 : L'action '$action' est introuvable dans le contrôleur '$nom_classe'.");
+        }
+    } else {
+        die("Erreur 404 : La classe '$nom_classe' est introuvable.");
+    }
 } else {
-    die("Error 404: not found!");
+    die("Erreur 404 : Le fichier du contrôleur '$nom_fichier' est introuvable.");
 }

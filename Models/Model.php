@@ -93,5 +93,21 @@ class Model
         $requete->execute();
         return $requete->fetch(PDO::FETCH_ASSOC)["id_utilisateur"];
     }
+
+    public function ajouterMateriel($description, $prix, $nom) {
+        // Préparer la requête SQL
+        $requete = $this->bd->prepare("INSERT INTO Materiel (Description_materiel, Prix_materiel, Nom_materiel) 
+                                       VALUES (:description, :prix, :nom)");
+        
+        // Lier les paramètres
+        $requete->bindValue(':description', $description);
+        $requete->bindValue(':prix', $prix);
+        $requete->bindValue(':nom', $nom);
+        
+        // Exécuter la requête
+        return $requete->execute();
+    }
+    
+    
     
 }
