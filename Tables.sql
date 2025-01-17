@@ -78,7 +78,7 @@ CREATE TABLE Artiste(
 
 CREATE TABLE Materiel(
    Id_Materiel SERIAL,
-   Description_materiel VARCHAR(50) ,
+   Description_materiel VARCHAR(800) ,
    Prix_materiel NUMERIC(10,2)  ,
    Nom_materiel VARCHAR(250) ,
    id_image SERIAL NOT NULL,

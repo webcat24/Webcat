@@ -267,10 +267,10 @@ INSERT INTO public.oeuvres(nom_oeuvre, description, id_artiste, id_image) VALUES
 
 INSERT INTO public.images(lien_image)
 	VALUES
-	('Content/img/materiaux/toile_pinceau.jpg'),
+	('Content/img/materiaux/toiles_pinceau.jpg'),
 	('Content/img/materiaux/chevalet.jpg'),
-	('Content/img/materiaux/pinceau_rond.png'),
-	('Content/img/materiaux/pinceau_carrée.png'),
+	('Content/img/materiaux/set_pinceau_rond.png'),
+	('Content/img/materiaux/set_pinceau_carree.png'),
 	('Content/img/materiaux/peinture_huile_10ml.png'),
 	('Content/img/materiaux/peinture_huile_50ml.png'),
 	('Content/img/materiaux/peinture_huile_100ml.png'),
@@ -292,42 +292,51 @@ INSERT INTO public.images(lien_image)
 	('Content/img/materiaux/peinture_gouache_100ml.png'),
 	('Content/img/materiaux/peinture_gouache_250ml.png'),
 	('Content/img/materiaux/peinture_gouache_500ml.png'),
-	('Content/img/materiaux/peinture_gouache_1l.png');
+	('Content/img/materiaux/peinture_gouache_1l.png'),
+    ('Content/img/materiaux/pinceau_carree.png'),
+    ('Content/img/materiaux/pinceau_rond.png');
+
 	
 INSERT INTO public.materiel(
 	description_materiel, prix_materiel, nom_materiel, id_image)
 	VALUES
-	('...', 20, 'Toile',101),
-	('...', 15, 'Chevalet en bois',102),
-	('...', 10, 'Set de pinceaux rond',103),
-	('...', 10, 'Set de pinceaux carrée',104),
-	('...', 5, 'Peinture à l''huile', 105),
-	('...', 12, 'Peinture à l''huile', 106),
-	('...', 20, 'Peinture à l''huile', 107),
-	('...', 45, 'Peinture à l''huile', 108),
-	('...', 80, 'Peinture à l''huile', 109),
-	('...', 150, 'Peinture à l''huile', 110),
-	('...', 3, 'Peinture acrylique', 111),
-	('...', 10, 'Peinture acrylique', 112),
-	('...', 15, 'Peinture acrylique', 113),
-	('...', 30, 'Peinture acrylique', 114),
-	('...', 50, 'Peinture acrylique', 115),
-	('...', 90, 'Peinture acrylique', 116),
-	('...', 8, 'Peinture aquarelle', 117),
-	('...', 20, 'Peinture aquarelle', 118),
-	('...', 35, 'Peinture aquarelle', 119),
-	('...', 80, 'Peinture aquarelle', 120),
-	('...', 2, 'Peinture gouache', 121),
-	('...', 8, 'Peinture gouache', 122),
-	('...', 12, 'Peinture gouache', 123),
-	('...', 25, 'Peinture gouache', 124),
-	('...', 40, 'Peinture gouache', 125),
-	('...', 70, 'Peinture gouache', 126);	 
+	('Une toile de haute qualité, idéale pour toutes vos créations artistiques. Parfaite pour l''acrylique, l''huile ou l''aquarelle.', 20, 'Toile',101),
+	('Un chevalet robuste en bois, conçu pour offrir une stabilité optimale. Idéal pour vos peintures en atelier ou en plein air.', 15, 'Chevalet en bois',102),
+	('Un set de pinceaux ronds de qualité professionnelle, parfaits pour les détails et les lignes précises.', 10, 'Set de pinceaux rond',103),
+	('Un set de pinceaux carrés offrant des traits nets et larges, idéal pour couvrir de grandes surfaces.', 10, 'Set de pinceaux carrée',104),
+	('Peinture à l''huile classique, parfaite pour les artistes exigeants, offrant des couleurs riches et durables.', 5, 'Peinture à l''huile', 105),
+	('Peinture à l''huile de qualité supérieure, idéale pour des mélanges fluides et des finitions éclatantes.', 12, 'Peinture à l''huile', 106),
+	('Peinture à l''huile offrant une excellente couverture et des teintes profondes, parfaite pour tous vos projets.', 20, 'Peinture à l''huile', 107),
+	('Une peinture à l''huile haut de gamme, avec une texture onctueuse et des pigments intenses', 45, 'Peinture à l''huile', 108),
+	('Peinture à l''huile professionnelle, conçue pour les œuvres d''art les plus exigeantes.', 80, 'Peinture à l''huile', 109),
+	('Un produit exceptionnel pour les artistes chevronnés, offrant une qualité irréprochable.', 150, 'Peinture à l''huile', 110),
+	('Peinture acrylique économique, idéale pour les débutants ou les petits projets créatifs.', 3, 'Peinture acrylique', 111),
+	('Peinture acrylique polyvalente, offrant une application facile et des couleurs éclatantes.', 10, 'Peinture acrylique', 112),
+	('Une peinture acrylique de qualité intermédiaire, parfaite pour vos œuvres sur toile.', 15, 'Peinture acrylique', 113),
+	('Peinture acrylique de qualité supérieure, offrant une grande résistance et des couleurs intenses.', 30, 'Peinture acrylique', 114),
+	('Une peinture acrylique haut de gamme, idéale pour des projets professionnels ou ambitieux.', 50, 'Peinture acrylique', 115),
+	('Un choix incontournable pour les artistes, cette peinture acrylique garantit des résultats exceptionnels.', 90, 'Peinture acrylique', 116),
+	('Peinture aquarelle économique, idéale pour débuter ou expérimenter des techniques légères.', 8, 'Peinture aquarelle', 117),
+	('Peinture aquarelle de qualité intermédiaire, parfaite pour des lavis doux et des dégradés subtils.', 20, 'Peinture aquarelle', 118),
+	('Une aquarelle d''excellente qualité, idéale pour les artistes amateurs ou confirmés.', 35, 'Peinture aquarelle', 119),
+	('Peinture aquarelle professionnelle, offrant des pigments intenses et une fluidité remarquable.', 80, 'Peinture aquarelle', 120),
+	('Une gouache pratique et abordable, parfaite pour les projets scolaires ou les débutants.', 2, 'Peinture gouache', 121),
+	('Peinture gouache de qualité, idéale pour des couleurs opaques et des finitions lisses.', 8, 'Peinture gouache', 122),
+	('Une gouache polyvalente et vibrante, adaptée pour des créations expressives.', 12, 'Peinture gouache', 123),
+	('Peinture gouache professionnelle, offrant une excellente opacité et une texture crémeuse.', 25, 'Peinture gouache', 124),
+	('Un produit haut de gamme pour les artistes exigeants, avec une qualité de pigmentation exceptionnelle.', 40, 'Peinture gouache', 125),
+	('Une gouache d''élite, parfaite pour des projets sophistiqués et des œuvres mémorables.', 70, 'Peinture gouache', 126),
+	('Un outil d''élite, idéal pour des traits nets, des angles précis, et des créations raffinées.', 5, 'pinceau carree', 127), 
+	('Un compagnon d''exception, parfait pour des détails délicats et des courbes harmonieuses.', 5, 'pinceau rond', 128);
+
 		
 INSERT INTO public.autres_materiaux (id_materiel, type_materiel) VALUES (1,'Toile');
 INSERT INTO public.autres_materiaux (id_materiel, type_materiel) VALUES (2,'Chevalet');
-INSERT INTO public.autres_materiaux (id_materiel, type_materiel) VALUES (3,'Pinceaux rond');
-INSERT INTO public.autres_materiaux (id_materiel, type_materiel) VALUES (4,'Pinceaux carrée');
+INSERT INTO public.autres_materiaux (id_materiel, type_materiel) VALUES (3,'Set Pinceaux rond');
+INSERT INTO public.autres_materiaux (id_materiel, type_materiel) VALUES (4,'Set Pinceaux carree');
+INSERT INTO public.autres_materiaux (id_materiel, type_materiel) VALUES (27,'Pinceau carree');
+INSERT INTO public.autres_materiaux (id_materiel, type_materiel) VALUES (28,'Pinceau rond');
+
 
 INSERT INTO public.type_peinture (nom_type_peinture) VALUES ('Aquarelle');
 INSERT INTO public.type_peinture (nom_type_peinture) VALUES ('Acrylique');
