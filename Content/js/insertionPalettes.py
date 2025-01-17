@@ -61,7 +61,7 @@ def insert_palettes_from_json(json_file, db_config):
 # Configuration de la base de données
 db_config = {
     "host": "localhost",
-    "dbname": "sae_s5",
+    "dbname": "saes5",
     "user": "postgres",
     "password": "02062004",
     "port": "5433",  # Par défaut, essayez 5432 ou 5433 selon votre configuration

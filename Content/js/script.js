@@ -28,7 +28,199 @@ function showImage(index) {
   }
 }
 
+// document.addEventListener("DOMContentLoaded", () => {
+//   const modal = document.querySelector(".modalboutique");
+//   const closeModalButton = modal.querySelector(".close-button");
+//   const modalImage = modal.querySelector("img");
+//   const modalTitle = document.getElementById("modal-title");
+//   const modalDescription = document.getElementById("modal-description");
+//   const modalPrice = document.getElementById("modal-price");
+
+//   // Afficher le modal avec les informations du produit
+//   function showProductModal(product) {
+//     const productName = product.dataset.name;
+//     const productDescription = product.dataset.description;
+//     const productPrice = product.dataset.price;
+//     // const productImage = product.dataset.image;
+//     const productImage = "Content/img/arb.avif";
+
+//     // Remplir les éléments du modal
+//     modalImage.src = productImage;
+//     modalTitle.textContent = productName;
+//     modalDescription.textContent = productDescription;
+//     modalPrice.textContent = `$${productPrice}`;
+//     modal.style.display = "flex";
+//   }
+//   document.querySelectorAll(".product-item").forEach((item) => {
+//     item.addEventListener("click", () => showProductModal(item));
+//   });
+
+//   closeModalButton.addEventListener("click", () => {
+//     modal.style.display = "none";
+//   });
+
+//   // Fermer en cliquant à l'extérieur
+//   modal.addEventListener("click", (event) => {
+//     if (event.target === modal) {
+//       modal.style.display = "none";
+//     }
+//   });
+// });
+
 // Fermer la modale + retirer l'icône + restart color pipette
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const modal = document.querySelector(".modalboutique");
+//   const closeModalButton = modal.querySelector(".close-button");
+//   const modalImage = document.getElementById("modal-image");
+//   const modalTitle = document.getElementById("modal-title");
+//   const modalDescription = document.getElementById("modal-description");
+//   const modalPrice = document.getElementById("modal-price");
+//   const productItems = document.querySelectorAll(".product-item");
+
+//   let currentIndex = -1;
+
+//   // Afficher le modal avec les informations du produit
+//   function showProductModal(index) {
+//     currentIndex = index;
+
+//     const product = productItems[index];
+//     const productName = product.dataset.name;
+//     const productDescription = product.dataset.description;
+//     const productPrice = product.dataset.price + " - Litre";
+//     const productImage = product.dataset.image;
+
+//     // Remplir les éléments du modal
+//     modalImage.src = productImage;
+//     modalTitle.textContent = productName;
+//     modalDescription.textContent = productDescription;
+//     modalPrice.textContent = `$${productPrice}`;
+//     modal.style.display = "flex";
+//   }
+
+//   // Navigation vers le produit précédent
+//   function showPreviousProduct() {
+//     if (currentIndex > 0) {
+//       showProductModal(currentIndex - 1);
+//     } else {
+//       showProductModal(productItems.length - 1); // Aller au dernier produit
+//     }
+//   }
+
+//   // Navigation vers le produit suivant
+//   function showNextProduct() {
+//     if (currentIndex < productItems.length - 1) {
+//       showProductModal(currentIndex + 1);
+//     } else {
+//       showProductModal(0); // Retourner au premier produit
+//     }
+//   }
+
+//   // Attachez des événements aux produits
+//   productItems.forEach((item, index) => {
+//     item.addEventListener("click", () => showProductModal(index));
+//   });
+
+//   // Attachez des événements aux boutons de navigation
+//   document
+//     .getElementById("prev-button")
+//     .addEventListener("click", showPreviousProduct);
+//   document
+//     .getElementById("next-button")
+//     .addEventListener("click", showNextProduct);
+
+//   // Fermer le modal
+//   closeModalButton.addEventListener("click", () => {
+//     modal.style.display = "none";
+//   });
+
+//   // Fermer en cliquant à l'extérieur
+//   modal.addEventListener("click", (event) => {
+//     if (event.target === modal) {
+//       modal.style.display = "none";
+//     }
+//   });
+// });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.querySelector(".modalboutique");
+  const closeModalButton = modal.querySelector(".close-button");
+  const modalImage = document.getElementById("modal-image");
+  const modalTitle = document.getElementById("modal-title");
+  const modalDescription = document.getElementById("modal-description");
+  const modalPrice = document.getElementById("modal-price");
+  const modalColor = document.getElementById("modal-color"); // ID pour afficher les couleurs
+  const modalHex = document.getElementById("modal-hex"); // ID pour afficher le code hexadécimal
+  const productItems = document.querySelectorAll(".product-item");
+
+  let currentIndex = -1;
+
+  // Afficher le modal avec les informations du produit
+  function showProductModal(index) {
+    currentIndex = index;
+
+    const product = productItems[index];
+    const productName = product.dataset.name;
+    const productDescription = product.dataset.description;
+    const productPrice = product.dataset.price + " - Litre";
+    const productImage = product.dataset.image;
+    const productColor = product.dataset.color; // Récupération de la couleur
+    const productHex = product.dataset.code_hexadecimal; // Récupération du code hexadécimal
+
+    // Remplir les éléments du modal
+    modalImage.src = productImage;
+    modalTitle.textContent = productName;
+    modalDescription.textContent = productDescription;
+    modalPrice.textContent = `$${productPrice}`;
+    modalColor.textContent = `Couleur : ${productColor}`;
+    modalHex.textContent = `Code Hex : ${productHex}`;
+    modal.style.display = "flex";
+  }
+
+  // Navigation vers le produit précédent
+  function showPreviousProduct() {
+    if (currentIndex > 0) {
+      showProductModal(currentIndex - 1);
+    } else {
+      showProductModal(productItems.length - 1); // Aller au dernier produit
+    }
+  }
+
+  // Navigation vers le produit suivant
+  function showNextProduct() {
+    if (currentIndex < productItems.length - 1) {
+      showProductModal(currentIndex + 1);
+    } else {
+      showProductModal(0); // Retourner au premier produit
+    }
+  }
+
+  // Attachez des événements aux produits
+  productItems.forEach((item, index) => {
+    item.addEventListener("click", () => showProductModal(index));
+  });
+
+  // Attachez des événements aux boutons de navigation
+  document
+    .getElementById("prev-button")
+    .addEventListener("click", showPreviousProduct);
+  document
+    .getElementById("next-button")
+    .addEventListener("click", showNextProduct);
+
+  // Fermer le modal
+  closeModalButton.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Fermer en cliquant à l'extérieur
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
+
 function closeModal() {
   const modalElement = document.querySelector(".modal");
   const canvas = document.getElementById("canvas");
@@ -387,12 +579,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (category && category.trim() !== "") {
         category.split(",").forEach((cat) => categories.add(cat.trim()));
       }
-
       const color = item.getAttribute("data-color");
       if (color && color.trim() !== "") {
-        color.split(",").forEach((col) => colors.add(col.trim()));
+        colors.add(color.trim()); // Ajout direct sans split
+        console.log("Couleur ajoutée :", color.trim());
       }
-
       const shade = item.getAttribute("data-shade");
       if (shade && shade.trim() !== "") {
         shade.split(",").forEach((sh) => shades.add(sh.trim()));
@@ -416,16 +607,16 @@ document.addEventListener("DOMContentLoaded", () => {
       shadeContainer.innerHTML += `<li data-filter="${sh}"><a href="#">${sh}</a></li>`;
     });
   }
-
-  // Appliquer les filtres
   function applyFilters() {
     const selectedCategory =
       document
         .querySelector(".categories .active")
         ?.getAttribute("data-filter") || "all";
+
     const selectedColor =
       document.querySelector(".colors .active")?.getAttribute("data-filter") ||
       "all";
+
     const selectedShade =
       document.querySelector(".shades .active")?.getAttribute("data-filter") ||
       "all";
@@ -443,9 +634,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const colorMatch =
         selectedColor === "all" ||
-        (item.getAttribute("data-color") || "")
-          .split(",")
-          .includes(selectedColor);
+        (item.getAttribute("data-color") || "").trim() === selectedColor; // Comparaison directe
 
       const shadeMatch =
         selectedShade === "all" ||
@@ -470,7 +659,7 @@ document.addEventListener("DOMContentLoaded", () => {
         productContainer.style.justifyContent = "flex-start";
     } else {
       for (let item of li) {
-        item.style.width = "30.4%";
+        item.style.width = "46%";
       }
     }
   }
@@ -499,6 +688,7 @@ document.addEventListener("DOMContentLoaded", () => {
   generateFilters();
   setupFilterListeners();
 })();
+
 let next = document.getElementById("next");
 let prev = document.getElementById("prev");
 let carousel = document.querySelector(".carousel");
@@ -560,3 +750,5 @@ if (next && prev && carousel) {
 } else {
   console.warn("Carousel elements are not found in the DOM.");
 }
+
+// pagination
