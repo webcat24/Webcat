@@ -1,3 +1,7 @@
+<?php $title= "Mon compte";
+require "view_begin.php";
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -23,7 +27,7 @@
                <p><img src="<?= $v["img_link"] ?>" alt="image du produit"></p>
         </div>
         <?php endforeach ?>
-        <h1>historique</h1>
+        <h1>Historique</h1>
         <?php foreach($historique as $v): ?>
             <div style="background: #F5F5DC; border: 5px solid black;">
                <p><?= $v["nom"] ?></p>
@@ -34,3 +38,5 @@
     </div>
 </body>
 </html>
+
+<?php require "view_end.php"; ?>

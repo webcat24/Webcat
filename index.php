@@ -1,7 +1,6 @@
 <?php
 session_start();
-
-// Pour avoir la fonction e()
+//Pour avoir la fonction e()
 require_once "Utils/functions.php";
 // Inclusion du modèle
 require_once "Models/Model.php";
@@ -9,8 +8,8 @@ require_once "Models/Model.php";
 require_once "Controllers/Controller.php";
 
 // Liste des contrôleurs autorisés
-$controllers = ["Utilisateur", "Connexion", "Admin", "Materiel"];
-$controller_default = "Connexion";
+$controllers = ["Utilisateur", "Connexion", "inspiration","Accueil""Utilisateur", "Connexion", "Admin", "Materiel"];
+$controller_default = "ConnexionAccueil";
 
 // Récupérer le contrôleur depuis l'URL ou utiliser le contrôleur par défaut
 if (isset($_GET['controller']) && in_array($_GET['controller'], $controllers)) {
