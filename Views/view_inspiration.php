@@ -77,11 +77,11 @@ require 'view_begin.php';
                                     </div>
                                     <div class="witr_content_pslide">
                                         <p>EXPLORATION DES NUANCES</p>
-                                        <h3><a href="?controller=Controller_inspiration&action=affichepalettes">Palettes
+                                        <h3><a href="?controller=inspiration&action=affichepalettes">Palettes
                                                 Créatives</a></h3>
                                     </div>
                                     <div class="witr_pslide_custom">
-                                        <a href="?controller=Controller_inspiration&action=affichepalettes"><span
+                                        <a href="?controller=inspiration&action=affichepalettes"><span
                                                 class="fas fa-arrow-right"></span></a>
                                     </div>
 
@@ -101,11 +101,11 @@ require 'view_begin.php';
                                     </div>
                                     <div class="witr_content_pslide">
                                         <p>EXPRESSION ARTISTIQUE</p>
-                                        <h3><a href="?controller=Controller_inspiration&action=afficheroeuvre">Galerie
+                                        <h3><a href="?controller=inspiration&action=afficheroeuvre">Galerie
                                                 des Œuvres</a></h3>
                                     </div>
                                     <div class="witr_pslide_custom">
-                                        <a href="?controller=Controller_inspiration&action=afficheroeuvre"><span
+                                        <a href="?controller=inspiration&action=afficheroeuvre"><span
                                                 class="fas fa-arrow-right"></span></a>
                                     </div>
                                 </div>
