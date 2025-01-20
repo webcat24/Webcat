@@ -33,7 +33,7 @@ class Controller_inspiration extends Controller
         $nbrPagination = round($totalOeuvres / 9, 0);
 
         // Récupérer la page demandée et valider
-        $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;  // Convertir en entier
+        $page = isset($_GET['page']) ? (int) $_GET['page'] : 1;  // Convertir en entier
 
         // Vérification que la page est un entier positif et si elle ne depasse pas le nbr de pagination
         if ($page <= 0 || $page > $nbrPagination) {
@@ -41,8 +41,8 @@ class Controller_inspiration extends Controller
         }
 
         // Calcul des indices de début et de fin
-        $debut = 9 * ($page-1) + 1;
-        $fin =  9 * $page;
+        $debut = 9 * ($page - 1) + 1;
+        $fin = 9 * $page;
 
         $data = [
             "dataTableaux" => $m->getOeuvresWithTheirArtisteAndImg($debut, $fin),
@@ -57,12 +57,6 @@ class Controller_inspiration extends Controller
 
         $this->render('entreprise');
     }
-    // public function action_affichepalettes()
-    // {
-
-    //     $this->render('palettes');
-    // }
-
     public function action_affichepalettes()
     {
         $model = Model::getModel();
@@ -84,15 +78,4 @@ class Controller_inspiration extends Controller
         // Envoyer les données à la vue
         $this->render('palettes', ['palettes' => $palette_data]);
     }
-    public function action_boutique()
-    {
-        $model = Model::getModel();
-
-        $produits = $model->getProduits();
-
-        $this->render('boutique', ['produits' => $produits]);
-    }
-
-
-
 }

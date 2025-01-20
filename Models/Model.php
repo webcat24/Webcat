@@ -100,12 +100,72 @@ class Model
         return $requete->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // public function getProduits()
+    // {
+    //     $requete = $this->bd->prepare("SELECT * FROM Materiel m");
+    //     $requete->execute();
+    //     return $requete->fetchAll(PDO::FETCH_ASSOC);
+    // }
+
     public function getProduits()
     {
-        $requete = $this->bd->prepare("SELECT * FROM Materiel m");
+        $requete = $this->bd->prepare("
+       SELECT 
+        m.Id_Materiel,
+        m.Description_materiel,
+        m.Prix_materiel,
+        m.Nom_materiel AS categories,
+        i.Lien_image AS image,
+        c.Coloris AS colors,
+        c.Code_hexadecimal AS code_hexadecimal, -- Ajouté ici
+        cc.Nom_categorie_couleur AS shades
+        FROM 
+            Materiel m
+        LEFT JOIN Images i ON m.id_image = i.id_image
+        LEFT JOIN Peinture p ON m.Id_Materiel = p.Id_Materiel
+        LEFT JOIN Couleur c ON p.Id_Couleur = c.Id_Couleur
+        LEFT JOIN Appartient_categorie_couleur acc ON c.Id_Couleur = acc.Id_Couleur
+        LEFT JOIN Categorie_couleur cc ON acc.Nom_categorie_couleur = cc.Nom_categorie_couleur;");
         $requete->execute();
         return $requete->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public function getProduitsPaginés($debut, $fin)
+    {
+        $requete = $this->bd->prepare("
+            SELECT 
+                m.Id_Materiel,
+                m.Description_materiel,
+                m.Prix_materiel,
+                m.Nom_materiel AS categories,
+                i.Lien_image AS image,
+                c.Coloris AS colors,
+                c.Code_hexadecimal AS code_hexadecimal,
+                cc.Nom_categorie_couleur AS shades
+            FROM 
+                Materiel m
+            LEFT JOIN Images i ON m.id_image = i.id_image
+            LEFT JOIN Peinture p ON m.Id_Materiel = p.Id_Materiel
+            LEFT JOIN Couleur c ON p.Id_Couleur = c.Id_Couleur
+            LEFT JOIN Appartient_categorie_couleur acc ON c.Id_Couleur = acc.Id_Couleur
+            LEFT JOIN Categorie_couleur cc ON acc.Nom_categorie_couleur = cc.Nom_categorie_couleur
+            LIMIT :limite OFFSET :decalage
+        ");
+        $requete->bindValue(':limite', $fin - $debut + 1, PDO::PARAM_INT);
+        $requete->bindValue(':decalage', $debut - 1, PDO::PARAM_INT);
+        $requete->execute();
+
+        return $requete->fetchAll(PDO::FETCH_ASSOC);
+    }
+    public function getNombreTotalProduits()
+    {
+        $requete = $this->bd->prepare("SELECT count(*) AS quantite FROM Materiel");
+        $requete->execute();
+        return $requete->fetch(PDO::FETCH_ASSOC);
+    }
+
+
+
 
     public function getAllColors()
     {

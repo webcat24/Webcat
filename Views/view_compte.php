@@ -2,12 +2,7 @@
 $bodyClass = "profile";
 require "view_begin.php";
 ?>
-<!-- Boxicons -->
-<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-
-<!-- CONTENT -->
 <section id="content">
-    <!-- NAVBAR -->
     <nav>
         <form action="#">
             <div class="form-input">
@@ -15,24 +10,16 @@ require "view_begin.php";
                 <button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
             </div>
         </form>
-        <!-- <a href="#" class="notification">
-            <i class='bx bxs-bell'></i>
-            <span class="num">8</span>
-        </a> -->
         <a href="#" class="profile">
             <img src="Content/img/image.png">
         </a>
     </nav>
-    <!-- NAVBAR -->
-
-    <!-- MAIN -->
     <main>
         <h3>Favoris</h3>
         <ul class="box-info">
             <?php foreach ($fav as $v): ?>
                 <li>
-                    <!-- <img src="<?= htmlspecialchars($v["img_link"]) ?>" alt="image du produit" class='bx'> -->
-                    <img src="Content/img/image.png" alt="image du produit" class='bx'>
+                    <img src="<?= htmlspecialchars($v["img_link"]) ?>" alt="image du produit" class='bx'>
                     <span class="text">
                         <h3><?= htmlspecialchars($v["nom"]) ?></h3>
                         <p>Prix : <?= htmlspecialchars($v["prix"]) ?>€</p>
@@ -59,8 +46,7 @@ require "view_begin.php";
                         <?php foreach ($historique as $v): ?>
                             <tr>
                                 <td>
-                                    <!-- <img src="<?= $v["img_link"] ?>" alt="image du produit"> -->
-                                    <img src="Content/img/image.png">
+                                    <img src="<?= $v["img_link"] ?>" alt="image du produit">
                                     <p><?= $v["nom"] ?></p>
                                 </td>
                                 <td><?= $v["prix"] ?>€ </td>
@@ -87,8 +73,7 @@ require "view_begin.php";
                     <?php foreach ($panier as $v): ?>
                         <li class="completed">
                             <div class="product-image">
-                                <!-- <img src="<?= htmlspecialchars($v["img_link"]) ?>" alt="image du produit"> -->
-                                <img src="Content/img/image.png">
+                                <img src="<?= htmlspecialchars($v["img_link"]) ?>" alt="image du produit">
                             </div>
                             <div class="product-details">
                                 <p class="product-name">Nom : <?= htmlspecialchars($v["nom"]) ?></p>
@@ -103,13 +88,8 @@ require "view_begin.php";
                     <?php endforeach; ?>
                 </ul>
             </div>
-
-
-
         </div>
         </div>
     </main>
-    <!-- MAIN -->
 </section>
-<!-- CONTENT -->
 <?php require "view_end.php"; ?>

@@ -42,13 +42,8 @@
                 </div>
             </div>
         </div>
-
-        <!-- Ligne de séparation -->
         <hr class="mb-4">
-
-        <!-- Copyright et Réseaux sociaux -->
         <div class="row align-items-center">
-            <!-- Copyright à gauche -->
             <div class="col-md-6 text-md-left">
                 <p class="copyright mb-0">© 2025 Peinturia. Tous droits réservés.</p>
             </div>
@@ -74,14 +69,10 @@
 <script src="https://unpkg.com/scrollreveal"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
-
-<!-- Tes fichiers JS personnalisés -->
-<!-- <script src="Content/js/carousel.js"></script> -->
 <script src="Content/js/footer.js"></script>
 <script src="Content/js/script.js"></script>
 <script src="Content/js/theme-pluginjs.js"></script>
 <script src="Content/js/theme.js"></script>
-
 </body>
 
 </html>

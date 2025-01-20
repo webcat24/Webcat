@@ -3,7 +3,6 @@ $bodyClass = "background-modifie"; // Classe pour le body
 require "view_begin.php";
 ?>
 
-<!--container-fluid permet d'obtenir un affichage responsive-->
 <div id="cont_co" class="container-fluid">
     <div class="row justify-content-center align-items-center">
         <div class="col-lg-6 col-md-8 col-sm-10 col-12 form_co">

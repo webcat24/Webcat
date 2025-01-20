@@ -2,7 +2,6 @@
 $title = "Accueil";
 require "view_begin.php";
 ?>
-
 <div id="myCarousel" class="carousel slide">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"

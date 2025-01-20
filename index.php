@@ -8,13 +8,13 @@ require_once "Models/Model.php";
 require_once "Controllers/Controller.php";
 
 //Liste des contrôleurs -- A RENSEIGNER
-$controllers = ["Utilisateur", "Connexion", "inspiration","Accueil"];
+$controllers = ["Utilisateur", "Connexion", "inspiration", "Accueil", "boutique"];
 //Nom du contrôleur par défaut-- A RENSEIGNER
 $controller_default = "Accueil";
 
 //API URL*********************************************************************
 // Il faut stocker le mdp dans la BDD et le hasher + expiration des tokens (why not)
-if(isset($_GET['api'])){
+if (isset($_GET['api'])) {
 
     // Récupérer l'en-tête Authorization
     $headers = apache_request_headers();
@@ -24,12 +24,12 @@ if(isset($_GET['api'])){
         // Vérifier que le token commence par "Bearer"
         if (preg_match('/Bearer\s(\S+)/', $authHeader, $matches)) {
             $token = $matches[1];  // Le token est dans $matches[1]
-            
+
             // Vérifier si le token est valide (On compare avec notre token secret)
             if ($token === 'Webcat') {
                 // Est-ce que c'est bien un string qui ne contient pas de caractère malveillant ?
                 $api = filter_input(INPUT_GET, 'api', FILTER_SANITIZE_STRING);
-                
+
                 //-- A RENSEIGNER
                 $apiDisponibles = ['allColors'];
 
@@ -39,23 +39,23 @@ if(isset($_GET['api'])){
                     echo json_encode(["error" => "API inconnue"]);
                     exit;
                 }
-    
+
                 //Inclusion des API's
                 require_once "Controllers/Controller_API.php";
                 $controller = new Controller_API();
-    
+
                 if ($api == 'allColors') {
                     $controller->getAllColorsAPI();
                     exit;
                 }
-            }else {
+            } else {
                 header('Content-Type: application/json');
                 http_response_code(403);
                 echo json_encode(["error" => "Accès interdit, token incorrect"]);
                 exit;
             }
         }
-    }else{
+    } else {
         // Pas d'en-tête Authorization
         header('Content-Type: application/json');
         http_response_code(400);
@@ -66,10 +66,9 @@ if(isset($_GET['api'])){
 
 //Controller URL***************************************************************
 //On teste si le paramètre controller existe et correspond à un contrôleur de la liste $controllers
-elseif(isset($_GET['controller']) and in_array($_GET['controller'], $controllers)) {
+elseif (isset($_GET['controller']) and in_array($_GET['controller'], $controllers)) {
     $nom_controller = $_GET['controller'];
-}
-else {
+} else {
     $nom_controller = $controller_default;
 }
 

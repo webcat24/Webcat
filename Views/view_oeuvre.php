@@ -3,75 +3,41 @@ $title = "Oeuvres";
 require 'view_begin.php';
 // var_dump(value: $data)
 ?>
+<?php
+$backgrounds = [
+    "linear-gradient(#603524, #d69041)",
+    "linear-gradient(#fdefe5, #faaec6)",
+    "linear-gradient(#3474d4, #83c2ef)",
+    "linear-gradient(#f0a60c, #97c9f7)",
+    "linear-gradient(#bc60a1, #2c3151)",
+    "linear-gradient(#dfb66d, #5b6f75)",
+
+];
+$desiredIndexes = [0, 2, 3, 4, 6, 8];
+
+?>
 <div class="carousel next">
     <div class="list">
-        <article class="item other_1">
-            <div class="main-content" style="background: linear-gradient(#603524, #d69041);">
-                <!-- <div class="main-content" style="background: linear-gradient(to right, #b26c86, #4b3d4f);"> -->
-
-                <div class="content">
-                    <h2>Exprimez-vous en couleurs.</h2>
+        <?php foreach ($desiredIndexes as $key => $index): ?>
+            <?php $oeuvre = $data["dataTableaux"][$index]; ?>
+            <article class="item <?= $key === 0 ? 'active' : ($key === 1 ? 'other_1' : ($key === 2 ? 'other_2' : '')) ?>">
+                <div class="main-content" style="background: <?= $backgrounds[$key % count($backgrounds)] ?>;">
+                    <div class="content">
+                        <h2>Exprimez-vous en couleurs.</h2>
+                    </div>
                 </div>
-            </div>
-            <figure class="image">
-                <img src="Content/img/oeuvre1.jpg" alt="" crossorigin="anonymous">
-                <figcaption>Les couleurs de votre art</figcaption>
-            </figure>
-        </article>
-        <article class="item active">
-            <!-- <div class="main-content" style="background-color: #f5bfaf;"> -->
-            <div class="main-content" style="background: linear-gradient(#fdefe5, #faaec6);">
-                <div class="content">
-                    <h2>Exprimez-vous en couleurs.</h2>
-                </div>
-            </div>
-            <figure class="image">
-                <img src="Content/img/oeuvre2.jpg" alt="" crossorigin="anonymous">
-                <figcaption>Les couleurs de votre art</figcaption>
-            </figure>
-        </article>
-        <article class="item other_2">
-            <div class="main-content" style="background: linear-gradient(#3474d4, #83c2ef);">
-                <div class=" content">
-                    <h2>Exprimez-vous en couleurs.</h2>
-                </div>
-            </div>
-            <figure class="image">
-                <img src="Content/img/oeuvre3.jpg" alt="" crossorigin="anonymous">
-                <figcaption>Les couleurs de votre art</figcaption>
-            </figure>
-        </article>
-        <article class="item">
-            <div class="main-content" style="background: linear-gradient(#f0a60c, #97c9f7);">
-                <div class="content">
-                    <h2>Exprimez-vous en couleurs.</h2>
-                </div>
-            </div>
-            <figure class="image">
-                <img src="Content/img/oeuvre4.jpg" alt="" crossorigin="anonymous">
-                <figcaption>Les couleurs de votre art</figcaption>
-            </figure>
-        </article>
-        <article class="item">
-            <!-- <div class="main-content" style="background: linear-gradient(to right, #bc60a1, #2c3151);"> -->
-            <div class="main-content" style="background: linear-gradient(#dfb66d, #5b6f75);">
-                <div class="content">
-                    <h2>Exprimez-vous en couleurs.</h2>
-                </div>
-            </div>
-            <figure class="image">
-                <img src="Content/img/oeuvre6.jpg" alt="" crossorigin="anonymous">
-                <figcaption>Les couleurs de votre art</figcaption>
-            </figure>
-        </article>
+                <figure class="image">
+                    <img src="<?= $oeuvre['lien_image'] ?>" alt="<?= htmlspecialchars($oeuvre['nom_oeuvre']) ?>"
+                        crossorigin="anonymous">
+                </figure>
+            </article>
+        <?php endforeach; ?>
     </div>
     <div class="arrows">
-        <button id="prev">
-            < </button>
-                <button id="next">></button>
+        <button id="prev">&#10094;</button>
+        <button id="next">&#10095;</button>
     </div>
 </div>
-<!-- section  menu -->
 <div class="wrapper">
     <div class="search-input">
         <a href="" target="_blank" hidden></a>
@@ -83,7 +49,7 @@ require 'view_begin.php';
         </div>
     </div>
 </div>
-<div class="entoure">
+<div class="entoure" id="oeuvre">
     <section id="menu">
         <h2 class="section-title ff-damion espace">Nos Œuvres</h2>
         <div class="dishes">
@@ -95,7 +61,6 @@ require 'view_begin.php';
                     <!-- pipette icon -->
                     <i id="pipetteSmallEcran" class="bi bi-eyedropper"
                         onclick="showImage(<?= $oeuvre['id_oeuvres'] - 1 ?>)"></i>
-                    <!-- <a href="#" class="buy-button">Acheter</a> -->
                 </div>
             <?php endforeach; ?>
 
@@ -117,20 +82,61 @@ require 'view_begin.php';
 
     </section>
 </div>
-<!-- Barre nav -->
 <div class="conteneurBarreNavOeuvre">
     <nav class="navBarreNavOeuvre">
         <ul>
-            <?php for ($i = 1; $i <= $data["taillePageNav"]; $i++): ?>
+            <?php if ($data["currentPage"] > 1): ?>
+                <li>
+                    <a href="?controller=inspiration&action=afficheroeuvre&page=<?= $data["currentPage"] - 1 ?>#oeuvre">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                </li>
+            <?php endif ?>
+
+            <?php if ($data["currentPage"] > 5): ?>
+                <li>
+                    <a
+                        href="?controller=inspiration&action=afficheroeuvre&page=<?= max(1, $data["currentPage"] - 5) ?>#oeuvre">
+                        <span class="dots">&bull;&bull;&bull;</span>
+                    </a>
+                </li>
+            <?php endif ?>
+            <?php
+            $windowSize = 5;
+            $start = max(1, $data["currentPage"] - floor($windowSize / 2));
+            $end = min($data["taillePageNav"], $start + $windowSize - 1);
+            $start = max(1, $end - $windowSize + 1); // Réajuster le début si on est proche de la fin
+            ?>
+
+            <?php for ($i = $start; $i <= $end; $i++): ?>
                 <li>
                     <a <?php if ($i == $data["currentPage"]) {
                         echo "class=\"pageActive\"";
                     } ?>
-                        href="http://localhost/SAE5/git/Webcat/?controller=Controller_inspiration&action=afficheroeuvre&page=<?= $i ?>">
+                        href="?controller=inspiration&action=afficheroeuvre&page=<?= $i ?>#oeuvre">
                         <?= $i ?>
                     </a>
                 </li>
             <?php endfor ?>
+
+            <!-- Bouton pour avancer de 5 pages -->
+            <?php if ($data["currentPage"] <= $data["taillePageNav"] - 5): ?>
+                <li>
+                    <a
+                        href="?controller=inspiration&action=afficheroeuvre&page=<?= min($data["taillePageNav"], $data["currentPage"] + 5) ?>#oeuvre">
+                        <span class="dots">&bull;&bull;&bull;</span>
+                    </a>
+                </li>
+            <?php endif ?>
+
+            <!-- Bouton Suivant -->
+            <?php if ($data["currentPage"] < $data["taillePageNav"]): ?>
+                <li>
+                    <a href="?controller=inspiration&action=afficheroeuvre&page=<?= $data["currentPage"] + 1 ?>#oeuvre">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </li>
+            <?php endif ?>
         </ul>
     </nav>
 </div>

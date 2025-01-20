@@ -15,7 +15,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 	<!-- CSS de Venobox -->
 	<link rel="stylesheet" href="https://unpkg.com/venobox@1.9.1/venobox.min.css" />
-	<link rel="stylesheet" href="Content/css/stylesheet.css"> <!-- Votre CSS personnalisé -->
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="Content/css/stylesheet.css">
 
 
 
@@ -25,12 +26,9 @@
 	<header class="header">
 		<nav class="navbar navbar-expand-lg header-custom">
 			<div class="container-fluid d-flex flex-column align-items-center">
-				<!-- Logo au centre -->
 				<a class="navbar_logo" href="?controller=accueil&action=accueil">
 					<img src="Content/img/logo_long.png" alt="Logo" class="img-fluid" style="max-width: 150px;" />
 				</a>
-
-				<!-- Menu en dessous -->
 				<div class="collapse navbar-collapse mt-2" id="navbarNavDropdown">
 					<ul class="navbar-nav d-flex justify-content-center w-100">
 						<li class="nav-item">
@@ -42,20 +40,18 @@
 								href="?controller=inspiration&action=afficherentreprise">Entreprise</a>
 						</li>
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle"
-								href="?controller=inspiration&action=afficherinspiration" role="button"
-								data-bs-toggle="dropdown" aria-expanded="false">Inspiration</a>
+							<a class="nav-link"
+								href="?controller=inspiration&action=afficherinspiration">Inspiration</a>
 							<ul class="dropdown-menu">
-								<li><a class="dropdown-item"
-										href="?controller=inspiration&action=affichepalettes">Palettes</a>
-								</li>
-								<li><a class="dropdown-item"
+								<li><a class="dropdown-item nav-link active"
+										href="?controller=inspiration&action=affichepalettes">Palettes</a></li>
+								<li><a class="dropdown-item nav-link active"
 										href="?controller=inspiration&action=afficheroeuvre">Œuvres</a></li>
 							</ul>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link active" aria-current="page"
-								href="?controller=inspiration&action=boutique">Boutique</a>
+								href="?controller=boutique&action=boutique">Boutique</a>
 						</li>
 					</ul>
 				</div>
@@ -65,7 +61,7 @@
 					<a href="?controller=Connexion&action=connexion" class="me-3">
 						<img src="Content/img/user.png" alt="User" style="width: 30px; height: 30px;" />
 					</a>
-					<a href="?controller=compte&action=compte">
+					<a href="?controller=compte&action=compte" class="me-3">
 						<img src="Content/img/panier.png" alt="Panier" style="width: 30px; height: 30px;" />
 					</a>
 				</div>
@@ -80,5 +76,3 @@
 			</div>
 		</nav>
 	</header>
-
-	<!-- ?controller=Controller_inspiration&action=afficherentreprise -->
