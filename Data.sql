@@ -2123,6 +2123,10 @@ INSERT INTO
   public.type_peinture (nom_type_peinture)
 VALUES
   ('Gouache');
+INSERT INTO
+  public.type_peinture (nom_type_peinture)
+VALUES
+  ('Encre');
 
 
 INSERT INTO
