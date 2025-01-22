@@ -119,4 +119,10 @@ function create_sql_from_tokens($tokens){
 
     //LINK table with id (img)
     //OR pour des mots non définis
+
+    //ORDER BY catégorie ASC -> null come first so when matched by color you get the first match in color followed by the articles in the catégorie -> encapusler la requete et rajouter le deuxième order by donc une combinaison de select
+    //To make the matching by type -> use regex to detect typo and match it with the correct one / list with regex or individuals trial (may takes time) / construct a LIKE with main material part and detect next one as a filter
+    //To gain time maybe use a variable to skip next word when used in the current test (pas + chere etc)
+    //=> combine search like two colors with keyword (need thoughts on the order by)
+    //switch to GET
 }
