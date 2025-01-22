@@ -55,7 +55,6 @@ VALUES
 -- (28, 'Froid'),
 -- (29, 'Chaud'),
 -- (30, 'Froid'),
--- -- Répétez ce schéma jusqu'à 210
 -- (210, 'Froid');
 -- ou
 DO $ $

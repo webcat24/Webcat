@@ -54,7 +54,7 @@ require 'view_begin.php';
                             <span><i class="fas fa-shopping-basket"></i></span>
                         </p>
                         <strong><?= htmlspecialchars($produit['categories'] ?? '') ?></strong>
-                        <span><?= htmlspecialchars($produit['description_materiel'] ?? '') ?></span>
+                        <!-- <span><?= htmlspecialchars($produit['description_materiel'] ?? '') ?></span> -->
                     </div>
                     <h4>$<?= number_format($produit['prix_materiel'] ?? 0, 2) ?></h4>
                 </li>
@@ -100,10 +100,10 @@ require 'view_begin.php';
 <?php endforeach; ?>
 
 
-<div class="conteneurBarreNavOeuvre">
+<!-- <div class="conteneurBarreNavOeuvre">
     <nav class="navBarreNavOeuvre">
         <ul>
-            <!-- Bouton Précédent -->
+            <!-- Bouton Précédent --
             <?php if ($currentPage > 1): ?>
                 <li>
                     <a href="?controller=boutique&action=boutique&page=<?= $currentPage - 1 ?>">
@@ -112,7 +112,7 @@ require 'view_begin.php';
                 </li>
             <?php endif ?>
 
-            <!-- Bouton pour reculer de 5 pages -->
+            <!-- Bouton pour reculer de 5 pages --
             <?php if ($currentPage > 5): ?>
                 <li>
                     <a href="?controller=boutique&action=boutique&page=<?= max(1, $currentPage - 5) ?>">
@@ -138,7 +138,7 @@ require 'view_begin.php';
                 </li>
             <?php endfor ?>
 
-            <!-- Bouton pour avancer de 5 pages -->
+            <!-- Bouton pour avancer de 5 pages --
             <?php if ($currentPage <= $taillePageNav - 5): ?>
                 <li>
                     <a href="?controller=boutique&action=boutique&page=<?= min($taillePageNav, $currentPage + 5) ?>">
@@ -147,7 +147,7 @@ require 'view_begin.php';
                 </li>
             <?php endif ?>
 
-            <!-- Bouton Suivant -->
+            <!-- Bouton Suivant --
             <?php if ($currentPage < $taillePageNav): ?>
                 <li>
                     <a href="?controller=boutique&action=boutique&page=<?= $currentPage + 1 ?>">
@@ -157,7 +157,7 @@ require 'view_begin.php';
             <?php endif ?>
         </ul>
     </nav>
-</div>
+</div> -->
 
 
 

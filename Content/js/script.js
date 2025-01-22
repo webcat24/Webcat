@@ -412,7 +412,7 @@ document.addEventListener("DOMContentLoaded", () => {
         productContainer.style.justifyContent = "flex-start";
     } else {
       for (let item of li) {
-        item.style.width = "46%";
+        item.style.width = "30%";
       }
     }
   }
