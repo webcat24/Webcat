@@ -43,6 +43,7 @@ function tokenize($query){
     $type = "all";
     $quantite = "any";
     $keywords = preg_split("/ +/", $query);
+    var_dump($keywords);
     foreach ($keywords as $key => $word) {
         if(preg_match("/^p[ea]intures?$/", $word) && $materiel == "all"){
             $materiel = "peinture";
@@ -65,6 +66,7 @@ function tokenize($query){
         }
         if(in_array(strtolower($word), $GLOBALS["search"]["couleur"])){
             $couleur = strtolower($word); //voir cat
+            $materiel = "peinture";
             continue;
         }
         if($type == "all" && in_array(strtolower($word), $GLOBALS["search"]["type"])){
@@ -74,6 +76,7 @@ function tokenize($query){
         }
         if(preg_match("/^[0-9]+m?l$/", strtolower($word)) && in_array(strtolower($word), $GLOBALS["search"]["quantite"])){
             $quantite = strtolower($word);
+            $materiel = "peinture";
             continue;
         }
         if(preg_match("/^[0-9]+$/", $word) && isset($keywords[$key+1]) && preg_match("/^m?l$/", strtolower($keywords[$key+1])) && in_array(strtolower($word.strtolower($keywords[$key+1])), $GLOBALS["search"]["quantite"])){
