@@ -166,6 +166,14 @@ class Model
         return $requete->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function getOeuvres()
+    {
+        $requete = $this->bd->prepare("SELECT lien_image FROM oeuvres
+                                                JOIN images ON oeuvres.id_image = images.id_image LIMIT 4");
+        $requete->execute();
+        return $requete->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     public function getOeuvresWithTheirArtisteAndImg($debut, $fin)
     {
         $requete = $this->bd->prepare("SELECT id_oeuvres, nom_oeuvre, oeuvres.id_artiste, nom_artiste, images.id_image, Lien_image FROM oeuvres
