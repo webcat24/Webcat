@@ -1,9 +1,9 @@
 <?php
 // Paramètres de connexion
-// $host = 'localhost';
-// $dbname = 'WEBCATNEW';
-// $login = 'postgres';
-// $mdp = 'houssna';
+ $host = 'localhost';
+ $dbname = 'WEBCATNEW';
+ $login = 'postgres';
+ $mdp = 'houssna';
 
 // Création du DSN pour PostgreSQL
 $dsn = "pgsql:host=$host;dbname=$dbname";
