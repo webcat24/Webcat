@@ -36,20 +36,20 @@ function prepare_search(){
 }
 
 function tokenize($query){
+    var_dump($query);
     $price = "";
     $materiel = "all";
     $couleur = "all";
     $type = "all";
     $quantite = "any";
     $keywords = preg_split("/ +/", $query);
-    var_dump($keywords);
     foreach ($keywords as $key => $word) {
         if(preg_match("/^p[ea]intures?$/", $word) && $materiel == "all"){
             $materiel = "peinture";
             continue;
         }
         if(in_array($word, $GLOBALS["search"]["materiel"]) && $materiel == "all"){
-            $materiel = "autres";
+            $materiel = "autres_materiaux";
             continue;
         }
         if(in_array($word, $GLOBALS["search"]["determinants"])){
@@ -78,6 +78,7 @@ function tokenize($query){
         }
         if(preg_match("/^[0-9]+$/", $word) && isset($keywords[$key+1]) && preg_match("/^m?l$/", strtolower($keywords[$key+1])) && in_array(strtolower($word.strtolower($keywords[$key+1])), $GLOBALS["search"]["quantite"])){
             $quantite = $word.strtolower($keywords[$key+1]);
+            $materiel = "peinture";
             continue;
         }
     }
@@ -85,8 +86,34 @@ function tokenize($query){
 }
 
 function create_sql_from_tokens($tokens){
-    $base = "SELECT * FROM materiel JOIN peinture USING(id_materiel) JOIN type_peinture USING(id_type_peinture) JOIN couleur USING(id_couleur) WHERE LOWER(coloris) LIKE :couleur AND nom_type_peinture = :type";
-    $prix = "ORDER BY prix_materiel DESC/ASC";
-    // %:couleur%
-    return;
+    $type = "1=1";
+    $couleur = "1=1";
+    $quantite = "1=1";
+    $filter = "";
+    if ($tokens["materiel"] == "all"){
+        $base = "SELECT id_materiel,prix_materiel,nom_materiel,id_image FROM peinture RIGHT JOIN materiel USING(id_materiel) LEFT JOIN autres_materiaux USING(id_materiel)"; //Valide
+    }
+    else { 
+        $materiel = $tokens["materiel"];
+        if($tokens["materiel"] == "peinture"){
+            if($tokens["type"] != "all"){
+                $type = "nom_type_peinture = '".$tokens["type"]."'";
+            }
+            if($tokens["couleur"] != "all"){
+                $couleur = "LOWER(coloris) LIKE '%".$tokens["type"]."%'";
+            }
+            if($tokens["quantite"] != "any"){
+                $quantite = "LOWER(quantite) = '".$tokens["quantite"]."'";
+            }
+            $filter = " WHERE ".$type." AND ".$couleur." AND ".$quantite;
+        }
+        $base = "SELECT id_materiel,prix_materiel,nom_materiel,id_image FROM materiel RIGHT JOIN ".$materiel." USING(id_materiel) LEFT JOIN type_peinture USING(id_type_peinture) LEFT JOIN couleur USING(id_couleur)".$filter;
+    }
+    if($tokens["price"] != ""){
+        $base .= " ORDER BY prix_materiel ".$tokens["price"];
+    }
+    return $base;
+
+    //LINK table with id (img)
+    //OR pour des mots non définis
 }
