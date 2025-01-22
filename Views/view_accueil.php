@@ -15,7 +15,7 @@ require "view_begin.php";
             <div class="carousel-caption d-block">
                 <h5>Les couleurs de votre art</h5>
                 <p>Pinceaux, chevalet, peinture aquarelle, à l'huile, acrylique, ...</p>
-                <a href="?controller=Boutique&action="><button class="bouton2">Découvrir nos produits</button></a>
+                <a href="?controller=boutique"><button class="bouton2">Découvrir nos produits</button></a>
             </div>
         </div>
         <div class="carousel-item">
@@ -23,7 +23,7 @@ require "view_begin.php";
             <div class="carousel-caption d-block">
                 <h5>Les couleurs de votre art</h5>
                 <p>Pinceaux, chevalet, peinture aquarelle, à l'huile, acrylique, ...</p>
-                <a href="?controller=Boutique&action="><button class="bouton2">Découvrir nos produits</button></a>
+                <a href="?controller=boutique"><button class="bouton2">Découvrir nos produits</button></a>
             </div>
         </div>
         <div class="carousel-item">
@@ -31,7 +31,7 @@ require "view_begin.php";
             <div class="carousel-caption d-block">
                 <h5>Les couleurs de votre art</h5>
                 <p>Pinceaux, chevalet, peinture aquarelle, à l'huile, acrylique, ...</p>
-                <a href="?controller=Boutique&action="><button class="bouton2">Découvrir nos produits</button></a>
+                <a href="?controller=boutique"><button class="bouton2">Découvrir nos produits</button></a>
             </div>
         </div>
     </div>
@@ -50,41 +50,27 @@ require "view_begin.php";
         <h5>Peinture à la une</h5>
         <div class="container article">
             <div class="row">
+            <?php for ($i = 0; $i < 4 && $i < count($produits); $i++): $produit = $produits[$i];?>
                 <div class="col">
-                    <img src="Content/img/pont-monet.jpeg" alt="Article 1">
+                    <img src="<?= htmlspecialchars($produit['image'] ?? '') ?>" alt="<?= htmlspecialchars($produit['categories'] ?? '') ?>">
                 </div>
-                <div class="col">
-                    <img src="Content/img/femme-monet.jpg" alt="Article 2">
-                </div>
-                <div class="col">
-                    <img src="Content/img/argenteuil-monet.jpg" alt="Article 3">
-                </div>
-                <div class="col">
-                    <img src="Content/img/rochers-monet.jpg" alt="Article 4">
-                </div>
+            <?php endfor; ?>
             </div>
         </div>
-        <a href="?controller=Boutique&action="><button class="bouton3">En découvrir plus</button></a>
+        <a href="?controller=boutique"><button class="bouton3">En découvrir plus</button></a>
     </div>
     <div class="article-bloc">
         <h5>Galerie d'art</h5>
         <div class="container article">
             <div class="row">
+            <?php foreach ($data['dataTableaux'] as $oeuvre): ?>
                 <div class="col">
-                    <img src="Content/img/pont-monet.jpeg" alt="Article 1">
+                    <img src="<?= $oeuvre['lien_image'] ?>" alt="">
                 </div>
-                <div class="col">
-                    <img src="Content/img/femme-monet.jpg" alt="Article 2">
-                </div>
-                <div class="col">
-                    <img src="Content/img/argenteuil-monet.jpg" alt="Article 3">
-                </div>
-                <div class="col">
-                    <img src="Content/img/rochers-monet.jpg" alt="Article 4">
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
-        <a href="?controller=Boutique&action="><button class="bouton3">En découvrir plus</button></a>
+        <a href="?controller=inspiration&action=afficheroeuvre"><button class="bouton3">En découvrir plus</button></a>
     </div>
 </div>
 

@@ -16,7 +16,7 @@ require "view_begin.php";
             <div class="carousel-caption d-block">
                 <h5>Les couleurs de votre art</h5>
                 <p>Pinceaux, chevalet, peinture aquarelle, à l'huile, acrylique, ...</p>
-                <a href="?controller=Boutique&action="><button class="bouton2">Découvrir nos produits</button></a>
+                <a href="?controller=boutique"><button class="bouton2">Découvrir nos produits</button></a>
             </div>
         </div>
         <div class="carousel-item">
@@ -24,7 +24,7 @@ require "view_begin.php";
             <div class="carousel-caption d-block">
                 <h5>Les couleurs de votre art</h5>
                 <p>Pinceaux, chevalet, peinture aquarelle, à l'huile, acrylique, ...</p>
-                <a href="?controller=Boutique&action="><button class="bouton2">Découvrir nos produits</button></a>
+                <a href="?controller=boutique"><button class="bouton2">Découvrir nos produits</button></a>
             </div>
         </div>
         <div class="carousel-item">
@@ -32,7 +32,7 @@ require "view_begin.php";
             <div class="carousel-caption d-block">
                 <h5>Les couleurs de votre art</h5>
                 <p>Pinceaux, chevalet, peinture aquarelle, à l'huile, acrylique, ...</p>
-                <a href="?controller=Boutique&action="><button class="bouton2">Découvrir nos produits</button></a>
+                <a href="?controller=boutique"><button class="bouton2">Découvrir nos produits</button></a>
             </div>
         </div>
     </div>
@@ -51,39 +51,17 @@ require "view_begin.php";
             <h2 class="section-title ff-damion espace">À Propos de nous</h2>
 
             <span class="fc-primary fs-h2">
-                WebCat Cooperation
+                Notre histoire
             </span>
             <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores, quaerat iusto expedita corporis
-                esse repellendus laboriosam suscipit. Cupiditate enim repellendus porro nam? Repudiandae doloribus
-                dicta vero maiores labore dolore voluptatem.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus nisi tenetur corporis minus sint
-                voluptates molestias dolore quisquam nihil illo consequatur id ea similique nesciunt suscipit, ipsum
-                reprehenderit eligendi atque?
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio sunt debitis veniam et esse magnam
-                obcaecati asperiores nam omnis harum molestias ullam nulla quas suscipit distinctio illum, quasi
-                neque laudantium?
-
-
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat voluptas quia, enim a odio eligendi
-                quasi culpa qui nulla dolores, porro nisi! Aut facilis illum facere ex laudantium accusamus unde.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quas doloribus maiores magni
-                voluptas minus ad quaerat autem reiciendis sunt alias eius sint, deserunt adipisci dolore fugiat
-                soluta nobis! Blanditiis.
-
+                Peinturia est <strong>née en 2016</strong>, de l’amitié et de la passion commune pour l’art de cinq anciens camarades de classe. Ces passionnés, réunis autour de la même vision, ont voulu <strong>rendre l’art accessible tout en valorisant des matériaux de qualité</strong>. Ils ont commencé modestement dans un atelier improvisé, développant des produits pensés par des artistes pour des artistes. Aujourd’hui, Peinturia est devenue une <strong>référence dans le domaine des peintures et du matériel artistique</strong>, tout en restant <strong>fidèle à ses racines</strong> et à <strong>son engagement</strong> envers l’excellence et la créativité.
             </p>
         </div>
         <div class="col-balance">
             <div class="sticky-img-dual">
-                <img src="Content/img/arbre.avif" alt="" class="caher">
+                <img src="Content/img/locaux.jpg" alt="" class="caher">
                 <!-- <img src="Content/img/arbre.avif" alt="" class="blob"> -->
-                <img src="Content/img/er.jfif" alt="">
+                <img src="Content/img/atelier.jpg" alt="">
             </div>
         </div>
         <div class="sticky-img-dual-spacer"></div>
@@ -92,29 +70,17 @@ require "view_begin.php";
 
         <div class="col-balance ordi">
             <div class="sticky-img-dual">
-                <img src="Content/img/arb.avif" alt="">
+                <img src="Content/img/artiste.jpg" alt="">
                 <!-- <img src="Content/img/arb.avif" alt="" class="blob"> -->
-                <img src="Content/img/R.jfif" alt="" class="caher">
+                <img src="Content/img/atelierluxe.jpg" alt="" class="caher">
             </div>
         </div>
         <div class="col-balance">
             <span class="fc-primary fs-h2">
-                Notre Mission
+                Notre mission
             </span>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi harum soluta aperiam ipsum vitae
-                debitis, placeat nam saepe tempore laborum cum? Accusantium suscipit labore delectus corrupti quis
-                porro necessitatibus quae?
-            </p>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero facere, et consectetur error qui
-                debitis ex, minus, deserunt eveniet quasi esse? Suscipit, dolor qui! Dignissimos fugiat dolorum
-                recusandae nostrum excepturi.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis voluptas asperiores quasi quam
-                rem inventore pariatur suscipit! Ex maiores laborum est necessitatibus, rem, doloremque quidem
-                aperiam magnam quis nihil ducimus?
+                Chez Peinturia, nous avons une mission claire : <strong>inspirer et équiper les artistes</strong>, qu’ils soient amateurs ou professionnels, en leur offrant <strong>des produits de qualité supérieure</strong>. Nous croyons que chaque coup de pinceau raconte une histoire et mérite les meilleures matières premières pour la sublimer. En proposant des peintures éclatantes, des palettes inspirantes et un matériel durable, <strong>nous accompagnons nos clients dans leur quête de beauté et d’expression artistique</strong>.
             </p>
 
         </div>
@@ -125,46 +91,14 @@ require "view_begin.php";
                 Nos Valeurs
             </span>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem earum perferendis aliquam. Quod,
-                commodi eum. Inventore, illum odio commodi natus facilis culpa qui pariatur harum ex nam iure.
-                Voluptatum, explicabo.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam corrupti atque natus odio libero,
-                veritatis aspernatur necessitatibus aliquid nesciunt! Quasi molestiae sed laboriosam accusamus rem
-                non natus repellendus commodi saepe.
-            </p>
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id sint aliquid nesciunt quam ex natus
-                fuga nihil unde eos culpa! Debitis, incidunt perferendis autem magnam tenetur maxime. Suscipit,
-                atque similique.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, sunt porro recusandae quod provident
-                ab nesciunt praesentium voluptate aut excepturi ratione quisquam! Deleniti in nemo suscipit incidunt
-                neque aspernatur voluptates?
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus possimus minima et ab voluptate
-                amet eligendi. Esse nesciunt reiciendis optio iusto eaque architecto, quia iste dignissimos est ipsa
-                iure accusantium!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi illo corrupti cumque,
-                reprehenderit illum sapiente facilis nemo nulla beatae quos eum asperiores exercitationem nobis
-                suscipit ex ipsa. Repellendus, officiis voluptatibus.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, sunt porro recusandae quod provident
-                ab nesciunt praesentium voluptate aut excepturi ratione quisquam! Deleniti in nemo suscipit incidunt
-                neque aspernatur voluptates?
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus possimus minima et ab voluptate
-                amet eligendi. Esse nesciunt reiciendis optio iusto eaque architecto, quia iste dignissimos est ipsa
-                iure accusantium!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi illo corrupti cumque,
-                reprehenderit illum sapiente facilis nemo nulla beatae quos eum asperiores exercitationem nobis
-                suscipit ex ipsa. Repellendus, officiis voluptatibus.
+            L’engagement de Peinturia repose sur des valeurs fortes qui guident chaque étape de notre activité : nous favorisons des procédés <strong>respectueux de l’environnement</strong> et collaborons avec <strong>des producteurs locaux</strong> pour réduire notre empreinte carbone, notre équipe reflète <strong>une diversité de talents et de cultures</strong> en mettant en avant l’égalité des chances, nous travaillons avec <strong>des partenaires français</strong> pour garantir des produits authentiques et <strong>soutenir l’artisanat local</strong>, et enfin, notre passion pour l’art et la création se retrouve dans chaque produit, <strong>conçu pour inspirer et respecter nos valeurs de durabilité</strong>.
             </p>
         </div>
         <div class="col-balance">
             <div class="sticky-img-dual">
-                <img src="Content/img/er.jfif" alt="">
+                <img src="Content/img/reunion.jpg" alt="">
                 <!-- <img src="Content/img/arbr.avif" alt="" class="blob"> -->
-                <img src="Content/img/arbr.avif" alt="" class="caher">
+                <img src="Content/img/champsfleurs.jpg" alt="" class="caher">
             </div>
         </div>
         <div class="sticky-img-dual-spacer"></div>
