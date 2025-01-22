@@ -22,6 +22,762 @@ VALUES
     , '0601020305'
   );
 
+  -- Script pour insérer les données dans la table 'couleur'
+
+INSERT INTO
+  public.couleur (coloris, code_hexadecimal)
+VALUES
+  ('---', '#E5E7E6')
+  , ('---', '#EEE6D8')
+  , ('---', '#DAAB3A')
+  , ('---', '#B67332')
+  , ('---', '#93441A')
+  , ('---', '#1E0F1C')
+  , ('---', '#A7001E')
+  , ('---', '#E2E9C0')
+  , ('---', '#7AA95C')
+  , ('---', '#955149')
+  , ('---', '#CA3C66')
+  , ('---', '#DB6A8F')
+  , ('---', '#E8AABE')
+  , ('---', '#A7E0E0')
+  , ('---', '#4AA3A2')
+  , ('---', '#430C05')
+  , ('---', '#D46F4D')
+  , ('---', '#FFBF66')
+  , ('---', '#08C5D1')
+  , ('---', '#00353F')
+  , ('---', '#CE6A6B')
+  , ('---', '#EBACA2')
+  , ('---', '#BED3C3')
+  , ('---', '#4A919E')
+  , ('---', '#212E53')
+  , ('---', '#F7F6CF')
+  , ('---', '#B6D8F2')
+  , ('---', '#F4CFDF')
+  , ('---', '#5784BA')
+  , ('---', '#9AC8EB')
+  , ('---', '#F9968B')
+  , ('---', '#F27438')
+  , ('---', '#26474E')
+  , ('---', '#76CDCD')
+  , ('---', '#2CCED2')
+  , ('---', '#6A645A')
+  , ('---', '#E3CD8B')
+  , ('---', '#5D7052')
+  , ('---', '#C18845')
+  , ('---', '#F0BE86')
+  , ('---', '#E1A624')
+  , ('---', '#317AC1')
+  , ('---', '#384454')
+  , ('---', '#D4D3DC')
+  , ('---', '#AD956B')
+  , ('---', '#18534F')
+  , ('---', '#226D68')
+  , ('---', '#ECF8F6')
+  , ('---', '#FEEAA1')
+  , ('---', '#D6955B')
+  , ('---', '#91464B')
+  , ('---', '#F3DDD2')
+  , ('---', '#ED9F82')
+  , ('---', '#C3625B')
+  , ('---', '#833233')
+  , ('---', '#35435C')
+  , ('---', '#5F8AB4')
+  , ('---', '#A9C5E0')
+  , ('---', '#CEDDE9')
+  , ('---', '#F3F8FA')
+  , ('---', '#212121')
+  , ('---', '#373737')
+  , ('---', '#5F5F5F')
+  , ('---', '#878787')
+  , ('---', '#D7D7D7')
+  , ('---', '#59656B')
+  , ('---', '#8D9EA7')
+  , ('---', '#C6CED3')
+  , ('---', '#DEE5E8')
+  , ('---', '#F4F6F7')
+  , ('---', '#FFF4E4')
+  , ('---', '#FCE0BA')
+  , ('---', '#F7C27F')
+  , ('---', '#EE9F4C')
+  , ('---', '#DC7839')
+  , ('---', '#1B1414')
+  , ('---', '#342727')
+  , ('---', '#5C4949')
+  , ('---', '#987979')
+  , ('---', '#E4BDBD')
+  , ('---', '#F0F9EF')
+  , ('---', '#DEEBDD')
+  , ('---', '#BED7B8')
+  , ('---', '#8FB786')
+  , ('---', '#488D47')
+  , ('---', '#F1F0EA')
+  , ('---', '#CCC7B2')
+  , ('---', '#A0997C')
+  , ('---', '#6C6346')
+  , ('---', '#332C19')
+  , ('---', '#E4F1F3')
+  , ('---', '#B4DAE0')
+  , ('---', '#75BAC3')
+  , ('---', '#37929F')
+  , ('---', '#106572')
+  , ('---', '#F8ECD3')
+  , ('---', '#EFD19B')
+  , ('---', '#E5B45A')
+  , ('---', '#CA902E')
+  , ('---', '#956419')
+  , ('---', '#FFB7B2')
+  , ('---', '#FFDFBA')
+  , ('---', '#FFFFBA')
+  , ('---', '#BAFFC9')
+  , ('---', '#BAE1FF')
+  , ('---', '#EF476F')
+  , ('---', '#FFD166')
+  , ('---', '#06D6A0')
+  , ('---', '#118AB2')
+  , ('---', '#073B4C')
+  , ('---', '#3E4C57')
+  , ('---', '#7D9D9C')
+  , ('---', '#C2D9D6')
+  , ('---', '#F4FCF9')
+  , ('---', '#B47051')
+  , ('---', '#E5989B')
+  , ('---', '#F1D0AD')
+  , ('---', '#FAEDCD')
+  , ('---', '#A8DADC')
+  , ('---', '#457B9D')
+  , ('---', '#FF9F1C')
+  , ('---', '#FFD827')
+  , ('---', '#247BA0')
+  , ('---', '#70C1B3')
+  , ('---', '#1F1E33')
+  , ('---', '#456990')
+  , ('---', '#4D908E')
+  , ('---', '#67BDAD')
+  , ('---', '#A8DADC')
+  , ('---', '#FFF4DC')
+  , ('---', '#4B6177')
+  , ('---', '#9DBEBB')
+  , ('---', '#E8E5D7')
+  , ('---', '#F7F6E7')
+  , ('---', '#D2C6A8')
+  , ('---', '#F4D35E')
+  , ('---', '#F8E4B9')
+  , ('---', '#83C4C4')
+  , ('---', '#2C2C54')
+  , ('---', '#0F3460')
+  , ('---', '#D7DFE9')
+  , ('---', '#BACDE0')
+  , ('---', '#72A8CE')
+  , ('---', '#3C76BF')
+  , ('---', '#1A336C')
+  , ('---', '#EFF3F1')
+  , ('---', '#D2DDDA')
+  , ('---', '#80A9A9')
+  , ('---', '#405B5B')
+  , ('---', '#1A2424')
+  , ('---', '#F4A261')
+  , ('---', '#E9C46A')
+  , ('---', '#2A9D8F')
+  , ('---', '#264653')
+  , ('---', '#E76F51')
+  , ('---', '#5DBCDA')
+  , ('---', '#F4F1DE')
+  , ('---', '#E9C46A')
+  , ('---', '#DC5754')
+  , ('---', '#4D373B')
+  , ('---', '#A8DADC')
+  , ('---', '#457B9D')
+  , ('---', '#1D3557')
+  , ('---', '#E63946')
+  , ('---', '#F1FAEE')
+  , ('---', '#2F4858')
+  , ('---', '#E9C46A')
+  , ('---', '#F4F7E3')
+  , ('---', '#B46988')
+  , ('---', '#172A3A')
+  , ('---', '#E76F51')
+  , ('---', '#F4A261')
+  , ('---', '#264653')
+  , ('---', '#E9C46A')
+  , ('---', '#2A9D8F')
+  , ('---', '#FFD369')
+  , ('---', '#F47A5F')
+  , ('---', '#606C80')
+  , ('---', '#485563')
+  , ('---', '#202429')
+  , ('---', '#F4A261')
+  , ('---', '#2A9D8F')
+  , ('---', '#457B9D')
+  , ('---', '#264653')
+  , ('---', '#F1FAEE')
+  , ('---', '#F16941')
+  , ('---', '#FF9F1C')
+  , ('---', '#F8F4E4')
+  , ('---', '#5DA3A2')
+  , ('---', '#364347')
+  , ('---', '#F4A261')
+  , ('---', '#E76F51')
+  , ('---', '#264653')
+  , ('---', '#E9C46A')
+  , ('---', '#2A9D8F')
+  , ('---', '#E9C46A')
+  , ('---', '#2A9D8F')
+  , ('---', '#F4A261')
+  , ('---', '#E76F51')
+  , ('---', '#264653')
+  , ('---', '#457B9D')
+  , ('---', '#A8DADC')
+  , ('---', '#F1FAEE')
+  , ('---', '#1D3557')
+  , ('---', '#E63946')
+  , ('---', '#FDE74C')
+  , ('---', '#F38630')
+  , ('---', '#237B80')
+  , ('---', '#12202F')
+  , ('---', '#FFD1DC');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bisque', '#FFE4C4');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Rose bonbon', '#F9429E');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Chair', '#FEC3AC');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Cherry', '#EC3B83');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Coquille d’œuf', '#FDE9E0');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Cuisse de nymphe', '#FEE7F0');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Cuisse de nymphe émue', '#F4A6C8');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Rose dragée', '#FEBFD2');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Framboise', '#E25098');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Fuchsia', '#FD3F92');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Hollywood', '#F400A1');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Incarnat', '#FF6F7D');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Magenta', '#FF00FF');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Misty Rose', '#FFE4E1');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Rose Mountbatten', '#997A8D');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Nacarat', '#FC5D5D');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Pelure d’oignon', '#D58490');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Rose persan', '#F77FBE');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Rose razzle dazzle', '#EED5D2');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Rose', '#FD6C9E');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Rose saumon', '#FF91A4');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Rose shocking', '#FC0FC0');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Rose vif', '#F682A6');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Alizarine', '#D90115');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Amarante', '#91283B');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Rouge d''Andrinople', '#A91101');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Rouge anglais', '#F7230C');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bordeaux', '#800000');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Brique', '#842E1B');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Capucine', '#FF5E4D');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Rouge cardinal', '#B82010');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Carmin', '#960018');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Rouge Cerise', '#D20F45');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Cinabre', '#DB1702');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Rouge coquelicot', '#C60800');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Cramoisi', '#DC143C');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Écarlate', '#FF2400');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Rouge de Falun', '#801818');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Rouge feu', '#FE1B00');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Fraise', '#BF3030');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Fraise écrasée', '#A42424');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Framboise', '#C72C48');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Garance', '#EE1010');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Rouge grenadine', '#E9383F');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Rouge grenat', '#6E0B14');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Rouge groseille', '#CF0A1D');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Pourpre', '#9E0E40');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Rosso Corsa', '#D40000');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Rouge', '#E10343');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Rouge sang', '#850606');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Sang de bœuf', '#730800');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Rouge tomate', '#DE2916');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Rouge tomette', '#AE4A34');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vermeil', '#FF0921');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vermillon', '#E34234');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Abricot', '#E67E30');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Aurore', '#FFCB60');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Carotte', '#F4661B');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Citrouille', '#DF6D14');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Corail', '#E73E01');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Cuivre', '#B36700');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Gomme-gutte', '#EF9B0F');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Mandarine', '#FEA347');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Orange', '#ED7F10');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Orange brûlé', '#CC5500');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Roux', '#B7410E');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Safran', '#F4C430');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Saumon', '#F88E55');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Tangerine', '#FF7F00');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Ambre', '#F0C300');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Auréoline', '#EFD242');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Jaune banane', '#D1B606');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Beurre', '#F0E36B');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Beurre frais', '#FFF48D');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Blé', '#E8D630');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Blond', '#E2BD74');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Blond vénitien', '#E7A854');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bouton d''or', '#F6DC12');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Caca d''oie', '#CDCD0D');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Jaune canari', '#E7F00D');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Chartreuse', '#DFFF00');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Jaune de chrome', '#FFFF05');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Jaune citron', '#F7FF3C');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Jaune de cobalt', '#FDEE00');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Flave', '#E6E697');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Jaune impérial', '#FFE436');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Jaune indien', '#E89845');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Jaune', '#FFFF00');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Maïs', '#E29000');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Jaune de Mars', '#EED153');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Jaune miel', '#CB8E00');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Jaune mimosa', '#FEF86C');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Moutarde', '#FFDB58');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Nankin', '#F7E269');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Jaune de Naples', '#FADA5E');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Ocre (jaune)', '#DFAF2C');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Or', '#FFD700');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Orpiment', '#FCD21C');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Jaune paille', '#FEE347');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Jaune poussin', '#F7E35F');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Sable', '#E0CDA9');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Soufre', '#FFFF6B');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Topaze', '#FAEA73');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert absinthe', '#7FDD4C');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert Amande', '#82C46C');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert Anglais', '#34A040');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Anis', '#9FE855');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Asperge', '#7BA05B');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert avocat', '#568203');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert bouteille', '#096A09');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert céladon', '#83A697');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Chartreuse', '#C2F732');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert de chrome', '#18391E');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert citron', '#00FF00');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert d''eau', '#B0F2B6');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert émeraude', '#01D758');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert épinard', '#175732');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert gazon', '#3A9D23');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Glauque', '#649B88');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert de Hooker', '#1B4F08');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert impérial', '#00561B');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Jade', '#87E990');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert lichen', '#85C17E');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert Lime', '#9EFD38');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert malachite', '#1FA055');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert Menthe', '#16B84E');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert militaire', '#596643');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert mousse', '#679F5A');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert olive', '#708D23');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert perroquet', '#3AF24B');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert pin', '#01796F');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert pistache', '#BEF574');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert poireau', '#4CA66B');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert pomme', '#34C924');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert prairie', '#57D53B');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert printemps', '#00FF7F');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert sapin', '#095228');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert sauge', '#689D71');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert tilleul', '#A5D152');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert Véronèse', '#00A25D');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert', '#00894D');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert-de-gris', '#95A595');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Vert de vessie', '#22780F');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Viride', '#40826D');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu acier', '#1A2B3C');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Aigue-marine', '#79F8F8');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Azur', '#007FFF');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Azur clair', '#74D0F1');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Azuré', '#F0FFFF');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Azurin', '#A9EAFE');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Barbeau', '#5472AE');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu', '#0040D0');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu canard', '#048B9A');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu de cæruleum', '#007BA7');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu céleste', '#26C4EC');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu charrette', '#8EA2C6');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu ciel', '#007CB0');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu cobalt', '#22427C');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Cyan', '#00FFFF');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu Denim', '#1560BD');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu dragée', '#DFF2FF');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu égyptien', '#1034A6');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu électrique', '#2C75FF');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu de France', '#318CE7');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu fumée', '#BBD2E1');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu givré', '#80D0D0');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu horizon', '#7F8FA6');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Indigo', '#23446B');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu Klein', '#002FA7');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu Majorelle', '#6050DC');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu marine', '#000080');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu maya', '#73C2FB');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu des mers du sud', '#00CCCB');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu minéral', '#24445C');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu minuit', '#003366');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu nuit', '#0F056B');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu outremer', '#1B019B');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu paon', '#067790');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu pastel', '#56739A');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu persan', '#458E9D');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu pétrole', '#1D4851');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu roi', '#002366');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu saphir', '#0131B4');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu sarcelle', '#008E8E');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Smalt', '#003399');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu Tiffany', '#0ABAB5');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu turquin', '#425B8A');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bleu turquoise', '#25FDE9');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Améthyste', '#884DA7');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Aubergine', '#370028');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Violet d''évêque', '#723E64');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Glycine', '#C9A0DC');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Gris de lin', '#D2CAEC');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Héliotrope', '#DF73FF');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Lavande', '#9683EC');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Lilas', '#B666D2');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Violet de manganèse', '#8A55A3');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Mauve', '#D473D4');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Orchidée', '#DA70D6');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Parme', '#CFA0E9');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Pervenche', '#CCCCFF');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Prune', '#811453');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Violet', '#7F00FF');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Violine', '#580688');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Zinzolin', '#6C0277');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Acajou', '#88421D');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Alezan', '#A76726');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Auburn', '#9D3E0C');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Ambre', '#AD390E');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Basané', '#8B6C42');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Beige', '#C8AD7F');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bismarck', '#4D2009');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bistre', '#3D2B1F');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bitume', '#4E3D28');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bronze', '#614E1A');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Brou de noix', '#3F2204');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Brun', '#5B3C11');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bureau', '#6B5731');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Cacao', '#614B3A');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Cachou', '#2F1B0C');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Café', '#462E01');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Café au lait', '#785E2F');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Cannelle', '#7E5835');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Caramel', '#7E3300');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Chamois', '#D0C07A');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Châtaigne', '#806D5A');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Chaudron', '#85530F');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Chocolat', '#5A3A22');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Fauve', '#AD4F09');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Feuille-morte', '#99512B');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Grège', '#BBAE98');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Lavallière', '#8F5922');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Marron', '#582900');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Mastic', '#B3B191');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Noisette', '#955628');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Ocre', '#DD985C');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Poil de chameau', '#B67823');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Puce', '#4E1609');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Sépia', '#702C14');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Tabac', '#9F551E');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Terracotta', '#8C5230');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Terre d''ombre', '#684C2D');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Terre de Sienne', '#8E5434');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Albâtre', '#FEFEFE');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Beige (clair)', '#F5F5DC');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Blanc', '#FFFFFF');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Blanc cassé', '#FEFEE2');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Crème', '#FFFDD0');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Écru', '#FEFEE0');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Blanc d''Espagne', '#FEFDF0');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Ivoire', '#FFFFF0');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Blanc de lait', '#FBFCFA');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Blanc lunaire', '#F4FEFE');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Blanc de zinc', '#F6FEFE');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Gris acier', '#AFAFAF');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Anthracite', '#303030');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Gris ardoise', '#5A5E6B');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Argent', '#C0C0C0');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Argile', '#EFEFEF');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Bis', '#766F64');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Étain', '#EDEDED');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Gris fer', '#7F7F7F');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Gris', '#808080');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Lin', '#939681');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Gris de Payne', '#677179');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Gris perle', '#CECECE');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Gris plomb', '#798081');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Gris souris', '#9E9E9E');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Gris taupe', '#463F32');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Tourterelle', '#BBACAC');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Noir', '#000000');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Noir d''aniline', '#120D16');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Noir de carbone', '#130E0A');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Cassis', '#2C030B');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Dorian', '#0B1616');
+INSERT INTO public.couleur(coloris, code_hexadecimal) VALUES ('Réglisse', '#2D241E');
+
+
+INSERT INTO public.palette
+	(nom_palette)
+	VALUES
+	('Palette 1'),
+	('Palette 2'),
+	('Palette 3'),
+	('Palette 4'),
+	('Palette 5'),
+	('Palette 6'),
+	('Palette 7'),
+	('Palette 8'),
+	('Palette 9'),
+	('Palette 10'),
+	('Palette 11'),
+	('Palette 12'),
+	('Palette 13'),
+	('Palette 14'),
+	('Palette 15'),
+	('Palette 16'),
+	('Palette 17'),
+	('Palette 18'),
+	('Palette 19'),
+	('Palette 20'),
+	('Palette 21'),
+	('Palette 22'),
+	('Palette 23'),
+	('Palette 24'),
+	('Palette 25'),
+	('Palette 26'),
+	('Palette 27'),
+	('Palette 28'),
+	('Palette 29'),
+	('Palette 30'),
+	('Palette 31'),
+	('Palette 32'),
+	('Palette 33'),
+	('Palette 34'),
+	('Palette 35'),
+	('Palette 36'),
+	('Palette 37'),
+	('Palette 38'),
+	('Palette 39'),
+	('Palette 40'),
+	('Palette 41'),
+	('Palette 42');
+
+-- Fichier SQL généré automatiquement
+
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (1, 'Palette 1');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (2, 'Palette 1');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (3, 'Palette 1');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (4, 'Palette 1');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (5, 'Palette 1');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (6, 'Palette 2');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (7, 'Palette 2');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (8, 'Palette 2');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (9, 'Palette 2');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (10, 'Palette 2');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (11, 'Palette 3');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (12, 'Palette 3');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (13, 'Palette 3');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (14, 'Palette 3');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (15, 'Palette 3');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (16, 'Palette 4');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (17, 'Palette 4');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (18, 'Palette 4');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (19, 'Palette 4');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (20, 'Palette 4');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (21, 'Palette 5');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (22, 'Palette 5');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (23, 'Palette 5');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (24, 'Palette 5');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (25, 'Palette 5');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (26, 'Palette 6');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (27, 'Palette 6');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (28, 'Palette 6');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (29, 'Palette 6');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (30, 'Palette 6');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (31, 'Palette 7');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (32, 'Palette 7');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (33, 'Palette 7');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (34, 'Palette 7');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (35, 'Palette 7');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (36, 'Palette 8');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (37, 'Palette 8');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (38, 'Palette 8');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (39, 'Palette 8');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (40, 'Palette 8');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (41, 'Palette 9');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (42, 'Palette 9');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (43, 'Palette 9');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (44, 'Palette 9');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (45, 'Palette 9');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (46, 'Palette 10');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (47, 'Palette 10');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (48, 'Palette 10');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (49, 'Palette 10');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (50, 'Palette 10');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (51, 'Palette 11');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (52, 'Palette 11');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (53, 'Palette 11');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (54, 'Palette 11');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (55, 'Palette 11');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (56, 'Palette 12');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (57, 'Palette 12');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (58, 'Palette 12');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (59, 'Palette 12');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (60, 'Palette 12');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (61, 'Palette 13');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (62, 'Palette 13');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (63, 'Palette 13');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (64, 'Palette 13');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (65, 'Palette 13');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (66, 'Palette 14');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (67, 'Palette 14');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (68, 'Palette 14');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (69, 'Palette 14');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (70, 'Palette 14');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (71, 'Palette 15');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (72, 'Palette 15');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (73, 'Palette 15');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (74, 'Palette 15');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (75, 'Palette 15');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (76, 'Palette 16');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (77, 'Palette 16');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (78, 'Palette 16');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (79, 'Palette 16');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (80, 'Palette 16');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (81, 'Palette 17');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (82, 'Palette 17');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (83, 'Palette 17');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (84, 'Palette 17');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (85, 'Palette 17');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (86, 'Palette 18');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (87, 'Palette 18');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (88, 'Palette 18');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (89, 'Palette 18');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (90, 'Palette 18');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (91, 'Palette 19');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (92, 'Palette 19');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (93, 'Palette 19');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (94, 'Palette 19');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (95, 'Palette 19');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (96, 'Palette 20');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (97, 'Palette 20');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (98, 'Palette 20');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (99, 'Palette 20');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (100, 'Palette 20');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (101, 'Palette 21');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (102, 'Palette 21');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (103, 'Palette 21');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (104, 'Palette 21');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (105, 'Palette 21');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (106, 'Palette 22');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (107, 'Palette 22');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (108, 'Palette 22');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (109, 'Palette 22');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (110, 'Palette 22');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (111, 'Palette 23');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (112, 'Palette 23');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (113, 'Palette 23');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (114, 'Palette 23');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (115, 'Palette 23');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (116, 'Palette 24');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (117, 'Palette 24');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (118, 'Palette 24');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (119, 'Palette 24');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (120, 'Palette 24');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (121, 'Palette 25');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (122, 'Palette 25');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (123, 'Palette 25');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (124, 'Palette 25');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (125, 'Palette 25');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (126, 'Palette 26');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (127, 'Palette 26');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (128, 'Palette 26');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (119, 'Palette 26');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (130, 'Palette 26');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (131, 'Palette 27');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (132, 'Palette 27');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (133, 'Palette 27');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (134, 'Palette 27');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (135, 'Palette 27');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (136, 'Palette 28');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (137, 'Palette 28');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (138, 'Palette 28');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (139, 'Palette 28');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (140, 'Palette 28');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (141, 'Palette 29');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (142, 'Palette 29');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (143, 'Palette 29');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (144, 'Palette 29');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (145, 'Palette 29');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (146, 'Palette 30');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (147, 'Palette 30');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (148, 'Palette 30');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (149, 'Palette 30');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (150, 'Palette 30');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (151, 'Palette 31');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (152, 'Palette 31');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (153, 'Palette 31');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (154, 'Palette 31');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (155, 'Palette 31');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (156, 'Palette 32');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (157, 'Palette 32');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (152, 'Palette 32');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (159, 'Palette 32');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (160, 'Palette 32');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (119, 'Palette 33');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (120, 'Palette 33');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (163, 'Palette 33');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (164, 'Palette 33');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (165, 'Palette 33');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (166, 'Palette 34');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (152, 'Palette 34');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (168, 'Palette 34');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (169, 'Palette 34');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (170, 'Palette 34');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (155, 'Palette 35');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (151, 'Palette 35');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (154, 'Palette 35');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (152, 'Palette 35');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (153, 'Palette 35');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (176, 'Palette 36');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (177, 'Palette 36');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (178, 'Palette 36');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (179, 'Palette 36');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (180, 'Palette 36');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (151, 'Palette 37');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (153, 'Palette 37');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (120, 'Palette 37');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (154, 'Palette 37');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (165, 'Palette 37');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (186, 'Palette 38');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (121, 'Palette 38');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (188, 'Palette 38');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (189, 'Palette 38');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (190, 'Palette 38');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (151, 'Palette 39');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (155, 'Palette 39');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (154, 'Palette 39');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (152, 'Palette 39');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (153, 'Palette 39');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (152, 'Palette 40');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (153, 'Palette 40');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (151, 'Palette 40');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (155, 'Palette 40');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (154, 'Palette 40');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (120, 'Palette 41');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (119, 'Palette 41');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (165, 'Palette 41');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (163, 'Palette 41');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (164, 'Palette 41');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (206, 'Palette 42');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (207, 'Palette 42');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (208, 'Palette 42');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (209, 'Palette 42');
+INSERT INTO public.est_composee(id_couleur, nom_palette) VALUES (210, 'Palette 42');
+
+INSERT INTO public.categorie_couleur
+  (nom_categorie_couleur)
+	VALUES ('Chaud'),('Froid');
+
 -- Insérer des catégories pour les 210 couleurs
 -- INSERT INTO Appartient_categorie_couleur (Id_Couleur, Nom_categorie_couleur)
 -- VALUES
@@ -57,7 +813,7 @@ VALUES
 -- (30, 'Froid'),
 -- (210, 'Froid');
 -- ou
-DO $ $
+DO $$
 BEGIN
   FOR i IN 1..210
   LOOP
@@ -72,7 +828,7 @@ BEGIN
         END
       );
   END LOOP;
-END $ $;
+END $$;
 
 
 
@@ -1902,222 +2658,10 @@ INSERT INTO
   public.type_peinture (nom_type_peinture)
 VALUES
   ('Gouache');
-
--- Script pour insérer les données dans la table 'couleur'
-
 INSERT INTO
-  public.couleur (coloris, code_hexadecimal)
+  public.type_peinture (nom_type_peinture)
 VALUES
-  ('rgb(229, 231, 230)', '#e5e7e6')
-  , ('rgb(238, 230, 216)', '#EEE6D8')
-  , ('rgb(218, 171, 58)', '#DAAB3A')
-  , ('rgb(182, 115, 50)', '#B67332')
-  , ('rgb(147, 68, 26)', '#93441A')
-  , ('rgb(30, 15, 28)', '#1E0F1C')
-  , ('rgb(167, 0, 30)', '#A7001E')
-  , ('rgb(226, 233, 192)', '#E2E9C0')
-  , ('rgb(122, 169, 92)', '#7AA95C')
-  , ('rgb(149, 81, 73)', '#955149')
-  , ('rgb(202, 60, 102)', '#CA3C66')
-  , ('rgb(219, 106, 143)', '#DB6A8F')
-  , ('rgb(232, 170, 190)', '#E8AABE')
-  , ('rgb(167, 224, 224)', '#A7E0E0')
-  , ('rgb(74, 163, 162)', '#4AA3A2')
-  , ('rgb(67, 12, 5)', '#430C05')
-  , ('rgb(212, 111, 77)', '#D46F4D')
-  , ('rgb(255, 191, 102)', '#FFBF66')
-  , ('rgb(8, 197, 209)', '#08C5D1')
-  , ('rgb(0, 53, 63)', '#00353F')
-  , ('rgb(206, 106, 107)', '#CE6A6B')
-  , ('rgb(235, 172, 162)', '#EBACA2')
-  , ('rgb(190, 211, 195)', '#BED3C3')
-  , ('rgb(74, 145, 158)', '#4A919E')
-  , ('rgb(33, 46, 83)', '#212E53')
-  , ('rgb(247, 246, 207)', '#F7F6CF')
-  , ('rgb(182, 216, 242)', '#B6D8F2')
-  , ('rgb(244, 207, 223)', '#F4CFDF')
-  , ('rgb(87, 132, 186)', '#5784BA')
-  , ('rgb(154, 200, 235)', '#9AC8EB')
-  , ('rgb(249, 150, 139)', '#F9968B')
-  , ('rgb(242, 116, 56)', '#F27438')
-  , ('rgb(38, 71, 78)', '#26474E')
-  , ('rgb(118, 205, 205)', '#76CDCD')
-  , ('rgb(44, 206, 210)', '#2CCED2')
-  , ('rgb(106, 100, 90)', '#6A645A')
-  , ('rgb(227, 205, 139)', '#E3CD8B')
-  , ('rgb(93, 112, 82)', '#5D7052')
-  , ('rgb(193, 136, 69)', '#C18845')
-  , ('rgb(240, 190, 134)', '#F0BE86')
-  , ('rgb(225, 166, 36)', '#E1A624')
-  , ('rgb(49, 122, 193)', '#317AC1')
-  , ('rgb(56, 68, 84)', '#384454')
-  , ('rgb(212, 211, 220)', '#D4D3DC')
-  , ('rgb(173, 149, 107)', '#AD956B')
-  , ('rgb(24, 83, 79)', '#18534F')
-  , ('rgb(34, 109, 104)', '#226D68')
-  , ('rgb(236, 248, 246)', '#ECF8F6')
-  , ('rgb(254, 234, 161)', '#FEEAA1')
-  , ('rgb(214, 149, 91)', '#D6955B')
-  , ('rgb(145, 70, 75)', '#91464B')
-  , ('rgb(243, 221, 210)', '#F3DDD2')
-  , ('rgb(237, 159, 130)', '#ED9F82')
-  , ('rgb(195, 98, 91)', '#C3625B')
-  , ('rgb(131, 50, 51)', '#833233')
-  , ('rgb(53, 67, 92)', '#35435C')
-  , ('rgb(95, 138, 180)', '#5F8AB4')
-  , ('rgb(169, 197, 224)', '#A9C5E0')
-  , ('rgb(206, 221, 233)', '#CEDDE9')
-  , ('rgb(243, 248, 250)', '#F3F8FA')
-  , ('rgb(33, 33, 33)', '#212121')
-  , ('rgb(55, 55, 55)', '#373737')
-  , ('rgb(95, 95, 95)', '#5F5F5F')
-  , ('rgb(135, 135, 135)', '#878787')
-  , ('rgb(215, 215, 215)', '#D7D7D7')
-  , ('rgb(89, 101, 107)', '#59656B')
-  , ('rgb(141, 158, 167)', '#8D9EA7')
-  , ('rgb(198, 206, 211)', '#C6CED3')
-  , ('rgb(222, 229, 232)', '#DEE5E8')
-  , ('rgb(244, 246, 247)', '#F4F6F7')
-  , ('rgb(255, 244, 228)', '#FFF4E4')
-  , ('rgb(252, 224, 186)', '#FCE0BA')
-  , ('rgb(247, 194, 127)', '#F7C27F')
-  , ('rgb(238, 159, 76)', '#EE9F4C')
-  , ('rgb(220, 120, 57)', '#DC7839')
-  , ('rgb(27, 20, 20)', '#1B1414')
-  , ('rgb(52, 39, 39)', '#342727')
-  , ('rgb(92, 73, 73)', '#5C4949')
-  , ('rgb(152, 121, 121)', '#987979')
-  , ('rgb(228, 189, 189)', '#E4BDBD')
-  , ('rgb(240, 249, 239)', '#F0F9EF')
-  , ('rgb(222, 235, 218)', '#DEEBDD')
-  , ('rgb(190, 215, 184)', '#BED7B8')
-  , ('rgb(143, 183, 134)', '#8FB786')
-  , ('rgb(72, 141, 71)', '#488D47')
-  , ('rgb(241, 240, 234)', '#F1F0EA')
-  , ('rgb(204, 199, 178)', '#CCC7B2')
-  , ('rgb(160, 153, 124)', '#A0997C')
-  , ('rgb(108, 99, 70)', '#6C6346')
-  , ('rgb(51, 44, 25)', '#332C19')
-  , ('rgb(228, 241, 243)', '#E4F1F3')
-  , ('rgb(180, 218, 224)', '#B4DAE0')
-  , ('rgb(117, 186, 195)', '#75BAC3')
-  , ('rgb(55, 146, 159)', '#37929F')
-  , ('rgb(16, 101, 114)', '#106572')
-  , ('rgb(248, 236, 211)', '#F8ECD3')
-  , ('rgb(239, 209, 155)', '#EFD19B')
-  , ('rgb(229, 180, 90)', '#E5B45A')
-  , ('rgb(202, 144, 46)', '#CA902E')
-  , ('rgb(149, 100, 25)', '#956419')
-  , ('rgb(255, 183, 178)', '#FFB7B2')
-  , ('rgb(255, 223, 186)', '#FFDFBA')
-  , ('rgb(255, 255, 186)', '#FFFFBA')
-  , ('rgb(186, 255, 201)', '#BAFFC9')
-  , ('rgb(186, 225, 255)', '#BAE1FF')
-  , ('rgb(239, 71, 111)', '#EF476F')
-  , ('rgb(255, 209, 102)', '#FFD166')
-  , ('rgb(6, 214, 160)', '#06D6A0')
-  , ('rgb(17, 138, 178)', '#118AB2')
-  , ('rgb(7, 59, 76)', '#073B4C')
-  , ('rgb(62, 76, 87)', '#3E4C57')
-  , ('rgb(125, 157, 156)', '#7D9D9C')
-  , ('rgb(194, 217, 214)', '#C2D9D6')
-  , ('rgb(244, 252, 249)', '#F4FCF9')
-  , ('rgb(180, 112, 81)', '#B47051')
-  , ('rgb(229, 152, 155)', '#E5989B')
-  , ('rgb(241, 208, 173)', '#F1D0AD')
-  , ('rgb(250, 237, 205)', '#FAEDCD')
-  , ('rgb(168, 218, 220)', '#A8DADC')
-  , ('rgb(69, 123, 157)', '#457B9D')
-  , ('rgb(255, 159, 28)', '#FF9F1C')
-  , ('rgb(255, 216, 39)', '#FFD827')
-  , ('rgb(36, 123, 160)', '#247BA0')
-  , ('rgb(112, 193, 179)', '#70C1B3')
-  , ('rgb(31, 30, 51)', '#1F1E33')
-  , ('rgb(69, 105, 144)', '#456990')
-  , ('rgb(77, 144, 142)', '#4D908E')
-  , ('rgb(103, 189, 173)', '#67BDAD')
-  , ('rgb(168, 218, 220)', '#A8DADC')
-  , ('rgb(255, 244, 220)', '#FFF4DC')
-  , ('rgb(75, 97, 119)', '#4B6177')
-  , ('rgb(157, 190, 187)', '#9DBEBB')
-  , ('rgb(232, 229, 215)', '#E8E5D7')
-  , ('rgb(247, 246, 231)', '#F7F6E7')
-  , ('rgb(210, 198, 168)', '#D2C6A8')
-  , ('rgb(244, 211, 94)', '#F4D35E')
-  , ('rgb(248, 228, 185)', '#F8E4B9')
-  , ('rgb(131, 196, 196)', '#83C4C4')
-  , ('rgb(44, 44, 84)', '#2C2C54')
-  , ('rgb(15, 52, 96)', '#0F3460')
-  , ('rgb(215, 223, 233)', '#D7DFE9')
-  , ('rgb(186, 205, 224)', '#BACDE0')
-  , ('rgb(114, 168, 206)', '#72A8CE')
-  , ('rgb(60, 118, 191)', '#3C76BF')
-  , ('rgb(26, 51, 108)', '#1A336C')
-  , ('rgb(239, 243, 241)', '#EFF3F1')
-  , ('rgb(210, 221, 218)', '#D2DDDA')
-  , ('rgb(128, 169, 169)', '#80A9A9')
-  , ('rgb(64, 91, 91)', '#405B5B')
-  , ('rgb(26, 36, 36)', '#1A2424')
-  , ('rgb(244, 162, 97)', '#F4A261')
-  , ('rgb(233, 196, 106)', '#E9C46A')
-  , ('rgb(42, 157, 143)', '#2A9D8F')
-  , ('rgb(38, 70, 83)', '#264653')
-  , ('rgb(231, 111, 81)', '#E76F51')
-  , ('rgb(93, 188, 210)', '#5DBCDA')
-  , ('rgb(244, 241, 222)', '#F4F1DE')
-  , ('rgb(233, 196, 106)', '#E9C46A')
-  , ('rgb(220, 87, 84)', '#DC5754')
-  , ('rgb(77, 55, 59)', '#4D373B')
-  , ('rgb(168, 218, 220)', '#A8DADC')
-  , ('rgb(69, 123, 157)', '#457B9D')
-  , ('rgb(29, 53, 87)', '#1D3557')
-  , ('rgb(230, 57, 70)', '#E63946')
-  , ('rgb(241, 250, 238)', '#F1FAEE')
-  , ('rgb(47, 72, 88)', '#2F4858')
-  , ('rgb(233, 196, 106)', '#E9C46A')
-  , ('rgb(244, 247, 227)', '#F4F7E3')
-  , ('rgb(180, 105, 136)', '#B46988')
-  , ('rgb(23, 42, 58)', '#172A3A')
-  , ('rgb(231, 111, 81)', '#E76F51')
-  , ('rgb(244, 162, 97)', '#F4A261')
-  , ('rgb(38, 70, 83)', '#264653')
-  , ('rgb(233, 196, 106)', '#E9C46A')
-  , ('rgb(42, 157, 143)', '#2A9D8F')
-  , ('rgb(255, 211, 105)', '#FFD369')
-  , ('rgb(244, 122, 95)', '#F47A5F')
-  , ('rgb(96, 108, 128)', '#606C80')
-  , ('rgb(72, 85, 99)', '#485563')
-  , ('rgb(32, 36, 41)', '#202429')
-  , ('rgb(244, 162, 97)', '#F4A261')
-  , ('rgb(42, 157, 143)', '#2A9D8F')
-  , ('rgb(69, 123, 157)', '#457B9D')
-  , ('rgb(38, 70, 83)', '#264653')
-  , ('rgb(241, 250, 238)', '#F1FAEE')
-  , ('rgb(241, 105, 65)', '#F16941')
-  , ('rgb(255, 159, 28)', '#FF9F1C')
-  , ('rgb(248, 244, 228)', '#F8F4E4')
-  , ('rgb(93, 163, 162)', '#5DA3A2')
-  , ('rgb(54, 67, 71)', '#364347')
-  , ('rgb(244, 162, 97)', '#F4A261')
-  , ('rgb(231, 111, 81)', '#E76F51')
-  , ('rgb(38, 70, 83)', '#264653')
-  , ('rgb(233, 196, 106)', '#E9C46A')
-  , ('rgb(42, 157, 143)', '#2A9D8F')
-  , ('rgb(233, 196, 106)', '#E9C46A')
-  , ('rgb(42, 157, 143)', '#2A9D8F')
-  , ('rgb(244, 162, 97)', '#F4A261')
-  , ('rgb(231, 111, 81)', '#E76F51')
-  , ('rgb(38, 70, 83)', '#264653')
-  , ('rgb(69, 123, 157)', '#457B9D')
-  , ('rgb(168, 218, 220)', '#A8DADC')
-  , ('rgb(241, 250, 238)', '#F1FAEE')
-  , ('rgb(29, 53, 87)', '#1D3557')
-  , ('rgb(230, 57, 70)', '#E63946')
-  , ('rgb(253, 231, 76)', '#FDE74C')
-  , ('rgb(243, 134, 48)', '#F38630')
-  , ('rgb(35, 123, 128)', '#237B80')
-  , ('rgb(18, 32, 47)', '#12202F')
-  , ('rgb(255, 209, 220)', '#FFD1DC');
+  ('Encre');
 
 
 INSERT INTO
