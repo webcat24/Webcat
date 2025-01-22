@@ -2383,58 +2383,6 @@ VALUES
   , ('Content/img/materiaux/chevalet.jpg')
   , ('Content/img/materiaux/set_pinceau_rond.png')
   , ('Content/img/materiaux/set_pinceau_carree.png')
-  , ('Content/img/materiaux/peinture_huile_10ml.png')
-  , ('Content/img/materiaux/peinture_huile_50ml.png')
-  , ('Content/img/materiaux/peinture_huile_100ml.png')
-  , ('Content/img/materiaux/peinture_huile_250ml.png')
-  , ('Content/img/materiaux/peinture_huile_500ml.png')
-  , ('Content/img/materiaux/peinture_huile_1l.png')
-  , (
-    'Content/img/materiaux/peinture_acrylique_10ml.png'
-  )
-  , (
-    'Content/img/materiaux/peinture_acrylique_50ml.png'
-  )
-  , (
-    'Content/img/materiaux/peinture_acrylique_100ml.png'
-  )
-  , (
-    'Content/img/materiaux/peinture_acrylique_250ml.png'
-  )
-  , (
-    'Content/img/materiaux/peinture_acrylique_500ml.png'
-  )
-  , (
-    'Content/img/materiaux/peinture_acrylique_1l.png'
-  )
-  , (
-    'Content/img/materiaux/peinture_aquarelle_10ml.png'
-  )
-  , (
-    'Content/img/materiaux/peinture_aquarelle_50ml.png'
-  )
-  , (
-    'Content/img/materiaux/peinture_aquarelle_100ml.png'
-  )
-  , (
-    'Content/img/materiaux/peinture_aquarelle_250ml.png'
-  )
-  , (
-    'Content/img/materiaux/peinture_gouache_10ml.png'
-  )
-  , (
-    'Content/img/materiaux/peinture_gouache_50ml.png'
-  )
-  , (
-    'Content/img/materiaux/peinture_gouache_100ml.png'
-  )
-  , (
-    'Content/img/materiaux/peinture_gouache_250ml.png'
-  )
-  , (
-    'Content/img/materiaux/peinture_gouache_500ml.png'
-  )
-  , ('Content/img/materiaux/peinture_gouache_1l.png')
   , ('Content/img/materiaux/pinceau_carree.png')
   , ('Content/img/materiaux/pinceau_rond.png');
 
@@ -2472,148 +2420,16 @@ VALUES
     , 104
   )
   , (
-    'Peinture à l''huile classique, parfaite pour les artistes exigeants, offrant des couleurs riches et durables.'
-    , 5
-    , 'Peinture à l''huile'
-    , 105
-  )
-  , (
-    'Peinture à l''huile de qualité supérieure, idéale pour des mélanges fluides et des finitions éclatantes.'
-    , 12
-    , 'Peinture à l''huile'
-    , 106
-  )
-  , (
-    'Peinture à l''huile offrant une excellente couverture et des teintes profondes, parfaite pour tous vos projets.'
-    , 20
-    , 'Peinture à l''huile'
-    , 107
-  )
-  , (
-    'Une peinture à l''huile haut de gamme, avec une texture onctueuse et des pigments intenses'
-    , 45
-    , 'Peinture à l''huile'
-    , 108
-  )
-  , (
-    'Peinture à l''huile professionnelle, conçue pour les œuvres d''art les plus exigeantes.'
-    , 80
-    , 'Peinture à l''huile'
-    , 109
-  )
-  , (
-    'Un produit exceptionnel pour les artistes chevronnés, offrant une qualité irréprochable.'
-    , 150
-    , 'Peinture à l''huile'
-    , 110
-  )
-  , (
-    'Peinture acrylique économique, idéale pour les débutants ou les petits projets créatifs.'
-    , 3
-    , 'Peinture acrylique'
-    , 111
-  )
-  , (
-    'Peinture acrylique polyvalente, offrant une application facile et des couleurs éclatantes.'
-    , 10
-    , 'Peinture acrylique'
-    , 112
-  )
-  , (
-    'Une peinture acrylique de qualité intermédiaire, parfaite pour vos œuvres sur toile.'
-    , 15
-    , 'Peinture acrylique'
-    , 113
-  )
-  , (
-    'Peinture acrylique de qualité supérieure, offrant une grande résistance et des couleurs intenses.'
-    , 30
-    , 'Peinture acrylique'
-    , 114
-  )
-  , (
-    'Une peinture acrylique haut de gamme, idéale pour des projets professionnels ou ambitieux.'
-    , 50
-    , 'Peinture acrylique'
-    , 115
-  )
-  , (
-    'Un choix incontournable pour les artistes, cette peinture acrylique garantit des résultats exceptionnels.'
-    , 90
-    , 'Peinture acrylique'
-    , 116
-  )
-  , (
-    'Peinture aquarelle économique, idéale pour débuter ou expérimenter des techniques légères.'
-    , 8
-    , 'Peinture aquarelle'
-    , 117
-  )
-  , (
-    'Peinture aquarelle de qualité intermédiaire, parfaite pour des lavis doux et des dégradés subtils.'
-    , 20
-    , 'Peinture aquarelle'
-    , 118
-  )
-  , (
-    'Une aquarelle d''excellente qualité, idéale pour les artistes amateurs ou confirmés.'
-    , 35
-    , 'Peinture aquarelle'
-    , 119
-  )
-  , (
-    'Peinture aquarelle professionnelle, offrant des pigments intenses et une fluidité remarquable.'
-    , 80
-    , 'Peinture aquarelle'
-    , 120
-  )
-  , (
-    'Une gouache pratique et abordable, parfaite pour les projets scolaires ou les débutants.'
-    , 2
-    , 'Peinture gouache'
-    , 121
-  )
-  , (
-    'Peinture gouache de qualité, idéale pour des couleurs opaques et des finitions lisses.'
-    , 8
-    , 'Peinture gouache'
-    , 122
-  )
-  , (
-    'Une gouache polyvalente et vibrante, adaptée pour des créations expressives.'
-    , 12
-    , 'Peinture gouache'
-    , 123
-  )
-  , (
-    'Peinture gouache professionnelle, offrant une excellente opacité et une texture crémeuse.'
-    , 25
-    , 'Peinture gouache'
-    , 124
-  )
-  , (
-    'Un produit haut de gamme pour les artistes exigeants, avec une qualité de pigmentation exceptionnelle.'
-    , 40
-    , 'Peinture gouache'
-    , 125
-  )
-  , (
-    'Une gouache d''élite, parfaite pour des projets sophistiqués et des œuvres mémorables.'
-    , 70
-    , 'Peinture gouache'
-    , 126
-  )
-  , (
     'Un outil d''élite, idéal pour des traits nets, des angles précis, et des créations raffinées.'
     , 5
     , 'pinceau carree'
-    , 127
+    , 105
   )
   , (
     'Un compagnon d''exception, parfait pour des détails délicats et des courbes harmonieuses.'
     , 5
     , 'pinceau rond'
-    , 128
+    , 106
   );
 
 		
@@ -2636,11 +2452,11 @@ VALUES
 INSERT INTO
   public.autres_materiaux (id_materiel, type_materiel)
 VALUES
-  (27, 'Pinceau carree');
+  (5, 'Pinceau carree');
 INSERT INTO
   public.autres_materiaux (id_materiel, type_materiel)
 VALUES
-  (28, 'Pinceau rond');
+  (6, 'Pinceau rond');
 
 
 INSERT INTO
@@ -2663,33 +2479,836 @@ INSERT INTO
   public.type_peinture (nom_type_peinture)
 VALUES
   ('Encre');
+  
 
-
-INSERT INTO
-  public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)
-VALUES
-  (5, '10mL', 3, 2)
-  , (6, '50mL', 3, 4)
-  , (7, '100mL', 3, 6)
-  , (8, '250mL', 3, 8)
-  , (9, '500mL', 3, 10)
-  , (10, '1L', 3, 12)
-  , (11, '10mL', 2, 14)
-  , (12, '50mL', 2, 16)
-  , (13, '100mL', 2, 18)
-  , (14, '250mL', 2, 20)
-  , (15, '500mL', 2, 22)
-  , (16, '1L', 2, 24)
-  , (17, '10ml', 1, 26)
-  , (18, '50ml', 1, 28)
-  , (19, '100ml', 1, 30)
-  , (20, '250ml', 1, 32)
-  , (21, '10ml', 4, 32)
-  , (22, '50ml', 4, 34)
-  , (23, '100ml', 4, 36)
-  , (24, '250ml', 4, 38)
-  , (25, '500ml', 4, 40)
-  , (26, '1l', 4, 42);
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Bisque_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Rose_bonbon_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Chair_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Cherry_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Coquille_d’œuf_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Cuisse_de_nymphe_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Cuisse_de_nymphe_émue_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Rose_dragée_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Framboise_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Fuchsia_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Hollywood_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Incarnat_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Magenta_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Misty_Rose_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Rose_Mountbatten_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Nacarat_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Pelure_d’oignon_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Rose_persan_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Rose_razzle_dazzle_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Rose_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Rose_saumon_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Rose_shocking_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Rose_vif_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Alizarine_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Amarante_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Rouge_d''Andrinople_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Rouge_anglais_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Bordeaux_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Brique_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Capucine_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Rouge_cardinal_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Carmin_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Rouge_Cerise_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Cinabre_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Rouge_coquelicot_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Cramoisi_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Écarlate_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Rouge_de_Falun_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Rouge_feu_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Fraise_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Fraise_écrasée_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Framboise_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Garance_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Rouge_grenadine_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Rouge_grenat_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Rouge_groseille_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Pourpre_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Rosso_Corsa_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Rouge_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Rouge_sang_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Sang_de_bœuf_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Rouge_tomate_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Rouge_tomette_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Vermeil_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_aquarelle_Vermillon_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Abricot_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Aurore_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Carotte_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Citrouille_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Corail_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Cuivre_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Gomme-gutte_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Mandarine_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Orange_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Orange_brûlé_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Roux_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Safran_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Saumon_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Tangerine_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Ambre_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Auréoline_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Jaune_banane_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Beurre_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Beurre_frais_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Blé_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Blond_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Blond_vénitien_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Bouton_d''or_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Caca_d''oie_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Jaune_canari_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Chartreuse_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Jaune_de_chrome_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Jaune_citron_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Jaune_de_cobalt_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Flave_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Jaune_impérial_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Jaune_indien_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Jaune_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Maïs_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Jaune_de_Mars_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Jaune_miel_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Jaune_mimosa_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Moutarde_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Nankin_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Jaune_de_Naples_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Ocre_(jaune)_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Or_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Orpiment_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Jaune_paille_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Jaune_poussin_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Sable_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Soufre_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Topaze_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Vert_absinthe_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Vert_Amande_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Vert_Anglais_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Anis_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Asperge_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Vert_avocat_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_acrylique_Vert_bouteille_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Vert_céladon_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Chartreuse_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Vert_de_chrome_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Vert_citron_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Vert_d''eau_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Vert_émeraude_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Vert_épinard_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Vert_gazon_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Glauque_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Vert_de_Hooker_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Vert_impérial_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Jade_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Vert_lichen_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Vert_Lime_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Vert_malachite_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Vert_Menthe_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Vert_militaire_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Vert_mousse_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Vert_olive_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Vert_perroquet_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Vert_pin_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Vert_pistache_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Vert_poireau_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Vert_pomme_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Vert_prairie_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Vert_printemps_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Vert_sapin_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Vert_sauge_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Vert_tilleul_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Vert_Véronèse_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Vert_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Vert-de-gris_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Vert_de_vessie_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Viride_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Bleu_acier_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Aigue-marine_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Azur_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Azur_clair_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Azuré_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Azurin_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Barbeau_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Bleu_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Bleu_canard_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Bleu_de_cæruleum_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Bleu_céleste_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Bleu_charrette_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Bleu_ciel_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Bleu_cobalt_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Cyan_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Bleu_Denim_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Bleu_dragée_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Bleu_égyptien_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Bleu_électrique_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Bleu_de_France_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_l''huile_Bleu_fumée_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Bleu_givré_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Bleu_horizon_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Indigo_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Bleu_Klein_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Bleu_Majorelle_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Bleu_marine_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Bleu_maya_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Bleu_des_mers_du_sud_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Bleu_minéral_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Bleu_minuit_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Bleu_nuit_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Bleu_outremer_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Bleu_paon_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Bleu_pastel_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Bleu_persan_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Bleu_pétrole_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Bleu_roi_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Bleu_saphir_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Bleu_sarcelle_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Smalt_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Bleu_Tiffany_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Bleu_turquin_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Bleu_turquoise_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Améthyste_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Aubergine_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Violet_d''évêque_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Glycine_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Gris_de_lin_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Héliotrope_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Lavande_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Lilas_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Violet_de_manganèse_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Mauve_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Orchidée_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Parme_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Pervenche_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Prune_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Violet_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Violine_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Zinzolin_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Acajou_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Alezan_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Auburn_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Ambre_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Basané_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Beige_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Bismarck_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Bistre_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Bitume_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Bronze_500ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Brou_de_noix_1l.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Brun_10ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Bureau_50ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Cacao_100ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_gouache_Cachou_250ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Café_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Café_au_lait_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Cannelle_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Caramel_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Chamois_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Châtaigne_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Chaudron_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Chocolat_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Fauve_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Feuille-morte_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Grège_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Lavallière_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Marron_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Mastic_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Noisette_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Ocre_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Poil_de_chameau_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Puce_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Sépia_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Tabac_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Terracotta_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Terre_d''ombre_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Terre_de_Sienne_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Albâtre_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Beige_(clair)_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Blanc_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Blanc_cassé_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Crème_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Écru_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Blanc_d''Espagne_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Ivoire_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Blanc_de_lait_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Blanc_lunaire_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Blanc_de_zinc_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Gris_acier_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Anthracite_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Gris_ardoise_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Argent_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Argile_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Bis_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Étain_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Gris_fer_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Gris_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Lin_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Gris_de_Payne_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Gris_perle_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Gris_plomb_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Gris_souris_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Gris_taupe_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Tourterelle_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Noir_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Noir_d''aniline_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Noir_de_carbone_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Cassis_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Dorian_30ml.png');
+INSERT INTO public.images(lien_image) VALUES ('Content/img/materiaux/Peinture_encre_Réglisse_30ml.png');
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle économique, idéale pour débuter ou expérimenter des techniques légères.', 2.74, 'Peinture aquarelle Bisque 10ml', 107);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle de qualité intermédiaire, parfaite pour des lavis doux et des dégradés subtils.', 5.85, 'Peinture aquarelle Rose bonbon 50ml', 108);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une aquarelle dexcellente qualité, idéale pour les artistes amateurs ou confirmés.', 14.08, 'Peinture aquarelle Chair 100ml', 109);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle professionnelle, offrant des pigments intenses et une fluidité remarquable.', 23.35, 'Peinture aquarelle Cherry 250ml', 110);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle économique, idéale pour débuter ou expérimenter des techniques légères.', 49.29, 'Peinture aquarelle Coquille d’œuf 500ml', 111);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle de qualité intermédiaire, parfaite pour des lavis doux et des dégradés subtils.', 62.08, 'Peinture aquarelle Cuisse de nymphe 1l', 112);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une aquarelle dexcellente qualité, idéale pour les artistes amateurs ou confirmés.', 3.8, 'Peinture aquarelle Cuisse de nymphe émue 10ml', 113);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle professionnelle, offrant des pigments intenses et une fluidité remarquable.', 5.24, 'Peinture aquarelle Rose dragée 50ml', 114);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle économique, idéale pour débuter ou expérimenter des techniques légères.', 10.19, 'Peinture aquarelle Framboise 100ml', 115);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle de qualité intermédiaire, parfaite pour des lavis doux et des dégradés subtils.', 18.69, 'Peinture aquarelle Fuchsia 250ml', 116);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une aquarelle dexcellente qualité, idéale pour les artistes amateurs ou confirmés.', 30.93, 'Peinture aquarelle Hollywood 500ml', 117);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle professionnelle, offrant des pigments intenses et une fluidité remarquable.', 98.64, 'Peinture aquarelle Incarnat 1l', 118);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle économique, idéale pour débuter ou expérimenter des techniques légères.', 2.52, 'Peinture aquarelle Magenta 10ml', 119);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle de qualité intermédiaire, parfaite pour des lavis doux et des dégradés subtils.', 8.44, 'Peinture aquarelle Misty Rose 50ml', 120);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une aquarelle dexcellente qualité, idéale pour les artistes amateurs ou confirmés.', 11.73, 'Peinture aquarelle Rose Mountbatten 100ml', 121);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle professionnelle, offrant des pigments intenses et une fluidité remarquable.', 15.32, 'Peinture aquarelle Nacarat 250ml', 122);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle économique, idéale pour débuter ou expérimenter des techniques légères.', 44.65, 'Peinture aquarelle Pelure d’oignon 500ml', 123);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle de qualité intermédiaire, parfaite pour des lavis doux et des dégradés subtils.', 49.63, 'Peinture aquarelle Rose persan 1l', 124);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une aquarelle dexcellente qualité, idéale pour les artistes amateurs ou confirmés.', 4.15, 'Peinture aquarelle Rose razzle dazzle 10ml', 125);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle professionnelle, offrant des pigments intenses et une fluidité remarquable.', 6.5, 'Peinture aquarelle Rose 50ml', 126);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle économique, idéale pour débuter ou expérimenter des techniques légères.', 10.93, 'Peinture aquarelle Rose saumon 100ml', 127);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle de qualité intermédiaire, parfaite pour des lavis doux et des dégradés subtils.', 23.4, 'Peinture aquarelle Rose shocking 250ml', 128);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une aquarelle dexcellente qualité, idéale pour les artistes amateurs ou confirmés.', 42.0, 'Peinture aquarelle Rose vif 500ml', 129);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle professionnelle, offrant des pigments intenses et une fluidité remarquable.', 60.87, 'Peinture aquarelle Alizarine 1l', 130);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle économique, idéale pour débuter ou expérimenter des techniques légères.', 4.19, 'Peinture aquarelle Amarante 10ml', 131);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle de qualité intermédiaire, parfaite pour des lavis doux et des dégradés subtils.', 7.87, 'Peinture aquarelle Rouge d''Andrinople 50ml', 132);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une aquarelle dexcellente qualité, idéale pour les artistes amateurs ou confirmés.', 8.98, 'Peinture aquarelle Rouge anglais 100ml', 133);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle professionnelle, offrant des pigments intenses et une fluidité remarquable.', 29.9, 'Peinture aquarelle Bordeaux 250ml', 134);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle économique, idéale pour débuter ou expérimenter des techniques légères.', 47.0, 'Peinture aquarelle Brique 500ml', 135);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle de qualité intermédiaire, parfaite pour des lavis doux et des dégradés subtils.', 90.11, 'Peinture aquarelle Capucine 1l', 136);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une aquarelle dexcellente qualité, idéale pour les artistes amateurs ou confirmés.', 4.65, 'Peinture aquarelle Rouge cardinal 10ml', 137);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle professionnelle, offrant des pigments intenses et une fluidité remarquable.', 9.48, 'Peinture aquarelle Carmin 50ml', 138);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle économique, idéale pour débuter ou expérimenter des techniques légères.', 12.22, 'Peinture aquarelle Rouge Cerise 100ml', 139);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle de qualité intermédiaire, parfaite pour des lavis doux et des dégradés subtils.', 15.62, 'Peinture aquarelle Cinabre 250ml', 140);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une aquarelle dexcellente qualité, idéale pour les artistes amateurs ou confirmés.', 35.43, 'Peinture aquarelle Rouge coquelicot 500ml', 141);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle professionnelle, offrant des pigments intenses et une fluidité remarquable.', 50.24, 'Peinture aquarelle Cramoisi 1l', 142);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle économique, idéale pour débuter ou expérimenter des techniques légères.', 2.94, 'Peinture aquarelle Écarlate 10ml', 143);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle de qualité intermédiaire, parfaite pour des lavis doux et des dégradés subtils.', 8.22, 'Peinture aquarelle Rouge de Falun 50ml', 144);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une aquarelle dexcellente qualité, idéale pour les artistes amateurs ou confirmés.', 8.96, 'Peinture aquarelle Rouge feu 100ml', 145);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle professionnelle, offrant des pigments intenses et une fluidité remarquable.', 29.1, 'Peinture aquarelle Fraise 250ml', 146);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle économique, idéale pour débuter ou expérimenter des techniques légères.', 47.34, 'Peinture aquarelle Fraise écrasée 500ml', 147);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle de qualité intermédiaire, parfaite pour des lavis doux et des dégradés subtils.', 99.58, 'Peinture aquarelle Framboise 1l', 148);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une aquarelle dexcellente qualité, idéale pour les artistes amateurs ou confirmés.', 2.75, 'Peinture aquarelle Garance 10ml', 149);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle professionnelle, offrant des pigments intenses et une fluidité remarquable.', 7.59, 'Peinture aquarelle Rouge grenadine 50ml', 150);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle économique, idéale pour débuter ou expérimenter des techniques légères.', 9.57, 'Peinture aquarelle Rouge grenat 100ml', 151);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle de qualité intermédiaire, parfaite pour des lavis doux et des dégradés subtils.', 19.53, 'Peinture aquarelle Rouge groseille 250ml', 152);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une aquarelle dexcellente qualité, idéale pour les artistes amateurs ou confirmés.', 46.65, 'Peinture aquarelle Pourpre 500ml', 153);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle professionnelle, offrant des pigments intenses et une fluidité remarquable.', 97.58, 'Peinture aquarelle Rosso Corsa 1l', 154);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle économique, idéale pour débuter ou expérimenter des techniques légères.', 4.84, 'Peinture aquarelle Rouge 10ml', 155);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle de qualité intermédiaire, parfaite pour des lavis doux et des dégradés subtils.', 8.77, 'Peinture aquarelle Rouge sang 50ml', 156);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une aquarelle dexcellente qualité, idéale pour les artistes amateurs ou confirmés.', 12.79, 'Peinture aquarelle Sang de bœuf 100ml', 157);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle professionnelle, offrant des pigments intenses et une fluidité remarquable.', 29.26, 'Peinture aquarelle Rouge tomate 250ml', 158);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle économique, idéale pour débuter ou expérimenter des techniques légères.', 45.89, 'Peinture aquarelle Rouge tomette 500ml', 159);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture aquarelle de qualité intermédiaire, parfaite pour des lavis doux et des dégradés subtils.', 52.44, 'Peinture aquarelle Vermeil 1l', 160);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une aquarelle dexcellente qualité, idéale pour les artistes amateurs ou confirmés.', 2.53, 'Peinture aquarelle Vermillon 10ml', 161);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture acrylique économique, idéale pour les débutants ou les petits projets créatifs.', 8.58, 'Peinture acrylique Abricot 50ml', 162);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture acrylique polyvalente, offrant une application facile et des couleurs éclatantes.', 8.52, 'Peinture acrylique Aurore 100ml', 163);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une peinture acrylique de qualité intermédiaire, parfaite pour vos œuvres sur toile.', 17.96, 'Peinture acrylique Carotte 250ml', 164);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture acrylique de qualité supérieure, offrant une grande résistance et des couleurs intenses.', 46.08, 'Peinture acrylique Citrouille 500ml', 165);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une peinture acrylique haut de gamme, idéale pour des projets professionnels ou ambitieux.', 64.98, 'Peinture acrylique Corail 1l', 166);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un choix incontournable pour les artistes, cette peinture acrylique garantit des résultats exceptionnels.', 4.84, 'Peinture acrylique Cuivre 10ml', 167);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture acrylique économique, idéale pour les débutants ou les petits projets créatifs.', 7.64, 'Peinture acrylique Gomme-gutte 50ml', 168);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture acrylique polyvalente, offrant une application facile et des couleurs éclatantes.', 8.67, 'Peinture acrylique Mandarine 100ml', 169);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une peinture acrylique de qualité intermédiaire, parfaite pour vos œuvres sur toile.', 26.33, 'Peinture acrylique Orange 250ml', 170);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture acrylique de qualité supérieure, offrant une grande résistance et des couleurs intenses.', 35.66, 'Peinture acrylique Orange brûlé 500ml', 171);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une peinture acrylique haut de gamme, idéale pour des projets professionnels ou ambitieux.', 81.53, 'Peinture acrylique Roux 1l', 172);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un choix incontournable pour les artistes, cette peinture acrylique garantit des résultats exceptionnels.', 4.13, 'Peinture acrylique Safran 10ml', 173);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture acrylique économique, idéale pour les débutants ou les petits projets créatifs.', 7.34, 'Peinture acrylique Saumon 50ml', 174);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture acrylique polyvalente, offrant une application facile et des couleurs éclatantes.', 10.3, 'Peinture acrylique Tangerine 100ml', 175);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une peinture acrylique de qualité intermédiaire, parfaite pour vos œuvres sur toile.', 17.55, 'Peinture acrylique Ambre 250ml', 176);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture acrylique de qualité supérieure, offrant une grande résistance et des couleurs intenses.', 49.49, 'Peinture acrylique Auréoline 500ml', 177);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une peinture acrylique haut de gamme, idéale pour des projets professionnels ou ambitieux.', 71.94, 'Peinture acrylique Jaune banane 1l', 178);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un choix incontournable pour les artistes, cette peinture acrylique garantit des résultats exceptionnels.', 2.8, 'Peinture acrylique Beurre 10ml', 179);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture acrylique économique, idéale pour les débutants ou les petits projets créatifs.', 9.55, 'Peinture acrylique Beurre frais 50ml', 180);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture acrylique polyvalente, offrant une application facile et des couleurs éclatantes.', 9.06, 'Peinture acrylique Blé 100ml', 181);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une peinture acrylique de qualité intermédiaire, parfaite pour vos œuvres sur toile.', 17.86, 'Peinture acrylique Blond 250ml', 182);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture acrylique de qualité supérieure, offrant une grande résistance et des couleurs intenses.', 39.1, 'Peinture acrylique Blond vénitien 500ml', 183);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une peinture acrylique haut de gamme, idéale pour des projets professionnels ou ambitieux.', 89.58, 'Peinture acrylique Bouton d''or 1l', 184);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un choix incontournable pour les artistes, cette peinture acrylique garantit des résultats exceptionnels.', 2.19, 'Peinture acrylique Caca d''oie 10ml', 185);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture acrylique économique, idéale pour les débutants ou les petits projets créatifs.', 8.44, 'Peinture acrylique Jaune canari 50ml', 186);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture acrylique polyvalente, offrant une application facile et des couleurs éclatantes.', 8.47, 'Peinture acrylique Chartreuse 100ml', 187);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une peinture acrylique de qualité intermédiaire, parfaite pour vos œuvres sur toile.', 29.93, 'Peinture acrylique Jaune de chrome 250ml', 188);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture acrylique de qualité supérieure, offrant une grande résistance et des couleurs intenses.', 34.87, 'Peinture acrylique Jaune citron 500ml', 189);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une peinture acrylique haut de gamme, idéale pour des projets professionnels ou ambitieux.', 68.13, 'Peinture acrylique Jaune de cobalt 1l', 190);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un choix incontournable pour les artistes, cette peinture acrylique garantit des résultats exceptionnels.', 3.27, 'Peinture acrylique Flave 10ml', 191);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture acrylique économique, idéale pour les débutants ou les petits projets créatifs.', 8.48, 'Peinture acrylique Jaune impérial 50ml', 192);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture acrylique polyvalente, offrant une application facile et des couleurs éclatantes.', 10.54, 'Peinture acrylique Jaune indien 100ml', 193);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une peinture acrylique de qualité intermédiaire, parfaite pour vos œuvres sur toile.', 15.73, 'Peinture acrylique Jaune 250ml', 194);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture acrylique de qualité supérieure, offrant une grande résistance et des couleurs intenses.', 42.99, 'Peinture acrylique Maïs 500ml', 195);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une peinture acrylique haut de gamme, idéale pour des projets professionnels ou ambitieux.', 63.88, 'Peinture acrylique Jaune de Mars 1l', 196);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un choix incontournable pour les artistes, cette peinture acrylique garantit des résultats exceptionnels.', 2.96, 'Peinture acrylique Jaune miel 10ml', 197);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture acrylique économique, idéale pour les débutants ou les petits projets créatifs.', 5.1, 'Peinture acrylique Jaune mimosa 50ml', 198);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture acrylique polyvalente, offrant une application facile et des couleurs éclatantes.', 9.57, 'Peinture acrylique Moutarde 100ml', 199);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une peinture acrylique de qualité intermédiaire, parfaite pour vos œuvres sur toile.', 25.11, 'Peinture acrylique Nankin 250ml', 200);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture acrylique de qualité supérieure, offrant une grande résistance et des couleurs intenses.', 38.59, 'Peinture acrylique Jaune de Naples 500ml', 201);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une peinture acrylique haut de gamme, idéale pour des projets professionnels ou ambitieux.', 61.55, 'Peinture acrylique Ocre (jaune) 1l', 202);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un choix incontournable pour les artistes, cette peinture acrylique garantit des résultats exceptionnels.', 4.39, 'Peinture acrylique Or 10ml', 203);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture acrylique économique, idéale pour les débutants ou les petits projets créatifs.', 8.42, 'Peinture acrylique Orpiment 50ml', 204);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture acrylique polyvalente, offrant une application facile et des couleurs éclatantes.', 13.32, 'Peinture acrylique Jaune paille 100ml', 205);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une peinture acrylique de qualité intermédiaire, parfaite pour vos œuvres sur toile.', 20.15, 'Peinture acrylique Jaune poussin 250ml', 206);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture acrylique de qualité supérieure, offrant une grande résistance et des couleurs intenses.', 39.08, 'Peinture acrylique Sable 500ml', 207);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une peinture acrylique haut de gamme, idéale pour des projets professionnels ou ambitieux.', 63.14, 'Peinture acrylique Soufre 1l', 208);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un choix incontournable pour les artistes, cette peinture acrylique garantit des résultats exceptionnels.', 2.61, 'Peinture acrylique Topaze 10ml', 209);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture acrylique économique, idéale pour les débutants ou les petits projets créatifs.', 7.1, 'Peinture acrylique Vert absinthe 50ml', 210);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture acrylique polyvalente, offrant une application facile et des couleurs éclatantes.', 12.36, 'Peinture acrylique Vert Amande 100ml', 211);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une peinture acrylique de qualité intermédiaire, parfaite pour vos œuvres sur toile.', 17.29, 'Peinture acrylique Vert Anglais 250ml', 212);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture acrylique de qualité supérieure, offrant une grande résistance et des couleurs intenses.', 26.73, 'Peinture acrylique Anis 500ml', 213);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une peinture acrylique haut de gamme, idéale pour des projets professionnels ou ambitieux.', 78.53, 'Peinture acrylique Asperge 1l', 214);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un choix incontournable pour les artistes, cette peinture acrylique garantit des résultats exceptionnels.', 3.56, 'Peinture acrylique Vert avocat 10ml', 215);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture acrylique économique, idéale pour les débutants ou les petits projets créatifs.', 5.76, 'Peinture acrylique Vert bouteille 50ml', 216);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile classique, parfaite pour les artistes exigeants, offrant des couleurs riches et durables.', 9.43, 'Peinture l''huile Vert céladon 100ml', 217);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile de qualité supérieure, idéale pour des mélanges fluides et des finitions éclatantes.', 19.54, 'Peinture l''huile Chartreuse 250ml', 218);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile offrant une excellente couverture et des teintes profondes, parfaite pour tous vos projets.', 36.93, 'Peinture l''huile Vert de chrome 500ml', 219);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une peinture à lhuile haut de gamme, avec une texture onctueuse et des pigments intenses', 57.77, 'Peinture l''huile Vert citron 1l', 220);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile professionnelle, conçue pour les œuvres dart les plus exigeantes.', 3.92, 'Peinture l''huile Vert d''eau 10ml', 221);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un produit exceptionnel pour les artistes chevronnés, offrant une qualité irréprochable.', 5.82, 'Peinture l''huile Vert émeraude 50ml', 222);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile classique, parfaite pour les artistes exigeants, offrant des couleurs riches et durables.', 14.26, 'Peinture l''huile Vert épinard 100ml', 223);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile de qualité supérieure, idéale pour des mélanges fluides et des finitions éclatantes.', 25.35, 'Peinture l''huile Vert gazon 250ml', 224);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile offrant une excellente couverture et des teintes profondes, parfaite pour tous vos projets.', 32.57, 'Peinture l''huile Glauque 500ml', 225);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une peinture à lhuile haut de gamme, avec une texture onctueuse et des pigments intenses', 66.32, 'Peinture l''huile Vert de Hooker 1l', 226);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile professionnelle, conçue pour les œuvres dart les plus exigeantes.', 3.45, 'Peinture l''huile Vert impérial 10ml', 227);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un produit exceptionnel pour les artistes chevronnés, offrant une qualité irréprochable.', 9.27, 'Peinture l''huile Jade 50ml', 228);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile classique, parfaite pour les artistes exigeants, offrant des couleurs riches et durables.', 8.23, 'Peinture l''huile Vert lichen 100ml', 229);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile de qualité supérieure, idéale pour des mélanges fluides et des finitions éclatantes.', 23.68, 'Peinture l''huile Vert Lime 250ml', 230);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile offrant une excellente couverture et des teintes profondes, parfaite pour tous vos projets.', 44.75, 'Peinture l''huile Vert malachite 500ml', 231);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une peinture à lhuile haut de gamme, avec une texture onctueuse et des pigments intenses', 58.11, 'Peinture l''huile Vert Menthe 1l', 232);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile professionnelle, conçue pour les œuvres dart les plus exigeantes.', 3.82, 'Peinture l''huile Vert militaire 10ml', 233);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un produit exceptionnel pour les artistes chevronnés, offrant une qualité irréprochable.', 5.55, 'Peinture l''huile Vert mousse 50ml', 234);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile classique, parfaite pour les artistes exigeants, offrant des couleurs riches et durables.', 12.65, 'Peinture l''huile Vert olive 100ml', 235);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile de qualité supérieure, idéale pour des mélanges fluides et des finitions éclatantes.', 18.54, 'Peinture l''huile Vert perroquet 250ml', 236);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile offrant une excellente couverture et des teintes profondes, parfaite pour tous vos projets.', 41.03, 'Peinture l''huile Vert pin 500ml', 237);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une peinture à lhuile haut de gamme, avec une texture onctueuse et des pigments intenses', 73.13, 'Peinture l''huile Vert pistache 1l', 238);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile professionnelle, conçue pour les œuvres dart les plus exigeantes.', 3.92, 'Peinture l''huile Vert poireau 10ml', 239);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un produit exceptionnel pour les artistes chevronnés, offrant une qualité irréprochable.', 9.8, 'Peinture l''huile Vert pomme 50ml', 240);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile classique, parfaite pour les artistes exigeants, offrant des couleurs riches et durables.', 13.84, 'Peinture l''huile Vert prairie 100ml', 241);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile de qualité supérieure, idéale pour des mélanges fluides et des finitions éclatantes.', 15.62, 'Peinture l''huile Vert printemps 250ml', 242);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile offrant une excellente couverture et des teintes profondes, parfaite pour tous vos projets.', 35.93, 'Peinture l''huile Vert sapin 500ml', 243);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une peinture à lhuile haut de gamme, avec une texture onctueuse et des pigments intenses', 91.29, 'Peinture l''huile Vert sauge 1l', 244);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile professionnelle, conçue pour les œuvres dart les plus exigeantes.', 2.57, 'Peinture l''huile Vert tilleul 10ml', 245);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un produit exceptionnel pour les artistes chevronnés, offrant une qualité irréprochable.', 8.78, 'Peinture l''huile Vert Véronèse 50ml', 246);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile classique, parfaite pour les artistes exigeants, offrant des couleurs riches et durables.', 13.69, 'Peinture l''huile Vert 100ml', 247);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile de qualité supérieure, idéale pour des mélanges fluides et des finitions éclatantes.', 18.66, 'Peinture l''huile Vert-de-gris 250ml', 248);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile offrant une excellente couverture et des teintes profondes, parfaite pour tous vos projets.', 36.95, 'Peinture l''huile Vert de vessie 500ml', 249);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une peinture à lhuile haut de gamme, avec une texture onctueuse et des pigments intenses', 66.93, 'Peinture l''huile Viride 1l', 250);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile professionnelle, conçue pour les œuvres dart les plus exigeantes.', 3.79, 'Peinture l''huile Bleu acier 10ml', 251);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un produit exceptionnel pour les artistes chevronnés, offrant une qualité irréprochable.', 8.02, 'Peinture l''huile Aigue-marine 50ml', 252);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile classique, parfaite pour les artistes exigeants, offrant des couleurs riches et durables.', 13.92, 'Peinture l''huile Azur 100ml', 253);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile de qualité supérieure, idéale pour des mélanges fluides et des finitions éclatantes.', 23.72, 'Peinture l''huile Azur clair 250ml', 254);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile offrant une excellente couverture et des teintes profondes, parfaite pour tous vos projets.', 32.87, 'Peinture l''huile Azuré 500ml', 255);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une peinture à lhuile haut de gamme, avec une texture onctueuse et des pigments intenses', 66.68, 'Peinture l''huile Azurin 1l', 256);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile professionnelle, conçue pour les œuvres dart les plus exigeantes.', 3.2, 'Peinture l''huile Barbeau 10ml', 257);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un produit exceptionnel pour les artistes chevronnés, offrant une qualité irréprochable.', 6.56, 'Peinture l''huile Bleu 50ml', 258);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile classique, parfaite pour les artistes exigeants, offrant des couleurs riches et durables.', 9.64, 'Peinture l''huile Bleu canard 100ml', 259);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile de qualité supérieure, idéale pour des mélanges fluides et des finitions éclatantes.', 19.99, 'Peinture l''huile Bleu de cæruleum 250ml', 260);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile offrant une excellente couverture et des teintes profondes, parfaite pour tous vos projets.', 38.88, 'Peinture l''huile Bleu céleste 500ml', 261);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une peinture à lhuile haut de gamme, avec une texture onctueuse et des pigments intenses', 69.54, 'Peinture l''huile Bleu charrette 1l', 262);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile professionnelle, conçue pour les œuvres dart les plus exigeantes.', 4.19, 'Peinture l''huile Bleu ciel 10ml', 263);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un produit exceptionnel pour les artistes chevronnés, offrant une qualité irréprochable.', 5.12, 'Peinture l''huile Bleu cobalt 50ml', 264);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile classique, parfaite pour les artistes exigeants, offrant des couleurs riches et durables.', 14.42, 'Peinture l''huile Cyan 100ml', 265);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile de qualité supérieure, idéale pour des mélanges fluides et des finitions éclatantes.', 24.73, 'Peinture l''huile Bleu Denim 250ml', 266);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile offrant une excellente couverture et des teintes profondes, parfaite pour tous vos projets.', 31.1, 'Peinture l''huile Bleu dragée 500ml', 267);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une peinture à lhuile haut de gamme, avec une texture onctueuse et des pigments intenses', 71.66, 'Peinture l''huile Bleu égyptien 1l', 268);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile professionnelle, conçue pour les œuvres dart les plus exigeantes.', 4.39, 'Peinture l''huile Bleu électrique 10ml', 269);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un produit exceptionnel pour les artistes chevronnés, offrant une qualité irréprochable.', 5.17, 'Peinture l''huile Bleu de France 50ml', 270);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture à lhuile classique, parfaite pour les artistes exigeants, offrant des couleurs riches et durables.', 8.99, 'Peinture l''huile Bleu fumée 100ml', 271);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une gouache délite, parfaite pour des projets sophistiqués et des œuvres mémorables.', 15.43, 'Peinture gouache Bleu givré 250ml', 272);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un produit haut de gamme pour les artistes exigeants, avec une qualité de pigmentation exceptionnelle.', 31.94, 'Peinture gouache Bleu horizon 500ml', 273);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture gouache professionnelle, offrant une excellente opacité et une texture crémeuse.', 59.39, 'Peinture gouache Indigo 1l', 274);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une gouache polyvalente et vibrante, adaptée pour des créations expressives.', 4.84, 'Peinture gouache Bleu Klein 10ml', 275);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture gouache de qualité, idéale pour des couleurs opaques et des finitions lisses.', 6.14, 'Peinture gouache Bleu Majorelle 50ml', 276);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une gouache pratique et abordable, parfaite pour les projets scolaires ou les débutants.', 13.35, 'Peinture gouache Bleu marine 100ml', 277);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une gouache délite, parfaite pour des projets sophistiqués et des œuvres mémorables.', 27.9, 'Peinture gouache Bleu maya 250ml', 278);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un produit haut de gamme pour les artistes exigeants, avec une qualité de pigmentation exceptionnelle.', 32.09, 'Peinture gouache Bleu des mers du sud 500ml', 279);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture gouache professionnelle, offrant une excellente opacité et une texture crémeuse.', 41.85, 'Peinture gouache Bleu minéral 1l', 280);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une gouache polyvalente et vibrante, adaptée pour des créations expressives.', 2.82, 'Peinture gouache Bleu minuit 10ml', 281);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture gouache de qualité, idéale pour des couleurs opaques et des finitions lisses.', 9.12, 'Peinture gouache Bleu nuit 50ml', 282);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une gouache pratique et abordable, parfaite pour les projets scolaires ou les débutants.', 12.87, 'Peinture gouache Bleu outremer 100ml', 283);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une gouache délite, parfaite pour des projets sophistiqués et des œuvres mémorables.', 26.12, 'Peinture gouache Bleu paon 250ml', 284);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un produit haut de gamme pour les artistes exigeants, avec une qualité de pigmentation exceptionnelle.', 32.79, 'Peinture gouache Bleu pastel 500ml', 285);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture gouache professionnelle, offrant une excellente opacité et une texture crémeuse.', 72.75, 'Peinture gouache Bleu persan 1l', 286);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une gouache polyvalente et vibrante, adaptée pour des créations expressives.', 3.41, 'Peinture gouache Bleu pétrole 10ml', 287);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture gouache de qualité, idéale pour des couleurs opaques et des finitions lisses.', 6.7, 'Peinture gouache Bleu roi 50ml', 288);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une gouache pratique et abordable, parfaite pour les projets scolaires ou les débutants.', 8.67, 'Peinture gouache Bleu saphir 100ml', 289);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une gouache délite, parfaite pour des projets sophistiqués et des œuvres mémorables.', 28.44, 'Peinture gouache Bleu sarcelle 250ml', 290);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un produit haut de gamme pour les artistes exigeants, avec une qualité de pigmentation exceptionnelle.', 26.83, 'Peinture gouache Smalt 500ml', 291);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture gouache professionnelle, offrant une excellente opacité et une texture crémeuse.', 42.46, 'Peinture gouache Bleu Tiffany 1l', 292);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une gouache polyvalente et vibrante, adaptée pour des créations expressives.', 3.86, 'Peinture gouache Bleu turquin 10ml', 293);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture gouache de qualité, idéale pour des couleurs opaques et des finitions lisses.', 6.82, 'Peinture gouache Bleu turquoise 50ml', 294);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une gouache pratique et abordable, parfaite pour les projets scolaires ou les débutants.', 13.91, 'Peinture gouache Améthyste 100ml', 295);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une gouache délite, parfaite pour des projets sophistiqués et des œuvres mémorables.', 15.99, 'Peinture gouache Aubergine 250ml', 296);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un produit haut de gamme pour les artistes exigeants, avec une qualité de pigmentation exceptionnelle.', 37.65, 'Peinture gouache Violet d''évêque 500ml', 297);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture gouache professionnelle, offrant une excellente opacité et une texture crémeuse.', 69.67, 'Peinture gouache Glycine 1l', 298);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une gouache polyvalente et vibrante, adaptée pour des créations expressives.', 5.0, 'Peinture gouache Gris de lin 10ml', 299);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture gouache de qualité, idéale pour des couleurs opaques et des finitions lisses.', 7.86, 'Peinture gouache Héliotrope 50ml', 300);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une gouache pratique et abordable, parfaite pour les projets scolaires ou les débutants.', 12.29, 'Peinture gouache Lavande 100ml', 301);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une gouache délite, parfaite pour des projets sophistiqués et des œuvres mémorables.', 27.61, 'Peinture gouache Lilas 250ml', 302);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un produit haut de gamme pour les artistes exigeants, avec une qualité de pigmentation exceptionnelle.', 34.49, 'Peinture gouache Violet de manganèse 500ml', 303);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture gouache professionnelle, offrant une excellente opacité et une texture crémeuse.', 52.46, 'Peinture gouache Mauve 1l', 304);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une gouache polyvalente et vibrante, adaptée pour des créations expressives.', 4.41, 'Peinture gouache Orchidée 10ml', 305);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture gouache de qualité, idéale pour des couleurs opaques et des finitions lisses.', 8.15, 'Peinture gouache Parme 50ml', 306);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une gouache pratique et abordable, parfaite pour les projets scolaires ou les débutants.', 10.79, 'Peinture gouache Pervenche 100ml', 307);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une gouache délite, parfaite pour des projets sophistiqués et des œuvres mémorables.', 15.86, 'Peinture gouache Prune 250ml', 308);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un produit haut de gamme pour les artistes exigeants, avec une qualité de pigmentation exceptionnelle.', 31.4, 'Peinture gouache Violet 500ml', 309);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture gouache professionnelle, offrant une excellente opacité et une texture crémeuse.', 88.24, 'Peinture gouache Violine 1l', 310);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une gouache polyvalente et vibrante, adaptée pour des créations expressives.', 3.1, 'Peinture gouache Zinzolin 10ml', 311);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture gouache de qualité, idéale pour des couleurs opaques et des finitions lisses.', 8.34, 'Peinture gouache Acajou 50ml', 312);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une gouache pratique et abordable, parfaite pour les projets scolaires ou les débutants.', 14.32, 'Peinture gouache Alezan 100ml', 313);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une gouache délite, parfaite pour des projets sophistiqués et des œuvres mémorables.', 20.49, 'Peinture gouache Auburn 250ml', 314);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un produit haut de gamme pour les artistes exigeants, avec une qualité de pigmentation exceptionnelle.', 39.64, 'Peinture gouache Ambre 500ml', 315);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture gouache professionnelle, offrant une excellente opacité et une texture crémeuse.', 58.43, 'Peinture gouache Basané 1l', 316);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une gouache polyvalente et vibrante, adaptée pour des créations expressives.', 2.45, 'Peinture gouache Beige 10ml', 317);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture gouache de qualité, idéale pour des couleurs opaques et des finitions lisses.', 6.88, 'Peinture gouache Bismarck 50ml', 318);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une gouache pratique et abordable, parfaite pour les projets scolaires ou les débutants.', 9.69, 'Peinture gouache Bistre 100ml', 319);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une gouache délite, parfaite pour des projets sophistiqués et des œuvres mémorables.', 25.92, 'Peinture gouache Bitume 250ml', 320);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un produit haut de gamme pour les artistes exigeants, avec une qualité de pigmentation exceptionnelle.', 48.88, 'Peinture gouache Bronze 500ml', 321);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture gouache professionnelle, offrant une excellente opacité et une texture crémeuse.', 50.57, 'Peinture gouache Brou de noix 1l', 322);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une gouache polyvalente et vibrante, adaptée pour des créations expressives.', 3.03, 'Peinture gouache Brun 10ml', 323);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Peinture gouache de qualité, idéale pour des couleurs opaques et des finitions lisses.', 7.86, 'Peinture gouache Bureau 50ml', 324);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une gouache pratique et abordable, parfaite pour les projets scolaires ou les débutants.', 11.61, 'Peinture gouache Cacao 100ml', 325);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Une gouache délite, parfaite pour des projets sophistiqués et des œuvres mémorables.', 15.83, 'Peinture gouache Cachou 250ml', 326);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre économique, idéale pour les débutants ou les projets créatifs occasionnels.', 4.37, 'Peinture encre Café 30ml', 327);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre polyvalente, offrant une application fluide et des pigments éclatants.', 4.62, 'Peinture encre Café au lait 30ml', 328);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre de qualité intermédiaire, parfaite pour expérimenter sur papier ou toile.', 4.11, 'Peinture encre Cannelle 30ml', 329);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre de qualité supérieure, assurant une grande durabilité et des couleurs profondes.', 3.22, 'Peinture encre Caramel 30ml', 330);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre haut de gamme, idéale pour des créations artistiques exigeantes ou professionnelles.', 3.32, 'Peinture encre Chamois 30ml', 331);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un choix incontournable pour les artistes, cette encre garantit des résultats dune finesse exceptionnelle.', 4.9, 'Peinture encre Châtaigne 30ml', 332);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre économique, idéale pour les débutants ou les projets créatifs occasionnels.', 3.61, 'Peinture encre Chaudron 30ml', 333);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre polyvalente, offrant une application fluide et des pigments éclatants.', 5.02, 'Peinture encre Chocolat 30ml', 334);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre de qualité intermédiaire, parfaite pour expérimenter sur papier ou toile.', 5.87, 'Peinture encre Fauve 30ml', 335);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre de qualité supérieure, assurant une grande durabilité et des couleurs profondes.', 5.7, 'Peinture encre Feuille-morte 30ml', 336);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre haut de gamme, idéale pour des créations artistiques exigeantes ou professionnelles.', 3.16, 'Peinture encre Grège 30ml', 337);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un choix incontournable pour les artistes, cette encre garantit des résultats dune finesse exceptionnelle.', 3.14, 'Peinture encre Lavallière 30ml', 338);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre économique, idéale pour les débutants ou les projets créatifs occasionnels.', 3.84, 'Peinture encre Marron 30ml', 339);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre polyvalente, offrant une application fluide et des pigments éclatants.', 3.32, 'Peinture encre Mastic 30ml', 340);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre de qualité intermédiaire, parfaite pour expérimenter sur papier ou toile.', 3.58, 'Peinture encre Noisette 30ml', 341);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre de qualité supérieure, assurant une grande durabilité et des couleurs profondes.', 3.92, 'Peinture encre Ocre 30ml', 342);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre haut de gamme, idéale pour des créations artistiques exigeantes ou professionnelles.', 4.06, 'Peinture encre Poil de chameau 30ml', 343);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un choix incontournable pour les artistes, cette encre garantit des résultats dune finesse exceptionnelle.', 3.36, 'Peinture encre Puce 30ml', 344);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre économique, idéale pour les débutants ou les projets créatifs occasionnels.', 4.06, 'Peinture encre Sépia 30ml', 345);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre polyvalente, offrant une application fluide et des pigments éclatants.', 5.82, 'Peinture encre Tabac 30ml', 346);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre de qualité intermédiaire, parfaite pour expérimenter sur papier ou toile.', 4.78, 'Peinture encre Terracotta 30ml', 347);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre de qualité supérieure, assurant une grande durabilité et des couleurs profondes.', 4.97, 'Peinture encre Terre d''ombre 30ml', 348);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre haut de gamme, idéale pour des créations artistiques exigeantes ou professionnelles.', 3.08, 'Peinture encre Terre de Sienne 30ml', 349);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un choix incontournable pour les artistes, cette encre garantit des résultats dune finesse exceptionnelle.', 4.49, 'Peinture encre Albâtre 30ml', 350);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre économique, idéale pour les débutants ou les projets créatifs occasionnels.', 4.41, 'Peinture encre Beige (clair) 30ml', 351);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre polyvalente, offrant une application fluide et des pigments éclatants.', 3.9, 'Peinture encre Blanc 30ml', 352);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre de qualité intermédiaire, parfaite pour expérimenter sur papier ou toile.', 3.28, 'Peinture encre Blanc cassé 30ml', 353);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre de qualité supérieure, assurant une grande durabilité et des couleurs profondes.', 4.06, 'Peinture encre Crème 30ml', 354);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre haut de gamme, idéale pour des créations artistiques exigeantes ou professionnelles.', 3.36, 'Peinture encre Écru 30ml', 355);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un choix incontournable pour les artistes, cette encre garantit des résultats dune finesse exceptionnelle.', 3.12, 'Peinture encre Blanc d''Espagne 30ml', 356);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre économique, idéale pour les débutants ou les projets créatifs occasionnels.', 3.66, 'Peinture encre Ivoire 30ml', 357);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre polyvalente, offrant une application fluide et des pigments éclatants.', 3.19, 'Peinture encre Blanc de lait 30ml', 358);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre de qualité intermédiaire, parfaite pour expérimenter sur papier ou toile.', 3.61, 'Peinture encre Blanc lunaire 30ml', 359);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre de qualité supérieure, assurant une grande durabilité et des couleurs profondes.', 5.31, 'Peinture encre Blanc de zinc 30ml', 360);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre haut de gamme, idéale pour des créations artistiques exigeantes ou professionnelles.', 5.38, 'Peinture encre Gris acier 30ml', 361);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un choix incontournable pour les artistes, cette encre garantit des résultats dune finesse exceptionnelle.', 4.96, 'Peinture encre Anthracite 30ml', 362);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre économique, idéale pour les débutants ou les projets créatifs occasionnels.', 5.94, 'Peinture encre Gris ardoise 30ml', 363);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre polyvalente, offrant une application fluide et des pigments éclatants.', 5.72, 'Peinture encre Argent 30ml', 364);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre de qualité intermédiaire, parfaite pour expérimenter sur papier ou toile.', 4.37, 'Peinture encre Argile 30ml', 365);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre de qualité supérieure, assurant une grande durabilité et des couleurs profondes.', 5.28, 'Peinture encre Bis 30ml', 366);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre haut de gamme, idéale pour des créations artistiques exigeantes ou professionnelles.', 4.79, 'Peinture encre Étain 30ml', 367);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un choix incontournable pour les artistes, cette encre garantit des résultats dune finesse exceptionnelle.', 4.79, 'Peinture encre Gris fer 30ml', 368);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre économique, idéale pour les débutants ou les projets créatifs occasionnels.', 5.39, 'Peinture encre Gris 30ml', 369);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre polyvalente, offrant une application fluide et des pigments éclatants.', 4.22, 'Peinture encre Lin 30ml', 370);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre de qualité intermédiaire, parfaite pour expérimenter sur papier ou toile.', 4.36, 'Peinture encre Gris de Payne 30ml', 371);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre de qualité supérieure, assurant une grande durabilité et des couleurs profondes.', 3.06, 'Peinture encre Gris perle 30ml', 372);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre haut de gamme, idéale pour des créations artistiques exigeantes ou professionnelles.', 4.29, 'Peinture encre Gris plomb 30ml', 373);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un choix incontournable pour les artistes, cette encre garantit des résultats dune finesse exceptionnelle.', 3.01, 'Peinture encre Gris souris 30ml', 374);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre économique, idéale pour les débutants ou les projets créatifs occasionnels.', 3.07, 'Peinture encre Gris taupe 30ml', 375);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre polyvalente, offrant une application fluide et des pigments éclatants.', 4.07, 'Peinture encre Tourterelle 30ml', 376);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre de qualité intermédiaire, parfaite pour expérimenter sur papier ou toile.', 4.93, 'Peinture encre Noir 30ml', 377);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre de qualité supérieure, assurant une grande durabilité et des couleurs profondes.', 4.11, 'Peinture encre Noir d''aniline 30ml', 378);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre haut de gamme, idéale pour des créations artistiques exigeantes ou professionnelles.', 4.62, 'Peinture encre Noir de carbone 30ml', 379);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Un choix incontournable pour les artistes, cette encre garantit des résultats dune finesse exceptionnelle.', 4.79, 'Peinture encre Cassis 30ml', 380);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre économique, idéale pour les débutants ou les projets créatifs occasionnels.', 5.14, 'Peinture encre Dorian 30ml', 381);
+INSERT INTO public.materiel(description_materiel, prix_materiel, nom_materiel, id_image) VALUES('Encre polyvalente, offrant une application fluide et des pigments éclatants.', 4.54, 'Peinture encre Réglisse 30ml', 382);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (7, '10ml', 1, 1);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (8, '50ml', 1, 2);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (9, '100ml', 1, 3);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (10, '250ml', 1, 4);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (11, '500ml', 1, 5);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (12, '1l', 1, 6);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (13, '10ml', 1, 7);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (14, '50ml', 1, 8);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (15, '100ml', 1, 9);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (16, '250ml', 1, 10);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (17, '500ml', 1, 11);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (18, '1l', 1, 12);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (19, '10ml', 1, 13);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (20, '50ml', 1, 14);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (21, '100ml', 1, 15);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (22, '250ml', 1, 16);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (23, '500ml', 1, 17);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (24, '1l', 1, 18);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (25, '10ml', 1, 19);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (26, '50ml', 1, 20);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (27, '100ml', 1, 21);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (28, '250ml', 1, 22);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (29, '500ml', 1, 23);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (30, '1l', 1, 24);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (31, '10ml', 1, 25);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (32, '50ml', 1, 26);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (33, '100ml', 1, 27);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (34, '250ml', 1, 28);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (35, '500ml', 1, 29);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (36, '1l', 1, 30);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (37, '10ml', 1, 31);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (38, '50ml', 1, 32);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (39, '100ml', 1, 33);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (40, '250ml', 1, 34);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (41, '500ml', 1, 35);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (42, '1l', 1, 36);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (43, '10ml', 1, 37);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (44, '50ml', 1, 38);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (45, '100ml', 1, 39);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (46, '250ml', 1, 40);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (47, '500ml', 1, 41);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (48, '1l', 1, 42);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (49, '10ml', 1, 43);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (50, '50ml', 1, 44);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (51, '100ml', 1, 45);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (52, '250ml', 1, 46);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (53, '500ml', 1, 47);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (54, '1l', 1, 48);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (55, '10ml', 1, 49);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (56, '50ml', 1, 50);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (57, '100ml', 1, 51);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (58, '250ml', 1, 52);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (59, '500ml', 1, 53);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (60, '1l', 1, 54);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (61, '10ml', 1, 55);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (62, '50ml', 2, 56);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (63, '100ml', 2, 57);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (64, '250ml', 2, 58);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (65, '500ml', 2, 59);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (66, '1l', 2, 60);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (67, '10ml', 2, 61);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (68, '50ml', 2, 62);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (69, '100ml', 2, 63);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (70, '250ml', 2, 64);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (71, '500ml', 2, 65);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (72, '1l', 2, 66);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (73, '10ml', 2, 67);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (74, '50ml', 2, 68);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (75, '100ml', 2, 69);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (76, '250ml', 2, 70);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (77, '500ml', 2, 71);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (78, '1l', 2, 72);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (79, '10ml', 2, 73);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (80, '50ml', 2, 74);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (81, '100ml', 2, 75);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (82, '250ml', 2, 76);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (83, '500ml', 2, 77);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (84, '1l', 2, 78);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (85, '10ml', 2, 79);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (86, '50ml', 2, 80);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (87, '100ml', 2, 81);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (88, '250ml', 2, 82);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (89, '500ml', 2, 83);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (90, '1l', 2, 84);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (91, '10ml', 2, 85);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (92, '50ml', 2, 86);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (93, '100ml', 2, 87);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (94, '250ml', 2, 88);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (95, '500ml', 2, 89);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (96, '1l', 2, 90);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (97, '10ml', 2, 91);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (98, '50ml', 2, 92);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (99, '100ml', 2, 93);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (100, '250ml', 2, 94);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (101, '500ml', 2, 95);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (102, '1l', 2, 96);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (103, '10ml', 2, 97);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (104, '50ml', 2, 98);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (105, '100ml', 2, 99);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (106, '250ml', 2, 100);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (107, '500ml', 2, 101);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (108, '1l', 2, 102);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (109, '10ml', 2, 103);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (110, '50ml', 2, 104);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (111, '100ml', 2, 105);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (112, '250ml', 2, 106);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (113, '500ml', 2, 107);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (114, '1l', 2, 108);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (115, '10ml', 2, 109);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (116, '50ml', 2, 110);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (117, '100ml', 3, 111);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (118, '250ml', 3, 112);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (119, '500ml', 3, 113);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (120, '1l', 3, 114);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (121, '10ml', 3, 115);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (122, '50ml', 3, 116);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (123, '100ml', 3, 117);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (124, '250ml', 3, 118);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (125, '500ml', 3, 119);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (126, '1l', 3, 120);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (127, '10ml', 3, 121);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (128, '50ml', 3, 122);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (129, '100ml', 3, 123);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (130, '250ml', 3, 124);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (131, '500ml', 3, 125);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (132, '1l', 3, 126);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (133, '10ml', 3, 127);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (134, '50ml', 3, 128);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (135, '100ml', 3, 129);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (136, '250ml', 3, 130);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (137, '500ml', 3, 131);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (138, '1l', 3, 132);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (139, '10ml', 3, 133);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (140, '50ml', 3, 134);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (141, '100ml', 3, 135);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (142, '250ml', 3, 136);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (143, '500ml', 3, 137);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (144, '1l', 3, 138);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (145, '10ml', 3, 139);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (146, '50ml', 3, 140);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (147, '100ml', 3, 141);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (148, '250ml', 3, 142);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (149, '500ml', 3, 143);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (150, '1l', 3, 144);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (151, '10ml', 3, 145);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (152, '50ml', 3, 146);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (153, '100ml', 3, 147);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (154, '250ml', 3, 148);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (155, '500ml', 3, 149);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (156, '1l', 3, 150);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (157, '10ml', 3, 151);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (158, '50ml', 3, 152);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (159, '100ml', 3, 153);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (160, '250ml', 3, 154);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (161, '500ml', 3, 155);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (162, '1l', 3, 156);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (163, '10ml', 3, 157);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (164, '50ml', 3, 158);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (165, '100ml', 3, 159);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (166, '250ml', 3, 160);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (167, '500ml', 3, 161);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (168, '1l', 3, 162);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (169, '10ml', 3, 163);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (170, '50ml', 3, 164);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (171, '100ml', 3, 165);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (172, '250ml', 4, 166);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (173, '500ml', 4, 167);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (174, '1l', 4, 168);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (175, '10ml', 4, 169);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (176, '50ml', 4, 170);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (177, '100ml', 4, 171);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (178, '250ml', 4, 172);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (179, '500ml', 4, 173);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (180, '1l', 4, 174);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (181, '10ml', 4, 175);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (182, '50ml', 4, 176);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (183, '100ml', 4, 177);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (184, '250ml', 4, 178);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (185, '500ml', 4, 179);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (186, '1l', 4, 180);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (187, '10ml', 4, 181);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (188, '50ml', 4, 182);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (189, '100ml', 4, 183);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (190, '250ml', 4, 184);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (191, '500ml', 4, 185);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (192, '1l', 4, 186);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (193, '10ml', 4, 187);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (194, '50ml', 4, 188);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (195, '100ml', 4, 189);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (196, '250ml', 4, 190);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (197, '500ml', 4, 191);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (198, '1l', 4, 192);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (199, '10ml', 4, 193);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (200, '50ml', 4, 194);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (201, '100ml', 4, 195);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (202, '250ml', 4, 196);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (203, '500ml', 4, 197);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (204, '1l', 4, 198);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (205, '10ml', 4, 199);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (206, '50ml', 4, 200);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (207, '100ml', 4, 201);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (208, '250ml', 4, 202);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (209, '500ml', 4, 203);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (210, '1l', 4, 204);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (211, '10ml', 4, 205);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (212, '50ml', 4, 206);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (213, '100ml', 4, 207);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (214, '250ml', 4, 208);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (215, '500ml', 4, 209);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (216, '1l', 4, 210);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (217, '10ml', 4, 211);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (218, '50ml', 4, 212);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (219, '100ml', 4, 213);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (220, '250ml', 4, 214);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (221, '500ml', 4, 215);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (222, '1l', 4, 216);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (223, '10ml', 4, 217);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (224, '50ml', 4, 218);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (225, '100ml', 4, 219);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (226, '250ml', 4, 220);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (227, '30ml', 5, 221);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (228, '30ml', 5, 222);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (229, '30ml', 5, 223);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (230, '30ml', 5, 224);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (231, '30ml', 5, 225);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (232, '30ml', 5, 226);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (233, '30ml', 5, 227);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (234, '30ml', 5, 228);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (235, '30ml', 5, 229);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (236, '30ml', 5, 230);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (237, '30ml', 5, 231);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (238, '30ml', 5, 232);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (239, '30ml', 5, 233);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (240, '30ml', 5, 234);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (241, '30ml', 5, 235);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (242, '30ml', 5, 236);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (243, '30ml', 5, 237);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (244, '30ml', 5, 238);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (245, '30ml', 5, 239);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (246, '30ml', 5, 240);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (247, '30ml', 5, 241);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (248, '30ml', 5, 242);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (249, '30ml', 5, 243);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (250, '30ml', 5, 244);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (251, '30ml', 5, 245);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (252, '30ml', 5, 246);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (253, '30ml', 5, 247);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (254, '30ml', 5, 248);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (255, '30ml', 5, 249);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (256, '30ml', 5, 250);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (257, '30ml', 5, 251);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (258, '30ml', 5, 252);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (259, '30ml', 5, 253);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (260, '30ml', 5, 254);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (261, '30ml', 5, 255);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (262, '30ml', 5, 256);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (263, '30ml', 5, 257);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (264, '30ml', 5, 258);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (265, '30ml', 5, 259);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (266, '30ml', 5, 260);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (267, '30ml', 5, 261);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (268, '30ml', 5, 262);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (269, '30ml', 5, 263);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (270, '30ml', 5, 264);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (271, '30ml', 5, 265);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (272, '30ml', 5, 266);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (273, '30ml', 5, 267);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (274, '30ml', 5, 268);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (275, '30ml', 5, 269);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (276, '30ml', 5, 270);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (277, '30ml', 5, 271);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (278, '30ml', 5, 272);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (279, '30ml', 5, 273);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (280, '30ml', 5, 274);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (281, '30ml', 5, 275);
+INSERT INTO public.peinture(id_materiel, quantite, id_type_peinture, id_couleur)VALUES (282, '30ml', 5, 276);
 
 -- Exemples de commandes passées
 INSERT INTO
