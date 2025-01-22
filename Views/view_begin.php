@@ -45,7 +45,7 @@
             			</ul>
           			</li>
           			<li class="nav-item">
-            			<a class="nav-link active" aria-current="page" href="?controller=boutique&action=boutique">Boutique</a>
+            			<a class="nav-link active" aria-current="page" href="?controller=Boutique&action=boutique">Boutique</a>
           			</li>
         		</ul>
       		</div>

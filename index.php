@@ -6,10 +6,10 @@ require_once "Utils/functions.php";
 require_once "Models/Model.php";
 // Inclusion de la classe Controller
 require_once "Controllers/Controller.php";
-
+prepare_search();
 // Liste des contrôleurs autorisés
-$controllers = ["Utilisateur", "Connexion", "inspiration","Accueil""Utilisateur", "Connexion", "Admin", "Materiel"];
-$controller_default = "ConnexionAccueil";
+$controllers = ["Utilisateur", "Connexion", "inspiration", "Accueil", "Admin", "Materiel", "Boutique"];
+$controller_default = "Accueil";
 
 // Récupérer le contrôleur depuis l'URL ou utiliser le contrôleur par défaut
 if (isset($_GET['controller']) && in_array($_GET['controller'], $controllers)) {
