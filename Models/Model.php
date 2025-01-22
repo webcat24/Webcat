@@ -99,14 +99,6 @@ class Model
         $requete->execute();
         return $requete->fetchAll(PDO::FETCH_ASSOC);
     }
-
-    // public function getProduits()
-    // {
-    //     $requete = $this->bd->prepare("SELECT * FROM Materiel m");
-    //     $requete->execute();
-    //     return $requete->fetchAll(PDO::FETCH_ASSOC);
-    // }
-
     public function getProduits()
     {
         $requete = $this->bd->prepare("
