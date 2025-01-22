@@ -15,34 +15,27 @@ class Controller_boutique extends Controller
     {
         $this->action_boutique();
     }
+
     public function action_boutique()
     {
         $m = Model::getModel();
 
-        $lengthProduitsStocked = $m->getNombreTotalProduits();
-        $totalProduits = isset($lengthProduitsStocked["quantite"]) ? $lengthProduitsStocked["quantite"] : 0;
-
-        $nbrPagination = round($totalProduits / 4, 0);
-
-        $page = isset($_GET['page']) ? (int) $_GET['page'] : 1;
-
-        if ($page <= 0 || $page > $nbrPagination) {
-            $page = 1;
-        }
-
-        $debut = 4 * ($page - 1) + 1;
-        $fin = 4 * $page;
+        $allProduits = $m->getProduits();
         $data = [
-            "produits" => $m->getProduitsPaginés($debut, $fin),
-            "taillePageNav" => $nbrPagination,
-            "currentPage" => $page,
+            "produits" => $allProduits,
         ];
 
         $this->render('boutique', $data);
     }
 
-
-
+    public function action_apiGetProduits()
+    {
+        $m = Model::getModel();
+        $produits = $m->getProduits();
+        header('Content-Type: application/json');
+        echo json_encode($produits);
+        exit;
+    }
 
 
 }

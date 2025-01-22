@@ -383,6 +383,10 @@ p.psswrd {
   padding: 30px !important;
 }
 
+.col-balance p {
+  text-align: justify;
+}
+
 h2,
 .fs-h2 {
   font-size: var(--h2TextSize);
@@ -593,6 +597,10 @@ h6 a {
   align-items: center;
   z-index: 1000;
   overflow: hidden;
+}
+
+#modal-title {
+  color: var(--rose);
 }
 
 .modal img {
@@ -1849,12 +1857,12 @@ footer a {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  /* justify-content: center; */
 }
 .product-field ul li {
   list-style: none;
-  width: 46%;
-  height: 750px;
+  width: 30%;
+  height: 200px;
   transition: 0.5s all;
   background: whitesmoke;
   border-radius: 20px;
@@ -1885,7 +1893,7 @@ picture img {
 
 .detail .icon {
   position: absolute;
-  bottom: 334px;
+  bottom: 120px;
   left: 25px;
   display: flex;
   gap: 10px;
@@ -2136,6 +2144,10 @@ li h4 {
   background-color: #000;
 }
 
+.modal-right h3 {
+  color: var(--rose);
+}
+
 .modalboutique .modal-right {
   flex: 1;
   display: flex;
@@ -2376,10 +2388,6 @@ li h4 {
     justify-content: center;
   }
 
-  .home .swiper-slide::before {
-    height: 100%;
-  }
-
   .filter-condition {
     font-size: 16px;
     padding: 10px;
@@ -2605,52 +2613,9 @@ li h4 {
   .header-active .navOpen-btn {
     color: var(--text-color);
   }
-
-  .homeTitle {
-    font-size: var(--h1-font);
-  }
-
-  .home h1 {
-    font-size: 32px;
-  }
-
-  .home p {
-    font-size: 16px;
-  }
-
-  .home-img {
-    height: 50rem;
-    width: 100%;
-    padding-bottom: 80px;
-  }
-
-  .home .swiper-slide::before {
-    height: 84%;
-  }
-
-  .about-page .home-img {
-    height: auto;
-    width: 100%;
-    padding-bottom: 80px;
-  }
-
   .about-page section {
     margin-top: -30px !important;
     display: table-cell;
-  }
-
-  .about-page .homeSubtitle {
-    font-size: 1.3rem;
-  }
-
-  .about-page .homeTitle {
-    font-size: 2rem;
-  }
-
-  .about-page .swiper-navBtn {
-    height: 2.5rem !important;
-    width: 2.5rem !important;
-    top: 50%;
   }
 
   .footer-links {
@@ -2694,16 +2659,6 @@ li h4 {
   .swiper-slide {
     display: flex;
     justify-content: center;
-  }
-
-  .swiper-navBtn {
-    height: 3rem !important;
-    width: 3rem !important;
-  }
-
-  .swiper-button-next:after,
-  .swiper-button-prev:after {
-    font-size: 20px !important;
   }
 
   h1,
@@ -2821,8 +2776,8 @@ li h4 {
   }
 
   .icon span {
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
     font-size: 14px;
   }
 
@@ -2837,8 +2792,8 @@ li h4 {
   }
 
   .product-field ul li {
-    width: 46%;
-    height: 750px;
+    width: 30%;
+    height: 335px;
     margin: 10px;
   }
 
@@ -2891,6 +2846,9 @@ li h4 {
   .navbar-nav .dropdown-menu {
     width: 25%;
   }
+  .product-item h4 {
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 993px) {
@@ -2901,10 +2859,6 @@ li h4 {
   .dishes .dish img {
     width: 210px;
   }
-
-  .about-page .home .swiper-slide::before {
-    height: 93%;
-  }
   .d-flex.align-items-center.position-absolute.top-0.end-0.mt-3.me-4 img {
     width: 50px !important;
     height: 50px !important;
@@ -2912,10 +2866,6 @@ li h4 {
 
   .img-fluid {
     max-width: 140px !important;
-  }
-
-  .about-page .home .swiper-slide::before {
-    height: 90%;
   }
 
   .header-active {
@@ -2926,34 +2876,20 @@ li h4 {
     width: 32px !important;
     height: 32px !important;
   }
-
-  .about-page .home .swiper-slide::before {
-    height: 88%;
-  }
-
-  .about-page .home .swiper-slide::before {
-    height: 82%;
-  }
-
-  .about-page .swiper-navBtn {
-    height: 8rem !important;
-    width: 8rem !important;
-    top: 45%;
-  }
   /* Carousel */
   .carousel .list .item .main-content .content h2 {
     font-size: 3.5em;
     margin-top: 1%;
   }
 
-  .product-field ul li {
-    width: 45%;
+  /* .product-field ul li {
+    width: 30%;
     height: 350px;
-  }
+  } */
 
   .filters {
     width: 150%;
-    max-width: 35%;
+    max-width: 20%;
     margin-top: 20px;
     margin-left: 0;
     padding: 10px;
@@ -2978,8 +2914,8 @@ li h4 {
   }
 
   .product-field ul li {
-    width: 46%;
-    height: 750px;
+    width: 30%;
+    height: 300px;
     margin: 10px;
   }
 
@@ -2991,4 +2927,48 @@ li h4 {
   .filters {
     margin-top: 210px;
   }
+}
+
+/* Conteneur de la pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Style général des boutons */
+.pagination button {
+  background-color: #f4f4f4;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Boutons au survol */
+.pagination button:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+/* Bouton actif */
+.pagination button.active {
+  background-color: var(--marron);
+  color: #fff;
+  border-color: var(--marron);
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Désactiver les boutons si non cliquables */
+.pagination button:disabled {
+  background-color: #e9ecef;
+  color: #6c757d;
+  border-color: #dee2e6;
+  cursor: not-allowed;
 }

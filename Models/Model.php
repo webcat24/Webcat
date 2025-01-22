@@ -99,14 +99,6 @@ class Model
         $requete->execute();
         return $requete->fetchAll(PDO::FETCH_ASSOC);
     }
-
-    // public function getProduits()
-    // {
-    //     $requete = $this->bd->prepare("SELECT * FROM Materiel m");
-    //     $requete->execute();
-    //     return $requete->fetchAll(PDO::FETCH_ASSOC);
-    // }
-
     public function getProduits()
     {
         $requete = $this->bd->prepare("
@@ -170,6 +162,14 @@ class Model
     public function getAllColors()
     {
         $requete = $this->bd->prepare("SELECT * FROM couleur");
+        $requete->execute();
+        return $requete->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getOeuvres()
+    {
+        $requete = $this->bd->prepare("SELECT lien_image FROM oeuvres
+                                                JOIN images ON oeuvres.id_image = images.id_image LIMIT 4");
         $requete->execute();
         return $requete->fetchAll(PDO::FETCH_ASSOC);
     }

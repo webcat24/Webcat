@@ -78,6 +78,35 @@ $desiredIndexes = [0, 2, 3, 4, 6, 8];
                 <div class="arrow left" onclick="navigateImage(-1)">&#10094;</div>
                 <div class="arrow right" onclick="navigateImage(1)">&#10095;</div>
             </div>
+
+
+            <!-- <div class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+
+                <!-- Section gauche --
+                <div class="modal-page modal-left">
+                    <h2 id="modal-title">Titre Exemple</h2>
+                    <p id="modal-description">
+                        Ceci est une description d'exemple pour l'image.
+                    </p>
+                    <p id="modal-artist">
+                        Artiste : <span id="modal-artist-name">Artiste Exemple</span>
+                    </p>
+                    <button class="modal-button">Voir les détails</button>
+                </div>
+
+                <!-- Section droite --
+                <div class="modal-page modal-right">
+                    <img src="path-to-your-image.jpg" alt="Image de l'œuvre" />
+                </div>
+                <div class="arrow left" onclick="navigateImage(-1)">&#10094;</div>
+                <div class="arrow right" onclick="navigateImage(1)">&#10095;</div>
+            </div> -->
+
+
+
+
+
         </div>
 
     </section>
