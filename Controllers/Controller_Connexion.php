@@ -6,7 +6,6 @@ class Controller_Connexion extends Controller
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }
-
         $m = Model::getModel();
 
         if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["email"]) && $m->isUserInDB($_POST["email"])) {
