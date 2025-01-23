@@ -34,15 +34,6 @@ class Model
         return self::$instance;
     }
 
-    public function isUserAdmin($userId)
-    {
-        $requete = $this->bd->prepare("SELECT id_utilisateur FROM admin WHERE id_utilisateur = :user_id");
-        $requete->bindValue(":user_id", $userId);
-        $requete->execute();
-        return $requete->fetch(PDO::FETCH_ASSOC);
-    }
-
-
     public function getFav($offset = 0, $limit = 20)
     {
         $requete = $this->bd->prepare("SELECT Nom_materiel AS nom, Prix_Materiel AS prix, id_Image AS img_link FROM Favoris JOIN Materiel USING (id_materiel) WHERE id_utilisateur = :id LIMIT :limit OFFSET :offset");
