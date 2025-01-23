@@ -29,6 +29,7 @@ require "view_begin.php";
                     <input class="bouton3" type="submit" value="Ajouter" />
                 </label>
             </form>
+            <a href="?controller=Connexion&action=logout" class="logout-btn">Se déconnecter</a>
         </div>
     </div>
 </div>
