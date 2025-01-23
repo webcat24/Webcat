@@ -754,8 +754,8 @@ document.addEventListener("DOMContentLoaded", () => {
 //     });
 // });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const url = "?controller=API&action=apiGetProduits";
+document.addEventListener("DOMContentLoaded", async function () {
+  const url = "?api=produit";
   const token = "Webcat";
 
   const itemsPerPage = 12;
@@ -773,7 +773,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const globalShades = ["Rouge", "Bleu", "Vert", "Jaune", "Noir", "Blanc"];
 
   // fetch(url)
-  fetch(url, {
+  await fetch(url, {
     method: "GET",
     headers: {
       Authorization: `Bearer ${token}`, // Ajouter l'en-tête Authorization
