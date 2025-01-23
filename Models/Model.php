@@ -57,6 +57,7 @@ class Model
     public function getHistorique($offset = 0, $limit = 20)
     {
         $requete = $this->bd->prepare("SELECT Nom_materiel AS nom, Prix_Materiel AS prix, id_Image AS img_link FROM Historique_commande JOIN materiel_commande USING (id_historique_commande) JOIN Materiel USING (id_materiel) WHERE id_utilisateur = :id LIMIT :limit OFFSET :offset");
+
         $requete->bindValue(":id", $_SESSION["id"]);
         $requete->bindValue(":offset", $offset);
         $requete->bindValue(":limit", $limit);
@@ -70,6 +71,17 @@ class Model
         $requete->bindValue(":email", $infos["email"]);
         $requete->execute();
     }
+
+    // public function addProducts()
+    // {
+    //     $requete = $this->bd->prepare("INSERT INTO Materiel (Nom_materiel, Prix_materiel, Description_materiel, Lien_image) VALUES (:name, :price, :description, :image)");
+    //     $requete->execute([
+    //         ':Nom_materiel' => $name,
+    //         ':Prix_materiel' => $price,
+    //         ':Description_materiel' => $description,
+    //         ':Lien_ image' => $image
+    //     ]);
+    // }
 
     public function isUserInDB($email)
     {
@@ -89,8 +101,6 @@ class Model
         $requete->execute();
         return $requete->fetch(PDO::FETCH_ASSOC)["id_utilisateur"];
     }
-
-
 
     // palette
     public function getPalettes()
@@ -208,6 +218,88 @@ class Model
         return $requete->fetch(PDO::FETCH_ASSOC);
     }
 
+
+
+    public function ajouterMateriel($description, $prix, $nom)
+    {
+        try {
+            $requete = $this->bd->prepare("
+                INSERT INTO Materiel (Description_materiel, Prix_materiel, Nom_materiel) 
+                VALUES (:description, :prix, :nom)
+                RETURNING Id_Materiel
+            ");
+
+            $requete->bindValue(':description', $description);
+            $requete->bindValue(':prix', $prix);
+            $requete->bindValue(':nom', $nom);
+
+            $requete->execute();
+
+            // Retourner l'ID généré
+            return $requete->fetchColumn();
+        } catch (PDOException $e) {
+            echo "Erreur lors de l'ajout dans Materiel : " . $e->getMessage();
+            return null;
+        }
+    }
+
+
+    public function recupererCouleurs()
+    {
+        try {
+            $query = $this->bd->query("SELECT Id_Couleur, Coloris, Code_hexadecimal FROM Couleur");
+            return $query->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            echo "Erreur lors de la récupération des couleurs : " . $e->getMessage();
+            return [];
+        }
+    }
+    public function recupererTypePeinture()
+    {
+        try {
+            $query = $this->bd->query("SELECT id_type_peinture, nom_type_peinture FROM type_peinture");
+            return $query->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            echo "Erreur lors de la récupération des couleurs : " . $e->getMessage();
+            return [];
+        }
+    }
+
+    public function ajouterAutreMateriel($idMateriel, $typeMateriel)
+    {
+        try {
+            $requete = $this->bd->prepare("
+                INSERT INTO Autres_materiaux (Id_Materiel, type_materiel)
+                VALUES (:idMateriel, :typeMateriel)
+            ");
+
+            $requete->bindValue(':idMateriel', $idMateriel, PDO::PARAM_INT);
+            $requete->bindValue(':typeMateriel', $typeMateriel, PDO::PARAM_STR);
+
+            $requete->execute();
+        } catch (PDOException $e) {
+            echo "Erreur lors de l'ajout dans Autres_materiaux : " . $e->getMessage();
+        }
+    }
+
+    public function ajouterPeinture($idMateriel, $quantite, $id_type_peinture, $id_couleur)
+    {
+        try {
+            $requete = $this->bd->prepare("
+                INSERT INTO Peinture (Id_Materiel, Quantite, id_type_peinture, Id_Couleur)
+                VALUES (:idMateriel, :quantite, :id_type_peinture, :id_couleur)
+            ");
+
+            $requete->bindValue(':idMateriel', $idMateriel, PDO::PARAM_INT);
+            $requete->bindValue(':quantite', $quantite, PDO::PARAM_STR);
+            $requete->bindValue(':id_type_peinture', $id_type_peinture, PDO::PARAM_INT);
+            $requete->bindValue(':id_couleur', $id_couleur, PDO::PARAM_INT);
+
+            $requete->execute();
+        } catch (PDOException $e) {
+            echo "Erreur lors de l'ajout dans Peinture : " . $e->getMessage();
+        }
+    }
 
 
 }

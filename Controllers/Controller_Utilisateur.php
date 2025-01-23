@@ -18,7 +18,6 @@ class Controller_Utilisateur extends Controller
         $fav = $m->getFav(limit: 10);
         $panier = $m->getPanier(limit: 10);
         $historique = $m->getHistorique(limit: 10);
-
         $data = ["fav" => $fav, "panier" => $panier, "historique" => $historique];
         $this->render("compte", $data);
     }
