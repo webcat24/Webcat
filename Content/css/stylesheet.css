@@ -1296,6 +1296,7 @@ footer a {
   top: 0;
   left: 0;
   z-index: 1000;
+  flex-direction: row-reverse;
 }
 #content nav::before {
   content: "";
@@ -2971,4 +2972,38 @@ li h4 {
   color: #6c757d;
   border-color: #dee2e6;
   cursor: not-allowed;
+}
+
+.profile-container {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 15px;
+  z-index: 1000;
+  width: 210px;
+}
+
+.profile-container p {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.logout-btn {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+  background-color: red;
+  padding: 8px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.logout-btn:hover {
+  background-color: darkred;
 }

@@ -4,16 +4,18 @@ require "view_begin.php";
 ?>
 <section id="content">
     <nav>
-        <form action="#">
-            <div class="form-input">
-                <input type="search" placeholder="Search...">
-                <button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
-            </div>
-        </form>
-        <a href="#" class="profile">
-            <img src="Content/img/image.png">
+        <a href="#" class="profile" id="profile-icon">
+            <img src="Content/img/image.png" alt="Profile">
         </a>
+        <div id="profile-container" class="profile-container">
+            <span class="close" onclick="closeModal('#profile-container')">&times;</span>
+            <p><strong>Nom :</strong>
+                <?= htmlspecialchars(($_SESSION["user_name"] ?? "") . " " . ($_SESSION["user_prenom"] ?? "Utilisateur")) ?>
+            <p><strong>Email :</strong> <?= htmlspecialchars($_SESSION["user_email"] ?? "Non défini") ?></p>
+            <a href="?controller=Connexion&action=logout" class="logout-btn">Se déconnecter</a>
+        </div>
     </nav>
+
     <main>
         <h3>Favoris</h3>
         <ul class="box-info">
@@ -57,7 +59,7 @@ require "view_begin.php";
                     </tbody>
                 </table>
             </div>
-            <div class="todo">
+            <div class="todo" id="panier">
                 <div class="head">
                     <h3>Panier</h3>
                     <div class="actions">
@@ -92,4 +94,25 @@ require "view_begin.php";
         </div>
     </main>
 </section>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const profileIcon = document.getElementById("profile-icon");
+        const profileContainer = document.getElementById("profile-container");
+
+        profileIcon.addEventListener("click", (e) => {
+            e.preventDefault();
+            // Affiche ou masque le conteneur de profil
+            profileContainer.style.display =
+                profileContainer.style.display === "block" ? "none" : "block";
+        });
+
+        // Masque le conteneur si on clique ailleurs sur la page
+        document.addEventListener("click", (e) => {
+            if (!profileIcon.contains(e.target) && !profileContainer.contains(e.target)) {
+                profileContainer.style.display = "none";
+            }
+        });
+    });
+</script>
+
 <?php require "view_end.php"; ?>
