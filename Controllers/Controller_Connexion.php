@@ -8,6 +8,20 @@ class Controller_Connexion extends Controller
         }
 
         $m = Model::getModel();
+                    // Vérification si l'utilisateur est admin
+                    $userId = $_SESSION["user_id"];
+                    $isAdmin = $m->isUserAdmin($userId);
+        
+                    if ($isAdmin['id_utilisateur']==3) {
+                        // Stocker les informations dans la session
+                        $_SESSION["id"] = $user["Id_Utilisateur"];
+                        $_SESSION["is_connected"] = true;
+                        $_SESSION["user_name"] = $user["nom_utilisateur"];
+                        $_SESSION["user_prenom"] = $user["prenom_utilisateur"];
+                        $_SESSION["user_email"] = $user["mail"];
+                        header("Location: ?controller=Materiel");
+                        exit;
+                    }
 
         if ($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST["email"]) && $m->isUserInDB($_POST["email"])) {
             $user = $m->getUserInfoBy('mail', $_POST["email"]);
