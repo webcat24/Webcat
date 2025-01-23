@@ -16,4 +16,3 @@
     <button type="submit">Ajouter</button>
 </form>
 <?php require "view_end.php"; ?>
-

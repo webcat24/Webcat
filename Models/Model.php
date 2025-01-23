@@ -300,6 +300,13 @@ class Model
             echo "Erreur lors de l'ajout dans Peinture : " . $e->getMessage();
         }
     }
+    public function isUserAdmin($userId)
+    {
+        $requete = $this->bd->prepare("SELECT id_utilisateur FROM admin WHERE id_utilisateur = :user_id");
+        $requete->bindValue(":user_id", $userId);
+        $requete->execute();
+        return $requete->fetch(PDO::FETCH_ASSOC);
+    }
 
 
 }

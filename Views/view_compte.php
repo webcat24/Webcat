@@ -1,6 +1,8 @@
 <?php $title = "Mon compte";
 $bodyClass = "profile";
 require "view_begin.php";
+var_dump($_SESSION["id"]);
+
 ?>
 <section id="content">
     <nav>
