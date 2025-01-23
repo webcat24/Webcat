@@ -28,6 +28,14 @@ class Controller_boutique extends Controller
         $this->render('boutique', $data);
     }
 
+    public function action_apiGetProduits()
+    {
+        $m = Model::getModel();
+        $produits = $m->getProduits();
+        header('Content-Type: application/json');
+        echo json_encode($produits);
+        exit;
+    }
 
 
 }
