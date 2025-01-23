@@ -303,8 +303,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // fin du script pour le caroussel
 
 // boutique
-document.addEventListener("DOMContentLoaded", function () {
-  const url = "?controller=boutique&action=apiGetProduits";
+function fecthFromAPI(url) {
   const itemsPerPage = 12;
   let currentPage = 1;
   let totalPages = 0;
@@ -560,7 +559,31 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch((error) => {
       console.error("Erreur lors de la récupération des données :", error);
     });
+};
+
+//Thibaud
+function test(url){
+  let date = new Date();
+  let time = date.getTime();
+  fetch(url)
+  .then((response)=> response.json())
+  .then((data) =>{
+    console.log(data);
+    let d = new Date();
+    console.log(d.getTime()-time);
+  });
+}
+document.addEventListener("DOMContentLoaded", function(){
+  fecthFromAPI("?controller=boutique&action=apiGetProduits");
+  const input_search = document.getElementById("search_bar_boutique");
+  input_search.addEventListener("input", function(){
+    //fecthFromAPI
+    test("?controller=boutique&action=apiGetProduits&search="+input_search.value);
+    console.log("change");
+  });
 });
+
+
 
 let next = document.getElementById("next");
 let prev = document.getElementById("prev");
