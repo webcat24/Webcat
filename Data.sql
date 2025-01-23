@@ -20,7 +20,19 @@ VALUES
     , 'sophie@gmail.com'
     , 'Sarcelles'
     , '0601020305'
+  )
+  , (
+    'Admin'
+    , 'Admin'
+    , 'admin@gmail.com'
+    , 'Paris'
+    , '0601020306'
+
   );
+
+INSERT INTO
+  public.admin (Id_Utilisateur)
+ VALUES (3);
 
   -- Script pour insérer les données dans la table 'couleur'
 

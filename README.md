@@ -44,7 +44,7 @@ PostgreSQL : Utilisée pour stocker et gérer les données de manière performan
 
 **Recherche multimodale**
 
-JavaScript et AJAX : Implémentés pour offrir une expérience de recherche dynamique et en temps réel.
+JavaScript, PHP, SQL et AJAX : Implémentés pour offrir une expérience de recherche dynamique et en temps réel.
 
 **Outils de développement**
 

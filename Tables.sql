@@ -15,6 +15,7 @@ DROP TABLE IF EXISTS Tags;
 DROP TABLE IF EXISTS Type_peinture;
 DROP TABLE IF EXISTS Categorie_couleur;
 DROP TABLE IF EXISTS Couleur;
+DROP TABLE IF EXISTS Admin;
 DROP TABLE IF EXISTS Utilisateur;
 DROP TABLE IF EXISTS Artiste;
 
@@ -26,6 +27,12 @@ CREATE TABLE Utilisateur(
    Adresse VARCHAR(250) ,
    Telephone VARCHAR(50) ,
    PRIMARY KEY(Id_Utilisateur)
+);
+
+CREATE TABLE Admin(
+   Id_Utilisateur INTEGER,
+   PRIMARY KEY(Id_Utilisateur),
+   FOREIGN KEY(Id_Utilisateur) REFERENCES Utilisateur(Id_Utilisateur)
 );
 
 CREATE TABLE Couleur(
