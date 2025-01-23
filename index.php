@@ -6,7 +6,7 @@ require_once "Utils/functions.php";
 require_once "Models/Model.php";
 // Inclusion de la classe Controller
 require_once "Controllers/Controller.php";
-
+prepare_search();
 //Liste des contrôleurs -- A RENSEIGNER
 $controllers = ["Utilisateur", "Connexion", "inspiration", "Accueil", "boutique", "Materiel"];
 //Nom du contrôleur par défaut-- A RENSEIGNER
