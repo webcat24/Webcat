@@ -31,7 +31,7 @@ if (isset($_GET['api'])) {
                 $api = filter_input(INPUT_GET, 'api', FILTER_SANITIZE_STRING);
 
                 //-- A RENSEIGNER
-                $apiDisponibles = ['allColors'];
+                $apiDisponibles = ['allColors', 'produit'];
 
                 if (!in_array($api, $apiDisponibles)) {
                     header('Content-Type: application/json');
@@ -46,6 +46,10 @@ if (isset($_GET['api'])) {
 
                 if ($api == 'allColors') {
                     $controller->getAllColorsAPI();
+                    exit;
+                }
+                if ($api == 'produit') {
+                    $controller->action_apiGetProduits();
                     exit;
                 }
             } else {

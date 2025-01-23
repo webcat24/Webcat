@@ -16,5 +16,15 @@ class Controller_API extends Controller
         http_response_code(200);
         echo json_encode($data);
     }
+    public function action_apiGetProduits()
+    {
+        $m = Model::getModel();
+        $produits = $m->getProduits();
+        header('Content-Type: application/json');
+        http_response_code(200);
+        echo json_encode($produits);
+        exit;
+    }
+
 }
 ?>

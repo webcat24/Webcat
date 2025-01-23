@@ -310,6 +310,7 @@ body.background-modifie {
 }
 
 div.form_co label {
+  padding: 10px;
   color: var(--marron);
   letter-spacing: 2px;
   font-size: var(--police_label);
@@ -3006,4 +3007,31 @@ li h4 {
 
 .logout-btn:hover {
   background-color: darkred;
+}
+
+/* Début CSS de view_materiel et view_confirmation.php */
+
+.ma {
+  color: var(--turquoise);
+  letter-spacing: 2px;
+  font-size: var(--police_titre);
+  font-weight: bold;
+}
+
+.confi {
+  margin: 300px;
+  padding: 50px;
+  border-radius: 50px;
+  background-color: var(--beige);
+  text-align: center;
+}
+
+.logoconfi {
+  width: 60px;
+  height: 60px;
+  margin-top: 20px;
+}
+
+.log-out-confi {
+  font-size: var(--police_label);
 }
