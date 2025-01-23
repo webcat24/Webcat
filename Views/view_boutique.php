@@ -21,7 +21,7 @@ require 'view_begin.php';
         <div class="wrapper">
             <div class="search-input">
                 <a href="" target="_blank" hidden></a>
-                <input type="text" placeholder="Type to search..">
+                <input id="search_bar_boutique" type="text" placeholder="Type to search..">
                 <div class="autocom-box">
                 </div>
                 <div class="icon">

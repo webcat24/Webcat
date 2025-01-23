@@ -309,4 +309,22 @@ class Model
     }
 
 
+    public function getTypePeinture(){
+        $requete = $this->bd->prepare("SELECT nom_type_peinture FROM type_peinture");
+        $requete->execute();
+        return $requete->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getQuantity(){
+        $requete = $this->bd->prepare("SELECT DISTINCT quantite FROM peinture");
+        $requete->execute();
+        return $requete->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getListProduit($sql){
+        $requete = $this->bd->prepare($sql);
+        $requete->execute();
+        return $requete->fetchAll(PDO::FETCH_ASSOC);
+    }
+
 }
