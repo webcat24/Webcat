@@ -2392,8 +2392,8 @@ INSERT INTO
 VALUES
   ('Content/img/materiaux/toiles_pinceau.jpg')
   , ('Content/img/materiaux/chevalet.jpg')
-  , ('Content/img/materiaux/set_pinceau_rond.png')
-  , ('Content/img/materiaux/set_pinceau_carree.png')
+  , ('Content/img/materiaux/set_pinceau_rond.jpg')
+  , ('Content/img/materiaux/set_pinceau_carree.jpg')
   , ('Content/img/materiaux/pinceau_carree.png')
   , ('Content/img/materiaux/pinceau_rond.png');
 
