@@ -25,88 +25,19 @@ function showImage(index) {
     showNotif();
   }
 }
-// document.addEventListener("DOMContentLoaded", () => {
-//   const modal = document.querySelector(".modalboutique");
-//   const closeModalButton = modal.querySelector(".close-button");
-//   const modalImage = document.getElementById("modal-image");
-//   const modalTitle = document.getElementById("modal-title");
-//   const modalDescription = document.getElementById("modal-description");
-//   const modalPrice = document.getElementById("modal-price");
-//   // const modalColor = document.getElementById("modal-color");
-//   // const modalHex = document.getElementById("modal-hex");
-//   const productItems = document.querySelectorAll(".product-item");
-
-//   let currentIndex = -1;
-
-//   // Afficher le modal avec les informations du produit
-//   function showProductModal(index) {
-//     currentIndex = index;
-
-//     const product = productItems[index];
-//     const productName = product.dataset.name;
-//     const productDescription = product.dataset.description;
-//     const productPrice = product.dataset.price + " - Litre";
-//     const productImage = product.dataset.image;
-//     const productColor = product.dataset.color;
-//     const productHex = product.dataset.code_hexadecimal;
-
-//     modalImage.src = productImage;
-//     modalTitle.textContent = productName;
-//     modalDescription.textContent = productDescription;
-//     modalPrice.textContent = `$${productPrice}`;
-//     // modalColor.textContent = `Couleur : ${productColor}`;
-//     // modalHex.textContent = `Code Hex : ${productHex}`;
-//     modal.style.display = "flex";
-//   }
-
-//   function showPreviousProduct() {
-//     if (currentIndex > 0) {
-//       showProductModal(currentIndex - 1);
-//     } else {
-//       showProductModal(productItems.length - 1); // Aller au dernier produit
-//     }
-//   }
-
-//   function showNextProduct() {
-//     if (currentIndex < productItems.length - 1) {
-//       showProductModal(currentIndex + 1);
-//     } else {
-//       showProductModal(0); // Retourner au premier produit
-//     }
-//   }
-
-//   productItems.forEach((item, index) => {
-//     item.addEventListener("click", () => showProductModal(index));
-//   });
-
-//   document
-//     .getElementById("prev-button")
-//     .addEventListener("click", showPreviousProduct);
-//   document
-//     .getElementById("next-button")
-//     .addEventListener("click", showNextProduct);
-
-//   closeModalButton.addEventListener("click", () => {
-//     modal.style.display = "none";
-//   });
-
-//   // Fermer en cliquant à l'extérieur
-//   modal.addEventListener("click", (event) => {
-//     if (event.target === modal) {
-//       modal.style.display = "none";
-//     }
-//   });
-// });
-
-function closeModal() {
-  const modalElement = document.querySelector(".modal");
-  const canvas = document.getElementById("canvas");
+function closeModal(modalSelector) {
+  const modalElement = document.querySelector(modalSelector);
 
   if (modalElement) {
     modalElement.style.display = "none";
-    canvas.style.cursor = "";
 
-    // Supprimer l'icône de la pipette
+    // Réinitialiser les curseurs ou d'autres éléments si nécessaire
+    const canvas = document.getElementById("canvas");
+    if (canvas) {
+      canvas.style.cursor = "";
+    }
+
+    // Supprimer l'icône de la pipette si elle existe
     const pipetteIcon = document.getElementById("pipetteIcon");
     if (pipetteIcon) {
       isPipetteActive = false;

@@ -193,5 +193,21 @@ class Model
         $requete->execute();
         return $requete->fetch(PDO::FETCH_ASSOC);
     }
+    public function getUserInfoBy($field, $value)
+    {
+        $allowedFields = ['Id_Utilisateur', 'mail']; // Champs autorisés pour éviter les injections SQL
+
+        if (!in_array($field, $allowedFields)) {
+            throw new InvalidArgumentException("Le champ spécifié n'est pas valide.");
+        }
+
+        $requete = $this->bd->prepare("SELECT * FROM Utilisateur WHERE $field = :value");
+        $requete->bindValue(':value', $value, $field === 'Id_Utilisateur' ? PDO::PARAM_INT : PDO::PARAM_STR);
+        $requete->execute();
+
+        return $requete->fetch(PDO::FETCH_ASSOC);
+    }
+
+
 
 }
