@@ -55,17 +55,17 @@
 						</li>
 					</ul>
 				</div>
-
-				<!-- Logos user/panier à droite -->
 				<div class="d-flex align-items-center position-absolute top-0 end-0 mt-3 me-4">
-					<a href="?controller=Connexion&action=connexion" class="me-3">
-						<img src="Content/img/user.png" alt="User" style="width: 30px; height: 30px;" />
-					</a>
-					<a href="?controller=compte&action=compte" class="me-3">
-						<img src="Content/img/panier.png" alt="Panier" style="width: 30px; height: 30px;" />
-					</a>
+					<?php if (isset($_SESSION['is_connected']) && $_SESSION['is_connected'] === true): ?>
+						<a href="?controller=Utilisateur&action=compte&#panier" class="me-3">
+							<img src="Content/img/panier.png" alt="Panier" style="width: 30px; height: 30px;" />
+						</a>
+					<?php else: ?>
+						<a href="?controller=Connexion&action=connexion" class="me-3">
+							<img src="Content/img/user.png" alt="User" style="width: 30px; height: 30px;" />
+						</a>
+					<?php endif; ?>
 				</div>
-
 				<!-- Bouton hamburger -->
 				<button class="navbar-toggler position-absolute top-0 start-0 ms-3 mt-3" type="button"
 					data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"

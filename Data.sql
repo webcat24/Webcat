@@ -20,7 +20,19 @@ VALUES
     , 'sophie@gmail.com'
     , 'Sarcelles'
     , '0601020305'
+  )
+  , (
+    'Admin'
+    , 'Admin'
+    , 'admin@gmail.com'
+    , 'Paris'
+    , '0601020306'
+
   );
+
+INSERT INTO
+  public.admin (Id_Utilisateur)
+ VALUES (3);
 
   -- Script pour insérer les données dans la table 'couleur'
 
@@ -2380,8 +2392,8 @@ INSERT INTO
 VALUES
   ('Content/img/materiaux/toiles_pinceau.jpg')
   , ('Content/img/materiaux/chevalet.jpg')
-  , ('Content/img/materiaux/set_pinceau_rond.png')
-  , ('Content/img/materiaux/set_pinceau_carree.png')
+  , ('Content/img/materiaux/set_pinceau_rond.jpg')
+  , ('Content/img/materiaux/set_pinceau_carree.jpg')
   , ('Content/img/materiaux/pinceau_carree.png')
   , ('Content/img/materiaux/pinceau_rond.png');
 

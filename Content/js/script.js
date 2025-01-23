@@ -25,88 +25,19 @@ function showImage(index) {
     showNotif();
   }
 }
-// document.addEventListener("DOMContentLoaded", () => {
-//   const modal = document.querySelector(".modalboutique");
-//   const closeModalButton = modal.querySelector(".close-button");
-//   const modalImage = document.getElementById("modal-image");
-//   const modalTitle = document.getElementById("modal-title");
-//   const modalDescription = document.getElementById("modal-description");
-//   const modalPrice = document.getElementById("modal-price");
-//   // const modalColor = document.getElementById("modal-color");
-//   // const modalHex = document.getElementById("modal-hex");
-//   const productItems = document.querySelectorAll(".product-item");
-
-//   let currentIndex = -1;
-
-//   // Afficher le modal avec les informations du produit
-//   function showProductModal(index) {
-//     currentIndex = index;
-
-//     const product = productItems[index];
-//     const productName = product.dataset.name;
-//     const productDescription = product.dataset.description;
-//     const productPrice = product.dataset.price + " - Litre";
-//     const productImage = product.dataset.image;
-//     const productColor = product.dataset.color;
-//     const productHex = product.dataset.code_hexadecimal;
-
-//     modalImage.src = productImage;
-//     modalTitle.textContent = productName;
-//     modalDescription.textContent = productDescription;
-//     modalPrice.textContent = `$${productPrice}`;
-//     // modalColor.textContent = `Couleur : ${productColor}`;
-//     // modalHex.textContent = `Code Hex : ${productHex}`;
-//     modal.style.display = "flex";
-//   }
-
-//   function showPreviousProduct() {
-//     if (currentIndex > 0) {
-//       showProductModal(currentIndex - 1);
-//     } else {
-//       showProductModal(productItems.length - 1); // Aller au dernier produit
-//     }
-//   }
-
-//   function showNextProduct() {
-//     if (currentIndex < productItems.length - 1) {
-//       showProductModal(currentIndex + 1);
-//     } else {
-//       showProductModal(0); // Retourner au premier produit
-//     }
-//   }
-
-//   productItems.forEach((item, index) => {
-//     item.addEventListener("click", () => showProductModal(index));
-//   });
-
-//   document
-//     .getElementById("prev-button")
-//     .addEventListener("click", showPreviousProduct);
-//   document
-//     .getElementById("next-button")
-//     .addEventListener("click", showNextProduct);
-
-//   closeModalButton.addEventListener("click", () => {
-//     modal.style.display = "none";
-//   });
-
-//   // Fermer en cliquant à l'extérieur
-//   modal.addEventListener("click", (event) => {
-//     if (event.target === modal) {
-//       modal.style.display = "none";
-//     }
-//   });
-// });
-
-function closeModal() {
-  const modalElement = document.querySelector(".modal");
-  const canvas = document.getElementById("canvas");
+function closeModal(modalSelector) {
+  const modalElement = document.querySelector(modalSelector);
 
   if (modalElement) {
     modalElement.style.display = "none";
-    canvas.style.cursor = "";
 
-    // Supprimer l'icône de la pipette
+    // Réinitialiser les curseurs ou d'autres éléments si nécessaire
+    const canvas = document.getElementById("canvas");
+    if (canvas) {
+      canvas.style.cursor = "";
+    }
+
+    // Supprimer l'icône de la pipette si elle existe
     const pipetteIcon = document.getElementById("pipetteIcon");
     if (pipetteIcon) {
       isPipetteActive = false;
@@ -303,12 +234,553 @@ document.addEventListener("DOMContentLoaded", () => {
 // fin du script pour le caroussel
 
 // boutique
+// document.addEventListener("DOMContentLoaded", function () {
+//   const url = "?controller=boutique&action=apiGetProduits";
+//   const itemsPerPage = 12;
+//   let currentPage = 1;
+//   let totalPages = 0;
+
+//   fetch(url)
+//     .then((response) => response.json())
+//     .then((data) => {
+//       const productsContainer = document.querySelector(".items");
+//       const paginationContainer = document.querySelector(".pagination");
+//       const categoryContainer = document.querySelector(".categories");
+//       const shadeContainer = document.querySelector(".shades");
+//       const modal = document.querySelector(".modalboutique");
+//       const closeModalButton = modal.querySelector(".close-button");
+//       const prevButton = modal.querySelector("#prev-button");
+//       const nextButton = modal.querySelector("#next-button");
+
+//       let currentIndex = 0;
+//       const categoriesSet = new Set();
+//       const shadesSet = new Set();
+
+//       // Remplir les ensembles pour les filtres
+//       data.forEach((produit) => {
+//         if (produit.categories) {
+//           produit.categories.split(",").forEach((cat) => {
+//             categoriesSet.add(cat.trim());
+//           });
+//         }
+//         if (produit.shades) {
+//           produit.shades.split(",").forEach((shade) => {
+//             shadesSet.add(shade.trim());
+//           });
+//         }
+//       });
+
+//       totalPages = Math.ceil(data.length / itemsPerPage);
+
+//       // la page avec le filtre appliquer pour Thibaud ce avec cette fonction que je recuperer les infos du model et convertir en json avec l'action api et implementer dans le site
+//       // attention je mis aussi des filtre me cette fois ci le filtre marche bien sur toute les page comme je fait que avec js
+//       function displayPage(page, filteredData = data) {
+//         productsContainer.innerHTML = "";
+//         const startIndex = (page - 1) * itemsPerPage;
+//         const endIndex = Math.min(
+//           startIndex + itemsPerPage,
+//           filteredData.length
+//         );
+
+//         for (let i = startIndex; i < endIndex; i++) {
+//           const produit = filteredData[i];
+//           const productItem = document.createElement("li");
+//           productItem.classList.add("product-item");
+
+//           productItem.setAttribute(
+//             "data-category",
+//             produit.categories || "Non spécifié"
+//           );
+//           productItem.setAttribute(
+//             "data-shade",
+//             produit.shades || "Non spécifié"
+//           );
+//           productItem.setAttribute("data-name", produit.categories || "");
+//           productItem.setAttribute(
+//             "data-description",
+//             produit.description_materiel || "Aucune description disponible."
+//           );
+//           productItem.setAttribute(
+//             "data-price",
+//             parseFloat(produit.prix_materiel || 0).toFixed(2)
+//           );
+//           productItem.setAttribute("data-image", produit.image || "");
+//           productItem.setAttribute(
+//             "data-code_hexadecimal",
+//             produit.code_hexadecimal || ""
+//           );
+
+//           productItem.innerHTML = `
+//             <picture>
+//               <img src="${produit.image || ""}" alt="${
+//             produit.categories || ""
+//           }">
+//             </picture>
+//             <div class="detail">
+//               <p class="icon">
+//                 <span><i class="far fa-heart"></i></span>
+//                 <span><i class="far fa-share-square"></i></span>
+//                 <span><i class="fas fa-shopping-basket"></i></span>
+//               </p>
+//               <strong>${produit.categories || "Sans catégorie"}</strong>
+//             </div>
+//             <h4>${parseFloat(produit.prix_materiel || 0).toFixed(2)}€</h4>
+//           `;
+
+//           productsContainer.appendChild(productItem);
+
+//           productItem.addEventListener("click", () => {
+//             currentIndex = i;
+//             openModal(produit);
+//           });
+//         }
+//       }
+
+//       // generer la pagination
+//       function renderPagination(filteredData = data) {
+//         paginationContainer.innerHTML = "";
+
+//         totalPages = Math.ceil(filteredData.length / itemsPerPage);
+
+//         if (totalPages === 0) {
+//           productsContainer.innerHTML = "<p>Aucun produit trouvé.</p>";
+//           return;
+//         }
+
+//         if (currentPage > 1) {
+//           const prevButton = document.createElement("button");
+//           prevButton.innerHTML = '<i class="fas fa-chevron-left"></i>';
+//           prevButton.addEventListener("click", () => {
+//             currentPage--;
+//             updatePage(filteredData);
+//           });
+//           paginationContainer.appendChild(prevButton);
+//         }
+
+//         // Numéros de la page
+//         for (let i = 1; i <= totalPages; i++) {
+//           const pageButton = document.createElement("button");
+//           pageButton.textContent = i;
+//           if (i === currentPage) {
+//             pageButton.classList.add("active");
+//           }
+//           pageButton.addEventListener("click", () => {
+//             currentPage = i;
+//             updatePage(filteredData);
+//           });
+//           paginationContainer.appendChild(pageButton);
+//         }
+//         if (currentPage < totalPages) {
+//           const nextButton = document.createElement("button");
+//           nextButton.innerHTML = '<i class="fas fa-chevron-right"></i>';
+//           nextButton.addEventListener("click", () => {
+//             currentPage++;
+//             updatePage(filteredData);
+//           });
+//           paginationContainer.appendChild(nextButton);
+//         }
+//       }
+
+//       // Fonction pour appliquer les filtres
+//       function applyFilters() {
+//         const selectedCategory =
+//           document
+//             .querySelector(".categories .active")
+//             ?.getAttribute("data-filter") || "all";
+//         const selectedShade =
+//           document
+//             .querySelector(".shades .active")
+//             ?.getAttribute("data-filter") || "all";
+
+//         const filteredData = data.filter((produit) => {
+//           const categoryMatch =
+//             selectedCategory === "all" ||
+//             (produit.categories || "")
+//               .split(",")
+//               .map((cat) => cat.trim())
+//               .includes(selectedCategory);
+
+//           const shadeMatch =
+//             selectedShade === "all" ||
+//             (produit.shades || "")
+//               .split(",")
+//               .map((shade) => shade.trim())
+//               .includes(selectedShade);
+
+//           return categoryMatch && shadeMatch;
+//         });
+
+//         currentPage = 1;
+//         updatePage(filteredData);
+//       }
+
+//       // Génération des filtres
+//       function generateFilterOptions(container, optionsSet, dataAttribute) {
+//         container.innerHTML = `<li data-filter="all" class="active"><a href="#">Toutes</a></li>`;
+//         optionsSet.forEach((option) => {
+//           container.innerHTML += `
+//             <li data-filter="${option}" data-${dataAttribute}="${option}">
+//               <a href="#">${option}</a>
+//             </li>`;
+//         });
+//         container.querySelectorAll("li").forEach((filter) => {
+//           filter.addEventListener("click", (event) => {
+//             event.preventDefault();
+//             const isActive = filter.classList.contains("active");
+
+//             const siblings = filter.parentElement.querySelectorAll("li");
+//             siblings.forEach((sibling) => sibling.classList.remove("active"));
+
+//             if (isActive) {
+//               applyFilters();
+//               return;
+//             }
+//             filter.classList.add("active");
+//             applyFilters();
+//           });
+//         });
+//       }
+
+//       generateFilterOptions(categoryContainer, categoriesSet, "category");
+//       generateFilterOptions(shadeContainer, shadesSet, "shade");
+
+//       function updatePage(filteredData = data) {
+//         displayPage(currentPage, filteredData);
+//         renderPagination(filteredData);
+//       }
+
+//       updatePage();
+//       function openModal(produit) {
+//         modal.querySelector("#modal-image").src =
+//           produit.image || "placeholder.jpg";
+//         modal.querySelector("#modal-title").textContent =
+//           produit.categories || "Sans catégorie";
+//         modal.querySelector("#modal-price").textContent = `${parseFloat(
+//           produit.prix_materiel || 0
+//         ).toFixed(2)}€`;
+//         modal.querySelector("#modal-description").textContent =
+//           produit.description_materiel || "Aucune description disponible.";
+//         modal.style.display = "flex";
+//       }
+//       closeModalButton.addEventListener("click", () => {
+//         modal.style.display = "none";
+//       });
+//       window.addEventListener("click", (event) => {
+//         if (event.target === modal) {
+//           modal.style.display = "none";
+//         }
+//       });
+//       prevButton.addEventListener("click", () => {
+//         if (currentIndex > 0) {
+//           currentIndex--;
+//         } else {
+//           currentIndex = data.length - 1;
+//         }
+//         openModal(data[currentIndex]);
+//       });
+
+//       nextButton.addEventListener("click", () => {
+//         if (currentIndex < data.length - 1) {
+//           currentIndex++;
+//         } else {
+//           currentIndex = 0;
+//         }
+//         openModal(data[currentIndex]);
+//       });
+//     })
+//     .catch((error) => {
+//       console.error("Erreur lors de la récupération des données :", error);
+//     });
+// });
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const url = "?controller=boutique&action=apiGetProduits";
+//   const itemsPerPage = 12;
+//   let currentPage = 1;
+//   let totalPages = 0;
+
+//   fetch(url)
+//     .then((response) => response.json())
+//     .then((data) => {
+//       const productsContainer = document.querySelector(".items");
+//       const paginationContainer = document.querySelector(".pagination");
+//       const categoryContainer = document.querySelector(".categories");
+//       const shadeContainer = document.querySelector(".shades");
+//       const modal = document.querySelector(".modalboutique");
+//       const closeModalButton = modal.querySelector(".close-button");
+//       const prevButton = modal.querySelector("#prev-button");
+//       const nextButton = modal.querySelector("#next-button");
+
+//       let currentIndex = 0;
+//       const categoriesSet = new Set();
+//       const shadesSet = new Set();
+
+//       // Remplir les ensembles pour les filtres
+//       data.forEach((produit) => {
+//         if (produit.categories) {
+//           produit.categories.split(",").forEach((cat) => {
+//             categoriesSet.add(cat.trim());
+//           });
+//         }
+//         if (produit.shades) {
+//           produit.shades.split(",").forEach((shade) => {
+//             shadesSet.add(shade.trim());
+//           });
+//         }
+//       });
+
+//       totalPages = Math.ceil(data.length / itemsPerPage);
+
+//       function displayPage(page, filteredData = data) {
+//         productsContainer.innerHTML = "";
+//         const startIndex = (page - 1) * itemsPerPage;
+//         const endIndex = Math.min(
+//           startIndex + itemsPerPage,
+//           filteredData.length
+//         );
+
+//         for (let i = startIndex; i < endIndex; i++) {
+//           const produit = filteredData[i];
+//           const productItem = document.createElement("li");
+//           productItem.classList.add("product-item");
+
+//           productItem.innerHTML = `
+//             <picture>
+//               <img src="${produit.image || ""}" alt="${
+//             produit.categories || ""
+//           }">
+//             </picture>
+//             <div class="detail">
+//               <p class="icon">
+//                 <span><i class="far fa-heart"></i></span>
+//                 <span><i class="far fa-share-square"></i></span>
+//                 <span><i class="fas fa-shopping-basket"></i></span>
+//               </p>
+//               <strong>${produit.categories || "Sans catégorie"}</strong>
+//             </div>
+//             <h4>${parseFloat(produit.prix_materiel || 0).toFixed(2)}€</h4>
+//           `;
+//           productsContainer.appendChild(productItem);
+
+//           productItem.addEventListener("click", () => {
+//             currentIndex = i;
+//             openModal(produit);
+//           });
+//         }
+//       }
+
+//       function renderPagination(filteredData = data) {
+//         paginationContainer.innerHTML = "";
+
+//         totalPages = Math.ceil(filteredData.length / itemsPerPage);
+//         if (totalPages === 0) {
+//           productsContainer.innerHTML = "<p>Aucun produit trouvé.</p>";
+//           return;
+//         }
+
+//         // Bouton Précédent
+//         if (currentPage > 1) {
+//           const prevButton = document.createElement("button");
+//           prevButton.innerHTML = '<i class="fas fa-chevron-left"></i>';
+//           prevButton.addEventListener("click", () => {
+//             currentPage--;
+//             updatePage(filteredData);
+//           });
+//           paginationContainer.appendChild(prevButton);
+//         }
+
+//         // Pages visibles avec les "..."
+//         const groupSize = 5;
+//         const startGroup =
+//           Math.floor((currentPage - 1) / groupSize) * groupSize + 1;
+//         const endGroup = Math.min(startGroup + groupSize - 1, totalPages);
+
+//         if (startGroup > 1) {
+//           const dotsLeft = document.createElement("button");
+//           dotsLeft.textContent = "...";
+//           dotsLeft.addEventListener("click", () => {
+//             currentPage = startGroup - 1;
+//             updatePage(filteredData);
+//           });
+//           paginationContainer.appendChild(dotsLeft);
+//         }
+
+//         for (let i = startGroup; i <= endGroup; i++) {
+//           const pageButton = document.createElement("button");
+//           pageButton.textContent = i;
+//           if (i === currentPage) {
+//             pageButton.classList.add("active");
+//           }
+//           pageButton.addEventListener("click", () => {
+//             currentPage = i;
+//             updatePage(filteredData);
+//           });
+//           paginationContainer.appendChild(pageButton);
+//         }
+
+//         if (endGroup < totalPages) {
+//           const dotsRight = document.createElement("button");
+//           dotsRight.textContent = "...";
+//           dotsRight.addEventListener("click", () => {
+//             currentPage = endGroup + 1;
+//             updatePage(filteredData);
+//           });
+//           paginationContainer.appendChild(dotsRight);
+//         }
+
+//         // Bouton Suivant
+//         if (currentPage < totalPages) {
+//           const nextButton = document.createElement("button");
+//           nextButton.innerHTML = '<i class="fas fa-chevron-right"></i>';
+//           nextButton.addEventListener("click", () => {
+//             currentPage++;
+//             updatePage(filteredData);
+//           });
+//           paginationContainer.appendChild(nextButton);
+//         }
+//       }
+
+//       function generateFilterOptions(container, optionsSet, dataAttribute) {
+//         container.innerHTML = `<li data-filter="all" class="active"><a href="#">Toutes</a></li>`;
+//         optionsSet.forEach((option) => {
+//           container.innerHTML += `
+//             <li data-filter="${option}" data-${dataAttribute}="${option}">
+//               <a href="#">${option}</a>
+//             </li>`;
+//         });
+//         container.querySelectorAll("li").forEach((filter) => {
+//           filter.addEventListener("click", (event) => {
+//             event.preventDefault();
+//             const isActive = filter.classList.contains("active");
+
+//             const siblings = filter.parentElement.querySelectorAll("li");
+//             siblings.forEach((sibling) => sibling.classList.remove("active"));
+
+//             if (isActive) {
+//               applyFilters();
+//               return;
+//             }
+//             filter.classList.add("active");
+//             applyFilters();
+//           });
+//         });
+//       }
+
+//       function applyFilters() {
+//         const selectedCategory =
+//           document
+//             .querySelector(".categories .active")
+//             ?.getAttribute("data-filter") || "all";
+//         const selectedShade =
+//           document
+//             .querySelector(".shades .active")
+//             ?.getAttribute("data-filter") || "all";
+
+//         const filteredData = data.filter((produit) => {
+//           const categoryMatch =
+//             selectedCategory === "all" ||
+//             (produit.categories || "")
+//               .split(",")
+//               .map((cat) => cat.trim())
+//               .includes(selectedCategory);
+
+//           const shadeMatch =
+//             selectedShade === "all" ||
+//             (produit.shades || "")
+//               .split(",")
+//               .map((shade) => shade.trim())
+//               .includes(selectedShade);
+
+//           return categoryMatch && shadeMatch;
+//         });
+
+//         currentPage = 1;
+//         updatePage(filteredData);
+//       }
+
+//       generateFilterOptions(categoryContainer, categoriesSet, "category");
+//       generateFilterOptions(shadeContainer, shadesSet, "shade");
+
+//       function updatePage(filteredData = data) {
+//         displayPage(currentPage, filteredData);
+//         renderPagination(filteredData);
+//       }
+
+//       function openModal(produit) {
+//         modal.querySelector("#modal-image").src =
+//           produit.image || "placeholder.jpg";
+//         modal.querySelector("#modal-title").textContent =
+//           produit.categories || "Sans catégorie";
+//         modal.querySelector("#modal-price").textContent = `${parseFloat(
+//           produit.prix_materiel || 0
+//         ).toFixed(2)}€`;
+//         modal.querySelector("#modal-description").textContent =
+//           produit.description_materiel || "Aucune description disponible.";
+//         modal.style.display = "flex";
+//       }
+
+//       closeModalButton.addEventListener("click", () => {
+//         modal.style.display = "none";
+//       });
+
+//       window.addEventListener("click", (event) => {
+//         if (event.target === modal) {
+//           modal.style.display = "none";
+//         }
+//       });
+
+//       prevButton.addEventListener("click", () => {
+//         if (currentIndex > 0) {
+//           currentIndex--;
+//         } else {
+//           currentIndex = data.length - 1;
+//         }
+//         openModal(data[currentIndex]);
+//       });
+
+//       nextButton.addEventListener("click", () => {
+//         if (currentIndex < data.length - 1) {
+//           currentIndex++;
+//         } else {
+//           currentIndex = 0;
+//         }
+//         openModal(data[currentIndex]);
+//       });
+
+//       updatePage();
+//     })
+//     .catch((error) => {
+//       console.error("Erreur lors de la récupération des données :", error);
+//     });
+// });
+
+document.addEventListener("DOMContentLoaded", async function () {
+  const url = "?api=produit";
+  const token = "Webcat";
+
 function fecthFromAPI(url) {
   const itemsPerPage = 12;
   let currentPage = 1;
   let totalPages = 0;
 
-  fetch(url)
+  // Définir les filtres globaux fixes
+  const globalCategories = [
+    "Toile",
+    "Chevalet",
+    "Set Pinceaux",
+    "Jouets",
+    "Livres",
+  ];
+  const globalShades = ["Rouge", "Bleu", "Vert", "Jaune", "Noir", "Blanc"];
+
+  // fetch(url)
+  await fetch(url, {
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${token}`, // Ajouter l'en-tête Authorization
+      "Content-Type": "application/json", // Type de contenu
+    },
+  })
     .then((response) => response.json())
     .then((data) => {
       const productsContainer = document.querySelector(".items");
@@ -321,27 +793,9 @@ function fecthFromAPI(url) {
       const nextButton = modal.querySelector("#next-button");
 
       let currentIndex = 0;
-      const categoriesSet = new Set();
-      const shadesSet = new Set();
-
-      // Remplir les ensembles pour les filtres
-      data.forEach((produit) => {
-        if (produit.categories) {
-          produit.categories.split(",").forEach((cat) => {
-            categoriesSet.add(cat.trim());
-          });
-        }
-        if (produit.shades) {
-          produit.shades.split(",").forEach((shade) => {
-            shadesSet.add(shade.trim());
-          });
-        }
-      });
 
       totalPages = Math.ceil(data.length / itemsPerPage);
 
-      // la page avec le filtre appliquer pour Thibaud ce avec cette fonction que je recuperer les infos du model et convertir en json avec l'action api et implementer dans le site
-      // attention je mis aussi des filtre me cette fois ci le filtre marche bien sur toute les page comme je fait que avec js
       function displayPage(page, filteredData = data) {
         productsContainer.innerHTML = "";
         const startIndex = (page - 1) * itemsPerPage;
@@ -354,29 +808,6 @@ function fecthFromAPI(url) {
           const produit = filteredData[i];
           const productItem = document.createElement("li");
           productItem.classList.add("product-item");
-
-          productItem.setAttribute(
-            "data-category",
-            produit.categories || "Non spécifié"
-          );
-          productItem.setAttribute(
-            "data-shade",
-            produit.shades || "Non spécifié"
-          );
-          productItem.setAttribute("data-name", produit.categories || "");
-          productItem.setAttribute(
-            "data-description",
-            produit.description_materiel || "Aucune description disponible."
-          );
-          productItem.setAttribute(
-            "data-price",
-            parseFloat(produit.prix_materiel || 0).toFixed(2)
-          );
-          productItem.setAttribute("data-image", produit.image || "");
-          productItem.setAttribute(
-            "data-code_hexadecimal",
-            produit.code_hexadecimal || ""
-          );
 
           productItem.innerHTML = `
             <picture>
@@ -394,7 +825,6 @@ function fecthFromAPI(url) {
             </div>
             <h4>${parseFloat(produit.prix_materiel || 0).toFixed(2)}€</h4>
           `;
-
           productsContainer.appendChild(productItem);
 
           productItem.addEventListener("click", () => {
@@ -404,17 +834,16 @@ function fecthFromAPI(url) {
         }
       }
 
-      // generer la pagination
       function renderPagination(filteredData = data) {
         paginationContainer.innerHTML = "";
 
         totalPages = Math.ceil(filteredData.length / itemsPerPage);
-
         if (totalPages === 0) {
           productsContainer.innerHTML = "<p>Aucun produit trouvé.</p>";
           return;
         }
 
+        // Bouton Précédent
         if (currentPage > 1) {
           const prevButton = document.createElement("button");
           prevButton.innerHTML = '<i class="fas fa-chevron-left"></i>';
@@ -425,8 +854,23 @@ function fecthFromAPI(url) {
           paginationContainer.appendChild(prevButton);
         }
 
-        // Numéros de la page
-        for (let i = 1; i <= totalPages; i++) {
+        // Pages visibles avec les "..."
+        const groupSize = 5;
+        const startGroup =
+          Math.floor((currentPage - 1) / groupSize) * groupSize + 1;
+        const endGroup = Math.min(startGroup + groupSize - 1, totalPages);
+
+        if (startGroup > 1) {
+          const dotsLeft = document.createElement("button");
+          dotsLeft.textContent = "...";
+          dotsLeft.addEventListener("click", () => {
+            currentPage = startGroup - 1;
+            updatePage(filteredData);
+          });
+          paginationContainer.appendChild(dotsLeft);
+        }
+
+        for (let i = startGroup; i <= endGroup; i++) {
           const pageButton = document.createElement("button");
           pageButton.textContent = i;
           if (i === currentPage) {
@@ -438,6 +882,18 @@ function fecthFromAPI(url) {
           });
           paginationContainer.appendChild(pageButton);
         }
+
+        if (endGroup < totalPages) {
+          const dotsRight = document.createElement("button");
+          dotsRight.textContent = "...";
+          dotsRight.addEventListener("click", () => {
+            currentPage = endGroup + 1;
+            updatePage(filteredData);
+          });
+          paginationContainer.appendChild(dotsRight);
+        }
+
+        // Bouton Suivant
         if (currentPage < totalPages) {
           const nextButton = document.createElement("button");
           nextButton.innerHTML = '<i class="fas fa-chevron-right"></i>';
@@ -449,7 +905,32 @@ function fecthFromAPI(url) {
         }
       }
 
-      // Fonction pour appliquer les filtres
+      function generateFilterOptions(container, optionsArray, dataAttribute) {
+        container.innerHTML = `<li data-filter="all" class="active"><a href="#">Toutes</a></li>`;
+        optionsArray.forEach((option) => {
+          container.innerHTML += `
+            <li data-filter="${option}" data-${dataAttribute}="${option}">
+              <a href="#">${option}</a>
+            </li>`;
+        });
+        container.querySelectorAll("li").forEach((filter) => {
+          filter.addEventListener("click", (event) => {
+            event.preventDefault();
+            const isActive = filter.classList.contains("active");
+
+            const siblings = filter.parentElement.querySelectorAll("li");
+            siblings.forEach((sibling) => sibling.classList.remove("active"));
+
+            if (isActive) {
+              applyFilters();
+              return;
+            }
+            filter.classList.add("active");
+            applyFilters();
+          });
+        });
+      }
+
       function applyFilters() {
         const selectedCategory =
           document
@@ -482,42 +963,15 @@ function fecthFromAPI(url) {
         updatePage(filteredData);
       }
 
-      // Génération des filtres
-      function generateFilterOptions(container, optionsSet, dataAttribute) {
-        container.innerHTML = `<li data-filter="all" class="active"><a href="#">Toutes</a></li>`;
-        optionsSet.forEach((option) => {
-          container.innerHTML += `
-            <li data-filter="${option}" data-${dataAttribute}="${option}">
-              <a href="#">${option}</a>
-            </li>`;
-        });
-        container.querySelectorAll("li").forEach((filter) => {
-          filter.addEventListener("click", (event) => {
-            event.preventDefault();
-            const isActive = filter.classList.contains("active");
-
-            const siblings = filter.parentElement.querySelectorAll("li");
-            siblings.forEach((sibling) => sibling.classList.remove("active"));
-
-            if (isActive) {
-              applyFilters();
-              return;
-            }
-            filter.classList.add("active");
-            applyFilters();
-          });
-        });
-      }
-
-      generateFilterOptions(categoryContainer, categoriesSet, "category");
-      generateFilterOptions(shadeContainer, shadesSet, "shade");
+      // Générer les options de filtres une seule fois
+      generateFilterOptions(categoryContainer, globalCategories, "category");
+      generateFilterOptions(shadeContainer, globalShades, "shade");
 
       function updatePage(filteredData = data) {
         displayPage(currentPage, filteredData);
         renderPagination(filteredData);
       }
 
-      updatePage();
       function openModal(produit) {
         modal.querySelector("#modal-image").src =
           produit.image || "placeholder.jpg";
@@ -530,14 +984,17 @@ function fecthFromAPI(url) {
           produit.description_materiel || "Aucune description disponible.";
         modal.style.display = "flex";
       }
+
       closeModalButton.addEventListener("click", () => {
         modal.style.display = "none";
       });
+
       window.addEventListener("click", (event) => {
         if (event.target === modal) {
           modal.style.display = "none";
         }
       });
+
       prevButton.addEventListener("click", () => {
         if (currentIndex > 0) {
           currentIndex--;
@@ -555,6 +1012,8 @@ function fecthFromAPI(url) {
         }
         openModal(data[currentIndex]);
       });
+
+      updatePage();
     })
     .catch((error) => {
       console.error("Erreur lors de la récupération des données :", error);

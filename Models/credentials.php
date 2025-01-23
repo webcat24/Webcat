@@ -4,7 +4,7 @@ $dsn= "pgsql:host=localhost;dbname=sae_s5";
 $login= "postgres";
 $mdp = "root";
 
-$dsn= "pgsql:host=localhost;dbname=BDD_SAE";
+$dsn= "pgsql:host=localhost;dbname=BDD_SAEs5";
 $login= "postgres";
 $mdp = "L@lexxx12!";
 

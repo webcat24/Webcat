@@ -64,9 +64,8 @@ $desiredIndexes = [0, 2, 3, 4, 6, 8];
                 </div>
             <?php endforeach; ?>
 
-            <div class="modal">
-                <span class="close" onclick="closeModal()">&times;</span>
-
+            <div class="modal" id="modaloeuvre">
+                <span class="close" onclick="closeModal('#modaloeuvre')">&times;</span>
                 <img src="" alt="Fullscreen Image">
                 <canvas id="canvas"></canvas>
                 <div id="notifCouleurPipette" class="notifCouleurPipette">
