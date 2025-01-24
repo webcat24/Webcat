@@ -11,6 +11,7 @@ Pour avoir les données, il faut exécuter tables.sql puis data.sql et changer l
 ### **Comptes pour tester la connexion**
 * **Compte client** : camelia@gmail.com (avec n'importe quel mot de passe).
 * **Compte administrateur** : admin@gmail.com (avec n'importe quel mot de passe).
+
 Le principe de mot de passe n'a pas encore été développé pour faciliter les tests de développement.
 
 ###  **Fonctionnalités principales**
