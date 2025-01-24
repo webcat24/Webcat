@@ -30,26 +30,62 @@ class Controller_boutique extends Controller
     public function action_apiGetProduits()
     {
         $m = Model::getModel();
-        /*if(! isset($_SESSION["produits"])){
-            $_SESSION["produits"] = $m->getProduits();
-        }*/
-        $produits = $m->getProduits();//$_SESSION["produits"];
-        if(isset($_GET["search"]) && $_GET["search"] != ""){
+        $produits = $m->getProduits();
+        if (isset($_GET["search"]) && $_GET["search"] != "") {
             $p = create_sql_from_tokens(tokenize(($_GET["search"])));
-            //var_dump($p);
             if ($p != null) {
                 $produits = $m->getListProduit($p);
-            }
-            else{
+            } else {
                 $produits = [];
             }
         }
         header('Content-Type: application/json');
         echo json_encode($produits);
         exit;
-        // var_dump($produits);
-        // $this->render('test');
     }
 
+    public function action_addToCart()
+    {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+        if (!isset($_GET["id"])) {
+            exit;
+        }
+
+        if (!isset($_SESSION["id"])) {
+            header("Location: ?controller=Connexion&action=connexion");
+            exit;
+        }
+
+        if (!isset($_GET["id"]) || empty($_GET["id"])) {
+            header("Location: ?controller=boutique&action=boutique&error=missing_id");
+            exit;
+        }
+
+        $idProduit = intval($_GET["id"]);
+        $m = Model::getModel();
+
+        $produit = $m->getProduitById($idProduit);
+        if (!$produit) {
+            header("Location: ?controller=boutique&action=boutique&error=product_not_found");
+            exit;
+        }
+
+        $added = $m->addToPanier($_SESSION["id"], $idProduit);
+        if ($added) {
+            header("Location: ?controller=boutique&action=boutique&success=added_to_cart");
+        } else {
+            header("Location: ?controller=boutique&action=boutique&error=add_failed");
+        }
+        exit;
+    }
+
+
+    public function action_panier()
+    {
+        $this->render('affiherPanier');
+
+    }
 
 }

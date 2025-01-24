@@ -12,8 +12,6 @@ class Controller_Utilisateur extends Controller
             header("Location: ?controller=Connexion&action=connexion");
             exit;
         }
-
-        // Récupération des données
         $m = Model::getModel();
         $fav = $m->getFav(limit: 10);
         $panier = $m->getPanier(limit: 10);
@@ -36,13 +34,43 @@ class Controller_Utilisateur extends Controller
             header("Location: ?controller=Connexion&action=connexion");
             exit;
         }
-
-        // Récupérer les informations utilisateur par ID
         $m = Model::getModel();
         $userInfo = $m->getUserInfoBy('Id_Utilisateur', $_SESSION["id"]);
 
         $this->render("profile", ["userInfo" => $userInfo]);
     }
+
+    public function action_removeFromCart()
+    {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        if (!isset($_SESSION["id"])) {
+            header("Location: ?controller=Connexion&action=connexion");
+            exit;
+        }
+
+        if (!isset($_GET["id"])) {
+            header("Location: ?controller=Utilisateur&action=compte&error=missing_id");
+            exit;
+        }
+
+        $idMateriel = intval($_GET["id"]);
+        $m = Model::getModel();
+
+        $removed = $m->removeFromPanier($_SESSION["id"], $idMateriel);
+        if ($removed) {
+            header("Location: ?controller=Utilisateur&action=compte&success=removed_from_cart");
+        } else {
+            header("Location: ?controller=Utilisateur&action=compte&error=remove_failed");
+        }
+        exit;
+    }
+
+
+
+
 
 }
 

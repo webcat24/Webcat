@@ -3,6 +3,16 @@ $title = "Boutique";
 $bodyClass = "profile";
 require 'view_begin.php';
 ?>
+
+<div class="wrapper">
+    <div class="search-input">
+        <a href="" target="_blank" hidden></a>
+        <input id="search_bar_boutique" type="text" placeholder="Type to search..">
+        <div class="icon">
+            <i class="fas fa-search"></i>
+        </div>
+    </div>
+</div>
 <div class="product-container">
     <div class="filters">
         <div>
@@ -16,24 +26,36 @@ require 'view_begin.php';
             </ul>
         </div>
     </div>
-
     <div class="product-field">
-        <div class="wrapper">
-            <div class="search-input">
-                <a href="" target="_blank" hidden></a>
-                <input id="search_bar_boutique" type="text" placeholder="Type to search..">
-                <div class="autocom-box">
-                </div>
-                <div class="icon">
-                    <i class="fas fa-search"></i>
-                </div>
-            </div>
-        </div>
         <ul class="items" id="products-container">
         </ul>
         <div class="pagination"></div>
     </div>
 </div>
+<?php if (isset($_GET["success"]) && $_GET["success"] == "added_to_cart"): ?>
+    <div id="modalajtsupproduit-message" class="modalajtsupproduit success-modalajtsupproduit">
+        <div class="modalajtsupproduit-content">
+            <span class="close-modalajtsupproduit">&times;</span>
+            <p>Produit ajouté au panier avec succès !</p>
+        </div>
+    </div>
+<?php elseif (isset($_GET["success"]) && $_GET["success"] == "removed_from_cart"): ?>
+    <div id="modalajtsupproduit-message" class="modalajtsupproduit success-modalajtsupproduit">
+        <div class="modalajtsupproduit-content">
+            <span class="close-modalajtsupproduit">&times;</span>
+            <p>Produit supprimé du panier avec succès !</p>
+        </div>
+    </div>
+<?php elseif (isset($_GET["error"])): ?>
+    <div id="modalajtsupproduit-message" class="modalajtsupproduit error-modalajtsupproduit">
+        <div class="modalajtsupproduit-content">
+            <span class="close-modalajtsupproduit">&times;</span>
+            <p>Erreur : <?= htmlspecialchars($_GET["error"]); ?></p>
+        </div>
+    </div>
+<?php endif; ?>
+
+
 
 <div class="modalboutique" style="display: none;">
     <div class="modal-content">
@@ -56,11 +78,6 @@ require 'view_begin.php';
                 <button><span><i class="fas fa-shopping-basket"></i></span></button>
                 <h3>Information produit</h3>
                 <p id="modal-description">Description</p>
-                <!-- <ul>
-                    <li id="modal-color">Couleurs : </li>
-                    <li id="modal-hex">Code Hex : </li>
-                    <li id="modal-collection">Collection</li>
-                </ul> -->
             </div>
         </div>
     </div>

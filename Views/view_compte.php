@@ -1,8 +1,6 @@
 <?php $title = "Mon compte";
 $bodyClass = "profile";
 require "view_begin.php";
-var_dump($_SESSION["id"]);
-
 ?>
 <section id="content">
     <nav>
@@ -77,44 +75,40 @@ var_dump($_SESSION["id"]);
                     <?php foreach ($panier as $v): ?>
                         <li class="completed">
                             <div class="product-image">
-                                <img src="<?= htmlspecialchars($v["img_link"]) ?>" alt="image du produit">
+                                <img src="<?= htmlspecialchars($v["img_link"] ?? '') ?>" alt="image du produit">
                             </div>
                             <div class="product-details">
-                                <p class="product-name">Nom : <?= htmlspecialchars($v["nom"]) ?></p>
-                                <p class="product-price">Prix : <?= htmlspecialchars($v["prix"]) ?>€</p>
+                                <p class="product-name">Nom : <?= htmlspecialchars($v["nom"] ?? 'Nom indisponible') ?></p>
+                                <p class="product-price">Prix : <?= htmlspecialchars($v["prix"] ?? '0.00') ?>€</p>
                             </div>
                             <div class="product-actions">
-                                <button class="btn remove-item" title="Retirer">
+                                <a href="?controller=Utilisateur&action=removeFromCart&id=<?= htmlspecialchars($v['id_materiel']) ?>"
+                                    class="btn remove-item" title="Retirer">
                                     <i class='bx bx-trash'></i>
-                                </button>
+                                </a>
                             </div>
                         </li>
                     <?php endforeach; ?>
+
                 </ul>
             </div>
         </div>
         </div>
     </main>
 </section>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const profileIcon = document.getElementById("profile-icon");
-        const profileContainer = document.getElementById("profile-container");
-
-        profileIcon.addEventListener("click", (e) => {
-            e.preventDefault();
-            // Affiche ou masque le conteneur de profil
-            profileContainer.style.display =
-                profileContainer.style.display === "block" ? "none" : "block";
-        });
-
-        // Masque le conteneur si on clique ailleurs sur la page
-        document.addEventListener("click", (e) => {
-            if (!profileIcon.contains(e.target) && !profileContainer.contains(e.target)) {
-                profileContainer.style.display = "none";
-            }
-        });
-    });
-</script>
-
+<?php if (isset($_GET["success"]) && $_GET["success"] == "removed_from_cart"): ?>
+    <div id="modalajtsupproduit-message" class="modalajtsupproduit success-modalajtsupproduit">
+        <div class="modalajtsupproduit-content">
+            <span class="close-modalajtsupproduit">&times;</span>
+            <p>Produit supprimé du panier avec succès !</p>
+        </div>
+    </div>
+<?php elseif (isset($_GET["error"])): ?>
+    <div id="modalajtsupproduit-message" class="modalajtsupproduit error-modalajtsupproduit">
+        <div class="modalajtsupproduit-content">
+            <span class="close-modalajtsupproduit">&times;</span>
+            <p>Erreur : <?= htmlspecialchars($_GET["error"]); ?></p>
+        </div>
+    </div>
+<?php endif; ?>
 <?php require "view_end.php"; ?>
