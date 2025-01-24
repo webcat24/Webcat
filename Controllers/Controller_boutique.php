@@ -81,11 +81,4 @@ class Controller_boutique extends Controller
         exit;
     }
 
-
-    public function action_panier()
-    {
-        $this->render('affiherPanier');
-
-    }
-
 }

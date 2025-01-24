@@ -54,9 +54,6 @@ require 'view_begin.php';
         </div>
     </div>
 <?php endif; ?>
-
-
-
 <div class="modalboutique" style="display: none;">
     <div class="modal-content">
         <span class="close-button">&times;</span>
@@ -75,14 +72,15 @@ require 'view_begin.php';
             <div class="modal-right">
                 <h2 id="modal-title"></h2>
                 <p id="modal-price"></p>
-                <button><span><i class="fas fa-shopping-basket"></i></span></button>
+                <button class="btn add-to-cart" data-id="">
+                    <span><i class="fas fa-shopping-basket"></i></span>
+                </button>
                 <h3>Information produit</h3>
                 <p id="modal-description">Description</p>
             </div>
         </div>
     </div>
 </div>
-
 <?php
 require 'view_end.php';
 ?>

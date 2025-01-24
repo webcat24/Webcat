@@ -327,8 +327,6 @@ function displayPage(page, data, productsContainer) {
       <h4>${parseFloat(produit.prix_materiel || 0).toFixed(2)}€</h4>
     `;
     productsContainer.appendChild(productItem);
-    // <span><i class="fas fa-shopping-basket"></i></span>
-
     productItem.addEventListener("click", () => {
       currentIndexboutique = i;
       openModal(produit);
@@ -435,9 +433,9 @@ function applyFilters() {
   currentPage = 1;
   updatePage(filteredData);
 }
-
 function openModal(produit) {
   const modal = document.querySelector(".modalboutique");
+
   modal.querySelector("#modal-image").src = produit.image || "placeholder.jpg";
   modal.querySelector("#modal-title").textContent =
     produit.categories || "Sans catégorie";
@@ -447,7 +445,13 @@ function openModal(produit) {
   modal.querySelector("#modal-description").textContent =
     produit.description_materiel || "Aucune description disponible.";
   modal.style.display = "flex";
+  const addToCartButton = modal.querySelector(".btn.add-to-cart");
+  addToCartButton.setAttribute("data-id", produit.id_materiel);
 
+  addToCartButton.onclick = () => {
+    const productId = addToCartButton.getAttribute("data-id");
+    window.location.href = `?controller=boutique&action=addToCart&id=${productId}`;
+  };
   const prevButton = modal.querySelector("#prev-button");
   const nextButton = modal.querySelector("#next-button");
 
