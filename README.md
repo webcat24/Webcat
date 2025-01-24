@@ -28,12 +28,13 @@ Le principe de mot de passe n'a pas encore été développé pour faciliter les 
 **Header**
 * Se connecter à son compte en cliquant sur l’icône "bonhomme".
 * Une fois connecté, accéder à des fonctionnalités comme ses favoris, son panier, et son historique d’achats ou de navigation.
+* Dans le cas où c'est un compte administrateur, accéder au formulaire de remplissage de la base de données.
 
 **Page Boutique**
 * Une barre de recherche multimodale permettant de trouver des produits selon des critères comme le type, le prix, la couleur ou l’inspiration artistique.
 * Des filtres avancés pour une recherche précise et intuitive.
 * Une fiche technique s’affiche lorsqu’on clique sur un produit, avec une option de fermeture grâce à une croix.
-* La fonctionnalité permettant d’ajouter des articles à ses favoris ou à son panier est en cours de développement et non encore implémentée.
+* La fonctionnalité permettant d’ajouter des articles à son panier.
 
 ###  **Public cible**
 Peinturia s’adresse aux artistes amateurs souhaitant explorer leur créativité, aux professionnels en quête de produits de haute qualité, aux enseignants en arts plastiques cherchant du matériel pédagogique, et aux entreprises ou collectivités à la recherche de solutions artistiques éco-responsables.
