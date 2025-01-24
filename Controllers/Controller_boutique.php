@@ -24,29 +24,31 @@ class Controller_boutique extends Controller
         $data = [
             "produits" => $allProduits,
         ];
-
         $this->render('boutique', $data);
     }
 
     public function action_apiGetProduits()
     {
         $m = Model::getModel();
-        if(! isset($_SESSION["produits"])){
+        /*if(! isset($_SESSION["produits"])){
             $_SESSION["produits"] = $m->getProduits();
-        }
-        $produits = $_SESSION["produits"];
+        }*/
+        $produits = $m->getProduits();//$_SESSION["produits"];
         if(isset($_GET["search"]) && $_GET["search"] != ""){
             $p = create_sql_from_tokens(tokenize(($_GET["search"])));
             //var_dump($p);
             if($p != null){
                 $produits = $m->getListProduit($p);
             }
+            else{
+                $produits = [];
+            }
         }
         header('Content-Type: application/json');
         echo json_encode($produits);
         exit;
-        //var_dump($produits);
-        //$this->render('test');
+        // var_dump($produits);
+        // $this->render('test');
     }
 
 

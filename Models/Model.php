@@ -327,4 +327,10 @@ class Model
         return $requete->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function getListMateriaux(){
+        $requete = $this->bd->prepare("SELECT DISTINCT type_materiel FROM autres_materiaux");
+        $requete->execute();
+        return $requete->fetchAll(PDO::FETCH_ASSOC);
+    }
+
 }
