@@ -1895,7 +1895,7 @@ picture img {
 
 .detail .icon {
   position: absolute;
-  bottom: 120px;
+  bottom: 200px;
   left: 25px;
   display: flex;
   gap: 10px;
@@ -1927,7 +1927,7 @@ picture img {
 .detail > strong {
   display: inherit;
   margin: 8px;
-  font-size: 30px;
+  font-size: 27px;
   letter-spacing: 2px;
   color: #555;
 }
@@ -1948,7 +1948,7 @@ li h4 {
 
 .product-container {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: flex-start;
   padding: 20px;
   margin-top: 50px;
@@ -2520,6 +2520,9 @@ li h4 {
     --small-font: 1.3rem;
     --smaller-font: 1.2rem;
   }
+  .detail > strong {
+    font-size: 24px;
+  }
   .nav-item .dropdown-menu {
     display: block;
     position: static;
@@ -2795,7 +2798,7 @@ li h4 {
 
   .product-field ul li {
     width: 30%;
-    height: 335px;
+    height: 450px;
     margin: 10px;
   }
 
@@ -2917,7 +2920,7 @@ li h4 {
 
   .product-field ul li {
     width: 30%;
-    height: 300px;
+    height: 450px;
     margin: 10px;
   }
 

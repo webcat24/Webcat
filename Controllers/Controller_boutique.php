@@ -37,7 +37,7 @@ class Controller_boutique extends Controller
         if(isset($_GET["search"]) && $_GET["search"] != ""){
             $p = create_sql_from_tokens(tokenize(($_GET["search"])));
             //var_dump($p);
-            if($p != null){
+            if ($p != null) {
                 $produits = $m->getListProduit($p);
             }
             else{

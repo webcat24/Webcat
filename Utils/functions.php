@@ -94,16 +94,18 @@ function tokenize($query){
             $materiel = "peinture";
             continue;
         }
-        if(preg_match("/^[0-9]+m?l$/", $word) && in_array($word, $GLOBALS["search"]["quantite"])){
+        if(preg_match("/^[0-9]+(ml|l)?$/", $word) && preg_grep("/^".$word."/", $GLOBALS["search"]["quantite"])){
             $quantite = $word;
             $materiel = "peinture";
             continue;
         }
+        /*
         if(preg_match("/^[0-9]+$/", $word) && isset($keywords[$key+1]) && preg_match("/^m?l$/", strtolower($keywords[$key+1])) && in_array(strtolower($word.strtolower($keywords[$key+1])), $GLOBALS["search"]["quantite"])){
             $quantite = $word.strtolower($keywords[$key+1]);
             $materiel = "peinture";
             continue;
         }
+        */
     }
     return ["price" => $price, "materiel" => $materiel, "couleur" => $couleur, "type" => $type, "quantite" => $quantite, "data" => $data];
 }
@@ -138,7 +140,7 @@ function create_sql_from_tokens($tokens){
                 
             }
             if($tokens["quantite"] != "any"){
-                $quantite = "LOWER(quantite) = '".$tokens["quantite"]."'";
+                $quantite = "LOWER(quantite) LIKE '".$tokens["quantite"]."%'";
             }
             $filter = " WHERE ".$type." AND ".$couleur." AND ".$quantite;
         
