@@ -465,8 +465,12 @@ function updatePage(filteredData) {
 }
 
 async function fetchFromAPI(url) {
+  let date = new Date();
+  let time = date.getTime();
   try {
     const data = await fetchData(url);
+    let d = new Date();
+    console.log("fetch : " + (d.getTime() - time));
     allData = data;
     extractFilters(data);
     const categoryContainer = document.querySelector(".categories");
@@ -474,6 +478,8 @@ async function fetchFromAPI(url) {
     generateFilterOptions(categoryContainer, extractedCategories, "category");
     generateFilterOptions(shadeContainer, extractedShades, "shade");
     updatePage(data);
+    d = new Date();
+    console.log("update : " + (d.getTime() - time));
   } catch (error) {
     console.error("Erreur lors de la récupération des données :", error);
   }
@@ -488,7 +494,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-//Thibaud
+
 function test(url) {
   let date = new Date();
   let time = date.getTime();

@@ -142,15 +142,18 @@ function create_sql_from_tokens($tokens){
             if($tokens["quantite"] != "any"){
                 $quantite = "LOWER(quantite) LIKE '".$tokens["quantite"]."%'";
             }
-            $filter = " WHERE ".$type." AND ".$couleur." AND ".$quantite;
+            $filter = " WHERE ".$type." AND ".$couleur." AND ".$quantite." ORDER BY LENGTH(nom_materiel)";
         
             $base = "SELECT id_materiel,description_materiel,prix_materiel,code_hexadecimal AS code_hexadecimal,nom_materiel AS categories,lien_image AS image, coloris AS colors FROM materiel RIGHT JOIN peinture USING(id_materiel) LEFT JOIN type_peinture USING(id_type_peinture) LEFT JOIN couleur USING(id_couleur) LEFT JOIN Images USING(id_image)".$filter;
         }
         else{
-            $base = "SELECT id_materiel,description_materiel,prix_materiel,nom_materiel AS categories,lien_image AS image FROM materiel RIGHT JOIN autres_materiaux USING(id_materiel) LEFT JOIN Images USING(id_image) WHERE LOWER(type_materiel) LIKE '".$tokens["materiel"]."%'";
+            $base = "SELECT id_materiel,description_materiel,prix_materiel,nom_materiel AS categories,lien_image AS image FROM materiel RIGHT JOIN autres_materiaux USING(id_materiel) LEFT JOIN Images USING(id_image) WHERE LOWER(type_materiel) LIKE '".$tokens["materiel"]."%' ORDER BY LENGTH(nom_materiel)";
         }
     }
-    if($tokens["price"] != ""){
+    if($tokens["price"] != "" && $tokens["materiel"] == "peinture"){
+        $base .= ", prix_materiel ".$tokens["price"];
+    }
+    else if($tokens["price"] != ""){
         $base .= " ORDER BY prix_materiel ".$tokens["price"];
     }
     if($type == "1=1" && $couleur == "1=1" && $quantite == "1=1" && $tokens["price"] == "" && $tokens["materiel"] == "all"){
