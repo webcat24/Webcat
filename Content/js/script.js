@@ -31,7 +31,6 @@ function closeModal(modalSelector) {
   if (modalElement) {
     modalElement.style.display = "none";
 
-    // Réinitialiser les curseurs ou d'autres éléments si nécessaire
     const canvas = document.getElementById("canvas");
     if (canvas) {
       canvas.style.cursor = "";
@@ -59,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function navigateImage(direction) {
   if (currentIndex === -1) return;
-  const newIndex = (currentIndex + direction + images.length) % images.length; // Navigation circulaire
+  const newIndex = (currentIndex + direction + images.length) % images.length;
   showImage(newIndex);
 }
 
@@ -79,7 +78,6 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-// Empêcher la fermeture en cliquant sur les flèches
 document.querySelectorAll(".arrow").forEach((arrow) => {
   arrow.addEventListener("click", (event) => {
     event.stopPropagation();
@@ -118,11 +116,11 @@ const body = document.querySelector("body"),
 if (navMenu && navOpenBtn) {
   navOpenBtn.addEventListener("click", () => {
     if (!navMenu.classList.contains("show")) {
-      navMenu.classList.add("show"); // Ouvre le menu
-      body.style.overflowY = "hidden"; // Empêche le scroll
+      navMenu.classList.add("show");
+      body.style.overflowY = "hidden";
     } else {
-      navMenu.classList.remove("show"); // Ferme le menu si cliqué à nouveau
-      body.style.overflowY = "scroll"; // Réactive le scroll
+      navMenu.classList.remove("show");
+      body.style.overflowY = "scroll";
     }
   });
 }
@@ -296,6 +294,12 @@ function generateFilterOptions(container, optionsSet, dataAttribute) {
 
 function displayPage(page, data, productsContainer) {
   productsContainer.innerHTML = "";
+  if (data.length === 0) {
+    productsContainer.innerHTML = `
+      <p class="no-results">Aucun résultat trouvé pour votre recherche.</p>
+    `;
+    return;
+  }
   const startIndex = (page - 1) * itemsPerPage;
   const endIndex = Math.min(startIndex + itemsPerPage, data.length);
 
@@ -312,14 +316,17 @@ function displayPage(page, data, productsContainer) {
         <p class="icon">
           <span><i class="far fa-heart"></i></span>
           <span><i class="far fa-share-square"></i></span>
-          <span><i class="fas fa-shopping-basket"></i></span>
+          <a href="?controller=boutique&action=addToCart&id=${
+            produit.id_materiel
+          }">
+        <i class="fas fa-shopping-basket"></i>
+      </a>
         </p>
         <strong>${produit.categories || "Sans catégorie"}</strong>
       </div>
       <h4>${parseFloat(produit.prix_materiel || 0).toFixed(2)}€</h4>
     `;
     productsContainer.appendChild(productItem);
-
     productItem.addEventListener("click", () => {
       currentIndexboutique = i;
       openModal(produit);
@@ -426,9 +433,9 @@ function applyFilters() {
   currentPage = 1;
   updatePage(filteredData);
 }
-
 function openModal(produit) {
   const modal = document.querySelector(".modalboutique");
+
   modal.querySelector("#modal-image").src = produit.image || "placeholder.jpg";
   modal.querySelector("#modal-title").textContent =
     produit.categories || "Sans catégorie";
@@ -438,7 +445,13 @@ function openModal(produit) {
   modal.querySelector("#modal-description").textContent =
     produit.description_materiel || "Aucune description disponible.";
   modal.style.display = "flex";
+  const addToCartButton = modal.querySelector(".btn.add-to-cart");
+  addToCartButton.setAttribute("data-id", produit.id_materiel);
 
+  addToCartButton.onclick = () => {
+    const productId = addToCartButton.getAttribute("data-id");
+    window.location.href = `?controller=boutique&action=addToCart&id=${productId}`;
+  };
   const prevButton = modal.querySelector("#prev-button");
   const nextButton = modal.querySelector("#next-button");
 
@@ -489,8 +502,9 @@ document.addEventListener("DOMContentLoaded", function () {
   fetchFromAPI("?controller=boutique&action=apiGetProduits");
   const inputSearch = document.getElementById("search_bar_boutique");
   inputSearch.addEventListener("input", function () {
-    fetchFromAPI("?controller=boutique&action=apiGetProduits&search=" + inputSearch.value);
-    //console.log("change");
+    fetchFromAPI(
+      "?controller=boutique&action=apiGetProduits&search=" + inputSearch.value
+    );
   });
 });
 
@@ -506,17 +520,6 @@ function test(url) {
       console.log(d.getTime() - time);
     });
 }
-// document.addEventListener("DOMContentLoaded", function () {
-//   fecthFromAPI("?controller=boutique&action=apiGetProduits");
-//   const input_search = document.getElementById("search_bar_boutique");
-//   input_search.addEventListener("input", function () {
-//     //fecthFromAPI
-//     fecthFromAPI(
-//       "?controller=boutique&action=apiGetProduits&search=" + input_search.value
-//     );
-//     console.log("change");
-//   });
-// });
 
 let next = document.getElementById("next");
 let prev = document.getElementById("prev");
@@ -579,3 +582,52 @@ if (next && prev && carousel) {
 } else {
   console.warn("Carousel elements are not found in the DOM.");
 }
+// compte + le message d'ajout et de suppression des produit
+document.addEventListener("DOMContentLoaded", () => {
+  const profileIcon = document.getElementById("profile-icon");
+  const profileContainer = document.getElementById("profile-container");
+
+  profileIcon.addEventListener("click", (e) => {
+    e.preventDefault();
+    // Affiche ou masque le conteneur de profil
+    profileContainer.style.display =
+      profileContainer.style.display === "block" ? "none" : "block";
+  });
+
+  // Masque le conteneur si on clique ailleurs sur la page
+  document.addEventListener("click", (e) => {
+    if (
+      !profileIcon.contains(e.target) &&
+      !profileContainer.contains(e.target)
+    ) {
+      profileContainer.style.display = "none";
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("modalajtsupproduit-message");
+  const closeModal = document.querySelector(".close-modalajtsupproduit");
+
+  if (modal) {
+    // Afficher le modale
+    modal.classList.add("show");
+
+    // Cacher le modale après 3 secondes
+    setTimeout(() => {
+      modal.classList.remove("show");
+    }, 3000);
+
+    // Fermer le modale lorsqu'on clique sur la croix
+    closeModal.addEventListener("click", () => {
+      modal.classList.remove("show");
+    });
+
+    // Fermer le modale en cliquant à l'extérieur
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.remove("show");
+      }
+    });
+  }
+});

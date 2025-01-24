@@ -1,5 +1,5 @@
 <?php $title = "S'enregistrer";
-$bodyClass = "background-modifie"; // Classe pour le body
+$bodyClass = "background-modifie";
 require "view_begin.php";
 ?>
 

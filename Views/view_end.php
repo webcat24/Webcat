@@ -70,6 +70,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
 <script src="Content/js/footer.js"></script>
+<script src="Content\js\pipette.js"></script>
 <script src="Content/js/script.js"></script>
 <script src="Content/js/theme-pluginjs.js"></script>
 <script src="Content/js/theme.js"></script>

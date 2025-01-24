@@ -1,6 +1,6 @@
 <?php
 $title = "À Propos";
-$bodyClass = "about-page"; // Classe pour le body
+$bodyClass = "about-page";
 require "view_begin.php";
 ?>
 <div id="myCarousel" class="carousel slide">
@@ -54,13 +54,18 @@ require "view_begin.php";
                 Notre histoire
             </span>
             <p>
-                Peinturia est <strong>née en 2016</strong>, de l’amitié et de la passion commune pour l’art de cinq anciens camarades de classe. Ces passionnés, réunis autour de la même vision, ont voulu <strong>rendre l’art accessible tout en valorisant des matériaux de qualité</strong>. Ils ont commencé modestement dans un atelier improvisé, développant des produits pensés par des artistes pour des artistes. Aujourd’hui, Peinturia est devenue une <strong>référence dans le domaine des peintures et du matériel artistique</strong>, tout en restant <strong>fidèle à ses racines</strong> et à <strong>son engagement</strong> envers l’excellence et la créativité.
+                Peinturia est <strong>née en 2016</strong>, de l’amitié et de la passion commune pour l’art de cinq
+                anciens camarades de classe. Ces passionnés, réunis autour de la même vision, ont voulu <strong>rendre
+                    l’art accessible tout en valorisant des matériaux de qualité</strong>. Ils ont commencé modestement
+                dans un atelier improvisé, développant des produits pensés par des artistes pour des artistes.
+                Aujourd’hui, Peinturia est devenue une <strong>référence dans le domaine des peintures et du matériel
+                    artistique</strong>, tout en restant <strong>fidèle à ses racines</strong> et à <strong>son
+                    engagement</strong> envers l’excellence et la créativité.
             </p>
         </div>
         <div class="col-balance">
             <div class="sticky-img-dual">
                 <img src="Content/img/locaux.jpg" alt="" class="caher">
-                <!-- <img src="Content/img/arbre.avif" alt="" class="blob"> -->
                 <img src="Content/img/atelier.jpg" alt="">
             </div>
         </div>
@@ -71,7 +76,6 @@ require "view_begin.php";
         <div class="col-balance ordi">
             <div class="sticky-img-dual">
                 <img src="Content/img/artiste.jpg" alt="">
-                <!-- <img src="Content/img/arb.avif" alt="" class="blob"> -->
                 <img src="Content/img/atelierluxe.jpg" alt="" class="caher">
             </div>
         </div>
@@ -80,7 +84,12 @@ require "view_begin.php";
                 Notre mission
             </span>
             <p>
-                Chez Peinturia, nous avons une mission claire : <strong>inspirer et équiper les artistes</strong>, qu’ils soient amateurs ou professionnels, en leur offrant <strong>des produits de qualité supérieure</strong>. Nous croyons que chaque coup de pinceau raconte une histoire et mérite les meilleures matières premières pour la sublimer. En proposant des peintures éclatantes, des palettes inspirantes et un matériel durable, <strong>nous accompagnons nos clients dans leur quête de beauté et d’expression artistique</strong>.
+                Chez Peinturia, nous avons une mission claire : <strong>inspirer et équiper les artistes</strong>,
+                qu’ils soient amateurs ou professionnels, en leur offrant <strong>des produits de qualité
+                    supérieure</strong>. Nous croyons que chaque coup de pinceau raconte une histoire et mérite les
+                meilleures matières premières pour la sublimer. En proposant des peintures éclatantes, des palettes
+                inspirantes et un matériel durable, <strong>nous accompagnons nos clients dans leur quête de beauté et
+                    d’expression artistique</strong>.
             </p>
 
         </div>
@@ -91,13 +100,19 @@ require "view_begin.php";
                 Nos Valeurs
             </span>
             <p>
-            L’engagement de Peinturia repose sur des valeurs fortes qui guident chaque étape de notre activité : nous favorisons des procédés <strong>respectueux de l’environnement</strong> et collaborons avec <strong>des producteurs locaux</strong> pour réduire notre empreinte carbone, notre équipe reflète <strong>une diversité de talents et de cultures</strong> en mettant en avant l’égalité des chances, nous travaillons avec <strong>des partenaires français</strong> pour garantir des produits authentiques et <strong>soutenir l’artisanat local</strong>, et enfin, notre passion pour l’art et la création se retrouve dans chaque produit, <strong>conçu pour inspirer et respecter nos valeurs de durabilité</strong>.
+                L’engagement de Peinturia repose sur des valeurs fortes qui guident chaque étape de notre activité :
+                nous favorisons des procédés <strong>respectueux de l’environnement</strong> et collaborons avec
+                <strong>des producteurs locaux</strong> pour réduire notre empreinte carbone, notre équipe reflète
+                <strong>une diversité de talents et de cultures</strong> en mettant en avant l’égalité des chances, nous
+                travaillons avec <strong>des partenaires français</strong> pour garantir des produits authentiques et
+                <strong>soutenir l’artisanat local</strong>, et enfin, notre passion pour l’art et la création se
+                retrouve dans chaque produit, <strong>conçu pour inspirer et respecter nos valeurs de
+                    durabilité</strong>.
             </p>
         </div>
         <div class="col-balance">
             <div class="sticky-img-dual">
                 <img src="Content/img/reunion.jpg" alt="">
-                <!-- <img src="Content/img/arbr.avif" alt="" class="blob"> -->
                 <img src="Content/img/champsfleurs.jpg" alt="" class="caher">
             </div>
         </div>
@@ -106,8 +121,4 @@ require "view_begin.php";
     </section>
 
 </main>
-
-<!-- Debut du FOOTER -->
-
-<!-- Fin du FOOTER -->
 <?php require "view_end.php"; ?>

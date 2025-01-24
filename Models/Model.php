@@ -33,35 +33,77 @@ class Model
         }
         return self::$instance;
     }
-
     public function getFav($offset = 0, $limit = 20)
     {
-        $requete = $this->bd->prepare("SELECT Nom_materiel AS nom, Prix_Materiel AS prix, id_Image AS img_link FROM Favoris JOIN Materiel USING (id_materiel) WHERE id_utilisateur = :id LIMIT :limit OFFSET :offset");
-        $requete->bindValue(":id", $_SESSION["id"]);
-        $requete->bindValue(":offset", $offset);
-        $requete->bindValue(":limit", $limit);
+        $offset = intval($offset);
+        $limit = intval($limit);
+
+        $requete = $this->bd->prepare("
+        SELECT 
+            Materiel.Nom_materiel AS nom, 
+            Materiel.Prix_Materiel AS prix, 
+            Images.Lien_image AS lien_image
+        FROM Favoris 
+        JOIN Materiel ON Favoris.id_materiel = Materiel.id_materiel
+        JOIN Images ON Materiel.id_image = Images.id_image
+        WHERE Favoris.id_utilisateur = :id
+        LIMIT :limit OFFSET :offset
+    ");
+        $requete->bindValue(":id", $_SESSION["id"], PDO::PARAM_INT);
+        $requete->bindValue(":offset", $offset, PDO::PARAM_INT);
+        $requete->bindValue(":limit", $limit, PDO::PARAM_INT);
         $requete->execute();
+
         return $requete->fetchAll(PDO::FETCH_ASSOC);
     }
+
 
     public function getPanier($offset = 0, $limit = 20)
     {
-        $requete = $this->bd->prepare("SELECT Nom_materiel AS nom, Prix_Materiel AS prix, id_Image AS img_link FROM Panier JOIN Materiel USING (id_materiel) WHERE id_utilisateur = :id LIMIT :limit OFFSET :offset");
-        $requete->bindValue(":id", $_SESSION["id"]);
-        $requete->bindValue(":offset", $offset);
-        $requete->bindValue(":limit", $limit);
+        $requete = $this->bd->prepare("
+        SELECT 
+            Materiel.Id_Materiel, 
+            Materiel.Nom_materiel AS nom, 
+            Materiel.Prix_materiel AS prix, 
+            Images.Lien_image AS img_link
+        FROM 
+            Panier 
+        JOIN 
+            Materiel ON Panier.Id_Materiel = Materiel.Id_Materiel
+        LEFT JOIN 
+            Images ON Materiel.id_image = Images.id_image
+        WHERE 
+            Panier.Id_Utilisateur = :id
+        LIMIT :limit OFFSET :offset
+    ");
+        $requete->bindValue(":id", $_SESSION["id"], PDO::PARAM_INT);
+        $requete->bindValue(":limit", $limit, PDO::PARAM_INT);
+        $requete->bindValue(":offset", $offset, PDO::PARAM_INT);
         $requete->execute();
         return $requete->fetchAll(PDO::FETCH_ASSOC);
     }
-
     public function getHistorique($offset = 0, $limit = 20)
     {
-        $requete = $this->bd->prepare("SELECT Nom_materiel AS nom, Prix_Materiel AS prix, id_Image AS img_link FROM Historique_commande JOIN materiel_commande USING (id_historique_commande) JOIN Materiel USING (id_materiel) WHERE id_utilisateur = :id LIMIT :limit OFFSET :offset");
+        $offset = intval($offset);
+        $limit = intval($limit);
 
-        $requete->bindValue(":id", $_SESSION["id"]);
-        $requete->bindValue(":offset", $offset);
-        $requete->bindValue(":limit", $limit);
+        $requete = $this->bd->prepare("
+        SELECT 
+            Materiel.Nom_materiel AS nom, 
+            Materiel.Prix_Materiel AS prix, 
+            Images.Lien_image AS img_link
+        FROM Historique_commande
+        JOIN materiel_commande USING (id_historique_commande)
+        JOIN Materiel USING (id_materiel)
+        JOIN Images ON Materiel.id_image = Images.id_image
+        WHERE Historique_commande.id_utilisateur = :id
+        LIMIT :limit OFFSET :offset
+    ");
+        $requete->bindValue(":id", $_SESSION["id"], PDO::PARAM_INT);
+        $requete->bindValue(":offset", $offset, PDO::PARAM_INT);
+        $requete->bindValue(":limit", $limit, PDO::PARAM_INT);
         $requete->execute();
+
         return $requete->fetchAll(PDO::FETCH_ASSOC);
     }
 
@@ -207,12 +249,13 @@ class Model
         return $requete->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function ajouterImage($lien) {
+    public function ajouterImage($lien)
+    {
         try {
             $requete = $this->bd->prepare("INSERT INTO public.images(lien_image) VALUES (:lien);");
             $requete->bindValue(':lien', $lien);
             $requete->execute();
-    
+
             // Retourner l'ID généré
             return $this->bd->lastInsertId();
         } catch (PDOException $e) {
@@ -220,7 +263,7 @@ class Model
             return null;
         }
     }
-    
+
     public function ajouterMateriel($description, $prix, $nom, $idImage)
     {
         try {
@@ -317,28 +360,78 @@ class Model
     }
 
 
-    public function getTypePeinture(){
+    public function getTypePeinture()
+    {
         $requete = $this->bd->prepare("SELECT nom_type_peinture FROM type_peinture");
         $requete->execute();
         return $requete->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function getQuantity(){
+    public function getQuantity()
+    {
         $requete = $this->bd->prepare("SELECT DISTINCT quantite FROM peinture");
         $requete->execute();
         return $requete->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function getListProduit($sql){
+    public function getListProduit($sql)
+    {
         $requete = $this->bd->prepare($sql);
         $requete->execute();
         return $requete->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function getListMateriaux(){
+    public function getListMateriaux()
+    {
         $requete = $this->bd->prepare("SELECT DISTINCT type_materiel FROM autres_materiaux");
         $requete->execute();
         return $requete->fetchAll(PDO::FETCH_ASSOC);
     }
+    public function addToPanier($idUtilisateur, $idMateriel)
+    {
+        try {
+            $requete = $this->bd->prepare("
+                INSERT INTO Panier (Id_Utilisateur, Id_Materiel)
+                VALUES (:idUtilisateur, :idMateriel)
+                ON CONFLICT (Id_Utilisateur, Id_Materiel) DO NOTHING
+            ");
+            $requete->bindValue(":idUtilisateur", $idUtilisateur, PDO::PARAM_INT);
+            $requete->bindValue(":idMateriel", $idMateriel, PDO::PARAM_INT);
+            $result = $requete->execute();
+            return $result;
+        } catch (PDOException $e) {
+            return false;
+        }
+    }
+
+    public function removeFromPanier($idUtilisateur, $idMateriel)
+    {
+        $requete = $this->bd->prepare("
+        DELETE FROM Panier 
+        WHERE Id_Utilisateur = :idUtilisateur 
+          AND Id_Materiel = :idMateriel
+    ");
+        $requete->bindValue(":idUtilisateur", $idUtilisateur, PDO::PARAM_INT);
+        $requete->bindValue(":idMateriel", $idMateriel, PDO::PARAM_INT);
+
+        return $requete->execute();
+    }
+    public function getCartCount($idUtilisateur)
+    {
+        $requete = $this->bd->prepare("SELECT COUNT(*) AS count FROM Panier WHERE Id_Utilisateur = :idUtilisateur");
+        $requete->bindValue(":idUtilisateur", $idUtilisateur);
+        $requete->execute();
+        $result = $requete->fetch(PDO::FETCH_ASSOC);
+        return $result["count"];
+    }
+
+    public function getProduitById($id)
+    {
+        $requete = $this->bd->prepare("SELECT * FROM Materiel WHERE Id_Materiel = :id");
+        $requete->bindValue(":id", $id, PDO::PARAM_INT);
+        $requete->execute();
+        return $requete->fetch(PDO::FETCH_ASSOC);
+    }
+
 
 }

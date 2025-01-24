@@ -84,8 +84,6 @@ require 'view_begin.php';
                                         <a href="?controller=inspiration&action=affichepalettes"><span
                                                 class="fas fa-arrow-right"></span></a>
                                     </div>
-
-
                                 </div>
                             </div>
                         </div>

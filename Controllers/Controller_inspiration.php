@@ -25,7 +25,6 @@ class Controller_inspiration extends Controller
     {
         $m = Model::getModel();
 
-        // Récupérer le nombre total d'œuvres
         $lenghtOeuvresStocked = $m->getNombreTotalOeuvres();
         $totalOeuvres = isset($lenghtOeuvresStocked["quantite"]) ? $lenghtOeuvresStocked["quantite"] : 0;
 
@@ -35,7 +34,6 @@ class Controller_inspiration extends Controller
         // Récupérer la page demandée et valider
         $page = isset($_GET['page']) ? (int) $_GET['page'] : 1;  // Convertir en entier
 
-        // Vérification que la page est un entier positif et si elle ne depasse pas le nbr de pagination
         if ($page <= 0 || $page > $nbrPagination) {
             $page = 1;  // Valeur par défaut
         }
@@ -74,8 +72,6 @@ class Controller_inspiration extends Controller
                 'hex_code' => $row['hex_code']
             ];
         }
-
-        // Envoyer les données à la vue
         $this->render('palettes', ['palettes' => $palette_data]);
     }
 }
