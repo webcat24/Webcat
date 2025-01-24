@@ -5,6 +5,14 @@
 ### **Description**
 Peinturia est une application web dédiée aux passionnés d'art, amateurs comme professionnels, qui souhaitent explorer, apprendre et se fournir en matériaux de qualité pour leurs créations. Sa mission est de démocratiser l'accès à des outils artistiques et d'inspirer la créativité, tout en valorisant des pratiques respectueuses de l'environnement.
 
+### **Installation**
+Pour avoir les données, il faut exécuter tables.sql puis data.sql et changer les credentials (fichier dans le dossier Models) afin de relier votre base de données. Puis, il faut mettre le dossier du site web dans votre serveur web.
+
+### **Comptes pour tester la connexion**
+* **Compte client** : camelia@gmail.com (avec n'importe quel mot de passe).
+* **Compte administrateur** : admin@gmail.com (avec n'importe quel mot de passe).
+Le principe de mot de passe n'a pas encore été développé pour faciliter les tests de développement.
+
 ###  **Fonctionnalités principales**
 **Site en globalité**
 * Une navigation intuitive permettant d'explorer facilement les sections du site.
